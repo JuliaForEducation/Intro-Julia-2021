@@ -1,0 +1,392 @@
+
+<!DOCTYPE html>
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git y GitHub &#8212; Project-oriented workshop in Julia computing</title>
+    
+  <link rel="stylesheet" href="_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="_static/sphinx-book-theme.2d2078699c18a0efb88233928e1cf6ed.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/translations.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.be0a4a0c39cd630af62a2fcf693f3f06.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Búsqueda" href="search.html" />
+    <link rel="next" title="Fundamentos" href="Fundamentos.html" />
+    <link rel="prev" title="Project-oriented workshop in Julia computing" href="Intro.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="index.html">
+  
+  <img src="_static/julia_logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Project-oriented workshop in Julia computing</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Buscar este libro ..." aria-label="Buscar este libro ..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Intro.html">
+   Project-oriented workshop in Julia computing
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Material principal
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Git y GitHub
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Fundamentos.html">
+   Fundamentos
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Parte de prueba
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="archivo_prueba.html">
+   probando
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Navegación de palanca" aria-controls="site-navigation"
+            title="Navegación de palanca" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Descarga esta pagina"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/Git_y_GitHub.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Descargar archivo fuente" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimir en PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Modo de pantalla completa"
+                title="Modo de pantalla completa"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contenido
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#por-que-hacer-uso-de-git-y-github">
+   ¿Por qué hacer uso de Git y GitHub?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#git-como-sistema-de-control-de-versiones">
+   Git como sistema de control de versiones
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#git-para-trabajo-local">
+     Git para trabajo local
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#areas-de-trabajo-en-git">
+     Áreas de trabajo en Git
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bifurcando-el-trabajo">
+     Bifurcando el trabajo
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="git-y-github">
+<h1>Git y GitHub<a class="headerlink" href="#git-y-github" title="Enlazar permanentemente con este título">¶</a></h1>
+<div class="section" id="por-que-hacer-uso-de-git-y-github">
+<h2>¿Por qué hacer uso de Git y GitHub?<a class="headerlink" href="#por-que-hacer-uso-de-git-y-github" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>El rápido crecimiento de la industria del software, ha permitido el desarrollo de herramientas que facilitan muchas de las tareas para la gestión de un proyecto. Sin tales herramientas el desarrollo de un proyecto, sobre todo cuando en él se involucran muchas personas, se vería comprometido. Cuando en un proyecto se mantiene una gran cantidad de archivos, para mantener con seguridad el trabajo realizado y que el equipo involucrado trabaje sobre ellos de forma colaborativa sin inconvenientes, se han desarrollado diferentes sistemas conocidos como: sistemas de gestión de control de versiones.</p>
+<p>Git figura como un sistema de control versiones, que goza de gran popularidad, debido a que marca un paradigma notablemente diferente respecto a otros sitemas decontrol de versiones. GitHub por su lado, es una herramienta diseñada para la gestión de proyectos colaborativos en la web que integra a Git como una de sus herramientas principales, permitiendo que personas de diferente latitudes del planeta puedan trabajar en proyectos a gran escala. GitHub se ha convertido en uno sitios con mayor número de repositorios y herramienta preferida para desarrolladores y científicos.</p>
+<p>Como se ha mencionado Git y GitHub no son las únicas herramientas para realizar las tareas descritas, sin embargo, porque gozan de una gran popularidad y utilidad es importante aprender a trabajar con ellas.</p>
+</div>
+<div class="section" id="git-como-sistema-de-control-de-versiones">
+<h2>Git como sistema de control de versiones<a class="headerlink" href="#git-como-sistema-de-control-de-versiones" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Git nace a ríz de la necesidad de un software para continuar con el desarrollo del kernel de linux por la comunidad, alrededor del año 2005. La comunidad de linux en el desarrollo del nuevo software, sistema de control de versiones, buscó y consiguó las siguientes características:</p>
+<ul class="simple">
+<li><p>Velocidad</p></li>
+<li><p>Diseño sencillo</p></li>
+<li><p>Soporte para un desarrollo de trabajo no lineal</p></li>
+<li><p>Sistema de control distribuido</p></li>
+<li><p>Capacidad de manejar proyectos a gran escala</p></li>
+</ul>
+<p>Git se puede considerar como una base de datos que mantiene instantáneas del conjuto de archivos del proyecto en cada versión de este, lo que permite que se pueda recuperar la forma de un proyecto en una versión específica. Por ello Git es útil cuando han ocurrido diversos errores y no hay forma fácil de solucionar, además, mantiene características con los que es posible integrar el tabajo hecho por muchas personas sobre un mismo conjunto de archivos. A continuación, se ilustra cómo Git mantiene las versiones de un proyecto con el tiempo.</p>
+<p><img alt="Ilustración de las versiones de un proyecto en Git" src="_images/img1.jpg" /></p>
+<p>En cada versión del proyecto se almacena el conjunto de archivos, si uno de ellos no es modificado se mantiene una referencia directa del archivo con la versión anterior.</p>
+<div class="section" id="git-para-trabajo-local">
+<h3>Git para trabajo local<a class="headerlink" href="#git-para-trabajo-local" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>La base de datos de git se mantiene de forma local en cada repositorio del disco duro que se desee. Para crear la base de datos de git, y por ende el directorio git, desde la consola ubicado en el directorio deseado, se ejecuta:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ git init
+</pre></div>
+</div>
+<p>Con ello se genera dentro el directorio actual, otro directorio oculto donde vive el repositorio git y la base de datos en formato comprimido. A partir de aquí se puede controlar las versiones del proyecto, que se encuentra en el directorio donde el repositorio y la base de datos git fueron creados, usando todas las herramientas y funcionalidades que Git ofrece.</p>
+<p>Por ahora el trabajo se mantiene de forma local, ya que para trabajar en equipo, se necesita de un servidor para comunicar a los diferentes miembros que colaboran en el proyecto. Aquí se justifica el uso de GitHub como herramienta, ya que puede considerarse como el «servidor» para el equipo que  lo uutiliza, porque el repositorio y la base de datos git vive de forma remota.</p>
+</div>
+<div class="section" id="areas-de-trabajo-en-git">
+<h3>Áreas de trabajo en Git<a class="headerlink" href="#areas-de-trabajo-en-git" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Para un fácil manejo de los archivos modificados y las diferentes versiones del proyecto, se concibe que los archivos pasan por tres estados:</p>
+<ul class="simple">
+<li><p>Confirmado: El archivo ya ha sido almacenado en el repositorio git (de ahora en más llamado repositorio solamente).</p></li>
+<li><p>Modificado: El archivo difiere del almacenado en el repositorio.</p></li>
+<li><p>Preparado: El archivo modificado está preparado para ser confirmado y por ende para ser guardado en el repositorio el archivo modificado.</p></li>
+</ul>
+<p>A los estados posibles del archivo, se añade, que en Git existen tres estaciones o secciones de trabajo:</p>
+<ul class="simple">
+<li><p>Working Directory (Directorio de trabajo)</p></li>
+<li><p>Staging Area (área de ensayo)</p></li>
+<li><p>repositorio Git (Almacenamiento de las diferentes versiones del proyecto)</p></li>
+</ul>
+<p><img alt="Áreas de trabajo en Git" src="_images/img2.jpg" /></p>
+<p>El diagrama anterior puede ser usado para explicar un flujo de trabajo básico en Git. En primer lugar, cada conjunto de archivos que han sido modificados y posteriormente confirmados se constituye en una nueva versión del proyecto. Por esta razón de la imagen anterior, la versión 2 del proyecto es un conjunto de archivos ya confirmados y que ha sido traido al directorio de trabajo para modificarlo. A continuación, se explica un flujo básico de trabajo, proceso que es repetido cuantas veces sea necesario para completar el proyecto:</p>
+<ol class="simple">
+<li><p>En el directorio de trabajo se modifican los archivos de la versión 2 (A.1, C.3)  y se agregan nuevos (Archivo E, Archivo F). En este punto, los archivos poseen el estado modificado.</p></li>
+<li><p>Cuando los archivos han sido modificados, cada uno de ellos se agregan al area staging, En este punto, los archivos poseen el estado preparado. El comando para gacerlo es:</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ git add &lt;nombre_archivo&gt;
+</pre></div>
+</div>
+<p>Si se desea agregar todo el conjunto de archivos modificados se  ejecuta el comando:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ git  add .
+</pre></div>
+</div>
+<ol class="simple">
+<li><p>Cuando los archivos se encuentran el área staging y se confirman los cambios, los archivos pasan al repositorio, creando una nueva versión del proyecto. El comando para confirmar los cambios es:</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ git commit -m <span class="s2">&quot;&lt;mensaje&gt;&quot;</span>
+</pre></div>
+</div>
+<p>El objetivo del mensaje es dar una descripción precisa de los cambios realizados, ello ayudará en el futuro a recordar aspectos claves de la versión del proyecto que se está creando.</p>
+</div>
+<div class="section" id="bifurcando-el-trabajo">
+<h3>Bifurcando el trabajo<a class="headerlink" href="#bifurcando-el-trabajo" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Con Git es posible mantener en paralelo multiples versiones del proyecto, esta es una de las características que lo hace poderoso. Lo anterior significa que el desarrollo del proyecto no es lineal. El concepto detrás de la características mencionada es «branch» o rama en español. Más alla de ello, es posible incluso fusionar versiones, mediante el proceso llamado «merge».</p>
+<p><img alt="Ilustración de un flujo de trabajo simple usando ramas" src="_images/img3.jpg" /></p>
+<p>Un branch es una versión del proyecto, que inicia a partir de una versión específica. En la imagen se observa que en el flujo de trabajo han existido tres ramas:</p>
+<ul class="simple">
+<li><p>La primera rama lo constituyen los nodos de color azul</p></li>
+<li><p>La segunda rama está constituido por los nodos de color anaranjando</p></li>
+<li><p>La tercera rama está representada por el único nodo color verde</p></li>
+</ul>
+<p>El conjunto de nodos es conocido como el árbol de confirmaciones, ya que está constituido por todas las versiones del proyecto que son cambios confirmados. De la imagen se observa que, la segunda rama es creada a partir una versión (V1.1) de la primera rama, para hacerlo, al directorio de trabajo se trae la versión a partir de la cual se crea la rama y se ejecuta el siguiente comando:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ git checkout -b  &lt;nombre_rama_2&gt;
+</pre></div>
+</div>
+<p>Con ello, el proyecto ha sido bifurcado por la creación de una nueva rama y en el directorio de trabajo (dentro de la rama nueva) se ha hecho una copia de la versión del proyecto a partir del cual se ha creado la rama. Ahora, pueden hacerce cambios al conjunto de archivos del proyecto y luego confirmarlos, al hacerlo obtenemos otra versión (V2.1) del proyecto que es completamente independiente de la versión del
+cual partimos.</p>
+<p>El proceso anterior puede ser repetido, conforme al número de ramas que se necesiten. En la imagen se observa que a partir de la versión (V2.1) se crea una nueva rama, que da origen a la versión (V3.1) del proyecto. A continuación, surge la pregunta: ¿cómo puedo llevar a la rama 2 los cambios hechos en la versión (V3.1)? la respuesta es que fusionar las ramas.</p>
+<p>Para hacer la fusión, se trae al directorio de trabajo la última versión de la rama 2 con el comando:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ git checkout &lt;nombre_rama_2&gt;
+</pre></div>
+</div>
+<p>Luego se ejecuta el comando que realiza la fusión de las ramas:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ git merge &lt;nombre_rama_3&gt;
+</pre></div>
+</div>
+<p>Después de ejecutar el comando, en la segunda rama se crea una nueva versión (V2.2) del proyecto, que contiene lo realizado en la versión (V2.1) y (V3.2) de forma combinada. En la imagen también se observa que se hace una fusión entre la primera y segunda rama, combinando las versiones (V1.1) y (V2.2) del proyecto y creando la versión (V1.2).</p>
+<p>Cuando una de las ramas ya no se necesita, como en el caso de la tercera rama, esta puede ser eliminada mediante el comando:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ git branch -d &lt;nombre_rama_3&gt;
+</pre></div>
+</div>
+<p>En caso de error, por existir cambios que no han sido fusionados con ningún otra rama, se puede forzar el borrado cambiando la «d» por «D» en el comando anterior.</p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="Intro.html" title="previous page">Project-oriented workshop in Julia computing</a>
+    <a class='right-next' id="next-link" href="Fundamentos.html" title="next page">Fundamentos</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Luis Felipe Flores Machado<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>

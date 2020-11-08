@@ -1,0 +1,15 @@
+title: Project-oriented workshop in Julia computing
+author: Luis Felipe Flores Machado
+logo: 'images/julia_logo.png'
+latex: 
+  latex_engine: xelatex
+  latex_documents:
+    targetname: julia.tex 
+sphinx:
+  config:
+#    latex_toplevel_sectioning: 'part'
+    latex_elements:
+      preamble: |
+        \renewcommand{\contentsname}{Contenidos}
+        \renewcommand{\chaptername}{Capítulo}
+    language: es
