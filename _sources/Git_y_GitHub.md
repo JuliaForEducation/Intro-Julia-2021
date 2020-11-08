@@ -19,7 +19,7 @@ Git nace a raíz de la necesidad de un software para continuar con el desarrollo
 
 Git se puede considerar como una base de datos que mantiene instantáneas del conjuto de archivos del proyecto en cada versión de este, lo que permite que se pueda recuperar la forma de un proyecto en una versión específica. Por ello Git es útil cuando han ocurrido diversos errores y no hay forma fácil de solucionar, además, mantiene características con los que es posible integrar el trabajo hecho por muchas personas sobre un mismo conjunto de archivos. A continuación, se ilustra cómo Git mantiene las versiones de un proyecto con el tiempo.
 
-![Ilustración de las versiones de un proyecto en Git](./image/img1.jpg "Ilustración de las versiones de un proyecto en Git")
+![Ilustración de las versiones de un proyecto en Git](./images/img1.jpg "Ilustración de las versiones de un proyecto en Git")
 
 En cada versión del proyecto se almacena el conjunto de archivos, si uno de ellos no es modificado y nuevo (señalado con el borde rojo) se mantiene una referencia directa del archivo con la versión anterior.
 
@@ -46,7 +46,7 @@ A los estados posibles del archivo, se añade, que en Git existen tres estacione
 - Staging Area (Área de ensayo)
 - Repositorio Git (Almacenamiento de las diferentes versiones del proyecto)
 
-![Áreas de trabajo en Git](./image/img2.jpg "Ilustración de las versiones de un proyecto en Git")
+![Áreas de trabajo en Git](./images/img2.jpg "Ilustración de las versiones de un proyecto en Git")
 
 El diagrama anterior puede ser usado para explicar un flujo de trabajo básico en Git. En primer lugar, cada conjunto de archivos que han sido modificados y posteriormente confirmados se constituye en una nueva versión del proyecto. Por esta razón de la imagen anterior, la versión 2 del proyecto es un conjunto de archivos ya confirmados y que ha sido traido al directorio de trabajo para modificarlo. A continuación la explicación del flujo básico de trabajo, proceso que es repetido cuantas veces sea necesario para completar el proyecto:
 1. En el directorio de trabajo se modifican los archivos de la versión 2 (A.1, C.3)  y se agregan nuevos (Archivo E, Archivo F). En este punto, los archivos poseen el estado modificado y sin rastrear respectivamente.
@@ -68,7 +68,7 @@ El objetivo del mensaje es dar una descripción precisa de los cambios realizado
 
  Con Git es posible mantener en paralelo múltiples versiones del proyecto, esta es una de las características que lo hace poderoso. Lo anterior significa que el desarrollo del proyecto no es lineal. El concepto detrás de la características mencionada es "branch" o rama en español. Más alla de ello, es posible incluso fusionar versiones, mediante el proceso llamado "merge".
 
-![Ilustración de un flujo de trabajo simple usando ramas](./image/img3.jpg "Ilustración de las versiones de un proyecto en Git")
+![Ilustración de un flujo de trabajo simple usando ramas](./images/img3.jpg "Ilustración de las versiones de un proyecto en Git")
 
 Un branch es una versión del proyecto, que inicia a partir de una versión específica. En la imagen se observa que en el flujo de trabajo han existido tres ramas:
 - La primera rama lo constituyen los nodos de color azul
@@ -132,7 +132,7 @@ $ git clone <url_https/ssh>
 
 El comando anterior configura por defecto el nombre del repositorio remoto como "origin" y por convención es el más usado. Cuando ya se configura el origen remoto de datos en el repositorio local, se pueden mandar cambios al repositorio en la nube haciendo un "push" o actualizar el repositorio local con un "pull", tal como se muestra en la imagen.
 
-![Ilustración de un flujo de trabajo simple usando ramas](./image/img4.png "Ilustración de los espacios donde vive un repositorio Git")
+![Ilustración de un flujo de trabajo simple usando ramas](./images/img4.png "Ilustración de los espacios donde vive un repositorio Git")
 
 Pull es un comando que realiza dos acciones dentro del repositorio local. En primer lugar realiza un fetch, es decir, trae del repositorio remoto la última confirmación activa, por lo que es posible la versión que trae difiera del reposiorio local. La segunda acción que realiza es un merge, de esta forma se combina el repositorio remoto con el local actualizándolo. El comando para hacer un pull es:
 ~~~bash

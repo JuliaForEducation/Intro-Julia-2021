@@ -54,6 +54,7 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="_static/logo.ico"/>
     <link rel="index" title="Índice" href="genindex.html" />
     <link rel="search" title="Búsqueda" href="search.html" />
     <link rel="next" title="Fundamentos" href="Fundamentos.html" />
@@ -178,6 +179,24 @@
 </div>
         <!-- Source interaction buttons -->
 
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/JuliaForEducation/Intro-Julia-2021"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Repositorio de origen"><i
+                    class="fab fa-github"></i>repositorio</button></a>
+        <a class="issues-button"
+            href="https://github.com/JuliaForEducation/Intro-Julia-2021/issues/new?title=Issue%20on%20page%20%2FGit_y_GitHub.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Abrir un problema"><i class="fas fa-lightbulb"></i>Tema abierto</button></a>
+        <a class="edit-button" href="https://github.com/JuliaForEducation/Intro-Julia-2021/edit/master/Git_y_GitHub.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edita esta página"><i class="fas fa-pencil-alt"></i>Tema abierto</button></a>
+    </div>
+</div>
+
 
         <!-- Full screen (wrap in <a> to have style consistency -->
         <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
@@ -276,7 +295,7 @@
 <li><p>Capacidad de manejar proyectos a gran escala</p></li>
 </ul>
 <p>Git se puede considerar como una base de datos que mantiene instantáneas del conjuto de archivos del proyecto en cada versión de este, lo que permite que se pueda recuperar la forma de un proyecto en una versión específica. Por ello Git es útil cuando han ocurrido diversos errores y no hay forma fácil de solucionar, además, mantiene características con los que es posible integrar el trabajo hecho por muchas personas sobre un mismo conjunto de archivos. A continuación, se ilustra cómo Git mantiene las versiones de un proyecto con el tiempo.</p>
-<p><img alt="Ilustración de las versiones de un proyecto en Git" src="./image/img1.jpg" /></p>
+<p><img alt="Ilustración de las versiones de un proyecto en Git" src="_images/img1.jpg" /></p>
 <p>En cada versión del proyecto se almacena el conjunto de archivos, si uno de ellos no es modificado y nuevo (señalado con el borde rojo) se mantiene una referencia directa del archivo con la versión anterior.</p>
 <div class="section" id="git-para-trabajo-local">
 <h3>Git para trabajo local<a class="headerlink" href="#git-para-trabajo-local" title="Enlazar permanentemente con este título">¶</a></h3>
@@ -302,7 +321,7 @@
 <li><p>Staging Area (Área de ensayo)</p></li>
 <li><p>Repositorio Git (Almacenamiento de las diferentes versiones del proyecto)</p></li>
 </ul>
-<p><img alt="Áreas de trabajo en Git" src="./image/img2.jpg" /></p>
+<p><img alt="Áreas de trabajo en Git" src="_images/img2.jpg" /></p>
 <p>El diagrama anterior puede ser usado para explicar un flujo de trabajo básico en Git. En primer lugar, cada conjunto de archivos que han sido modificados y posteriormente confirmados se constituye en una nueva versión del proyecto. Por esta razón de la imagen anterior, la versión 2 del proyecto es un conjunto de archivos ya confirmados y que ha sido traido al directorio de trabajo para modificarlo. A continuación la explicación del flujo básico de trabajo, proceso que es repetido cuantas veces sea necesario para completar el proyecto:</p>
 <ol class="simple">
 <li><p>En el directorio de trabajo se modifican los archivos de la versión 2 (A.1, C.3)  y se agregan nuevos (Archivo E, Archivo F). En este punto, los archivos poseen el estado modificado y sin rastrear respectivamente.</p></li>
@@ -326,7 +345,7 @@
 <div class="section" id="bifurcando-el-trabajo">
 <h3>Bifurcando el trabajo<a class="headerlink" href="#bifurcando-el-trabajo" title="Enlazar permanentemente con este título">¶</a></h3>
 <p>Con Git es posible mantener en paralelo múltiples versiones del proyecto, esta es una de las características que lo hace poderoso. Lo anterior significa que el desarrollo del proyecto no es lineal. El concepto detrás de la características mencionada es «branch» o rama en español. Más alla de ello, es posible incluso fusionar versiones, mediante el proceso llamado «merge».</p>
-<p><img alt="Ilustración de un flujo de trabajo simple usando ramas" src="./image/img3.jpg" /></p>
+<p><img alt="Ilustración de un flujo de trabajo simple usando ramas" src="_images/img3.jpg" /></p>
 <p>Un branch es una versión del proyecto, que inicia a partir de una versión específica. En la imagen se observa que en el flujo de trabajo han existido tres ramas:</p>
 <ul class="simple">
 <li><p>La primera rama lo constituyen los nodos de color azul</p></li>
@@ -386,7 +405,7 @@ cual partimos.</p>
 </pre></div>
 </div>
 <p>El comando anterior configura por defecto el nombre del repositorio remoto como «origin» y por convención es el más usado. Cuando ya se configura el origen remoto de datos en el repositorio local, se pueden mandar cambios al repositorio en la nube haciendo un «push» o actualizar el repositorio local con un «pull», tal como se muestra en la imagen.</p>
-<p><img alt="Ilustración de un flujo de trabajo simple usando ramas" src="./image/img4.png" /></p>
+<p><img alt="Ilustración de un flujo de trabajo simple usando ramas" src="_images/img4.png" /></p>
 <p>Pull es un comando que realiza dos acciones dentro del repositorio local. En primer lugar realiza un fetch, es decir, trae del repositorio remoto la última confirmación activa, por lo que es posible la versión que trae difiera del reposiorio local. La segunda acción que realiza es un merge, de esta forma se combina el repositorio remoto con el local actualizándolo. El comando para hacer un pull es:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ git pull &lt;nombre_repositorio_remoto&gt; &lt;nombre_rama&gt;
 </pre></div>
