@@ -13,3 +13,10 @@ sphinx:
         \renewcommand{\contentsname}{Contenidos}
         \renewcommand{\chaptername}{Capítulo}
     language: es
+repository:
+        url: https://github.com/JuliaForEducation/Intro-Julia-2021
+html:
+  use_repository_button: true
+  use_issues_button: true
+  use_edit_page_button: true
+  favicon: "images/logo.ico"
