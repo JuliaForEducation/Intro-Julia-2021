@@ -1,0 +1,24 @@
+title: Project-oriented workshop in Julia computing
+author: Luis Felipe Flores Machado, René David Hernández
+logo: 'images/julia_logo.png'
+latex: 
+  latex_engine: xelatex
+  latex_documents:
+    targetname: julia.tex 
+sphinx:
+  config:
+#    latex_toplevel_sectioning: 'part'
+    latex_elements:
+      preamble: |
+        \renewcommand{\contentsname}{Contenidos}
+        \renewcommand{\chaptername}{Capítulo}
+    language: es
+repository:
+        url: https://github.com/JuliaForEducation/Intro-Julia-2021
+html:
+  use_repository_button: true
+  use_issues_button: true
+  use_edit_page_button: true
+  favicon: "images/logo.ico"
+execute:
+  execute_notebooks: 'off'
