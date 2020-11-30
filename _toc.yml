@@ -1,6 +1,7 @@
 - file: Intro
+  title: test
 
-- part: Material principal
+- part: Primera Semana
   chapters:
   - file: Git_y_GitHub
   - file: Fundamentos 
