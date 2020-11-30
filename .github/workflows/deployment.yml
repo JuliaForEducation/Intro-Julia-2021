@@ -22,7 +22,7 @@ jobs:
     - name: set up Julia 1.5.0
       uses: julia-actions/setup-julia@v1
       with:
-        version: 1.5.0
+        version: "1.5.1"
 
     - name: Install dependencies
       run: |
