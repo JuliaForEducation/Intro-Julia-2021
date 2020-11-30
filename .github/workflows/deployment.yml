@@ -19,6 +19,10 @@ jobs:
       with:
         python-version: 3.7
 
+    - name: Set up Julia-latest
+      run: |
+          bash -ci "$(curl -fsSL https://raw.githubusercontent.com/abelsiqueira/jill/master/jill.sh)"
+
     - name: Install dependencies
       run: |
         pip install -r requirements.txt
