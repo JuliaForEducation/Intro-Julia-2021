@@ -1,0 +1,974 @@
+
+<!DOCTYPE html>
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Estructuras de Control &#8212; Project-oriented workshop in Julia computing</title>
+    
+  <link rel="stylesheet" href="_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/translations.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="_static/logo.ico"/>
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Búsqueda" href="search.html" />
+    <link rel="next" title="Estructuras de Datos" href="Estructuras_de_Datos.html" />
+    <link rel="prev" title="Fundamentos" href="Fundamentos.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="index.html">
+  
+  <img src="_static/julia_logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Project-oriented workshop in Julia computing</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Buscar este libro ..." aria-label="Buscar este libro ..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Intro.html">
+   Project-oriented workshop in Julia computing
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Primera Semana
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Git_y_GitHub.html">
+   Git y GitHub
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Fundamentos.html">
+   Fundamentos
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Estructuras de Control
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Estructuras_de_Datos.html">
+   Estructuras de Datos
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Proyectos
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Primer_proyecto.html">
+   Primer proyecto
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Navegación de palanca" aria-controls="site-navigation"
+            title="Navegación de palanca" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Descarga esta pagina"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/Estructuras_de_Control.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Descargar archivo fuente" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimir en PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/JuliaForEducation/Intro-Julia-2021"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Repositorio de origen"><i
+                    class="fab fa-github"></i>repositorio</button></a>
+        <a class="issues-button"
+            href="https://github.com/JuliaForEducation/Intro-Julia-2021/issues/new?title=Issue%20on%20page%20%2FEstructuras_de_Control.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Abrir un problema"><i class="fas fa-lightbulb"></i>Tema abierto</button></a>
+        <a class="edit-button" href="https://github.com/JuliaForEducation/Intro-Julia-2021/edit/master/Estructuras_de_Control.ipynb"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edita esta página"><i class="fas fa-pencil-alt"></i>Tema abierto</button></a>
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Modo de pantalla completa"
+                title="Modo de pantalla completa"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/JuliaForEducation/Intro-Julia-2021/master?urlpath=tree/Estructuras_de_Control.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Lanzamiento Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contenido
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#operadores">
+   Operadores
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#operadores-relacionales">
+     Operadores relacionales
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#operador-de-igualdad">
+       Operador de igualdad:
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#operador-de-igualdad-estricto">
+       Operador de igualdad estricto:
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#operador-de-desigualdad-o-no-igualdad">
+       Operador de desigualdad o no-igualdad:
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#operador-de-desigualdad-estricto">
+       Operador de desigualdad estricto:
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#operador-de-comparacion-mayor-y-menor-que">
+       Operador de comparación mayor y menor que:
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#operadores-logicos">
+     Operadores lógicos
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#operador-and">
+       Operador AND
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#operador-or">
+       Operador OR
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#operador-de-cortocircuito">
+       Operador de cortocircuito
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#precedencia-de-los-operadores">
+       Precedencia de los operadores
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#otros-operadores">
+       Otros operadores
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#operadores-de-pertenencia">
+         Operadores de pertenencia
+        </a>
+       </li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   Estructuras de Control
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#estructura-secuencial">
+     Estructura secuencial
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#estructura-de-seleccion">
+     Estructura de selección
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#instruccion-if">
+       Instrucción if
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#instruccion-if-elseif">
+       Instrucción if-elseif
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#operador-ternario">
+       Operador ternario
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#instruccion-switch">
+       Instrucción switch
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#estructura-de-repeticion">
+     Estructura de repetición
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#instruccion-while">
+       Instrucción while
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#instruccion-for">
+       Instrucción for
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#sentencias-break-y-continue">
+       Sentencias break y continue
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="estructuras-de-control">
+<h1>Estructuras de Control<a class="headerlink" href="#estructuras-de-control" title="Enlazar permanentemente con este título">¶</a></h1>
+<div class="section" id="operadores">
+<h2>Operadores<a class="headerlink" href="#operadores" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Los operadores se pueden definir como símbolos que permiten realizar diferentes operaciones entre valores o datos de un programa. Con ellos se pueden conectar dos  más expresiones, cuyo valor final para la expresión compuesta depende del valor de las expresiones que fueron conectadas.</p>
+<p>Existen diferentes tipos de operadores, entre ellos: aritméticos, asignación, relacionales, lógicos, etc. De ellos se hace especial mención de los operadores lógicos y relacionales, ya que son usados para la creación de test o comprobaciones con los cuales es posible controlar el <strong>flujo de un programa</strong> junto con las denominadas <strong>estructuras de control</strong>.</p>
+<p>Los operadores lógicos y relacionales permiten evaluar y crear expresiones booleanas. Las expresiones de este tipo son aquellas que pueden tener la condición de <code class="docutils literal notranslate"><span class="pre">true</span></code> o <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
+<div class="section" id="operadores-relacionales">
+<h3>Operadores relacionales<a class="headerlink" href="#operadores-relacionales" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Son operadores que nos permiten determinar un valor de verdad para una situación concreta, en el cual se necesita comparar determinados valores. Las operaciones de comparación estándar, en Julia, se definen para todos los tipos numéricos primitivos y estos son:</p>
+<div class="section" id="operador-de-igualdad">
+<h4>Operador de igualdad:<a class="headerlink" href="#operador-de-igualdad" title="Enlazar permanentemente con este título">¶</a></h4>
+<p>El operador de igualdad es denotado por <code class="docutils literal notranslate"><span class="pre">==</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="mi">5</span> <span class="o">==</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span> <span class="o">==</span> <span class="mf">5.0</span><span class="p">,</span> <span class="mi">5</span> <span class="o">==</span> <span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="operador-de-igualdad-estricto">
+<h4>Operador de igualdad estricto:<a class="headerlink" href="#operador-de-igualdad-estricto" title="Enlazar permanentemente con este título">¶</a></h4>
+<p>El operador de igualdad estricta se denotado por <code class="docutils literal notranslate"><span class="pre">===</span></code> o bien, <code class="docutils literal notranslate"><span class="pre">≡</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="mi">5</span> <span class="o">===</span> <span class="mf">5.0</span><span class="p">,</span> <span class="mf">5.0</span> <span class="o">≡</span> <span class="mf">5.0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>El símbolo ≡ se introduce escribiendo <code class="docutils literal notranslate"><span class="pre">\equiv+&lt;TAB&gt;</span></code>.</p>
+</div>
+<div class="section" id="operador-de-desigualdad-o-no-igualdad">
+<h4>Operador de desigualdad o no-igualdad:<a class="headerlink" href="#operador-de-desigualdad-o-no-igualdad" title="Enlazar permanentemente con este título">¶</a></h4>
+<p>El operador de desigualdad o no-igualdad se denota por <code class="docutils literal notranslate"><span class="pre">!=</span></code> o <code class="docutils literal notranslate"><span class="pre">≠</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="mi">1</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span> <span class="o">≠</span> <span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>El símbolo ≠ se introduce escribiendo <code class="docutils literal notranslate"><span class="pre">\ne+&lt;TAB&gt;</span></code>.</p>
+</div>
+<div class="section" id="operador-de-desigualdad-estricto">
+<h4>Operador de desigualdad estricto:<a class="headerlink" href="#operador-de-desigualdad-estricto" title="Enlazar permanentemente con este título">¶</a></h4>
+<p>El operador de desiagualdad o no-igualdad estricta es denotado por <code class="docutils literal notranslate"><span class="pre">!==</span></code> o <code class="docutils literal notranslate"><span class="pre">≢</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="mi">5</span> <span class="o">!==</span> <span class="mf">5.0</span><span class="p">,</span> <span class="mi">5</span> <span class="o">≢</span> <span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>El símbolo ≢  se introduce escribiendo <code class="docutils literal notranslate"><span class="pre">\nequiv+&lt;TAB&gt;</span></code>.</p>
+</div>
+<div class="section" id="operador-de-comparacion-mayor-y-menor-que">
+<h4>Operador de comparación mayor y menor que:<a class="headerlink" href="#operador-de-comparacion-mayor-y-menor-que" title="Enlazar permanentemente con este título">¶</a></h4>
+<p>Tenemos múltiples operadores de comparación de órden, o comúnmente conocidos por desigualdades (en dicho caso, se llama a las comparaciones anteriores no-igualdades). Estas son:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="o">-</span><span class="mi">1</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span> <span class="o">&lt;=</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span> <span class="o">≤</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mf">1.0</span> <span class="o">&gt;</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span> <span class="o">&gt;=</span> <span class="mf">1.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.5</span> <span class="o">≥</span> <span class="mf">1.0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>El símbolo ≥ se introduce escribiendo <code class="docutils literal notranslate"><span class="pre">\ge+&lt;TAB&gt;</span></code> y el símbolo ≤ se introduce mediante <code class="docutils literal notranslate"><span class="pre">\le+&lt;TAB&gt;</span></code></p>
+</div>
+</div>
+<div class="section" id="operadores-logicos">
+<h3>Operadores lógicos<a class="headerlink" href="#operadores-logicos" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Son operadores que trabajan sobre valores del tipo booleano (<code class="docutils literal notranslate"><span class="pre">true</span></code>, <code class="docutils literal notranslate"><span class="pre">false</span></code>) y componen expresiones booleanas más complejas, en su mayoría a partir de varias expresiones que involucran operadores relacionales.</p>
+<p>Los lenguajes de programación incorporan 3 operadores: AND y OR, los cuales son operadores binarios; NOT, que es un operador unario.</p>
+<div class="section" id="operador-and">
+<h4>Operador AND<a class="headerlink" href="#operador-and" title="Enlazar permanentemente con este título">¶</a></h4>
+<p>Este operador retorna el valor booleano <code class="docutils literal notranslate"><span class="pre">true</span></code> solamente si los dos operandos son verdaderos (<code class="docutils literal notranslate"><span class="pre">true</span></code>). En Julia el símbolo usado para el operador es <code class="docutils literal notranslate"><span class="pre">&amp;&amp;</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="kc">true</span> <span class="o">&amp;&amp;</span> <span class="kc">true</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="kc">true</span> <span class="o">&amp;&amp;</span> <span class="kc">false</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="kc">false</span> <span class="o">&amp;&amp;</span> <span class="kc">true</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="kc">false</span> <span class="o">&amp;&amp;</span> <span class="kc">false</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="operador-or">
+<h4>Operador OR<a class="headerlink" href="#operador-or" title="Enlazar permanentemente con este título">¶</a></h4>
+<p>Este operador retorna el valor booleano <code class="docutils literal notranslate"><span class="pre">false</span></code> solamente si los dos operandos son falsos (<code class="docutils literal notranslate"><span class="pre">false</span></code>). En Julia el símbolo usado para el operador es <code class="docutils literal notranslate"><span class="pre">||</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="kc">false</span> <span class="o">||</span> <span class="kc">false</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="kc">false</span> <span class="o">||</span> <span class="kc">true</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="kc">true</span> <span class="o">||</span> <span class="kc">false</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="kc">true</span> <span class="o">||</span> <span class="kc">true</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="operador-de-cortocircuito">
+<h4>Operador de cortocircuito<a class="headerlink" href="#operador-de-cortocircuito" title="Enlazar permanentemente con este título">¶</a></h4>
+<p>Los operadores lógicos en Julia se evaluan mediante “Short-Circuit Evaluation”, esto significa que se siempre se trata de hacer el menor número de evaluaciones.</p>
+<ul class="simple">
+<li><p>Para la expresión <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">&amp;&amp;</span> <span class="pre">b</span></code>, la subexpresión <code class="docutils literal notranslate"><span class="pre">b</span></code> se evalúa sólo si <code class="docutils literal notranslate"><span class="pre">a</span></code> es <code class="docutils literal notranslate"><span class="pre">true</span></code>, ya que la expresión será <code class="docutils literal notranslate"><span class="pre">false</span></code> si <code class="docutils literal notranslate"><span class="pre">a</span></code> lo es y ello independiente del valor de <code class="docutils literal notranslate"><span class="pre">b</span></code>.</p></li>
+<li><p>Para la expresión <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">||</span> <span class="pre">b</span></code>, la subexpresión <code class="docutils literal notranslate"><span class="pre">b</span></code> se evalúa sólo si <code class="docutils literal notranslate"><span class="pre">a</span></code> es <code class="docutils literal notranslate"><span class="pre">false</span></code>, ya que la expresión será <code class="docutils literal notranslate"><span class="pre">true</span></code> si <code class="docutils literal notranslate"><span class="pre">a</span></code> lo es y ello independiente del valor de `b.</p></li>
+</ul>
+<p><strong>NOTA:</strong> Los operadores <code class="docutils literal notranslate"><span class="pre">&amp;&amp;</span></code> y <code class="docutils literal notranslate"><span class="pre">||</span></code> no deben ser confundidos con los operadores <code class="docutils literal notranslate"><span class="pre">&amp;</span></code> y <code class="docutils literal notranslate"><span class="pre">|</span></code>, estos últimos son operadores denominados bitwise (bit a bit).</p>
+<p>####### Operador NOT
+Este operador retorna el valor booleano contrario sobre el cual opera. En Julia el símbolo usado para el operador es <code class="docutils literal notranslate"><span class="pre">!</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="o">!</span><span class="kc">false</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="o">!</span><span class="kc">true</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="precedencia-de-los-operadores">
+<h4>Precedencia de los operadores<a class="headerlink" href="#precedencia-de-los-operadores" title="Enlazar permanentemente con este título">¶</a></h4>
+<p>Los operadores lógicos pueden escribirse de la siguiente forma:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span> <span class="mi">1</span><span class="o">-</span><span class="mi">5</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="mi">2</span><span class="o">+</span><span class="mi">2</span> <span class="o">==</span> <span class="mi">4</span> <span class="o">||</span> <span class="mi">10</span><span class="o">-</span><span class="mi">4</span> <span class="o">==</span> <span class="mi">2</span><span class="o">*</span><span class="mi">3</span> <span class="o">&amp;&amp;</span> <span class="kc">true</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>La expresión anterior es ambigua porque no se conoce cómo se ejecutan los operadores.  Para aclarar la forma en que Julia ejecuta la sentencia, se debe tomar en cuenta la precedencia de los operadores.</p>
+<p>En primer lugar los operadores lógicos tienen mayor precedencia, por lo que la expresión de ejemplo se reduce  a:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="kc">false</span> <span class="o">&amp;&amp;</span> <span class="kc">true</span> <span class="o">||</span>  <span class="kc">true</span> <span class="o">&amp;&amp;</span> <span class="kc">true</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Finalmente, la última expresión se evalúa de izquierda a derecha. Aunque es útil saber la manera en que Julia ejecuta los operadores lógicos, a menudo se prefiere utilizar los paréntesis para eliminar las ambiguedades, permite que exista más legibilidad en el código.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span> <span class="p">((</span><span class="mi">1</span><span class="o">-</span><span class="mi">5</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="mi">2</span><span class="o">+</span><span class="mi">2</span> <span class="o">==</span> <span class="mi">4</span><span class="p">)</span><span class="o">||</span> <span class="mi">10</span><span class="o">-</span><span class="mi">4</span> <span class="o">==</span> <span class="mi">2</span><span class="o">*</span><span class="mi">3</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="kc">true</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span> <span class="mi">1</span><span class="o">-</span><span class="mi">5</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="mi">2</span><span class="o">+</span><span class="mi">2</span> <span class="o">==</span> <span class="mi">4</span> <span class="o">||</span> <span class="mi">10</span><span class="o">-</span><span class="mi">4</span> <span class="o">==</span> <span class="mi">2</span><span class="o">*</span><span class="mi">3</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="kc">true</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="otros-operadores">
+<h4>Otros operadores<a class="headerlink" href="#otros-operadores" title="Enlazar permanentemente con este título">¶</a></h4>
+<p>Los lenguajes de programación implementan otros tipos de operadores, los mencionados a continuación son importantes para el uso de estructuras de control.</p>
+<div class="section" id="operadores-de-pertenencia">
+<h5>Operadores de pertenencia<a class="headerlink" href="#operadores-de-pertenencia" title="Enlazar permanentemente con este título">¶</a></h5>
+<p>Son usados para comprobar si un elemento se encuentra en un determinado conjunto de datos, los cuales pueden ser del tipo: array, matrices, diccionarios o conjuntos.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span> <span class="kp">in</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span> <span class="o">∈</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="mf">6.0</span> <span class="o">∉</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Los símbolos anteriores se introducen de la siguiente manera: ∈ mediante <code class="docutils literal notranslate"><span class="pre">\in+&lt;TAB&gt;</span></code>,∉ mediante <code class="docutils literal notranslate"><span class="pre">\notin+&lt;TAB&gt;</span></code></p>
+<p><strong>NOTA:</strong> Una fuente de consulta adicional sobre los diferentes tipos operadores y funciones especiales en Julia, puede encontrarlo en el <a class="reference external" href="https://docs.julialang.org/en/v1/manual/mathematical-operations/##Mathematical-Operations-and-Elementary-Functions">manual de Julia.</a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id1">
+<h2>Estructuras de Control<a class="headerlink" href="#id1" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>En general un programa está definido por un algoritmo, que constituye una guía que lista los pasos a seguir para la resolución de un problema. Es por ello que todo lenguaje de programación de alto nivel posee definida ciertas estructuras que proveen una forma útil para organizar el algoritmo y permiten manipular el flujo de un programa, esto es, crear diferentes caminos para la ejecución de tareas o sentencias que definen el programa.</p>
+<p>Las estructuras de control, en lenguajes de programación, a menudo están referidos a sentencias que permiten: la elección de ejecución de código mediante condiciones o decisiones y repetición en la ejecución de bloques de código mediante bucles. En la construcción de tales estructuras se utilizan los operadores anteriormente mencionados.</p>
+<div class="section" id="estructura-secuencial">
+<h3>Estructura secuencial<a class="headerlink" href="#estructura-secuencial" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Por defecto las instrucciones de un programa se ejecutan de manera secuencial, es decir, en el orden en el cual están descritas; esta forma de ejecución se conoce como estructura secuencial.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">begin</span>
+	<span class="n">x</span> <span class="o">=</span> <span class="mi">1</span>
+	<span class="n">y</span> <span class="o">=</span> <span class="mi">2</span>
+	<span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="p">;</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Los keywords <code class="docutils literal notranslate"><span class="pre">begin</span></code> y <code class="docutils literal notranslate"><span class="pre">end</span></code> conforman delimitadores para un bloque de código, considerandolo como una expresión. Incluso, el bloque de código puede ser asignado a una variable. Su principal uso consiste en evaluar varias expresiones encadenadas, retornando el valor de la última subexpresión.</p>
+</div>
+<div class="section" id="estructura-de-seleccion">
+<h3>Estructura de selección<a class="headerlink" href="#estructura-de-seleccion" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Esta estructura permite decidir qué bloque debe ejecutarse mediante la evaluación de una condición o expresión booleana. Julia implementa diferentes formatos:</p>
+<ul class="simple">
+<li><p>if</p></li>
+<li><p>if-elseif</p></li>
+<li><p>Operador ternario</p></li>
+</ul>
+<div class="section" id="instruccion-if">
+<h4>Instrucción if<a class="headerlink" href="#instruccion-if" title="Enlazar permanentemente con este título">¶</a></h4>
+<p>La instrucción <code class="docutils literal notranslate"><span class="pre">if</span></code> permite comprobar el cumplimiento de una condición, en dicho caso se ejecuta un determinado bloque de código, si es lo contrario es posible ejecutar un grupo diferente de líneas de código.</p>
+<p>La función <code class="docutils literal notranslate"><span class="pre">testtriangle</span></code> respresenta un test de comprobación para saber si dada una terna de números, estos pueden representar las longitudes de los lados de un triángulo.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">function</span> <span class="n">testtriangle</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">)</span>
+	<span class="k">if</span> <span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="o">&gt;</span><span class="n">c</span> <span class="o">&amp;&amp;</span> <span class="n">a</span><span class="o">+</span><span class="n">c</span><span class="o">&gt;</span><span class="n">b</span> <span class="o">&amp;&amp;</span> <span class="n">b</span><span class="o">+</span><span class="n">c</span><span class="o">&gt;</span><span class="n">a</span> <span class="c">##Condición</span>
+		<span class="k">return</span> <span class="s">&quot;Las longitudes dadas representan los lados de un triángulo&quot;</span>
+	<span class="k">else</span> <span class="c">##Bloque de código alternativo en caso de no cumplirse la condicíon</span>
+		<span class="k">return</span> <span class="s">&quot;Las longitudes dadas no representan los lados de un triángulo&quot;</span>
+	<span class="k">end</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">testtriangle</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>En el dessarrollo de la función se implementa la estructura de control <code class="docutils literal notranslate"><span class="pre">if</span></code>, donde si en efecto se cumple el criterio que en un triángulo la longitud de cada lado debe ser menor que la suma de los otros dos lados, se imprime la oración “Las longitudes dadas representan los lados de un triángulo”, en caso contrario se imprime “Las longitudes dadas no representan los lados de un triángulo”.</p>
+<p>El bloque de código alternativo, <code class="docutils literal notranslate"><span class="pre">else</span></code>, es opcional, por ello puede prescindirse de dicho bloque si en el problema no se considera necesario.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">function</span> <span class="n">testtriangle2</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">)</span>
+	<span class="k">if</span> <span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="o">&gt;</span><span class="n">c</span> <span class="o">&amp;&amp;</span> <span class="n">a</span><span class="o">+</span><span class="n">c</span><span class="o">&gt;</span><span class="n">b</span> <span class="o">&amp;&amp;</span> <span class="n">b</span><span class="o">+</span><span class="n">c</span><span class="o">&gt;</span><span class="n">a</span>
+		<span class="k">return</span> <span class="s">&quot;Las longitudes dadas representan los lados de un triángulo&quot;</span>
+	<span class="k">end</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">testtriangle2</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="instruccion-if-elseif">
+<h4>Instrucción if-elseif<a class="headerlink" href="#instruccion-if-elseif" title="Enlazar permanentemente con este título">¶</a></h4>
+<p>Esta instrucción permite implementar instrucciones <code class="docutils literal notranslate"><span class="pre">if</span></code> encadenadas, sucediendo lo anterior en caso que se necesite realizar más de una comprobación.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">function</span> <span class="n">whichtriangle</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">)</span>
+	<span class="k">if</span> <span class="n">a</span><span class="o">==</span><span class="n">b</span> <span class="o">&amp;&amp;</span> <span class="n">b</span><span class="o">==</span><span class="n">c</span>
+		<span class="k">return</span> <span class="s">&quot;El triángulo es rectángulo&quot;</span>
+	<span class="k">elseif</span> <span class="n">a</span><span class="o">==</span><span class="n">b</span> <span class="o">||</span> <span class="n">b</span><span class="o">==</span><span class="n">c</span> <span class="o">||</span> <span class="n">a</span><span class="o">==</span><span class="n">c</span>
+		<span class="k">return</span> <span class="s">&quot;El triángulo es isóceles&quot;</span>
+	<span class="k">else</span>
+		<span class="k">return</span> <span class="s">&quot;El triángulo es escaleno&quot;</span>
+	<span class="k">end</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">whichtriangle</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">whichtriangle</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="operador-ternario">
+<h4>Operador ternario<a class="headerlink" href="#operador-ternario" title="Enlazar permanentemente con este título">¶</a></h4>
+<p>En otros lenguajes este operador también es llamado operador elvis. Permite tener una versión simplificada del operador <code class="docutils literal notranslate"><span class="pre">if</span></code>, el cual puede ser escrito en una sola línea de código.</p>
+<p>Se suele utilizar cuando se requiere una elección condicional entre valores de expresión única, en contraposición a la ejecución condicional de bloques de código más largos.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">mayor</span> <span class="o">=</span> <span class="n">x</span><span class="o">&gt;</span><span class="n">y</span> <span class="o">?</span> <span class="n">x</span> <span class="o">:</span> <span class="n">y</span> <span class="c">##las variables &quot;x&quot; y &quot;y&quot; fueron definidas previamente.</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Al igual que las instrucción <code class="docutils literal notranslate"><span class="pre">if</span></code>, el operador ternario puede encadenarse.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">begin</span>
+	<span class="n">testcomparación</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span> <span class="o">=</span> <span class="n">x</span><span class="o">&gt;</span><span class="n">y</span> <span class="o">?</span> <span class="s">&quot;x es mayor a y&quot;</span> <span class="o">:</span>
+						   <span class="n">x</span><span class="o">&lt;</span><span class="n">y</span> <span class="o">?</span> <span class="s">&quot;y es mayor a x&quot;</span> <span class="o">:</span> <span class="s">&quot;x es igual a y&quot;</span>
+	<span class="n">testcomparación</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>NOTAS:</strong></p>
+<ul class="simple">
+<li><p>Las estructuras de control if no introducen un nuevo ámbito local, significa que se puede declarar una nueva variable en la estructura y  utilizarla fuera de este. Sin embargo, debe usarse con cuidado ya que puede introducir errores de sitaxis.</p></li>
+<li><p>Devuelve el valor de la última expresión ejecutada en la estructura.</p></li>
+<li><p>Los únicos valores aceptados en la condicional son los del tipo booleano. Significa que, a diferecia de otros lenguajes, no se permiten el uso de <code class="docutils literal notranslate"><span class="pre">0</span></code> o <code class="docutils literal notranslate"><span class="pre">1</span></code> en la condición.</p></li>
+</ul>
+</div>
+<div class="section" id="instruccion-switch">
+<h4>Instrucción switch<a class="headerlink" href="#instruccion-switch" title="Enlazar permanentemente con este título">¶</a></h4>
+<p>Julia a diferencia de otros lenguajes de programación no implementa la instrucción <code class="docutils literal notranslate"><span class="pre">Switch</span></code>. Esta instrucción permite cambiar el flujo de un programa dependiendo del valor de una variable o expresión, permitiendo tomar decisiones cuando existe más de dos opciones.</p>
+<p>Julia ofrece un paquetes adicional para implementar esta instrucción, el paquete <code class="docutils literal notranslate"><span class="pre">Match.jl</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">using</span> <span class="n">Pkg</span><span class="p">;</span> <span class="n">Pkg</span><span class="o">.</span><span class="n">activate</span><span class="p">(</span><span class="s">&quot;.&quot;</span><span class="p">);</span> <span class="n">Pkg</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s">&quot;Match&quot;</span><span class="p">);</span> <span class="k">using</span> <span class="n">Match</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">function</span> <span class="n">switchselect</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+	<span class="nd">@match</span> <span class="n">x</span> <span class="k">begin</span>
+		<span class="mi">1</span> 	 <span class="o">=&gt;</span> <span class="s">&quot;x tiene el valor de 1&quot;</span>
+		<span class="mi">2</span> 	 <span class="o">=&gt;</span> <span class="s">&quot;x tiene el valor de 2&quot;</span>
+		<span class="mi">3</span><span class="o">||</span><span class="mi">4</span> <span class="o">=&gt;</span> <span class="s">&quot;tres o cuatro&quot;</span>
+		<span class="mi">3</span><span class="o">:</span><span class="mi">10</span>  <span class="o">=&gt;</span> <span class="s">&quot;x es el rango 3:10&quot;</span>
+		<span class="n">_</span>    <span class="o">=&gt;</span> <span class="s">&quot;Caso default&quot;</span>
+	<span class="k">end</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">switchselect</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Las posibilidades con el paquete mencionados son varias, este guía la macro bajo la política de primera coinicidencia y se pueden establecer comparaciones entre distintos tipos de datos, además, coincidencia profunda con matrices. Puede encontrar mayor información en la <a class="reference external" href="https://kmsquire.github.io/Match.jl/latest/">documentación del paquete Match.jl</a></p>
+<p>En determinadas ocasiones esta instrucción suele ser más eficiente que el encadenamiento de instrucciones <code class="docutils literal notranslate"><span class="pre">if</span></code>. Lo anterior debido que, cuando se tienen múltiples casos los <code class="docutils literal notranslate"><span class="pre">if</span></code> encadenados son evaluados hasta que se encuentra la condición que se cumple y en el peor de los casos se pueden evaluar todas las condiciones sin encontrar una condición que se cumple, ello hace que se tome un tiempo considerable de cálculo. Mientras que en la instrucción <code class="docutils literal notranslate"><span class="pre">switch</span></code>, la ejecución de un bloque de código está atada al valor de una expresión, por ello la ejecución o no del bloque es más directa que las los <code class="docutils literal notranslate"><span class="pre">if</span></code> encadenados.</p>
+</div>
+</div>
+<div class="section" id="estructura-de-repeticion">
+<h3>Estructura de repetición<a class="headerlink" href="#estructura-de-repeticion" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Esta estructura permite repetir un código las ocasiones que fueren necesarios. Julia implementa dos instrucciones para la evaluación repetida de expresiones: el bucle <code class="docutils literal notranslate"><span class="pre">while</span></code>  y el bucle <code class="docutils literal notranslate"><span class="pre">for</span></code>.</p>
+<div class="section" id="instruccion-while">
+<h4>Instrucción while<a class="headerlink" href="#instruccion-while" title="Enlazar permanentemente con este título">¶</a></h4>
+<p>Con esta instrucción se especifica que una serie de tareas o líneas de código se ejecutan de forma repetida mientras una condición sea verdadera.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">begin</span>
+	<span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+	<span class="nb">e</span> <span class="o">=</span> <span class="mi">0</span>
+	<span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">20</span> <span class="c">##Condición</span>
+		<span class="n">t</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="n">factorial</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="c">##Cuerpo de la instrucción while</span>
+		<span class="nb">e</span> <span class="o">+=</span> <span class="n">t</span>
+		<span class="n">i</span><span class="o">+=</span> <span class="mi">1</span>
+	<span class="k">end</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>La rutina anterior calcula el valor aproximado del número e, evaluando una serie hasta el vigésimo término. Se puede observar que las sentencias: <code class="docutils literal notranslate"><span class="pre">e</span> <span class="pre">+=</span> <span class="pre">1/factorial(i)</span></code> y <code class="docutils literal notranslate"><span class="pre">i+=</span> <span class="pre">1</span></code> se repiten, hasta que la condición (i &lt; 20) deja de cumplirse.</p>
+<p>El símbolo <code class="docutils literal notranslate"><span class="pre">+=</span></code>  es un operador de actualización, la línea de código <code class="docutils literal notranslate"><span class="pre">i+=1</span></code> es equivalente a <code class="docutils literal notranslate"><span class="pre">i=i+1</span></code>. Existen diversos operadores de asignación similares, los cuales pueden ser consultados en la sección <a class="reference external" href="https://docs.julialang.org/en/v1/manual/mathematical-operations/##Updating-operators">Updating operators</a> del manual de Julia.</p>
+<p>Cuando se utiliza el bucle <code class="docutils literal notranslate"><span class="pre">while</span></code> se debe tener el cuidado de asegurar que, en algún punto después de un número de repeticiones, la condición debe ser falso; de no hacerlo se tendrá un número infinito de repeticiones y por tanto el conocido <em>bucle infinito</em>, lo que constituye un error de programación.</p>
+<p>En Julia la instrucción <code class="docutils literal notranslate"><span class="pre">while</span></code>, a diferencia de la instrucción <code class="docutils literal notranslate"><span class="pre">if</span></code>, introduce un nuevo scope o ámbito local; ello significa que cualquier variable al cual se asigna un valor dentro del <code class="docutils literal notranslate"><span class="pre">while</span></code>, este vive solo dentro del bucle mientras no se haya declarado antes de la instrucción <code class="docutils literal notranslate"><span class="pre">while</span></code>.</p>
+<p>Para ilustrar este hecho puede observar las variables <code class="docutils literal notranslate"><span class="pre">e</span></code> y <code class="docutils literal notranslate"><span class="pre">t</span></code> del ejemplo anterior, como la variable <code class="docutils literal notranslate"><span class="pre">e</span></code> fue declarado antes de <code class="docutils literal notranslate"><span class="pre">while</span></code> este pertenece al ámbito global y posee un valor luego que el bucle se ejecuta.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="nb">e</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>t, a diferencia de <code class="docutils literal notranslate"><span class="pre">e</span></code>, pertenece al ámbito local al <code class="docutils literal notranslate"><span class="pre">while</span></code> porque fue declarado dentro de este. Por ello al querer utilizar la variable en el ámbito local se genera un error.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="c">## t # &lt;- Dará error al ser evaluado, dado que t no está definido en el ámbito global.</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="instruccion-for">
+<h4>Instrucción for<a class="headerlink" href="#instruccion-for" title="Enlazar permanentemente con este título">¶</a></h4>
+<p>La instrucción <code class="docutils literal notranslate"><span class="pre">for</span></code> es similar al <code class="docutils literal notranslate"><span class="pre">while</span></code>, permite tener bucles o repetición de código controlado. Sin embargo, tiene algunas diferencias fundamentales. El ciclo for se constituye como sigue:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">begin</span>
+	<span class="n">e₁</span> <span class="o">=</span> <span class="mi">0</span>
+	<span class="k">for</span> <span class="n">i</span> <span class="o">∈</span> <span class="mi">0</span><span class="o">:</span><span class="mi">20</span> <span class="c">##Encabezado</span>
+		<span class="n">t</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="n">factorial</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="c">##Cuerpo de la instrucción for</span>
+		<span class="n">e₁</span> <span class="o">+=</span> <span class="n">t</span>
+		<span class="n">i</span><span class="o">+=</span> <span class="mi">1</span>
+	<span class="k">end</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">e₁</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="c">##t # Causará error por la misma razón del ejemplo anterior. </span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>El ciclo <code class="docutils literal notranslate"><span class="pre">for</span></code> introduce un nuevo ámbito local como la hace el ciclo <code class="docutils literal notranslate"><span class="pre">while</span></code>, puede observar el comportamiento de las variables <code class="docutils literal notranslate"><span class="pre">e₁</span></code> y <code class="docutils literal notranslate"><span class="pre">t</span></code>.</p>
+<p>El encabezado del ciclo <code class="docutils literal notranslate"><span class="pre">for</span></code> está constituido por una variable (<code class="docutils literal notranslate"><span class="pre">i</span></code> en el ejemplo) y un iterable (el objeto <code class="docutils literal notranslate"><span class="pre">0:20</span></code>) que constituye un secuencia de números desde 0 hasta 20 y cuyo incremento es de uno en uno. Además se define la relación de pertenencia entre la variable y el iterable.</p>
+<p>El iterable contiene los valores que toma la variable (<code class="docutils literal notranslate"><span class="pre">i</span></code>) en cada iteración, por ello no necesariamente el ciclo <code class="docutils literal notranslate"><span class="pre">for</span></code> itera sobre valores numéricos. Además, si los valores son numéricos no necesariamente estos deberán tener un orden específico.</p>
+<p>Observe que la cantidad de elementos que contiene el iterable constituye el número de iteraciones en el ciclo <code class="docutils literal notranslate"><span class="pre">for</span></code>.</p>
+</div>
+<div class="section" id="sentencias-break-y-continue">
+<h4>Sentencias break y continue<a class="headerlink" href="#sentencias-break-y-continue" title="Enlazar permanentemente con este título">¶</a></h4>
+<p><code class="docutils literal notranslate"><span class="pre">break</span></code> y <code class="docutils literal notranslate"><span class="pre">continue</span></code> son keywords que permiten manipular las iteraciones en las estructuras de control de repetición.</p>
+<p>El keyword <code class="docutils literal notranslate"><span class="pre">break</span></code> para la ejecución del bucle.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">begin</span>
+	<span class="n">z</span> <span class="o">=</span> <span class="mi">0</span>
+	<span class="k">for</span> <span class="n">i</span> <span class="kp">in</span> <span class="mi">1</span><span class="o">:</span><span class="mi">10</span>
+		<span class="k">if</span> <span class="n">i</span> <span class="o">&gt;=</span> <span class="mi">6</span>
+			<span class="n">z</span> <span class="o">=</span> <span class="n">i</span>
+			<span class="k">break</span>
+		<span class="k">end</span>
+		<span class="n">z</span> <span class="o">=</span> <span class="n">i</span>
+	<span class="k">end</span>
+	<span class="n">z</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Aunque el ciclo for está definido para iterar sobre los números del 1-10, se observa que solo itera sobre los números 1-6, debido a que en su interior se encuentra la sentencia <code class="docutils literal notranslate"><span class="pre">if</span></code> que ejecuta <code class="docutils literal notranslate"><span class="pre">break</span></code> cuando la variable <code class="docutils literal notranslate"><span class="pre">i</span></code> alcanza o supera el valor de <code class="docutils literal notranslate"><span class="pre">6</span></code>.</p>
+<p>El keyword <code class="docutils literal notranslate"><span class="pre">continue</span></code> detiene la iteración actual y hace que el ciclo continúe en la iteración siguiente.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">begin</span>
+	<span class="n">w</span> <span class="o">=</span> <span class="s">&quot;&quot;</span>
+	<span class="k">for</span> <span class="n">i</span> <span class="kp">in</span> <span class="mi">1</span><span class="o">:</span><span class="mi">10</span>
+		<span class="k">if</span> <span class="n">i</span><span class="o">%</span><span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span>
+			<span class="k">continue</span>
+		<span class="k">end</span>
+		<span class="n">w</span> <span class="o">*=</span> <span class="s">&quot;</span><span class="si">$i</span><span class="s">&quot;</span>
+	<span class="k">end</span>
+	<span class="n">w</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Como se puede observar el valor de la cadena final solo contiene  los elementos que son impares, debido a que <code class="docutils literal notranslate"><span class="pre">w</span> <span class="pre">*=</span> <span class="pre">\&quot;$i\&quot;</span></code> no se ejecuta para <code class="docutils literal notranslate"><span class="pre">i</span></code> par, lo anterior porque se observa el efecto de ejecutar <code class="docutils literal notranslate"><span class="pre">continue</span></code>.</p>
+<p><strong>NOTA:</strong> Para conocer más detalles acerca de las estructura de control en Julia puede consultar la sección <a class="reference external" href="https://docs.julialang.org/en/v1/manual/control-flow/##Control-Flow">Control Flow</a> del maual de Julia.</p>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "julia-1.5"
+        },
+        kernelOptions: {
+            kernelName: "julia-1.5",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'julia-1.5'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="Fundamentos.html" title="previous page">Fundamentos</a>
+    <a class='right-next' id="next-link" href="Estructuras_de_Datos.html" title="next page">Estructuras de Datos</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Luis Felipe Flores Machado, René David Hernández<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>
