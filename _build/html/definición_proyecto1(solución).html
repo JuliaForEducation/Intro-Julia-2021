@@ -1,0 +1,961 @@
+
+<!DOCTYPE html>
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>definición_proyecto1(solución) &#8212; Project-oriented workshop in Julia computing</title>
+    
+  <link rel="stylesheet" href="_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.2d2078699c18a0efb88233928e1cf6ed.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/translations.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.be0a4a0c39cd630af62a2fcf693f3f06.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="_static/logo.ico"/>
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Búsqueda" href="search.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="index.html">
+  
+  <img src="_static/julia_logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Project-oriented workshop in Julia computing</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Buscar este libro ..." aria-label="Buscar este libro ..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Intro.html">
+   Project-oriented workshop in Julia computing
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Primera Semana
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Git_y_GitHub.html">
+   Git y GitHub
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Fundamentos.html">
+   Fundamentos
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Parte de prueba
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="archivo_prueba.html">
+   probando
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Navegación de palanca" aria-controls="site-navigation"
+            title="Navegación de palanca" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Descarga esta pagina"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/definición_proyecto1(solución).ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Descargar archivo fuente" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimir en PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/JuliaForEducation/Intro-Julia-2021"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Repositorio de origen"><i
+                    class="fab fa-github"></i>repositorio</button></a>
+        <a class="issues-button"
+            href="https://github.com/JuliaForEducation/Intro-Julia-2021/issues/new?title=Issue%20on%20page%20%2Fdefinición_proyecto1(solución).html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Abrir un problema"><i class="fas fa-lightbulb"></i>Tema abierto</button></a>
+        <a class="edit-button" href="https://github.com/JuliaForEducation/Intro-Julia-2021/edit/master/definición_proyecto1(solución).ipynb"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edita esta página"><i class="fas fa-pencil-alt"></i>Tema abierto</button></a>
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Modo de pantalla completa"
+                title="Modo de pantalla completa"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/JuliaForEducation/Intro-Julia-2021/master?urlpath=tree/definición_proyecto1(solución).ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Lanzamiento Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/JuliaForEducation/Intro-Julia-2021/blob/master/definición_proyecto1(solución).ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Lanzamiento Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contenido
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#proyecto-1">
+   PROYECTO 1
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#descripcion">
+     Descripción
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#requisitos">
+     Requisitos
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#criterios-de-evaluacion">
+     Criterios de Evaluación
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#ayuda">
+       AYUDA
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#solucion">
+   Solución
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#definicion-de-objetos-y-funciones">
+     Definición de objetos y funciones
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#solucion-a-los-incisos">
+     Solución a los incisos
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="definicion-proyecto1-solucion">
+<h1>definición_proyecto1(solución)<a class="headerlink" href="#definicion-proyecto1-solucion" title="Enlazar permanentemente con este título">¶</a></h1>
+<div class="section" id="proyecto-1">
+<h2>PROYECTO 1<a class="headerlink" href="#proyecto-1" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="section" id="descripcion">
+<h3>Descripción<a class="headerlink" href="#descripcion" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Se escribirá un código para visualizar diferentes familias del conjunto de Julia y Mandelbrot, en el proceso se modelarán diversas formas biológicas. Ambos conjuntos se forman a partir del estudio de ciertas funciones, <span class="math notranslate nohighlight">\(f_c\)</span>, sobre las cuales se iteran los números complejos. La notación para la función, <span class="math notranslate nohighlight">\(f_c\)</span>, denota que ésta depende de un parámetro <span class="math notranslate nohighlight">\(c \in C\)</span>.</p>
+<p>El conjunto de Julia <span class="math notranslate nohighlight">\(J_{f_c}\)</span>, para una constante <span class="math notranslate nohighlight">\(c\)</span> particular, está formado por todos aquellos puntos del plano complejo en el cual la sucesión siguiente es acotada:</p>
+<div class="math notranslate nohighlight">
+\[z_0=z\]</div>
+<div class="math notranslate nohighlight">
+\[z_{n+1}=f_c(z_n)\]</div>
+<p>El conjunto de Mandelbrot <span class="math notranslate nohighlight">\(M_{f_c}\)</span>, de forma similar, está formado por el conjunto de puntos del plano complejo, en el cual <span class="math notranslate nohighlight">\(c\)</span> pertenece al conjunto si la siguiente sucesión es acotada:</p>
+<div class="math notranslate nohighlight">
+\[z_0=0\]</div>
+<div class="math notranslate nohighlight">
+\[z_{n+1}=f_c(z_n)\]</div>
+<p>El conjunto de puntos que resulta de la sucesión, para cada <span class="math notranslate nohighlight">\(z\)</span> implicado, se conoce como la órbita de <span class="math notranslate nohighlight">\(z\)</span> por <span class="math notranslate nohighlight">\(f_c\)</span>. Para determinar los elementos de una familia del conjunto de <span class="math notranslate nohighlight">\(J_{f_c}\)</span> y <span class="math notranslate nohighlight">\(M_{f_c}\)</span>, se utiliza un método iterativo, verificando el criterio convergencia siguiente, en cada paso de la iteración donde se obtiene un elemento de la órbita:</p>
+<div class="math notranslate nohighlight">
+\[|z_n|&lt;2\]</div>
+<p>Si en algún punto de la iteración no se cumple el criterio, el punto del plano complejo analizado no pertenece al conjunto.</p>
+<p>El conjunto de Julia y Mandelbrot están dados por una familia muy popular de sistemas dinámicos complejos, esto es la familia de polinomios cuadráticos complejos:</p>
+<div class="math notranslate nohighlight">
+\[f_c=z^2+c\]</div>
+<p>Formas biológicas han sido representadas mediante procesos iterativos, como el descrito anteriormente. Pero, empleando un conjunto de funciones <span class="math notranslate nohighlight">\((f_c)\)</span> más complejas que las estudiadas en los conjuntos de Julia y Mandelbrot. A continuación, se listan algunas de las funciones usadas para reproducir formas biológicas:</p>
+<div class="math notranslate nohighlight">
+\[f_1(z,c)=sin(z)+z^2+c\]</div>
+<div class="math notranslate nohighlight">
+\[f_2(z,c)=z^z+z^6+c\]</div>
+<div class="math notranslate nohighlight">
+\[f_3(z,c)=z^z+z^6+c\]</div>
+<div class="math notranslate nohighlight">
+\[f_4(z,c)=z^5+c\]</div>
+<div class="math notranslate nohighlight">
+\[f_5(z,c)=z^3+c\]</div>
+<p>La iteración es realizada hasta que la magnitud de la componente real e imaginaria de los elementos de la órbita sobrepasa un determinado valor <span class="math notranslate nohighlight">\(\tau\)</span> (un valor puede ser <span class="math notranslate nohighlight">\(\tau=100\)</span>), esto significa que el proceso iterativo se mentiene mientras se cumpla que la parte real o imaginaria satisfacen la condición:</p>
+<div class="math notranslate nohighlight">
+\[|Re(z_n)|&lt;\tau\]</div>
+<div class="math notranslate nohighlight">
+\[|Im(z_n)|&lt;\tau\]</div>
+<p>Una manera de graficar los conjuntos de Julia, Mandelbrot y las formas biológicas, es graficar solamente los puntos que pertenecen al conjunto con un color determinado (monocromático).</p>
+<p>Para agregar colores a los gráficos, generalmente se utiliza el algoritmo de: Tiempo de Escape, aunque no es el único. El algoritmo consiste en asignar un color dependiendo del número de iteraciones realizadas antes que el elemento de la órbita no satisfaga el criterio de convergencia. De esta manera se visualiza aquellos elementos que pertenecen al conjunto y los que no, además, revela la velocidad de divergencia de la órbita en cada punto.</p>
+</div>
+<div class="section" id="requisitos">
+<h3>Requisitos<a class="headerlink" href="#requisitos" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Para el desarrollo del proyecto deberá utilizar solamente los elementos abarcados en la primera semana del workshop, esto es, el uso de: estructuras de datos y control, tipos de datos primitivos del lenguaje. Por lo que <strong>no utilizará</strong> ningún paquete adicional, creado o desarrollado por la comunidad de Julia, a excepción del paquete Plots.</p>
+<p>Para completar este proyecto deberá realizar los siguientes items:</p>
+<ol class="simple">
+<li><p>* Graficar un conjunto de Julia, para un <span class="math notranslate nohighlight">\(c\)</span> arbitrario (monocromático).</p></li>
+<li><p>* Graficar el conjunto de Mandelbrot (monocromático).</p></li>
+<li><p>* Graficar una forma biológica, par un c arbitrario (monocromático).</p></li>
+<li><p>* Hacer una gráfica a color del conjunto de Mandelbrot usando el algoritmo de Tiempo de Escape.</p></li>
+<li><p>Realizar una gráfica a color para un conjunto de Julia, para un <span class="math notranslate nohighlight">\(c\)</span> arbitrario .</p></li>
+<li><p>Realizar una gráfica a color para una forma biológica.</p></li>
+<li><p>Completar un ejercicio que forma parte de los  challenges problems.</p></li>
+</ol>
+<p>Para realizar las gráficas, deberá tomar en cuenta el uso de “structs” para representar estructuras de datos particulares y también el uso de “multiple dispatch”. Todo item marcado con (*) indica que es obligatorio.</p>
+</div>
+<div class="section" id="criterios-de-evaluacion">
+<h3>Criterios de Evaluación<a class="headerlink" href="#criterios-de-evaluacion" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Durante la evaluación del proyecto se tomarán en cuenta los siguientes aspectos:</p>
+<ul class="simple">
+<li><p>Cumplimiento de los requerimientos mencionados.</p></li>
+<li><p>Claridad y orden el código presentado.</p></li>
+<li><p>Completitud del proyecto, haciendo todas las partes que lo componen.</p></li>
+<li><p>Analizar y comentar el trabajo de otros grupos.</p></li>
+</ul>
+<hr class="docutils" />
+<div class="section" id="ayuda">
+<h4>AYUDA<a class="headerlink" href="#ayuda" title="Enlazar permanentemente con este título">¶</a></h4>
+<hr class="docutils" />
+<p>######## Gráficas
+Para realizar las gráficas se utilizará el paquete Plots, por lo tanto el paquete debe ser importado:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">using</span> <span class="n">Plots</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>A continuación se mostrarán ejemplos para realizar gráficas con el paquete, los cuales pueden usarse para mostrar las formas biológicas y los conjuntos de Julia y Mandelbrot, una vez se hayan obtenido los datos necesarios.</p>
+<p>Gráfico de números complejos:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">begin</span>
+	<span class="n">r</span> <span class="o">=</span> <span class="mi">2</span>	
+	<span class="n">zcomplejo</span> <span class="o">=</span> <span class="p">[</span><span class="n">r</span><span class="o">*</span><span class="n">cos</span><span class="p">(</span><span class="n">θ</span><span class="p">)</span><span class="o">+</span><span class="n">r</span><span class="o">*</span><span class="n">sin</span><span class="p">(</span><span class="n">θ</span><span class="p">)</span><span class="o">*</span><span class="nb">im</span> <span class="k">for</span> <span class="n">θ</span> <span class="kp">in</span> <span class="mi">0</span><span class="o">:</span><span class="mf">0.3</span><span class="o">:</span><span class="mi">2</span><span class="o">*</span><span class="nb">pi</span><span class="p">]</span>
+	<span class="n">scatter</span><span class="p">(</span><span class="n">zcomplejo</span><span class="p">,</span><span class="n">seriescolor</span><span class="o">=:</span><span class="n">white</span><span class="p">,</span><span class="n">markerstrokecolor</span><span class="o">=:</span><span class="n">blue</span><span class="p">,</span><span class="n">aspectratio</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">title</span><span class="o">=</span><span class="s">&quot;Gráfica de Ejemplo&quot;</span><span class="p">)</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/definición_proyecto1(solución)_5_0.svg" src="_images/definición_proyecto1(solución)_5_0.svg" /></div>
+</div>
+<p>Para colorear los gráficos del conjunto de Julia, Mandelbrot y las formas biológicas, utilizando el algoritmo de Tiempo de Escape,  se pueden utilizar mapas de calor.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">begin</span>
+	<span class="n">x</span> <span class="o">=</span> <span class="o">-</span><span class="mi">2</span><span class="o">:</span><span class="mf">0.3</span><span class="o">:</span><span class="mi">2</span>  
+	<span class="n">y</span> <span class="o">=</span> <span class="o">-</span><span class="mi">2</span><span class="o">:</span><span class="mf">0.3</span><span class="o">:</span><span class="mi">2</span>
+	<span class="n">colores</span> <span class="o">=</span> <span class="p">[</span><span class="n">i₁</span><span class="o">*</span><span class="n">i₂</span> <span class="k">for</span> <span class="n">i₁</span> <span class="kp">in</span> <span class="n">x</span><span class="p">,</span> <span class="n">i₂</span> <span class="kp">in</span> <span class="n">y</span><span class="p">]</span>
+	<span class="n">heatmap</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">colores</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="n">cgrad</span><span class="p">([</span><span class="o">:</span><span class="n">black</span><span class="p">,</span><span class="o">:</span><span class="n">blue</span><span class="p">,</span><span class="o">:</span><span class="n">white</span><span class="p">]),</span><span class="n">title</span><span class="o">=</span><span class="s">&quot;Ejemplo Mapa de Calor&quot;</span><span class="p">,</span><span class="n">xlabel</span><span class="o">=</span><span class="s">&quot;Re(z)&quot;</span><span class="p">,</span><span class="n">ylabel</span><span class="o">=</span><span class="s">&quot;Im(z)&quot;</span><span class="p">)</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Para el mapa de calor, se necesita hacer una malla (las listas “x” y “y” del ejemplo anterior) y una matriz donde se guardan los valores que definen el color para cada punto de la malla.</p>
+<p>######## Pseudocódigo
+Para clarificar los pasos a realizar, se muestra el siguiente algoritmo, cuando se desee obtener un gráfico con colores:</p>
+<p><em>NOTAS:</em></p>
+<ul class="simple">
+<li><p>Se utilizan algunas funciones que pertenecen al core y base de Julia, si no conoce o intuye su uso averigue sobre la función mediante <code class="docutils literal notranslate"><span class="pre">?&lt;nombre_función&gt;</span></code> o <code class="docutils literal notranslate"><span class="pre">methods(&lt;nombre_función&gt;)</span></code>.</p></li>
+<li><p>Usar <code class="docutils literal notranslate"><span class="pre">test_convergencia</span> <span class="pre">=</span> <span class="pre">b</span></code> para la creación de formas biológicas.</p></li>
+<li><p>Las variables rz, iz son las componentes real imaginaria del número complejo respectivamente, que define un punto de la región del plano complejo por analizar.</p></li>
+<li><p>La variable i es el contador del número de iteraciones.</p></li>
+<li><p>c y z representan números complejos.</p></li>
+</ul>
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span>  <span class="n">Para</span> <span class="n">rz</span> <span class="o">=</span> <span class="o">-</span><span class="mi">2</span><span class="o">:</span><span class="mf">0.3</span><span class="o">:</span><span class="mi">2</span> <span class="n">Hacer</span> <span class="c">##Elección del rango puede ser diferente	</span>
+<span class="mi">2</span>  	  <span class="n">Para</span> <span class="n">iz</span> <span class="o">=</span> <span class="o">-</span><span class="mi">2</span><span class="o">:</span><span class="mf">0.3</span><span class="o">:</span><span class="mi">2</span> <span class="n">Hacer</span> <span class="c">##Elección del rango puede ser diferente	</span>
+<span class="mi">3</span>		<span class="n">z</span> <span class="o">=</span> <span class="n">complex</span><span class="p">(</span><span class="n">rz</span><span class="p">,</span><span class="n">iz</span><span class="p">)</span>
+<span class="mi">4</span>		<span class="c">##La precisión de la imagen es mejor si incrementa las iteraciones</span>
+<span class="mi">5</span>		<span class="n">Para</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="o">:</span><span class="mi">30</span> 
+<span class="mi">6</span>			<span class="n">z</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="n">z</span><span class="p">)</span> <span class="o">+</span> <span class="n">c</span>
+<span class="mi">7</span>			<span class="c">##Se verfica que z = complex(rz,iz) esté en el conjunto</span>
+<span class="mi">8</span>			<span class="c">##T depende del conjunto que se desea graficar</span>
+<span class="mi">9</span>			<span class="n">Si</span> <span class="n">abs</span><span class="p">(</span><span class="n">z</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">T</span> <span class="n">Entonces</span> <span class="k">break</span> <span class="n">Fin</span> 
+<span class="mi">10</span>	   	<span class="n">Fin</span>
+<span class="mi">11</span>		<span class="n">color</span> <span class="o">=</span> <span class="n">i</span> <span class="c">##Indica la velocidad de divergencia de la orbita</span>
+<span class="mi">12</span>		<span class="n">Si</span> <span class="n">test_convergencia</span> <span class="o">=</span> <span class="n">a</span> <span class="n">Entonces</span> 
+<span class="mi">13</span>			<span class="n">Graficar</span> <span class="n">punto</span> <span class="n">en</span> <span class="p">(</span><span class="n">rz</span><span class="p">,</span><span class="n">iz</span><span class="p">,</span><span class="n">color</span><span class="p">)</span> 
+<span class="mi">14</span>		<span class="n">Fin</span>
+<span class="mi">15</span>		<span class="n">Si</span> <span class="n">test_convergencia</span> <span class="o">=</span> <span class="n">b</span> <span class="n">Entonces</span> 
+<span class="mi">16</span>			<span class="n">Si</span> <span class="n">real</span><span class="p">(</span><span class="n">z</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">T</span> <span class="o">||</span> <span class="n">imag</span><span class="p">(</span><span class="n">z</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">T</span> <span class="n">Entonces</span>
+<span class="mi">17</span>				<span class="n">Graficar</span> <span class="n">punto</span> <span class="n">en</span> <span class="p">(</span><span class="n">rz</span><span class="p">,</span><span class="n">iz</span><span class="p">,</span><span class="n">color</span><span class="p">)</span> 
+<span class="mi">18</span>			<span class="n">Fin</span>
+<span class="mi">19</span>		<span class="n">Fin</span>
+<span class="mi">20</span>	  <span class="n">Fin</span>
+<span class="mi">21</span>  <span class="n">Fin</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="solucion">
+<h2>Solución<a class="headerlink" href="#solucion" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>La solución del problema planteado puede seguir un camino diferente, pero siempre basado en el algoritmo proporcionado. Para completar la parte obligatoria de este proyecto rellene las partes que están incompletas de este documento, tome en cuenta la signatura de las funciones descritas y lo que esta debe hacer. A medida avance en el documento haga uso de las definiciones previas donde sea conveniente.</p>
+<div class="section" id="definicion-de-objetos-y-funciones">
+<h3>Definición de objetos y funciones<a class="headerlink" href="#definicion-de-objetos-y-funciones" title="Enlazar permanentemente con este título">¶</a></h3>
+<ul class="simple">
+<li><p>A continuación construya un struct Grilla, donde se defina la región del plano complejo que debe ser analizado (límites en las abcisas y ordenadas) y el espacio entre cada punto de la grilla.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="s">&quot;&quot;&quot;</span>
+<span class="s">Representa un objeto grilla</span>
+<span class="s">&quot;&quot;&quot;</span>
+<span class="k">struct</span> <span class="n">Grid</span><span class="p">{</span><span class="n">T</span><span class="o">&lt;:</span><span class="kt">Real</span><span class="p">}</span>
+	<span class="n">xᵢ</span><span class="o">::</span><span class="n">T</span>
+	<span class="n">xₛ</span><span class="o">::</span><span class="n">T</span>
+	<span class="n">yᵢ</span><span class="o">::</span><span class="n">T</span>
+	<span class="n">yₛ</span><span class="o">::</span><span class="n">T</span>
+	<span class="n">stp</span><span class="o">::</span><span class="n">T</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>Defina una función que cree una matriz de rangos para los ejes de las abcisas y ordenas.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="s">&quot;&quot;&quot;</span>
+<span class="s">	makeGrid(g::Grid)</span>
+<span class="s">Crear una matriz de rangos [rango_abcisas,rango_ordenadas]</span>
+<span class="s">&quot;&quot;&quot;</span>
+<span class="k">function</span> <span class="n">makeGrid</span><span class="p">(</span><span class="n">g</span><span class="o">::</span><span class="n">Grid</span><span class="p">)</span>
+	<span class="k">return</span> <span class="p">[</span><span class="n">g</span><span class="o">.</span><span class="n">xᵢ</span><span class="o">:</span><span class="n">g</span><span class="o">.</span><span class="n">stp</span><span class="o">:</span><span class="n">g</span><span class="o">.</span><span class="n">xₛ</span> <span class="n">g</span><span class="o">.</span><span class="n">yᵢ</span><span class="o">:</span><span class="n">g</span><span class="o">.</span><span class="n">stp</span><span class="o">:</span><span class="n">g</span><span class="o">.</span><span class="n">yₛ</span><span class="p">]</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>Defina funciones de una línea para las formas biológicas y la familia de polinomios cuadráticos complejos</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">begin</span>
+	<span class="n">fⱼₘ</span><span class="p">(</span><span class="n">z</span><span class="o">::</span><span class="kt">Complex</span><span class="p">,</span><span class="n">c</span><span class="o">::</span><span class="kt">Complex</span><span class="p">)</span> <span class="o">=</span> <span class="n">z</span><span class="o">^</span><span class="mi">2</span> <span class="o">+</span> <span class="n">c</span>
+	<span class="n">f₁</span><span class="p">(</span><span class="n">z</span><span class="o">::</span><span class="kt">Complex</span><span class="p">,</span><span class="n">c</span><span class="o">::</span><span class="kt">Complex</span><span class="p">)</span><span class="o">=</span><span class="n">sin</span><span class="p">(</span><span class="n">z</span><span class="p">)</span><span class="o">+</span><span class="n">z</span><span class="o">^</span><span class="mi">2</span><span class="o">+</span><span class="n">c</span>
+	<span class="n">f₂</span><span class="p">(</span><span class="n">z</span><span class="o">::</span><span class="kt">Complex</span><span class="p">,</span><span class="n">c</span><span class="o">::</span><span class="kt">Complex</span><span class="p">)</span><span class="o">=</span><span class="n">z</span><span class="o">^</span><span class="n">z</span><span class="o">+</span><span class="n">z</span><span class="o">^</span><span class="mi">6</span><span class="o">+</span><span class="n">c</span>
+	<span class="n">f₃</span><span class="p">(</span><span class="n">z</span><span class="o">::</span><span class="kt">Complex</span><span class="p">,</span><span class="n">c</span><span class="o">::</span><span class="kt">Complex</span><span class="p">)</span><span class="o">=</span><span class="n">z</span><span class="o">^</span><span class="n">z</span><span class="o">+</span><span class="n">z</span><span class="o">^</span><span class="mi">6</span><span class="o">+</span><span class="n">c</span>
+	<span class="n">f₄</span><span class="p">(</span><span class="n">z</span><span class="o">::</span><span class="kt">Complex</span><span class="p">,</span><span class="n">c</span><span class="o">::</span><span class="kt">Complex</span><span class="p">)</span><span class="o">=</span><span class="n">z</span><span class="o">^</span><span class="mi">5</span><span class="o">+</span><span class="n">c</span>
+	<span class="n">f₅</span><span class="p">(</span><span class="n">z</span><span class="o">::</span><span class="kt">Complex</span><span class="p">,</span><span class="n">c</span><span class="o">::</span><span class="kt">Complex</span><span class="p">)</span><span class="o">=</span><span class="n">z</span><span class="o">^</span><span class="mi">3</span><span class="o">+</span><span class="n">c</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>Defina una función que retorne <code class="docutils literal notranslate"><span class="pre">true</span></code> si el criterio de convergencia para los conjuntos <span class="math notranslate nohighlight">\(J_{_c}\)</span> y <span class="math notranslate nohighlight">\(M_{f_c}\)</span> se cumple, <code class="docutils literal notranslate"><span class="pre">false</span></code> en caso contrario.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="s">&quot;&quot;&quot;</span>
+<span class="s">	testJM(z::Complex)</span>
+<span class="s">Comprobar el criterio de convergencia para los conjuntos de Julia y Mandelbrot</span>
+<span class="s">&quot;&quot;&quot;</span>
+<span class="k">function</span> <span class="n">testJM</span><span class="p">(</span><span class="n">z</span><span class="o">::</span><span class="kt">Complex</span><span class="p">)</span>
+	<span class="k">if</span> <span class="n">abs</span><span class="p">(</span><span class="n">z</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">2</span>
+		<span class="k">return</span> <span class="kc">true</span>
+	<span class="k">else</span> 
+		<span class="k">return</span> <span class="kc">false</span>
+	<span class="k">end</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>Defina una función que <code class="docutils literal notranslate"><span class="pre">true</span></code> si el criterio de convergencia para las formas biológicas se cumple, <code class="docutils literal notranslate"><span class="pre">false</span></code> en caso contrario.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="s">&quot;&quot;&quot;</span>
+<span class="s">	testbiomorph(z::Complex,τ::Real)</span>
+<span class="s">Comprobar el criterio de convergencia para los conjuntos de Julia y Mandelbrot</span>
+<span class="s">&quot;&quot;&quot;</span>
+<span class="k">function</span> <span class="n">testbiomorph</span><span class="p">(</span><span class="n">z</span><span class="o">::</span><span class="kt">Complex</span><span class="p">,</span><span class="n">τ</span><span class="o">::</span><span class="kt">Real</span><span class="p">)</span>
+	<span class="k">if</span> <span class="p">(</span> <span class="n">abs</span><span class="p">(</span><span class="n">z</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">τ</span> <span class="o">&amp;&amp;</span> <span class="p">(</span> <span class="n">abs</span><span class="p">(</span><span class="n">real</span><span class="p">(</span><span class="n">z</span><span class="p">))</span><span class="o">&lt;</span><span class="n">τ</span> <span class="o">||</span> <span class="n">abs</span><span class="p">(</span><span class="n">imag</span><span class="p">(</span><span class="n">z</span><span class="p">))</span><span class="o">&lt;</span><span class="n">τ</span> <span class="p">)</span> <span class="p">)</span>
+		<span class="k">return</span> <span class="kc">true</span>
+	<span class="k">else</span> 
+		<span class="k">return</span> <span class="kc">false</span>
+	<span class="k">end</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>Defina una función que itere un número sobre una función <span class="math notranslate nohighlight">\(f_c\)</span> y devuelva true si se cumple el criterio de divergencia para <span class="math notranslate nohighlight">\(J_{f_c}\)</span>, <span class="math notranslate nohighlight">\(M_{f_c}\)</span> y formas biológicas</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="s">&quot;&quot;&quot;</span>
+<span class="s">	iterate(test::Function,f::Function,z::Complex,iter::Integer)</span>
+<span class="s">Interar z sobre una funcion f</span>
+<span class="s">&quot;&quot;&quot;</span>
+<span class="k">function</span> <span class="n">iterate</span><span class="p">(</span><span class="n">test</span><span class="o">::</span><span class="kt">Function</span><span class="p">,</span><span class="n">f</span><span class="o">::</span><span class="kt">Function</span><span class="p">,</span><span class="n">z</span><span class="o">::</span><span class="kt">Complex</span><span class="p">,</span><span class="n">iter</span><span class="o">::</span><span class="kt">Integer</span><span class="p">)</span>
+	<span class="k">for</span> <span class="n">i</span> <span class="kp">in</span> <span class="mi">1</span><span class="o">:</span><span class="n">iter</span>
+		<span class="n">z</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="n">z</span><span class="p">,</span><span class="n">c</span><span class="p">)</span>
+		<span class="k">if</span> <span class="o">!</span><span class="n">test</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
+			<span class="k">return</span> <span class="kc">false</span>
+			<span class="k">break</span>
+		<span class="k">end</span>
+	<span class="k">end</span> 
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>Defina un función que devuelva el número de iteraciones realizadas para un dado z (número complejo), hasta que se no se cumple el criterio de divergencia.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="s">&quot;&quot;&quot;</span>
+<span class="s">	colormap(f::Function,test::Function,z::Complex,c::Complex,iter::Integer)</span>
+<span class="s">Retornar el número de iteraciones para un valor dado de z minetras un criterio de convergencia sea válido</span>
+<span class="s">&quot;&quot;&quot;</span>
+<span class="k">function</span> <span class="n">colormap</span><span class="p">(</span><span class="n">f</span><span class="o">::</span><span class="kt">Function</span><span class="p">,</span><span class="n">test</span><span class="o">::</span><span class="kt">Function</span><span class="p">,</span><span class="n">z</span><span class="o">::</span><span class="kt">Complex</span><span class="p">,</span><span class="n">c</span><span class="o">::</span><span class="kt">Complex</span><span class="p">,</span><span class="n">iter</span><span class="o">::</span><span class="kt">Integer</span><span class="p">)</span>
+	<span class="n">color</span> <span class="o">=</span> <span class="mi">0</span>
+	<span class="k">for</span> <span class="n">i</span> <span class="kp">in</span> <span class="mi">1</span><span class="o">:</span><span class="n">iter</span>
+		<span class="n">z</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="n">z</span><span class="p">,</span><span class="n">c</span><span class="p">)</span>
+		<span class="k">if</span> <span class="o">!</span><span class="n">test</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
+			<span class="n">color</span> <span class="o">=</span> <span class="n">i</span>
+			<span class="k">break</span>
+		<span class="k">end</span>
+	<span class="k">end</span> 
+	<span class="k">return</span> <span class="n">color</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>Usando multiple dispatch, defina nuevamente la función colormap agregando un nuevo parámetro de entrada <span class="math notranslate nohighlight">\(\tau\)</span>, de modo que se pueda usar el test de convergencia para la forma biológica</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">function</span> <span class="n">colormap</span><span class="p">(</span><span class="n">f</span><span class="o">::</span><span class="kt">Function</span><span class="p">,</span><span class="n">test</span><span class="o">::</span><span class="kt">Function</span><span class="p">,</span><span class="n">z</span><span class="o">::</span><span class="kt">Complex</span><span class="p">,</span><span class="n">c</span><span class="o">::</span><span class="kt">Complex</span><span class="p">,</span><span class="n">iter</span><span class="o">::</span><span class="kt">Integer</span><span class="p">,</span><span class="n">τ</span><span class="o">::</span><span class="kt">Integer</span><span class="p">)</span>
+	<span class="n">color</span> <span class="o">=</span> <span class="mi">0</span>
+	<span class="k">for</span> <span class="n">i</span> <span class="kp">in</span> <span class="mi">1</span><span class="o">:</span><span class="n">iter</span>
+		<span class="n">z</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="n">z</span><span class="p">,</span><span class="n">c</span><span class="p">)</span>
+		<span class="k">if</span> <span class="o">!</span><span class="n">test</span><span class="p">(</span><span class="n">z</span><span class="p">,</span><span class="n">τ</span><span class="p">)</span>
+			<span class="n">color</span> <span class="o">=</span> <span class="n">i</span>
+			<span class="k">break</span>
+		<span class="k">end</span>
+	<span class="k">end</span> 
+	<span class="k">return</span> <span class="n">color</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>Defina una funcion que retorne el conjunto de puntos que pertenecen al conjunto de Julia.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="s">&quot;&quot;&quot;</span>
+<span class="s">	setjulia()</span>
+<span class="s">Construir un array con los puntos del plano complejo que pertenecen al conjunto, dada la región de análisis del plano complejo</span>
+<span class="s">Entradas:</span>
+<span class="s">- f::Function</span>
+<span class="s">- test::Function</span>
+<span class="s">- grid::Array{T,2} where T</span>
+<span class="s">- c::Complex</span>
+<span class="s">- iter::Integer</span>
+<span class="s">&quot;&quot;&quot;</span>
+<span class="k">function</span> <span class="n">setjulia</span><span class="p">(</span>
+		<span class="n">f</span><span class="o">::</span><span class="kt">Function</span><span class="p">,</span>
+		<span class="n">test</span><span class="o">::</span><span class="kt">Function</span><span class="p">,</span>
+		<span class="n">grid</span><span class="o">::</span><span class="kt">Array</span><span class="p">{</span><span class="n">T</span><span class="p">,</span><span class="mi">2</span><span class="p">}</span> <span class="n">where</span> <span class="n">T</span><span class="p">,</span>
+		<span class="n">c</span><span class="o">::</span><span class="kt">Complex</span><span class="p">,</span>
+		<span class="n">iter</span><span class="o">::</span><span class="kt">Integer</span><span class="p">)</span>
+	<span class="k">return</span> <span class="p">[</span>  
+		<span class="n">complex</span><span class="p">(</span><span class="n">grid</span><span class="p">[</span><span class="n">rz</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span><span class="n">grid</span><span class="p">[</span><span class="n">iz</span><span class="p">,</span><span class="mi">2</span><span class="p">])</span>
+		<span class="k">for</span> <span class="n">rz</span> <span class="o">∈</span> <span class="mi">1</span><span class="o">:</span><span class="n">length</span><span class="p">(</span><span class="n">grid</span><span class="p">[</span><span class="o">:</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span> 
+		<span class="k">for</span> <span class="n">iz</span> <span class="o">∈</span> <span class="mi">1</span><span class="o">:</span><span class="n">length</span><span class="p">(</span><span class="n">grid</span><span class="p">[</span><span class="o">:</span><span class="p">,</span><span class="mi">2</span><span class="p">])</span> 
+		<span class="k">if</span> <span class="n">colormap</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="n">test</span><span class="p">,</span><span class="n">complex</span><span class="p">(</span><span class="n">grid</span><span class="p">[</span><span class="n">rz</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span><span class="n">grid</span><span class="p">[</span><span class="n">iz</span><span class="p">,</span><span class="mi">2</span><span class="p">]),</span><span class="n">c</span><span class="p">,</span><span class="n">iter</span><span class="p">)</span><span class="o">==</span><span class="mi">0</span>
+	<span class="p">]</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>Defina una funcion que retorne el conjunto de puntos que pertenecen al conjunto de Mandelbrot</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="s">&quot;&quot;&quot;</span>
+<span class="s">	setmandelbrot()</span>
+<span class="s">Construir un array con los puntos del plano complejo que pertenecen al conjunto, dada la región de análisis del plano complejo</span>
+<span class="s">Entradas:</span>
+<span class="s">- f::Function</span>
+<span class="s">- test::Function</span>
+<span class="s">- grid::Array{T,2} where T</span>
+<span class="s">- iter::Integer</span>
+<span class="s">&quot;&quot;&quot;</span>
+<span class="k">function</span> <span class="n">setmandelbrot</span><span class="p">(</span>
+		<span class="n">f</span><span class="o">::</span><span class="kt">Function</span><span class="p">,</span>
+		<span class="n">test</span><span class="o">::</span><span class="kt">Function</span><span class="p">,</span>
+		<span class="n">grid</span><span class="o">::</span><span class="kt">Array</span><span class="p">{</span><span class="n">T</span><span class="p">,</span><span class="mi">2</span><span class="p">}</span> <span class="n">where</span> <span class="n">T</span><span class="p">,</span>
+		<span class="n">iter</span><span class="o">::</span><span class="kt">Integer</span><span class="p">)</span>
+	<span class="k">return</span> <span class="p">[</span>  
+		<span class="n">complex</span><span class="p">(</span><span class="n">grid</span><span class="p">[</span><span class="n">rz</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span><span class="n">grid</span><span class="p">[</span><span class="n">iz</span><span class="p">,</span><span class="mi">2</span><span class="p">])</span>
+		<span class="k">for</span> <span class="n">rz</span> <span class="o">∈</span> <span class="mi">1</span><span class="o">:</span><span class="n">length</span><span class="p">(</span><span class="n">grid</span><span class="p">[</span><span class="o">:</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span> 
+		<span class="k">for</span> <span class="n">iz</span> <span class="o">∈</span> <span class="mi">1</span><span class="o">:</span><span class="n">length</span><span class="p">(</span><span class="n">grid</span><span class="p">[</span><span class="o">:</span><span class="p">,</span><span class="mi">2</span><span class="p">])</span> 
+		<span class="k">if</span> <span class="n">colormap</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="n">test</span><span class="p">,</span><span class="n">complex</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span><span class="n">complex</span><span class="p">(</span><span class="n">grid</span><span class="p">[</span><span class="n">rz</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span><span class="n">grid</span><span class="p">[</span><span class="n">iz</span><span class="p">,</span><span class="mi">2</span><span class="p">]),</span><span class="n">iter</span><span class="p">)</span><span class="o">==</span><span class="mi">0</span>
+	<span class="p">]</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>Defina una funcion que retorne el conjunto de puntos que pertenecen al conjunto de una forma biológica.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="s">&quot;&quot;&quot;</span>
+<span class="s">	setbiomorph()</span>
+<span class="s">Construir un array con los puntos del plano complejo que pertenecen al conjunto, dada la región de análisis del plano complejo</span>
+<span class="s">Entradas:</span>
+<span class="s">- f::Function</span>
+<span class="s">- test::Function</span>
+<span class="s">- grid::Array{T,2} where T</span>
+<span class="s">- c::Complex</span>
+<span class="s">- iter::Integer</span>
+<span class="s">- τ::Integer</span>
+<span class="s">&quot;&quot;&quot;</span>
+<span class="k">function</span> <span class="n">setbiomorph</span><span class="p">(</span>
+		<span class="n">f</span><span class="o">::</span><span class="kt">Function</span><span class="p">,</span>
+		<span class="n">test</span><span class="o">::</span><span class="kt">Function</span><span class="p">,</span>
+		<span class="n">grid</span><span class="o">::</span><span class="kt">Array</span><span class="p">{</span><span class="n">T</span><span class="p">,</span><span class="mi">2</span><span class="p">}</span> <span class="n">where</span> <span class="n">T</span><span class="p">,</span>
+		<span class="n">c</span><span class="o">::</span><span class="kt">Complex</span><span class="p">,</span>
+		<span class="n">iter</span><span class="o">::</span><span class="kt">Integer</span><span class="p">,</span>
+		<span class="n">τ</span><span class="o">::</span><span class="kt">Integer</span><span class="p">)</span>
+	<span class="k">return</span> <span class="p">[</span>  
+		<span class="n">complex</span><span class="p">(</span><span class="n">grid</span><span class="p">[</span><span class="n">rz</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span><span class="n">grid</span><span class="p">[</span><span class="n">iz</span><span class="p">,</span><span class="mi">2</span><span class="p">])</span>
+		<span class="k">for</span> <span class="n">rz</span> <span class="o">∈</span> <span class="mi">1</span><span class="o">:</span><span class="n">length</span><span class="p">(</span><span class="n">grid</span><span class="p">[</span><span class="o">:</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span> 
+		<span class="k">for</span> <span class="n">iz</span> <span class="o">∈</span> <span class="mi">1</span><span class="o">:</span><span class="n">length</span><span class="p">(</span><span class="n">grid</span><span class="p">[</span><span class="o">:</span><span class="p">,</span><span class="mi">2</span><span class="p">])</span> 
+		<span class="k">if</span> <span class="n">colormap</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="n">test</span><span class="p">,</span><span class="n">complex</span><span class="p">(</span><span class="n">grid</span><span class="p">[</span><span class="n">rz</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span><span class="n">grid</span><span class="p">[</span><span class="n">iz</span><span class="p">,</span><span class="mi">2</span><span class="p">]),</span><span class="n">c</span><span class="p">,</span><span class="n">iter</span><span class="p">,</span><span class="n">τ</span><span class="p">)</span><span class="o">==</span><span class="mi">0</span>
+	<span class="p">]</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="solucion-a-los-incisos">
+<h3>Solución a los incisos<a class="headerlink" href="#solucion-a-los-incisos" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Usando las definiciones anteriores realice lo indicado.</p>
+<ul class="simple">
+<li><p>Para completar los incisos 1-3, defina una grilla</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">begin</span>
+	<span class="n">grilla</span> <span class="o">=</span> <span class="n">makeGrid</span><span class="p">(</span><span class="n">Grid</span><span class="p">(</span><span class="o">-</span><span class="mf">1.5</span><span class="p">,</span><span class="mf">1.5</span><span class="p">,</span><span class="o">-</span><span class="mf">1.5</span><span class="p">,</span><span class="mf">1.5</span><span class="p">,</span><span class="mf">0.02</span><span class="p">))</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>########## 1) Graficar un conjunto de Julia, para un <span class="math notranslate nohighlight">\(c\)</span> arbitrario (monocromático).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">begin</span>
+	<span class="n">c₁</span> <span class="o">=</span> <span class="n">complex</span><span class="p">(</span><span class="o">-</span><span class="mf">0.2</span><span class="p">,</span><span class="mf">0.5</span><span class="p">)</span>
+	<span class="n">set₁</span> <span class="o">=</span> <span class="n">setjulia</span><span class="p">(</span><span class="n">fⱼₘ</span><span class="p">,</span><span class="n">testJM</span><span class="p">,</span><span class="n">grilla</span><span class="p">,</span><span class="n">c₁</span><span class="p">,</span><span class="mi">200</span><span class="p">)</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">begin</span>
+	<span class="n">theme</span><span class="p">(</span><span class="o">:</span><span class="n">solarized</span><span class="p">)</span>
+	<span class="n">scatter</span><span class="p">(</span><span class="n">set₁</span><span class="p">,</span><span class="n">seriescolor</span><span class="o">=:</span><span class="n">white</span><span class="p">,</span><span class="n">markerstrokecolor</span><span class="o">=:</span><span class="n">white</span><span class="p">,</span><span class="n">aspectratio</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">title</span><span class="o">=</span><span class="s">&quot;Conjunto de Julia c = </span><span class="si">$c₁</span><span class="s">&quot;</span><span class="p">)</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>########## 2) Graficar el conjunto de Mandelbrot (monocromático).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">begin</span>
+	<span class="n">set₂</span> <span class="o">=</span> <span class="n">setmandelbrot</span><span class="p">(</span><span class="n">fⱼₘ</span><span class="p">,</span><span class="n">testJM</span><span class="p">,</span><span class="n">grilla</span><span class="p">,</span><span class="mi">200</span><span class="p">)</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">begin</span>
+	<span class="n">theme</span><span class="p">(</span><span class="o">:</span><span class="n">solarized</span><span class="p">)</span>
+	<span class="n">scatter</span><span class="p">(</span><span class="n">set₂</span><span class="p">,</span><span class="n">seriescolor</span><span class="o">=:</span><span class="n">white</span><span class="p">,</span><span class="n">markerstrokecolor</span><span class="o">=:</span><span class="n">white</span><span class="p">,</span><span class="n">aspectratio</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">title</span><span class="o">=</span><span class="s">&quot;Conjunto de Mandelbrot&quot;</span><span class="p">)</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>########## 3) Graficar una forma biológica, par un c arbitrario (monocromático).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">begin</span>
+	<span class="n">c₂</span> <span class="o">=</span> <span class="n">complex</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="p">,</span><span class="o">-</span><span class="mf">0.5</span><span class="p">)</span>
+	<span class="n">τ</span> <span class="o">=</span> <span class="mi">100</span>
+	<span class="n">set₃</span> <span class="o">=</span> <span class="n">setbiomorph</span><span class="p">(</span><span class="n">f₄</span><span class="p">,</span><span class="n">testbiomorph</span><span class="p">,</span><span class="n">grilla</span><span class="p">,</span><span class="n">c₂</span><span class="p">,</span><span class="mi">200</span><span class="p">,</span><span class="n">τ</span><span class="p">)</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">begin</span>
+	<span class="n">theme</span><span class="p">(</span><span class="o">:</span><span class="n">solarized</span><span class="p">)</span>
+	<span class="n">scatter</span><span class="p">(</span><span class="n">set₃</span><span class="p">,</span><span class="n">seriescolor</span><span class="o">=:</span><span class="n">white</span><span class="p">,</span><span class="n">markerstrokecolor</span><span class="o">=:</span><span class="n">white</span><span class="p">,</span><span class="n">aspectratio</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">title</span><span class="o">=</span><span class="s">&quot;Forma Biológica&quot;</span><span class="p">)</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>########## 4) Hacer una gráfica a color del conjunto de Mandelbrot</p>
+<p>Usando el algoritmo de Tiempo de Escape y multiple dispatch, defina nuevamente la función setmandelbrot, para obtener los datos necesarios (matriz) que defina los colores para cada punto de una región arbitraria.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="s">&quot;&quot;&quot;</span>
+<span class="s">	setmandelbrot(f::Function,test::Function,grid::Array{T,1} where T,iter::Integer)</span>
+<span class="s">Crear una matriz de enteros correspondiente a los colores </span>
+<span class="s">&quot;&quot;&quot;</span>
+<span class="k">function</span> <span class="n">setmandelbrot</span><span class="p">(</span>
+		<span class="n">f</span><span class="o">::</span><span class="kt">Function</span><span class="p">,</span>
+		<span class="n">test</span><span class="o">::</span><span class="kt">Function</span><span class="p">,</span>
+		<span class="n">grid</span><span class="o">::</span><span class="kt">Array</span><span class="p">{</span><span class="n">T</span><span class="p">,</span><span class="mi">1</span><span class="p">}</span> <span class="n">where</span> <span class="n">T</span><span class="p">,</span>
+		<span class="n">iter</span><span class="o">::</span><span class="kt">Integer</span>
+	<span class="p">)</span>
+	<span class="k">return</span> <span class="p">[</span>  
+			<span class="n">colormap</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="n">test</span><span class="p">,</span><span class="n">complex</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span><span class="n">complex</span><span class="p">(</span><span class="n">grid</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="n">rz</span><span class="p">],</span><span class="n">grid</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="n">iz</span><span class="p">]),</span><span class="n">iter</span><span class="p">)</span>
+			<span class="k">for</span> <span class="n">rz</span> <span class="o">∈</span> <span class="mi">1</span><span class="o">:</span><span class="n">length</span><span class="p">(</span><span class="n">grid</span><span class="p">[</span><span class="mi">1</span><span class="p">]),</span> <span class="n">iz</span> <span class="o">∈</span> <span class="mi">1</span><span class="o">:</span><span class="n">length</span><span class="p">(</span><span class="n">grid</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span> 
+		<span class="p">]</span><span class="o">&#39;</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">begin</span>
+	<span class="n">rzₘ</span> <span class="o">=</span> <span class="o">-</span><span class="mi">2</span><span class="o">:</span><span class="mf">0.009</span><span class="o">:</span><span class="mi">1</span>
+	<span class="n">izₘ</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="o">:</span><span class="mf">0.009</span><span class="o">:</span><span class="mi">1</span>
+	<span class="n">coloresₘ</span> <span class="o">=</span> <span class="n">setmandelbrot</span><span class="p">(</span><span class="n">fⱼₘ</span><span class="p">,</span><span class="n">testJM</span><span class="p">,[</span><span class="n">rzₘ</span><span class="p">,</span><span class="n">izₘ</span><span class="p">],</span><span class="mi">30</span><span class="p">)</span>
+	<span class="n">heatmap</span><span class="p">(</span>
+		<span class="n">rzₘ</span><span class="p">,</span>
+		<span class="n">izₘ</span><span class="p">,</span>
+		<span class="n">coloresₘ</span><span class="p">,</span>
+		<span class="n">color</span><span class="o">=</span><span class="n">cgrad</span><span class="p">([</span><span class="o">:</span><span class="n">black</span><span class="p">,</span><span class="o">:</span><span class="n">red</span><span class="p">,</span><span class="o">:</span><span class="n">white</span><span class="p">]),</span>
+		<span class="n">title</span><span class="o">=</span><span class="s">&quot;Conjunto de Mandelbrot Coloreado&quot;</span><span class="p">,</span>
+		<span class="n">xlabel</span><span class="o">=</span><span class="s">&quot;Re(z)&quot;</span><span class="p">,</span>
+		<span class="n">ylabel</span><span class="o">=</span><span class="s">&quot;Im(z)&quot;</span>
+	<span class="p">)</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>########## 5) Realizar una gráfica a color para un conjunto de Julia, para un <span class="math notranslate nohighlight">\(c\)</span> arbitrario.</p>
+<p>Usando el algoritmo de Tiempo de Escape y multiple dispatch, defina nuevamente la función setjulia, para obtener los datos necesarios (matriz) que defina los colores para cada punto de una región arbitraria.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">function</span> <span class="n">setjulia</span><span class="p">(</span>
+		<span class="n">f</span><span class="o">::</span><span class="kt">Function</span><span class="p">,</span>
+		<span class="n">test</span><span class="o">::</span><span class="kt">Function</span><span class="p">,</span>
+		<span class="n">grid</span><span class="o">::</span><span class="kt">Array</span><span class="p">{</span><span class="n">T</span><span class="p">,</span><span class="mi">1</span><span class="p">}</span> <span class="n">where</span> <span class="n">T</span><span class="p">,</span>
+		<span class="n">c</span><span class="o">::</span><span class="kt">Complex</span><span class="p">,</span>
+		<span class="n">iter</span><span class="o">::</span><span class="kt">Integer</span>
+	<span class="p">)</span>
+	<span class="k">return</span> <span class="p">[</span>  
+		<span class="n">colormap</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="n">test</span><span class="p">,</span><span class="n">complex</span><span class="p">(</span><span class="n">grid</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="n">rz</span><span class="p">],</span><span class="n">grid</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="n">iz</span><span class="p">]),</span><span class="n">c</span><span class="p">,</span><span class="n">iter</span><span class="p">)</span>
+		<span class="k">for</span> <span class="n">rz</span> <span class="o">∈</span> <span class="mi">1</span><span class="o">:</span><span class="n">length</span><span class="p">(</span><span class="n">grid</span><span class="p">[</span><span class="mi">1</span><span class="p">]),</span> <span class="n">iz</span> <span class="o">∈</span> <span class="mi">1</span><span class="o">:</span><span class="n">length</span><span class="p">(</span><span class="n">grid</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span> 
+	<span class="p">]</span><span class="o">&#39;</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">begin</span>
+	<span class="n">rzⱼ</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="o">:</span><span class="mf">0.003</span><span class="o">:</span><span class="mi">1</span>
+	<span class="n">izⱼ</span> <span class="o">=</span> <span class="o">-</span><span class="mf">1.2</span><span class="o">:</span><span class="mf">0.003</span><span class="o">:</span><span class="mf">1.2</span>
+	<span class="n">coloresⱼ</span> <span class="o">=</span> <span class="n">setjulia</span><span class="p">(</span><span class="n">fⱼₘ</span><span class="p">,</span><span class="n">testJM</span><span class="p">,[</span><span class="n">rzⱼ</span><span class="p">,</span><span class="n">izⱼ</span><span class="p">],</span><span class="n">complex</span><span class="p">(</span><span class="mf">0.279</span><span class="p">),</span><span class="mi">40</span><span class="p">)</span>
+	<span class="n">heatmap</span><span class="p">(</span>
+		<span class="n">rzⱼ</span><span class="p">,</span>
+		<span class="n">izⱼ</span><span class="p">,</span>
+		<span class="n">coloresⱼ</span><span class="p">,</span>
+		<span class="n">color</span><span class="o">=</span><span class="n">cgrad</span><span class="p">([</span><span class="o">:</span><span class="n">black</span><span class="p">,</span><span class="o">:</span><span class="n">darkblue</span><span class="p">,</span><span class="o">:</span><span class="n">green</span><span class="p">,</span><span class="o">:</span><span class="n">yellow</span><span class="p">,</span><span class="o">:</span><span class="n">red</span><span class="p">]),</span>
+		<span class="n">title</span><span class="o">=</span><span class="s">&quot;Conjunto de Julia Coloreado&quot;</span><span class="p">,</span>
+		<span class="n">xlabel</span><span class="o">=</span><span class="s">&quot;Re(z)&quot;</span><span class="p">,</span>
+		<span class="n">ylabel</span><span class="o">=</span><span class="s">&quot;Im(z)&quot;</span><span class="p">,</span>
+		<span class="n">aspectratio</span><span class="o">=</span><span class="mi">1</span>
+	<span class="p">)</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>########## 6) Realizar una gráfica a color para una forma biológica.</p>
+<p>Usando el algoritmo de Tiempo de Escape y multiple dispatch, defina nuevamente la función setbiomorph, para obtener los datos necesarios (matriz) que defina los colores para cada punto de una región arbitraria.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">function</span> <span class="n">setbiomorph</span><span class="p">(</span>
+		<span class="n">f</span><span class="o">::</span><span class="kt">Function</span><span class="p">,</span>
+		<span class="n">test</span><span class="o">::</span><span class="kt">Function</span><span class="p">,</span>
+		<span class="n">grid</span><span class="o">::</span><span class="kt">Array</span><span class="p">{</span><span class="n">T</span><span class="p">,</span><span class="mi">1</span><span class="p">}</span> <span class="n">where</span> <span class="n">T</span><span class="p">,</span>
+		<span class="n">c</span><span class="o">::</span><span class="kt">Complex</span><span class="p">,</span>
+		<span class="n">iter</span><span class="o">::</span><span class="kt">Integer</span><span class="p">,</span>
+		<span class="n">τ</span><span class="o">::</span><span class="kt">Integer</span><span class="p">)</span>
+	<span class="k">return</span> <span class="p">[</span>  
+		<span class="n">colormap</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="n">test</span><span class="p">,</span><span class="n">complex</span><span class="p">(</span><span class="n">grid</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="n">rz</span><span class="p">],</span><span class="n">grid</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="n">iz</span><span class="p">]),</span><span class="n">c</span><span class="p">,</span><span class="n">iter</span><span class="p">,</span><span class="n">τ</span><span class="p">)</span>
+		<span class="k">for</span> <span class="n">rz</span> <span class="o">∈</span> <span class="mi">1</span><span class="o">:</span><span class="n">length</span><span class="p">(</span><span class="n">grid</span><span class="p">[</span><span class="mi">1</span><span class="p">]),</span> <span class="n">iz</span> <span class="o">∈</span> <span class="mi">1</span><span class="o">:</span><span class="n">length</span><span class="p">(</span><span class="n">grid</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span> 
+	<span class="p">]</span><span class="o">&#39;</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">begin</span>
+	<span class="n">rzb</span> <span class="o">=</span> <span class="o">-</span><span class="mf">1.5</span><span class="o">:</span><span class="mf">0.003</span><span class="o">:</span><span class="mf">1.5</span>
+	<span class="n">izb</span> <span class="o">=</span> <span class="o">-</span><span class="mf">1.5</span><span class="o">:</span><span class="mf">0.003</span><span class="o">:</span><span class="mf">1.5</span>
+	<span class="n">coloresb</span> <span class="o">=</span> <span class="n">setbiomorph</span><span class="p">(</span><span class="n">f₄</span><span class="p">,</span><span class="n">testbiomorph</span><span class="p">,[</span><span class="n">rzb</span><span class="p">,</span><span class="n">izb</span><span class="p">],</span><span class="n">c₂</span><span class="p">,</span><span class="mi">40</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
+	<span class="n">heatmap</span><span class="p">(</span>
+		<span class="n">rzb</span><span class="p">,</span>
+		<span class="n">izb</span><span class="p">,</span>
+		<span class="n">coloresb</span><span class="p">,</span>
+		<span class="n">color</span><span class="o">=</span><span class="n">cgrad</span><span class="p">([</span><span class="o">:</span><span class="n">black</span><span class="p">,</span><span class="o">:</span><span class="n">darkblue</span><span class="p">,</span><span class="o">:</span><span class="n">green</span><span class="p">,</span><span class="o">:</span><span class="n">yellow</span><span class="p">,</span><span class="o">:</span><span class="n">red</span><span class="p">]),</span>
+		<span class="n">title</span><span class="o">=</span><span class="s">&quot;Forma Biológica Coloreado&quot;</span><span class="p">,</span>
+		<span class="n">xlabel</span><span class="o">=</span><span class="s">&quot;Re(z)&quot;</span><span class="p">,</span>
+		<span class="n">ylabel</span><span class="o">=</span><span class="s">&quot;Im(z)&quot;</span>
+	<span class="p">)</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>########## 7) Completar un ejercicio que forma parte de los  challenges problems.</p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "julia-1.5"
+        },
+        kernelOptions: {
+            kernelName: "julia-1.5",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'julia-1.5'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Luis Felipe Flores Machado, René David Hernández<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>

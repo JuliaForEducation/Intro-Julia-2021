@@ -5,9 +5,11 @@
   chapters:
   - file: Git_y_GitHub
   - file: Fundamentos 
-- part: Parte de prueba
+  - file: Estructuras_de_Control
+  - file: Estructuras_de_Datos
+- part: Proyectos
   chapters:
-  - file: archivo_prueba
+  - file: Primer_proyecto
 
 # - file: Fundamentos
 # - file: archivo_prueba

@@ -20,5 +20,3 @@ html:
   use_issues_button: true
   use_edit_page_button: true
   favicon: "images/logo.ico"
-execute:
-  execute_notebooks: 'off'

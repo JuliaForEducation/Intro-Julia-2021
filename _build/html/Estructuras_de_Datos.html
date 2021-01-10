@@ -1,0 +1,2519 @@
+
+<!DOCTYPE html>
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Estructuras de Datos &#8212; Project-oriented workshop in Julia computing</title>
+    
+  <link rel="stylesheet" href="_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.2d2078699c18a0efb88233928e1cf6ed.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/translations.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.be0a4a0c39cd630af62a2fcf693f3f06.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="_static/logo.ico"/>
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Búsqueda" href="search.html" />
+    <link rel="next" title="Primer proyecto" href="Primer_proyecto.html" />
+    <link rel="prev" title="Estructuras de Control" href="Estructuras_de_Control.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="index.html">
+  
+  <img src="_static/julia_logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Project-oriented workshop in Julia computing</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Buscar este libro ..." aria-label="Buscar este libro ..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Intro.html">
+   Project-oriented workshop in Julia computing
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Primera Semana
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Git_y_GitHub.html">
+   Git y GitHub
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Fundamentos.html">
+   Fundamentos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Estructuras_de_Control.html">
+   Estructuras de Control
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Estructuras de Datos
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Proyectos
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Primer_proyecto.html">
+   Primer proyecto
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Navegación de palanca" aria-controls="site-navigation"
+            title="Navegación de palanca" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Descarga esta pagina"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/Estructuras_de_Datos.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Descargar archivo fuente" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimir en PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/JuliaForEducation/Intro-Julia-2021"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Repositorio de origen"><i
+                    class="fab fa-github"></i>repositorio</button></a>
+        <a class="issues-button"
+            href="https://github.com/JuliaForEducation/Intro-Julia-2021/issues/new?title=Issue%20on%20page%20%2FEstructuras_de_Datos.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Abrir un problema"><i class="fas fa-lightbulb"></i>Tema abierto</button></a>
+        <a class="edit-button" href="https://github.com/JuliaForEducation/Intro-Julia-2021/edit/master/Estructuras_de_Datos.ipynb"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edita esta página"><i class="fas fa-pencil-alt"></i>Tema abierto</button></a>
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Modo de pantalla completa"
+                title="Modo de pantalla completa"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/JuliaForEducation/Intro-Julia-2021/master?urlpath=tree/Estructuras_de_Datos.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Lanzamiento Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/JuliaForEducation/Intro-Julia-2021/blob/master/Estructuras_de_Datos.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Lanzamiento Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contenido
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   Estructuras de Datos
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#rangos">
+     Rangos
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#array">
+     Array
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#inicializacion-de-arrays">
+       Inicialización de arrays
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#inicializacion-de-arrays-especiales">
+       Inicialización de arrays especiales
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#accediendo-a-los-elementos-de-un-array">
+       Accediendo a los elementos de un Array
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#metodos-utiles">
+       Métodos útiles
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#precauciones">
+       Precauciones
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tuplas">
+     Tuplas
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#diccionarios">
+     Diccionarios
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#creando-diccionarios">
+       Creando diccionarios
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id2">
+       Accediendo a los elementos de un array
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#metodos-usados-con-diccionarios">
+       Métodos usados con diccionarios
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#tipos-de-datos-y-los-diccionarios">
+       Tipos de datos y los diccionarios
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#conjuntos">
+     Conjuntos
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#creacion-de-conjuntos">
+       Creación de conjuntos
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#metodos-relacionados-con-los-conjuntos">
+       Métodos relacionados con los conjuntos
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#list-comprehensions">
+     List Comprehensions
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="estructuras-de-datos">
+<h1>Estructuras de Datos<a class="headerlink" href="#estructuras-de-datos" title="Enlazar permanentemente con este título">¶</a></h1>
+<div class="section" id="id1">
+<h2>Estructuras de Datos<a class="headerlink" href="#id1" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Las estructurtas de datos son formatos especiales de datos que permiten guardar, organizar y manipular información. En particular, cada estructura especifica la forma en la cual se pueden realizar operaciones sobre los datos que contiene y a la vez sobre qué tipo de datos trabajan.</p>
+<p>Las estructuras de datos ocultan al programador la manera en que se maneja la memoria y la gestionan de forma eficiente, por ende genera eficiencia en los algoritmos que los implementan.</p>
+<p>Existen numerosas estructuras de datos cada una diseñada para una aplicación en específico, Julia incorpora algunos tipos de datos básicos y sus procedimientos correspondientes, sin embargo no incorpora por defecto todos los tipos conocidos. Por ello, la comunidad de Julia ha trabajado en un paquete que incorpora diferentes estructuras de datos procurando rendimiento (revisar el paquete <a class="reference external" href="https://juliacollections.github.io/DataStructures.jl/latest/circ_buffer/">DataStructures.jl</a>).</p>
+<p>A continuación, se disertará sobre algunos de los tipos de datos básicos incorporados por defecto en Julia.</p>
+<div class="section" id="rangos">
+<h3>Rangos<a class="headerlink" href="#rangos" title="Enlazar permanentemente con este título">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">(:)(start,[step],stop)</span></code></p>
+<p>Esta estructura permite crear secuencias de números, desde un número dado (<code class="docutils literal notranslate"><span class="pre">start</span></code> ) hasta otro (<code class="docutils literal notranslate"><span class="pre">stop</span></code>) con un tamaño de paso (<code class="docutils literal notranslate"><span class="pre">[step]</span></code>) que puede ser inidicado de forma opcional.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">begin</span>
+	<span class="n">range₁</span> <span class="o">=</span> <span class="o">-</span><span class="mi">5</span><span class="o">:</span><span class="mi">10</span>
+	<span class="n">range₂</span> <span class="o">=</span> <span class="mi">0</span><span class="o">:</span><span class="mi">2</span><span class="o">:</span><span class="mi">10</span>
+	<span class="n">range₃</span> <span class="o">=</span> <span class="mi">0</span><span class="o">:</span><span class="mf">10.0</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.0:1.0:10.0
+</pre></div>
+</div>
+</div>
+</div>
+<p>Por defecto el tamaño del paso es <code class="docutils literal notranslate"><span class="pre">1</span></code>. Si es requerido Julia realiza una conversión automática de tipos de datos. En general el rango puede ser tipo <code class="docutils literal notranslate"><span class="pre">UnitRange</span></code> o <code class="docutils literal notranslate"><span class="pre">StepRange</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">typeof</span><span class="p">(</span><span class="n">range₁</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>UnitRange{Int64}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">typeof</span><span class="p">(</span><span class="n">range₂</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>StepRange{Int64,Int64}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">typeof</span><span class="p">(</span><span class="n">range₃</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>StepRangeLen{Float64,Base.TwicePrecision{Float64},Base.TwicePrecision{Float64}}
+</pre></div>
+</div>
+</div>
+</div>
+<p>Puede notar que el tipo de dato de cada elemento del range está determinado infiriendo este (de forma automática) por cualquiera de los tipos de datos de: <code class="docutils literal notranslate"><span class="pre">start</span></code>, <code class="docutils literal notranslate"><span class="pre">step</span></code> o <code class="docutils literal notranslate"><span class="pre">stop</span></code>.</p>
+<p>Para crear un rango también puede utilizarse el constructor <code class="docutils literal notranslate"><span class="pre">OneTo</span></code> (perteneciente al módulo Base), que garantiza el valor inicial de la secuencia es <code class="docutils literal notranslate"><span class="pre">1</span></code> al igual que el paso.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">range₄</span> <span class="o">=</span> <span class="n">Base</span><span class="o">.</span><span class="n">OneTo</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Base.OneTo(10)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">range₄</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="array">
+<h3>Array<a class="headerlink" href="#array" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Los arrays son un tipo de estructura que contiene datos relacionados, con ellos pueden ser representados vectores y matrices.</p>
+<p>En Julia los Arrays son listas, que pueden contener más de un tipo de dato, según este sea creado o inicializado, además implementa métodos para incrementar y eliminar elementos. También, a diferencia de otras estructuras los array pueden tener datos duplicados.</p>
+<div class="section" id="inicializacion-de-arrays">
+<h4>Inicialización de arrays<a class="headerlink" href="#inicializacion-de-arrays" title="Enlazar permanentemente con este título">¶</a></h4>
+<p>El array puede ser inicializado de diversas maneras, como se contempla a continuación:</p>
+<p><strong>Usando el constructor explícito</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">array₁</span> <span class="o">=</span> <span class="kt">Array</span><span class="p">{</span><span class="kt">Float64</span><span class="p">}(</span><span class="n">undef</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5×2×2 Array{Float64,3}:
+[:, :, 1] =
+ 6.94495e-310  6.94495e-310
+ 6.94495e-310  6.94495e-310
+ 6.94495e-310  6.94496e-310
+ 6.94493e-310  6.94493e-310
+ 6.94495e-310  6.94493e-310
+
+[:, :, 2] =
+ 6.94493e-310  6.94495e-310
+ 6.94495e-310  0.0
+ 6.94495e-310  0.0
+ 6.94495e-310  0.0
+ 6.94495e-310  6.94493e-310
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">array₁</span><span class="p">[</span><span class="mi">5</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6.9449545588407e-310
+</pre></div>
+</div>
+</div>
+</div>
+<p>En el constructor explícito debe especificarse:</p>
+<ul class="simple">
+<li><p>El tipo de dato (en el ejemplo <code class="docutils literal notranslate"><span class="pre">Float64</span></code>).</p></li>
+<li><p>Las dimensiones del array (en el ejemplo al array se especifica 3 dimensiones).</p></li>
+<li><p>El tamaño del array, el keyword <code class="docutils literal notranslate"><span class="pre">undef</span></code> debe ser declarado, posteriormente se indica la cantidad cantidad de elementos por dimensión.</p></li>
+</ul>
+<p><strong>NOTA:</strong>  Aunque se desea tener un array vacío, al especificar el tamaño de array, Julia rellena los elementos con datos contenidos en el garbage.</p>
+<p>El array vacío (sin especificar el tamaño) se puede inicializar de las siguientes maneras:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">array₂</span> <span class="o">=</span> <span class="kt">Array</span><span class="p">{</span><span class="kt">Any</span><span class="p">,</span><span class="mi">1</span><span class="p">}()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Any[]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">array₃</span> <span class="o">=</span> <span class="p">[]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Any[]
+</pre></div>
+</div>
+</div>
+</div>
+<p>En las inicializaciones anteriores el array acepta cualquier tipo de valor, pues su definición contempla elementos con el supertipo <code class="docutils literal notranslate"><span class="pre">Any</span></code> (en el caso de <code class="docutils literal notranslate"><span class="pre">array₂</span></code> se define de forma explícita y en el de <code class="docutils literal notranslate"><span class="pre">array₃</span></code> de forma implícita).</p>
+<p>Pueden existir casos en que el array solo deba contener elementos de un número limitado de tipos, en tales casos la declaración del tipo del array puede ser decalarado mediante <code class="docutils literal notranslate"><span class="pre">Union</span></code>, por ejemplo: <code class="docutils literal notranslate"><span class="pre">Array{Union{Int64,Float64,String},2}</span></code>. En el ejemplo el array solo podrá contener elementos del tipo: <code class="docutils literal notranslate"><span class="pre">Int64</span></code>, <code class="docutils literal notranslate"><span class="pre">Float64</span></code> o <code class="docutils literal notranslate"><span class="pre">String</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">array₄</span> <span class="o">=</span> <span class="kt">Array</span><span class="p">{</span><span class="kt">Float64</span><span class="p">,</span><span class="mi">1</span><span class="p">}()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Float64[]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">array₅</span> <span class="o">=</span> <span class="kt">Float64</span><span class="p">[]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Float64[]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Los arrays anteriores están vacios, pero solo aceptan elementos que son del tipo <code class="docutils literal notranslate"><span class="pre">Float64</span></code> o que pueden ser promovidos a ese tipo (por ejemplo Int64 puede ser convertido a Float64).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">push!</span><span class="p">(</span><span class="n">array₄</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1-element Array{Float64,1}:
+ 2.0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="c">##push!(array₅,&quot;Hola&quot;)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>NOTAS:</strong> Con el método <code class="docutils literal notranslate"><span class="pre">push!</span></code> se pueden agregar elementos al array.</p>
+<p>Si ya se conoce el contenido del array, este puede ser inicializado como “array literal”, es decir puede ser creado de forma manual.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">array₆</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3-element Array{Int64,1}:
+ 1
+ 2
+ 3
+</pre></div>
+</div>
+</div>
+</div>
+<p>El array anterior, que es de 1 dimensión, es conocido como array columna, en lugar de utilizar <code class="docutils literal notranslate"><span class="pre">,</span></code> puede utilizar <code class="docutils literal notranslate"><span class="pre">;</span></code>. Un array fila puede ser creado si cada elemento del array es separado mediante un espacio.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">array₇</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1×3 Array{Int64,2}:
+ 1  2  3
+</pre></div>
+</div>
+</div>
+</div>
+<p>Como puede notar el tipo de dato entre <code class="docutils literal notranslate"><span class="pre">array₆</span></code> y <code class="docutils literal notranslate"><span class="pre">array₇</span></code> difieren, el primero es de una dimensión mientras que el segundo es de dos dimensiones. Lo anterior significa que en <code class="docutils literal notranslate"><span class="pre">array₇</span></code>  cada elemento se encuentra en columnas diferentes de la matriz.</p>
+<p>Lo anterior puede suponer varias ventajas, ya que se pueden realizar operaciones conocidas entre matrices.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">array₇</span><span class="o">*</span><span class="n">array₆</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1-element Array{Int64,1}:
+ 14
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">array₆</span><span class="o">*</span><span class="n">array₇</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3×3 Array{Int64,2}:
+ 1  2  3
+ 2  4  6
+ 3  6  9
+</pre></div>
+</div>
+</div>
+</div>
+<p>En el caso de un array de dos dimensiones, existen diferentes formas en que este puede ser inicializado de formas manual.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">array₈</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">]</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3×3 Array{Int64,2}:
+ 1  4  7
+ 2  5  8
+ 3  6  9
+</pre></div>
+</div>
+</div>
+</div>
+<p>En el caso anterior el array fue creado por columnas, mediante el ingreso de arrays columnas separados por un espacio. Similares resultados se obtienen al utilizar el método <a class="reference external" href="https://docs.julialang.org/en/v1/base/arrays/##Base.hcat">hcat</a>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">hcat</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3×2 Array{Int64,2}:
+ 1  4
+ 2  5
+ 3  6
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">array₉</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span><span class="p">];</span> <span class="p">[</span><span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2×3 Array{Int64,2}:
+ 1  2  3
+ 4  5  6
+</pre></div>
+</div>
+</div>
+</div>
+<p>En el caso anterior el array fue creado mediante filas, mediante el ingreso de arrays filas separados por una <code class="docutils literal notranslate"><span class="pre">;</span></code>. Similares resultados se obtienen al utilizar el método <a class="reference external" href="https://docs.julialang.org/en/v1/base/arrays/##Base.vcat">vcat</a>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">vcat</span><span class="p">([</span><span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span><span class="p">]</span> <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2×3 Array{Int64,2}:
+ 1  2  3
+ 4  5  6
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="inicializacion-de-arrays-especiales">
+<h4>Inicialización de arrays especiales<a class="headerlink" href="#inicializacion-de-arrays-especiales" title="Enlazar permanentemente con este título">¶</a></h4>
+<p>Julia implementa métodos que pueden ser útiles para crear array de forma rápida</p>
+<p>####### Array de ceros
+Un array de ceros puede ser creado con el método <code class="docutils literal notranslate"><span class="pre">zeros</span></code>, que admite como argumentos el tipo de datos y luego las dimensiones del array.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">zeros</span><span class="p">(</span><span class="kt">Int64</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4-element Array{Int64,1}:
+ 0
+ 0
+ 0
+ 0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">zeros</span><span class="p">(</span><span class="kt">Float64</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4×4 Array{Float64,2}:
+ 0.0  0.0  0.0  0.0
+ 0.0  0.0  0.0  0.0
+ 0.0  0.0  0.0  0.0
+ 0.0  0.0  0.0  0.0
+</pre></div>
+</div>
+</div>
+</div>
+<p>####### Array de unos
+Un array de unos puede ser creado con el método <code class="docutils literal notranslate"><span class="pre">ones</span></code>, que admite como argumentos el tipo de datos y luego las dimensiones del array.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">ones</span><span class="p">(</span><span class="kt">Float64</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3-element Array{Float64,1}:
+ 1.0
+ 1.0
+ 1.0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">ones</span><span class="p">(</span><span class="kt">Float64</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3×3 Array{Float64,2}:
+ 1.0  1.0  1.0
+ 1.0  1.0  1.0
+ 1.0  1.0  1.0
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>NOTA:</strong> Puede leer más sobre inicialización de arrays y métodos para el manejo de arrays en:</p>
+<ul class="simple">
+<li><p>La sección <a class="reference external" href="https://docs.julialang.org/en/v1/manual/arrays/##Construction-and-Initialization">Construction and Initialization</a> del capítulo Multi-dimensional Arrays del manual de Julia.</p></li>
+<li><p>La sección <a class="reference external" href="https://docs.julialang.org/en/v1/base/arrays/##Constructors-and-Types">Constructors and Types</a> del capítulo Arrays en el manual de Julia.</p></li>
+</ul>
+</div>
+<div class="section" id="accediendo-a-los-elementos-de-un-array">
+<h4>Accediendo a los elementos de un Array<a class="headerlink" href="#accediendo-a-los-elementos-de-un-array" title="Enlazar permanentemente con este título">¶</a></h4>
+<p>Se accede a los elementos de un array con <code class="docutils literal notranslate"><span class="pre">[]</span></code> e indicando la posición de elemento.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">array₆</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3-element Array{Int64,1}:
+ 1
+ 2
+ 3
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">array₆</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
+</pre></div>
+</div>
+</div>
+</div>
+<p>Como puede ser observado, a diferencia de otros lenguajes de programación, Julia tiene indexación base-1, lo que significa que para el primer elemento del array tiene índice <code class="docutils literal notranslate"><span class="pre">1</span></code> no <code class="docutils literal notranslate"><span class="pre">0</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">array3dim</span> <span class="o">=</span> <span class="n">cat</span><span class="p">([</span><span class="mi">1</span> <span class="mi">2</span><span class="p">;</span> <span class="mi">3</span> <span class="mi">4</span><span class="p">],[</span><span class="s">&quot;Hola 1&quot;</span> <span class="s">&quot;Hola 2&quot;</span><span class="p">;</span> <span class="s">&quot;Hola 3&quot;</span> <span class="s">&quot;Hola 4&quot;</span><span class="p">],[</span><span class="mi">5</span> <span class="mi">6</span><span class="p">;</span> <span class="mi">7</span> <span class="mi">8</span><span class="p">],</span><span class="n">dims</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2×2×3 Array{Any,3}:
+[:, :, 1] =
+ 1  2
+ 3  4
+
+[:, :, 2] =
+ &quot;Hola 1&quot;  &quot;Hola 2&quot;
+ &quot;Hola 3&quot;  &quot;Hola 4&quot;
+
+[:, :, 3] =
+ 5  6
+ 7  8
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">array3dim</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&quot;Hola 1&quot;
+</pre></div>
+</div>
+</div>
+</div>
+<p>En el ejemplo anterior se accede a un elemento de un array de 3 dimensiones, indicando la posición con una terna de números. Sin embargo, se puede acceder a más de un elemento extrayendo un subarray del primero.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">array₆</span><span class="p">[</span><span class="mi">2</span><span class="o">:</span><span class="mi">3</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2-element Array{Int64,1}:
+ 2
+ 3
+</pre></div>
+</div>
+</div>
+</div>
+<p>Los índices de los elementos que se desean extraer pueden ser indicados mediante un objeto tipo range como se muestra en el ejemplo.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">array3dim</span><span class="p">[</span><span class="o">:</span><span class="p">,</span><span class="o">:</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2×2 Array{Any,2}:
+ &quot;Hola 1&quot;  &quot;Hola 2&quot;
+ &quot;Hola 3&quot;  &quot;Hola 4&quot;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Con el símbolo <code class="docutils literal notranslate"><span class="pre">:</span></code> se indica que todos los elementos de una dimensión del array deben ser extraidos; en el caso del array de una dimensión, todos los elementos del mismo.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">array3dim</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="o">:</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2-element Array{Any,1}:
+ 5
+ 6
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">array3dim</span><span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2-element Array{Any,1}:
+ 2
+ 4
+</pre></div>
+</div>
+</div>
+</div>
+<p>En los ejemplos anteriores, se recorre el arreglo por columna y por fila respectivamente.</p>
+<p>Para un mejor rendimiento, se recomienda recorrer un array por columna, debido a la forma en que Julia almacena los elementos del array en memoria, como se muestra a continuación.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">array₁₀</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="mi">3</span> <span class="mi">4</span><span class="o">:</span><span class="mi">6</span> <span class="mi">7</span><span class="o">:</span><span class="mi">9</span> <span class="p">]</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3×3 Array{Int64,2}:
+ 1  4  7
+ 2  5  8
+ 3  6  9
+</pre></div>
+</div>
+</div>
+</div>
+<p>Note que <code class="docutils literal notranslate"><span class="pre">array₁₀</span></code> es un array de dos dimensiones y aunque se accede a los elementos indicando dos índices, también puede accederse mediante un solo índice.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">array₁₀</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="n">array₁₀</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span><span class="n">array₁₀</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span><span class="n">array₁₀</span><span class="p">[</span><span class="mi">6</span><span class="p">],</span><span class="n">array₁₀</span><span class="p">[</span><span class="mi">7</span><span class="p">],</span><span class="n">array₁₀</span><span class="p">[</span><span class="k">end</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6-element Array{Int64,1}:
+ 1
+ 3
+ 4
+ 6
+ 7
+ 9
+</pre></div>
+</div>
+</div>
+</div>
+<p>Ello indica que Julia almacena los elementos del array de forma concecutiva por columnas. Por ende, si el array se recorre por filas se tendrán que hacer cálculos adicionales llevando un costo de tiempo; por esa razón el costo por acceder a un array por columnas es menor que si se hiciera por filas.</p>
+</div>
+<div class="section" id="metodos-utiles">
+<h4>Métodos útiles<a class="headerlink" href="#metodos-utiles" title="Enlazar permanentemente con este título">¶</a></h4>
+<p>Julia implementa numerosos métodos para trabajar con los arrays. A continuación, se mencionan algunas de las más básicas que permiten realizar varias tareas.</p>
+<p>En Julia los argumentos de las funciones se pasan por referencia, es decir, se pasa a la función no solo el valor contenido en la variable sino que, también se pasa la referencia a la variable original. Lo anterior significa que, cualquier cambio realizado al argumento dentro de la función, dicho cambio se verá reflejado en la variable original.</p>
+<p>Por ello, en Julia se sigue una convención cuando se diseña funciones y esta es: si la función modifica el argumento se denota añadiendo al nombre el símbolo <code class="docutils literal notranslate"><span class="pre">!</span></code>. La convención mencionada es algo que se mira en varias funciones, existiendo dos versiones de las mismas (las que modifican la variable original y las que no).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">array₁₁</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3-element Array{Int64,1}:
+ 1
+ 2
+ 3
+</pre></div>
+</div>
+</div>
+</div>
+<p>El método <code class="docutils literal notranslate"><span class="pre">push!</span></code> modifica el array, agregando un elementos al final del mismo y devuelve el array modificado.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">push!</span><span class="p">(</span><span class="n">array₁₁</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4-element Array{Int64,1}:
+ 1
+ 2
+ 3
+ 4
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">push!</span><span class="p">(</span><span class="n">array₁₁</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>7-element Array{Int64,1}:
+ 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">array₁₁</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>7-element Array{Int64,1}:
+ 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+</pre></div>
+</div>
+</div>
+</div>
+<p>El método <code class="docutils literal notranslate"><span class="pre">pushfirst!</span></code> añade un elementos al inicio del array.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">pushfirst!</span><span class="p">(</span><span class="n">array₁₁</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>9-element Array{Int64,1}:
+ -1
+  0
+  1
+  2
+  3
+  4
+  5
+  6
+  7
+</pre></div>
+</div>
+</div>
+</div>
+<p>El método <code class="docutils literal notranslate"><span class="pre">pop!</span></code> elimina y retorna el último elemento del array.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">pop!</span><span class="p">(</span><span class="n">array₁₁</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>7
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">array₁₁</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>8-element Array{Int64,1}:
+ -1
+  0
+  1
+  2
+  3
+  4
+  5
+  6
+</pre></div>
+</div>
+</div>
+</div>
+<p>El método <code class="docutils literal notranslate"><span class="pre">popfirst!</span></code> elimina y retorna el primer elemento del array.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">popfirst!</span><span class="p">(</span><span class="n">array₁₁</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-1
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">array₁₁</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>7-element Array{Int64,1}:
+ 0
+ 1
+ 2
+ 3
+ 4
+ 5
+ 6
+</pre></div>
+</div>
+</div>
+</div>
+<p>El método <code class="docutils literal notranslate"><span class="pre">deleteat!</span></code> elimina un elemento indicado la posición de este dentro del array y devuelve el array modificado.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">deleteat!</span><span class="p">(</span><span class="n">array₁₁</span><span class="p">,</span><span class="mi">6</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6-element Array{Int64,1}:
+ 0
+ 1
+ 2
+ 3
+ 4
+ 6
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">deleteat!</span><span class="p">(</span><span class="n">array₁₁</span><span class="p">,</span><span class="mi">3</span><span class="o">:</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3-element Array{Int64,1}:
+ 0
+ 1
+ 6
+</pre></div>
+</div>
+</div>
+</div>
+<p>El método <code class="docutils literal notranslate"><span class="pre">splice!</span></code> tiene diferentes formas de uso; entre ellas reemplazar elementos del array, indicando la posición del elemento por reemplazar y devuelve el valor del elemento reemplazado.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">splice!</span><span class="p">(</span><span class="n">array₁₁</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">array₁₁</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3-element Array{Int64,1}:
+ 0
+ 1
+ 3
+</pre></div>
+</div>
+</div>
+</div>
+<p>Otra forma de uso es la de eliminar elementos, para ello solo se pasa como argumento el array a modificar y la posición del elemento, el método devuelve el valor del elemento eliminado.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">splice!</span><span class="p">(</span><span class="n">array₁₁</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">array₁₁</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2-element Array{Int64,1}:
+ 0
+ 3
+</pre></div>
+</div>
+</div>
+</div>
+<p>Otro caso de uso para <code class="docutils literal notranslate"><span class="pre">splice!</span></code> es la eliminar un elemento y agregar elementos indicándolos por medio de una lista.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">splice!</span><span class="p">(</span><span class="n">array₁₁</span><span class="p">,</span><span class="mi">2</span><span class="p">,[</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">array₁₁</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5-element Array{Int64,1}:
+ 0
+ 3
+ 4
+ 5
+ 6
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">splice!</span><span class="p">(</span><span class="n">array₁₁</span><span class="p">,</span><span class="mi">2</span><span class="p">,[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">array₁₁</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>7-element Array{Int64,1}:
+ 0
+ 1
+ 2
+ 3
+ 4
+ 5
+ 6
+</pre></div>
+</div>
+</div>
+</div>
+<p>También pueden insertarse elementos elementos entre otros, como se ilustra.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">splice!</span><span class="p">(</span><span class="n">array₁₁</span><span class="p">,</span><span class="mi">4</span><span class="o">:</span><span class="mi">3</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Int64[]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">array₁₁</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>8-element Array{Int64,1}:
+ 0
+ 1
+ 2
+ 0
+ 3
+ 4
+ 5
+ 6
+</pre></div>
+</div>
+</div>
+</div>
+<p>Para que <code class="docutils literal notranslate"><span class="pre">splice!</span></code> funcione de la manera mostrada anteriormente, es necesario que el índice de los elementos donde se desea insertaer se indiquen de la forma <code class="docutils literal notranslate"><span class="pre">n:n-1</span></code>.</p>
+<p>Existe un método para vaciar un array, este método presenta los dos casos: el que modifca el array y el que no, el método <code class="docutils literal notranslate"><span class="pre">empty</span></code> y <code class="docutils literal notranslate"><span class="pre">empty!</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">empty</span><span class="p">(</span><span class="n">array₁₁</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Int64[]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">array₁₁</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>8-element Array{Int64,1}:
+ 0
+ 1
+ 2
+ 0
+ 3
+ 4
+ 5
+ 6
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">empty!</span><span class="p">(</span><span class="n">array₁₁</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Int64[]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">array₁₁</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Int64[]
+</pre></div>
+</div>
+</div>
+</div>
+<p>El método <code class="docutils literal notranslate"><span class="pre">maximum</span></code> devuelve el máximo valor entre los valores del elemento de un array.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">maximum</span><span class="p">([</span><span class="mi">1</span> <span class="mi">2</span><span class="p">;</span> <span class="mi">3</span> <span class="mi">4</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4
+</pre></div>
+</div>
+</div>
+</div>
+<p>El método <code class="docutils literal notranslate"><span class="pre">minimum</span></code> devuelve el mínimo valor entre los valores del elemento de un array.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">minimum</span><span class="p">([</span><span class="mi">1</span> <span class="mi">2</span><span class="p">;</span> <span class="mi">3</span> <span class="mi">4</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
+</pre></div>
+</div>
+</div>
+</div>
+<p>Merece la atención los métodos anteriores, pues devuelven el menor o mayor valor (según sea el caso) al llamado de una función, para más información puede leer del manual de Julia las <a class="reference external" href="https://docs.julialang.org/en/v1/base/collections/##Base.maximum">secciones</a> relacionadas con dichas funciones.</p>
+<p>El método <code class="docutils literal notranslate"><span class="pre">isempty</span></code> comprueba si el array está vacío o no.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">isempty</span><span class="p">(</span><span class="n">array₁₁</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>true
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">isempty</span><span class="p">(</span><span class="n">array₁₀</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>false
+</pre></div>
+</div>
+</div>
+</div>
+<p>La función <code class="docutils literal notranslate"><span class="pre">length</span></code> devuelve la cantidad de elementos que contiene el array.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">length</span><span class="p">(</span><span class="n">array₁₁</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">length</span><span class="p">(</span><span class="n">array₁₀</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>9
+</pre></div>
+</div>
+</div>
+</div>
+<p>La funión <code class="docutils literal notranslate"><span class="pre">size</span></code> devuelve las una tupla con las dimensiones del array.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">size</span><span class="p">(</span><span class="n">array₄</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(1,)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">size</span><span class="p">(</span><span class="n">array₁</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(5, 2, 2)
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>NOTA:</strong> Más funciones e información acerca de los arrays en Julia puede encontrarlo en el manual en la seción <a class="reference external" href="https://docs.julialang.org/en/v1/base/collections/##Base.maximum">Multi-dimensional Arrays</a></p>
+</div>
+<div class="section" id="precauciones">
+<h4>Precauciones<a class="headerlink" href="#precauciones" title="Enlazar permanentemente con este título">¶</a></h4>
+<p>Al trabajar con arrays en alguna ocasión se querrá hacer una copia de esta.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">array₁₂</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3-element Array{Int64,1}:
+ 1
+ 2
+ 3
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">arraycopy₁</span> <span class="o">=</span> <span class="n">array₁₂</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3-element Array{Int64,1}:
+ 1
+ 2
+ 3
+</pre></div>
+</div>
+</div>
+</div>
+<p>El problema de las líneas anteriores es: tanto <code class="docutils literal notranslate"><span class="pre">array₁₂</span></code> como <code class="docutils literal notranslate"><span class="pre">arraycopy₁</span></code> apuntan a la misma dirección de memoria, es decir, la línea de código <code class="docutils literal notranslate"><span class="pre">arraycopy₁</span> <span class="pre">=</span> <span class="pre">array₁₂</span></code> no asigna el valor de <code class="docutils literal notranslate"><span class="pre">array₁₂</span></code> en <code class="docutils literal notranslate"><span class="pre">arraycopy₁</span></code>.</p>
+<p>Para comprobar lo anterior puede usarse el operador de igualdad estricto.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">arraycopy₁</span> <span class="o">===</span> <span class="n">array₁₂</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>true
+</pre></div>
+</div>
+</div>
+</div>
+<p>Además cualquier modificación realizado con <code class="docutils literal notranslate"><span class="pre">arraycopy₁</span></code> se verá reflejado en <code class="docutils literal notranslate"><span class="pre">array₁₂</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">push!</span><span class="p">(</span><span class="n">arraycopy₁</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4-element Array{Int64,1}:
+ 1
+ 2
+ 3
+ 5
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">array₁₂</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4-element Array{Int64,1}:
+ 1
+ 2
+ 3
+ 5
+</pre></div>
+</div>
+</div>
+</div>
+<p>Para hacer una copia de una array puede utilizarse el método <code class="docutils literal notranslate"><span class="pre">copy</span></code>, el cual realiza una copia del array indicado en su argumento.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">arraycopy₂</span> <span class="o">=</span>  <span class="n">copy</span><span class="p">(</span><span class="n">array₁₂</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4-element Array{Int64,1}:
+ 1
+ 2
+ 3
+ 5
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">arraycopy₂</span> <span class="o">===</span> <span class="n">array₁₂</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>false
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">push!</span><span class="p">(</span><span class="n">arraycopy₂</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5-element Array{Int64,1}:
+ 1
+ 2
+ 3
+ 5
+ 5
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">array₁₂</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4-element Array{Int64,1}:
+ 1
+ 2
+ 3
+ 5
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="tuplas">
+<h3>Tuplas<a class="headerlink" href="#tuplas" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Las tuplas (<code class="docutils literal notranslate"><span class="pre">Tuples</span></code>) son listas, pero a diferencia de los arrays son inmutables. Lo anterior quiere decir que una vez creada la tupla esta no puede ser: modificada, eliminada o sobreescrita, como sí sucede con los arrays. Al igual que los arrays, las tuplas pueden contener diferentes tipos de datos.</p>
+<p>Para crear una tupla, los elementos de esta se encierran entre <code class="docutils literal notranslate"><span class="pre">()</span></code>. Se accede a los elementos de las tuplas de la misma forma en que se acceden a los elementos de un array.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">tuple₁</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="s">&quot;Hello, World!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(1, 2, 3, &quot;Hello, World!&quot;)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">typeof</span><span class="p">(</span><span class="n">tuple₁</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Tuple{Int64,Int64,Int64,String}
+</pre></div>
+</div>
+</div>
+</div>
+<p>Para comprobar la inmutabilidad de las tuplas, se puede intentar modificar el tercer elemento de <code class="docutils literal notranslate"><span class="pre">tuple₁</span></code> y de <code class="docutils literal notranslate"><span class="pre">array₁₂</span></code> (en el caso de <code class="docutils literal notranslate"><span class="pre">tuple₁</span></code> se obtendrá un error).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="c">##tuple₁[3] = 33</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">array₁₂</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="mi">33</span><span class="p">;</span> <span class="n">array₁₂</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4-element Array{Int64,1}:
+  1
+  2
+ 33
+  5
+</pre></div>
+</div>
+</div>
+</div>
+<p>Cuando se quiere crear una tupla de un solo elemento, al final del elemento debe colocarse <code class="docutils literal notranslate"><span class="pre">,</span></code>; ya que el uso de <code class="docutils literal notranslate"><span class="pre">(</span> <span class="pre">)</span></code> serían interpretados como elementos de agrupación. Para mantener coherencia, se permite lo mismo si se inicializa una tupla con más de un elemento.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">tuple₂</span> <span class="o">=</span> <span class="p">(</span><span class="mi">11</span><span class="p">,)</span> <span class="c">##Compare con la asignación (11), en el cual tuple₂ sería una variable con valor 11 del tipo Int64</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(11,)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">tuple₃</span> <span class="o">=</span> <span class="p">(</span><span class="mi">11</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="mi">13</span><span class="p">,)</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(11, 12, 13)
+</pre></div>
+</div>
+</div>
+</div>
+<p>A menudo las tuplas son implementadas en el retorno de funciones, por ejemplo, la función <code class="docutils literal notranslate"><span class="pre">divrem</span></code> que retorna el cociente y el resto de la división euclidiana. Cuando sucede lo anterior los valores de la tupla se puede descomprimir en variables.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">cociente</span><span class="p">,</span><span class="n">resto</span> <span class="o">=</span> <span class="n">divrem</span><span class="p">(</span><span class="mi">39</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(7, 4)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">cociente</span><span class="p">,</span> <span class="n">resto</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2-element Array{Int64,1}:
+ 7
+ 4
+</pre></div>
+</div>
+</div>
+</div>
+<p>Una discusión sobre el tipo de tuplas puede encontrarse en <a class="reference external" href="https://riptutorial.com/es/julia-lang/example/22725/tipos-de-tuplas">Tipos de Tuplas</a>.</p>
+<p>De forma opcional, los componentes de las tuplas pueden ser nombrados, en dicho caso se construye una tupla con nombre.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">tuple₄</span> <span class="o">=</span> <span class="p">(</span><span class="n">a</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">4</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(a = 2, b = 4)
+</pre></div>
+</div>
+</div>
+</div>
+<p>Para acceder a los elementos de una tupla nombrada se puede usar la sintaxis <code class="docutils literal notranslate"><span class="pre">tuple.nombre</span></code>, además de la indexación normal <code class="docutils literal notranslate"><span class="pre">tuple[i]</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">tuple₄</span><span class="o">.</span><span class="n">a</span><span class="p">,</span> <span class="n">tuple₄</span><span class="p">[</span><span class="o">:</span><span class="n">b</span><span class="p">],</span> <span class="n">tuple₄</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="n">tuple₄</span><span class="p">[</span><span class="mi">2</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4-element Array{Int64,1}:
+ 2
+ 4
+ 2
+ 4
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="diccionarios">
+<h3>Diccionarios<a class="headerlink" href="#diccionarios" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Los diccionarios son estructuras de datos que guardan datos en forma de clave-valor, es decir es una colección asociativa de datos que no tienen un orden establecido.</p>
+<div class="section" id="creando-diccionarios">
+<h4>Creando diccionarios<a class="headerlink" href="#creando-diccionarios" title="Enlazar permanentemente con este título">¶</a></h4>
+<p>Los diccionarios son creados con el constructor <code class="docutils literal notranslate"><span class="pre">Dict</span></code>, este puede contener como argumentos las claves asociadas a los valores o puede usarse sin argumentos (en dicho caso es vacío).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">dict₁</span> <span class="o">=</span> <span class="kt">Dict</span><span class="p">(</span><span class="s">&quot;Nombre&quot;</span><span class="o">=&gt;</span><span class="s">&quot;Juan&quot;</span><span class="p">,</span> <span class="s">&quot;Edad&quot;</span><span class="o">=&gt;</span><span class="mi">25</span><span class="p">,</span> <span class="mf">3.0</span><span class="o">=&gt;</span><span class="mi">50</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Dict{Any,Any} with 3 entries:
+  &quot;Nombre&quot; =&gt; &quot;Juan&quot;
+  &quot;Edad&quot;   =&gt; 25
+  3.0      =&gt; 50
+</pre></div>
+</div>
+</div>
+</div>
+<p>Como puede observarse, los diccionarios pueden aceptar como clave cualquier valor y tipo de dato. Para asociar los valores a las claves se utiliza el operador <code class="docutils literal notranslate"><span class="pre">=&gt;</span></code>, que corresponde a la función <code class="docutils literal notranslate"><span class="pre">Pair()</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">dict₂</span> <span class="o">=</span> <span class="kt">Dict</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Dict{Any,Any}()
+</pre></div>
+</div>
+</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">dict₂</span></code> es un diccionario vacío, pero al igual que los array es una estructura de datos mutable, por lo que pueden añadirse elementos como se haría con array asociativos en otros lenguajes de programación.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">begin</span>
+	<span class="n">dict₂</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;Hola&quot;</span> <span class="c">##La clave es un valor del tipo Int64</span>
+	<span class="n">dict₂</span><span class="p">[</span><span class="s">&quot;dos&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;Mundo&quot;</span> <span class="c">##La clave es un valor del tipo String</span>
+	<span class="n">dict₂</span><span class="p">[</span><span class="o">:</span><span class="n">x</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;Tercer elemento&quot;</span> <span class="c">##La clave es un valor del tipo Symbol</span>
+	<span class="n">dict₂</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Dict{Any,Any} with 3 entries:
+  :x    =&gt; &quot;Tercer elemento&quot;
+  &quot;dos&quot; =&gt; &quot;Mundo&quot;
+  1     =&gt; &quot;Hola&quot;
+</pre></div>
+</div>
+</div>
+</div>
+<p>En un diccionario las claves deben ser únicas, no pueden existir dos claves con el mismo nombre.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">dict₂</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">dict₂</span><span class="p">[</span><span class="s">&quot;dos&quot;</span><span class="p">],</span> <span class="n">dict₂</span><span class="p">[</span><span class="o">:</span><span class="n">x</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3-element Array{String,1}:
+ &quot;Hola&quot;
+ &quot;Mundo&quot;
+ &quot;Tercer elemento&quot;
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id2">
+<h4>Accediendo a los elementos de un array<a class="headerlink" href="#id2" title="Enlazar permanentemente con este título">¶</a></h4>
+<p>El acceso a los elementos del diccionario se realiza de forma similar a los arrays, mediante <code class="docutils literal notranslate"><span class="pre">[</span> <span class="pre">]</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="kt">Dict</span><span class="p">(</span><span class="s">&quot;nombre&quot;</span><span class="o">=&gt;</span><span class="s">&quot;Pedro&quot;</span><span class="p">,</span> <span class="s">&quot;nombre&quot;</span><span class="o">=&gt;</span><span class="s">&quot;Rodríguez&quot;</span><span class="p">)</span> <span class="c">##El diccionario solo tiene una única clave &#39;nombre&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Dict{String,String} with 1 entry:
+  &quot;nombre&quot; =&gt; &quot;Rodríguez&quot;
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="metodos-usados-con-diccionarios">
+<h4>Métodos usados con diccionarios<a class="headerlink" href="#metodos-usados-con-diccionarios" title="Enlazar permanentemente con este título">¶</a></h4>
+<p>Para conocer si una determinada clave existe se puede utilizar el método <code class="docutils literal notranslate"><span class="pre">haskey</span></code>, este retorna <code class="docutils literal notranslate"><span class="pre">true</span></code> o <code class="docutils literal notranslate"><span class="pre">false</span></code> dependiendo si existe o no.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">haskey</span><span class="p">(</span><span class="n">dict₂</span><span class="p">,</span><span class="mi">5</span><span class="p">),</span> <span class="n">haskey</span><span class="p">(</span><span class="n">dict₂</span><span class="p">,</span><span class="s">&quot;dos&quot;</span><span class="p">),</span> <span class="n">haskey</span><span class="p">(</span><span class="n">dict₂</span><span class="p">,</span><span class="mi">1</span><span class="p">)]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3-element Array{Bool,1}:
+ 0
+ 1
+ 1
+</pre></div>
+</div>
+</div>
+</div>
+<p>De igual manera se puede determinar si un par <code class="docutils literal notranslate"><span class="pre">clave</span> <span class="pre">=&gt;</span> <span class="pre">valor</span></code> existe con el método <code class="docutils literal notranslate"><span class="pre">in</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="kp">in</span><span class="p">(</span><span class="mi">1</span><span class="o">=&gt;</span><span class="s">&quot;Hola&quot;</span><span class="p">,</span><span class="n">dict₂</span><span class="p">),</span> <span class="kp">in</span><span class="p">(</span><span class="mi">1</span><span class="o">=&gt;</span><span class="s">&quot;Mundo&quot;</span><span class="p">,</span><span class="n">dict₂</span><span class="p">)]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2-element Array{Bool,1}:
+ 1
+ 0
+</pre></div>
+</div>
+</div>
+</div>
+<p>Las claves de un diccionario pueden obtenerse uando el método <code class="docutils literal notranslate"><span class="pre">keys</span></code>, el cual retorna un iterador. Se puede utilizar el método collect para transformarlo en un array.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">keys</span><span class="p">(</span><span class="n">dict₂</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Base.KeySet for a Dict{Any,Any} with 3 entries. Keys:
+  :x
+  &quot;dos&quot;
+  1
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">collect</span><span class="p">(</span><span class="n">keys</span><span class="p">(</span><span class="n">dict₂</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3-element Array{Any,1}:
+  :x
+  &quot;dos&quot;
+ 1
+</pre></div>
+</div>
+</div>
+</div>
+<p>Los valores de un diccionario pueden obtenerse uando el método <code class="docutils literal notranslate"><span class="pre">values</span></code>, el cual retorna una lista con ellas.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">values</span><span class="p">(</span><span class="n">dict₂</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Base.ValueIterator for a Dict{Any,Any} with 3 entries. Values:
+  &quot;Tercer elemento&quot;
+  &quot;Mundo&quot;
+  &quot;Hola&quot;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">collect</span><span class="p">(</span><span class="n">values</span><span class="p">(</span><span class="n">dict₂</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3-element Array{Any,1}:
+ &quot;Tercer elemento&quot;
+ &quot;Mundo&quot;
+ &quot;Hola&quot;
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="tipos-de-datos-y-los-diccionarios">
+<h4>Tipos de datos y los diccionarios<a class="headerlink" href="#tipos-de-datos-y-los-diccionarios" title="Enlazar permanentemente con este título">¶</a></h4>
+<p>En los diccionarios mostrados, el tipo de dato para la clave y los valores podian ser de diferentes tipos. La definición del diccionario es la siguiente:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">typeof</span><span class="p">(</span><span class="n">dict₂</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Dict{Any,Any}
+</pre></div>
+</div>
+</div>
+</div>
+<p>Como se observa <code class="docutils literal notranslate"><span class="pre">Dict{Any,Any}</span></code> indica que el tipo de dato para la clave es <code class="docutils literal notranslate"><span class="pre">Any</span></code> y para el valor es <code class="docutils literal notranslate"><span class="pre">Any</span></code>.</p>
+<p>Puede crearse un dicconario que restrinja el tipo de datos para la clave y valor, de esta manera puede crearse una estructura más compleja.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">typeof</span><span class="p">(</span><span class="kt">Dict</span><span class="p">{</span><span class="n">String</span><span class="p">,</span><span class="kt">Int64</span><span class="p">}(</span><span class="s">&quot;1&quot;</span><span class="o">=&gt;</span><span class="mi">1</span><span class="p">,</span> <span class="s">&quot;2&quot;</span><span class="o">=&gt;</span><span class="mi">2</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Dict{String,Int64}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">typeof</span><span class="p">(</span><span class="kt">Dict</span><span class="p">{</span><span class="kt">Int64</span><span class="p">,</span><span class="n">String</span><span class="p">}(</span><span class="mi">1</span><span class="o">=&gt;</span><span class="s">&quot;1&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="o">=&gt;</span><span class="s">&quot;2&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Dict{Int64,String}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">typeof</span><span class="p">(</span><span class="kt">Dict</span><span class="p">{</span><span class="kt">Symbol</span><span class="p">,</span><span class="kt">Int64</span><span class="p">}(</span><span class="o">:</span><span class="n">x</span><span class="o">=&gt;</span><span class="mi">1</span><span class="p">,</span> <span class="o">:</span><span class="n">y</span><span class="o">=&gt;</span><span class="mi">2</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Dict{Symbol,Int64}
+</pre></div>
+</div>
+</div>
+</div>
+<p>Los diccionarios y las tuplas nombradas pueden ser vistas como similares, sin embargo, existe una diferencia fundamental: que las tuplas son inmutables mientras que los diccionarios son mutables.</p>
+</div>
+</div>
+<div class="section" id="conjuntos">
+<h3>Conjuntos<a class="headerlink" href="#conjuntos" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Los conjuntos son una colección desordenada de datos, pero tiene la peculiaridad de no contener elementos duplicados. Así como los arrays y los diccionarios son tipos de datos mutables.</p>
+<p>Al igual que los arrays y los diccionarios, los conjuntos pueden contener cualquier tipo de dato. Al momento de crear el conjunto el tipo de dato puede ser especificado, como en otras estructuras de datos; si el tipo de dato no es especificado, Julia analiza los elementos y define  el tipo de datos del conjunto.</p>
+<div class="section" id="creacion-de-conjuntos">
+<h4>Creación de conjuntos<a class="headerlink" href="#creacion-de-conjuntos" title="Enlazar permanentemente con este título">¶</a></h4>
+<p>Los conjuntos son creados con el constructor <code class="docutils literal notranslate"><span class="pre">set</span></code>, cuyos elementos son especificados mediante un array.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">set₁</span> <span class="o">=</span> <span class="kt">Set</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Set{Any}()
+</pre></div>
+</div>
+</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">set₁</span> </code> es un conjunto vacío que acepta cualquier valor.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">set₂</span> <span class="o">=</span> <span class="kt">Set</span><span class="p">{</span><span class="kt">Float64</span><span class="p">}()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Set{Float64}()
+</pre></div>
+</div>
+</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">set₂</span></code> es un conjunto vacío que acepta valores del tipo <code class="docutils literal notranslate"><span class="pre">Float64</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">set₃</span> <span class="o">=</span> <span class="kt">Set</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Set{Int64} with 3 elements:
+  2
+  3
+  1
+</pre></div>
+</div>
+</div>
+</div>
+<p>Como puede notar, en el caso de <code class="docutils literal notranslate"><span class="pre">set₃</span></code> Julia analiza que los elementos del conjunto <code class="docutils literal notranslate"><span class="pre">set₃</span></code> deben ser del tipo <code class="docutils literal notranslate"><span class="pre">Int64</span></code>. Dado que los conjuntos no pueden tener elementos duplicados, finalmente <code class="docutils literal notranslate"><span class="pre">set₃</span></code> solo tiene un elemento con valor <code class="docutils literal notranslate"><span class="pre">3</span></code>.</p>
+<p>Con el método <code class="docutils literal notranslate"><span class="pre">push!</span></code> se puede agregar datos a los conjuntos, pero dado que es una colección de elementos desordenados no puede usarse el método <code class="docutils literal notranslate"><span class="pre">pushfirts!</span></code>. De la misma manera con el método <code class="docutils literal notranslate"><span class="pre">pop!</span></code> se puede eliminar un elemento del conjunto indicándolo.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">push!</span><span class="p">(</span><span class="n">set₃</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Set{Int64} with 4 elements:
+  2
+  3
+  5
+  1
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">pop!</span><span class="p">(</span><span class="n">set₃</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">set₃</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Set{Int64} with 3 elements:
+  2
+  3
+  1
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="metodos-relacionados-con-los-conjuntos">
+<h4>Métodos relacionados con los conjuntos<a class="headerlink" href="#metodos-relacionados-con-los-conjuntos" title="Enlazar permanentemente con este título">¶</a></h4>
+<p>Julia implementa diferentes métodos para trabajar con los conjuntos (muchos de ellos también puede usarse con los diccionarios).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">set₄</span> <span class="o">=</span> <span class="kt">Set</span><span class="p">([</span><span class="s">&quot;Domingo&quot;</span><span class="p">,</span><span class="s">&quot;Lunes&quot;</span><span class="p">,</span><span class="s">&quot;Martes&quot;</span><span class="p">,</span><span class="s">&quot;Miércoles&quot;</span><span class="p">,</span><span class="s">&quot;Jueves&quot;</span><span class="p">,</span><span class="s">&quot;Viernes&quot;</span><span class="p">,</span><span class="s">&quot;Sábado&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Set{String} with 7 elements:
+  &quot;Lunes&quot;
+  &quot;Martes&quot;
+  &quot;Viernes&quot;
+  &quot;Domingo&quot;
+  &quot;Sábado&quot;
+  &quot;Miércoles&quot;
+  &quot;Jueves&quot;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">set₅</span> <span class="o">=</span> <span class="kt">Set</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="s">&quot;Sábado&quot;</span><span class="p">,</span><span class="s">&quot;Domingo&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Set{Any} with 5 elements:
+  &quot;Sábado&quot;
+  2
+  3
+  &quot;Domingo&quot;
+  1
+</pre></div>
+</div>
+</div>
+</div>
+<p>Con el método <code class="docutils literal notranslate"><span class="pre">union</span></code> los conjuntos pueden fusionarse, retornando el conjunto resultante. Es decir, un conjunto cuyo elementos se ecuentra en cualquiera de los conjuntos.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">union</span><span class="p">(</span><span class="n">set₅</span><span class="p">,</span><span class="n">set₄</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Set{Any} with 10 elements:
+  &quot;Lunes&quot;
+  &quot;Martes&quot;
+  &quot;Viernes&quot;
+  &quot;Sábado&quot;
+  2
+  3
+  &quot;Domingo&quot;
+  &quot;Miércoles&quot;
+  &quot;Jueves&quot;
+  1
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">union!</span><span class="p">(</span><span class="n">set₅</span><span class="p">,</span><span class="n">set₄</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Set{Any} with 10 elements:
+  &quot;Lunes&quot;
+  &quot;Martes&quot;
+  &quot;Viernes&quot;
+  &quot;Sábado&quot;
+  2
+  3
+  &quot;Domingo&quot;
+  &quot;Miércoles&quot;
+  &quot;Jueves&quot;
+  1
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">set₅</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Set{Any} with 10 elements:
+  &quot;Lunes&quot;
+  &quot;Martes&quot;
+  &quot;Viernes&quot;
+  &quot;Sábado&quot;
+  2
+  3
+  &quot;Domingo&quot;
+  &quot;Miércoles&quot;
+  &quot;Jueves&quot;
+  1
+</pre></div>
+</div>
+</div>
+</div>
+<p>Con el método <code class="docutils literal notranslate"><span class="pre">intersect</span></code> se obtiene la interseción de los conjuntos, es decir, devuelve un conjunto cuyos elementos se encuentra en ambos conjuntos.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">intersect</span><span class="p">(</span><span class="n">set₄</span><span class="p">,</span><span class="n">set₅</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Set{String} with 7 elements:
+  &quot;Lunes&quot;
+  &quot;Martes&quot;
+  &quot;Viernes&quot;
+  &quot;Sábado&quot;
+  &quot;Domingo&quot;
+  &quot;Miércoles&quot;
+  &quot;Jueves&quot;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">intersect!</span><span class="p">(</span><span class="n">set₄</span><span class="p">,</span><span class="n">set₅</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Set{String} with 7 elements:
+  &quot;Lunes&quot;
+  &quot;Martes&quot;
+  &quot;Viernes&quot;
+  &quot;Domingo&quot;
+  &quot;Sábado&quot;
+  &quot;Miércoles&quot;
+  &quot;Jueves&quot;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">set₄</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Set{String} with 7 elements:
+  &quot;Lunes&quot;
+  &quot;Martes&quot;
+  &quot;Viernes&quot;
+  &quot;Domingo&quot;
+  &quot;Sábado&quot;
+  &quot;Miércoles&quot;
+  &quot;Jueves&quot;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Con el método <code class="docutils literal notranslate"><span class="pre">setdiff</span></code> se obtiene la diferencia entre dos conjuntos, es decir, un conjunto cuyos elementos se encuentran en uno de ellos no en el otro.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">setdiff</span><span class="p">(</span><span class="n">set₅</span><span class="p">,</span><span class="n">set₄</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Set{Any} with 3 elements:
+  2
+  3
+  1
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">setdiff!</span><span class="p">(</span><span class="n">set₅</span><span class="p">,</span><span class="n">set₄</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Set{Any} with 3 elements:
+  2
+  3
+  1
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="list-comprehensions">
+<h3>List Comprehensions<a class="headerlink" href="#list-comprehensions" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Es un forma poderosa de crear listas o array, que también ha sido implementado en otros lenguages de programación.  Tiene la peculiaridad de definir los elementos del array de manera similar a la notación constructiva en matemática. Tiene la siguiente sintaxis:</p>
+<p><code class="docutils literal notranslate"><span class="pre">[</span> <span class="pre">expresión</span> <span class="pre">for</span> <span class="pre">elemento</span> <span class="pre">∈</span> <span class="pre">colección]</span></code></p>
+<p>Por ejemplo, un matemático podría decir: <em>“Sea <span class="math notranslate nohighlight">\(S\)</span> el conjunto de todos los elementos <span class="math notranslate nohighlight">\(n\)</span>, donde <span class="math notranslate nohighlight">\(n\)</span> es mayor o igual a <span class="math notranslate nohighlight">\(1\)</span> y menor o igual a <span class="math notranslate nohighlight">\(10\)</span>”</em>. En tal caso se puede crear en Julia un conjunto que responda a la definición anterior.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">set₆</span> <span class="o">=</span> <span class="kt">Set</span><span class="p">([</span><span class="n">n</span> <span class="k">for</span> <span class="n">n</span> <span class="o">∈</span> <span class="mi">1</span><span class="o">:</span><span class="mi">10</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Set{Int64} with 10 elements:
+  7
+  4
+  9
+  10
+  2
+  3
+  5
+  8
+  6
+  1
+</pre></div>
+</div>
+</div>
+</div>
+<p>Ahora bien, con list comprehensions se pueden utilizar condicionales que actúan como filtro, de esta manera se pueden definir conjuntos más complicados como: <em>“Sea <span class="math notranslate nohighlight">\(C\)</span> el conjunto de todos los elementos <span class="math notranslate nohighlight">\(n\)</span>; donde <span class="math notranslate nohighlight">\(n\)</span> es mayor o igual a <span class="math notranslate nohighlight">\(1\)</span>, menor o igual a <span class="math notranslate nohighlight">\(10\)</span> y divisible entre dos”</em></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">C</span> <span class="o">=</span> <span class="p">[</span><span class="n">n</span> <span class="k">for</span> <span class="n">n</span> <span class="o">∈</span> <span class="mi">1</span><span class="o">:</span><span class="mi">10</span> <span class="k">if</span> <span class="n">n</span><span class="o">%</span><span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5-element Array{Int64,1}:
+  2
+  4
+  6
+  8
+ 10
+</pre></div>
+</div>
+</div>
+</div>
+<p>Dobles iteraciones se pueden utilizar para generar arrays con list comprehensions.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">tablamultiplicar₁</span> <span class="o">=</span> <span class="p">[</span> <span class="n">x</span><span class="o">*</span><span class="n">y</span> <span class="k">for</span> <span class="n">x</span> <span class="o">∈</span> <span class="mi">1</span><span class="o">:</span><span class="mi">10</span><span class="p">,</span> <span class="n">y</span> <span class="o">∈</span> <span class="mi">1</span><span class="o">:</span><span class="mi">10</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10×10 Array{Int64,2}:
+  1   2   3   4   5   6   7   8   9   10
+  2   4   6   8  10  12  14  16  18   20
+  3   6   9  12  15  18  21  24  27   30
+  4   8  12  16  20  24  28  32  36   40
+  5  10  15  20  25  30  35  40  45   50
+  6  12  18  24  30  36  42  48  54   60
+  7  14  21  28  35  42  49  56  63   70
+  8  16  24  32  40  48  56  64  72   80
+  9  18  27  36  45  54  63  72  81   90
+ 10  20  30  40  50  60  70  80  90  100
+</pre></div>
+</div>
+</div>
+</div>
+<p>En el caso anterior, se crea un array de más de dos dimensiones. Si se utiliza dos bucles de forma explícita se generan los mismos elementos, sin embargo, de esta última manera se crea un array de una dimensión.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">tablamultiplicar₂</span> <span class="o">=</span> <span class="p">[</span> <span class="n">x</span><span class="o">*</span><span class="n">y</span> <span class="k">for</span> <span class="n">x</span> <span class="o">∈</span> <span class="mi">1</span><span class="o">:</span><span class="mi">10</span> <span class="k">for</span> <span class="n">y</span> <span class="o">∈</span> <span class="mi">1</span><span class="o">:</span><span class="mi">5</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>50-element Array{Int64,1}:
+  1
+  2
+  3
+  4
+  5
+  2
+  4
+  6
+  8
+ 10
+  3
+  6
+  9
+  ⋮
+ 32
+ 40
+  9
+ 18
+ 27
+ 36
+ 45
+ 10
+ 20
+ 30
+ 40
+ 50
+</pre></div>
+</div>
+</div>
+</div>
+<p>Al igual que los arrays el tipo de datos de los elementos es analizado por Julia, pero este puede ser definido de forma explícita.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">typeof</span><span class="p">(</span><span class="kt">Float64</span><span class="p">[</span><span class="n">n</span> <span class="k">for</span> <span class="n">n</span> <span class="o">∈</span> <span class="mi">1</span><span class="o">:</span><span class="mi">10</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Array{Float64,1}
+</pre></div>
+</div>
+</div>
+</div>
+<p>Tipos de estructuras como: diccionarios, tuplas y arrays, pueden ser usados para realizar iteraciones.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="o">∈</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+	<span class="n">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>123
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">tuple₄</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(a = 2, b = 4)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="o">∈</span> <span class="n">tuple₄</span>
+	<span class="n">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>24
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">dict₂</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Dict{Any,Any} with 3 entries:
+  :x    =&gt; &quot;Tercer elemento&quot;
+  &quot;dos&quot; =&gt; &quot;Mundo&quot;
+  1     =&gt; &quot;Hola&quot;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="o">∈</span> <span class="n">keys</span><span class="p">(</span><span class="n">dict₂</span><span class="p">)</span>
+	<span class="n">print</span><span class="p">(</span><span class="n">dict₂</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Tercer elementoMundoHola
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="o">∈</span> <span class="n">values</span><span class="p">(</span><span class="n">dict₂</span><span class="p">)</span>
+	<span class="n">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Tercer elementoMundoHola
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "julia-1.5"
+        },
+        kernelOptions: {
+            kernelName: "julia-1.5",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'julia-1.5'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="Estructuras_de_Control.html" title="previous page">Estructuras de Control</a>
+    <a class='right-next' id="next-link" href="Primer_proyecto.html" title="next page">Primer proyecto</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Luis Felipe Flores Machado, René David Hernández<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>
