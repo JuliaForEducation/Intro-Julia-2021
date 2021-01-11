@@ -338,8 +338,8 @@
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#completar-un-ejercicio-que-forma-parte-de-los-challenges-problems">
-       7) Completar un ejercicio que forma parte de los  challenges problems.
+      <a class="reference internal nav-link" href="#completar-un-ejercicio-que-forma-parte-de-los-challenge-problems">
+       7) Completar un ejercicio que forma parte de los challenge problems.
       </a>
      </li>
     </ul>
@@ -467,6 +467,8 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<img alt="_images/Primer_proyecto_6_0.svg" src="_images/Primer_proyecto_6_0.svg" /></div>
 </div>
 <p>Para colorear los gráficos del conjunto de Julia, Mandelbrot y las formas biológicas, utilizando el algoritmo de Tiempo de Escape,  se pueden utilizar mapas de calor.</p>
 <div class="cell docutils container">
@@ -481,6 +483,8 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<img alt="_images/Primer_proyecto_8_0.svg" src="_images/Primer_proyecto_8_0.svg" /></div>
 </div>
 <p>Para el mapa de calor, se necesita hacer una malla (las listas “x” y “y” del ejemplo anterior) y una matriz donde se guardan los valores que definen el color para cada punto de la malla.</p>
 </div>
@@ -539,6 +543,11 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Grid
+</pre></div>
+</div>
+</div>
 </div>
 <ul class="simple">
 <li><p>Defina una función que cree una matriz de rangos para los ejes de las abcisas y ordenas.</p></li>
@@ -552,6 +561,11 @@
 <span class="k">function</span> <span class="n">makeGrid</span><span class="p">(</span><span class="n">g</span><span class="o">::</span><span class="n">Grid</span><span class="p">)</span>
 	
 <span class="k">end</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>makeGrid
 </pre></div>
 </div>
 </div>
@@ -583,6 +597,11 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>testJM
+</pre></div>
+</div>
+</div>
 </div>
 <ul class="simple">
 <li><p>Defina una función que <code class="docutils literal notranslate"><span class="pre">true</span></code> si el criterio de convergencia para las formas biológicas se cumple, <code class="docutils literal notranslate"><span class="pre">false</span></code> en caso contrario.</p></li>
@@ -596,6 +615,11 @@
 <span class="k">function</span> <span class="n">testbiomorph</span><span class="p">(</span><span class="n">z</span><span class="o">::</span><span class="kt">Complex</span><span class="p">,</span><span class="n">τ</span><span class="o">::</span><span class="kt">Real</span><span class="p">)</span>
 	
 <span class="k">end</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>testbiomorph
 </pre></div>
 </div>
 </div>
@@ -615,6 +639,11 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>iterate
+</pre></div>
+</div>
+</div>
 </div>
 <ul class="simple">
 <li><p>Defina un función que devuelva el número de iteraciones realizadas para un dado z (número complejo), hasta que se no se cumple el criterio de divergencia.</p></li>
@@ -631,6 +660,11 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>colormap
+</pre></div>
+</div>
+</div>
 </div>
 <ul class="simple">
 <li><p>Usando multiple dispatch, defina nuevamente la función colormap agregando un nuevo parámetro de entrada <span class="math notranslate nohighlight">\(\tau\)</span>, de modo que se pueda usar el test de convergencia para la forma biológica</p></li>
@@ -640,6 +674,11 @@
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">function</span> <span class="n">colormap</span><span class="p">(</span><span class="n">f</span><span class="o">::</span><span class="kt">Function</span><span class="p">,</span><span class="n">test</span><span class="o">::</span><span class="kt">Function</span><span class="p">,</span><span class="n">z</span><span class="o">::</span><span class="kt">Complex</span><span class="p">,</span><span class="n">c</span><span class="o">::</span><span class="kt">Complex</span><span class="p">,</span><span class="n">iter</span><span class="o">::</span><span class="kt">Integer</span><span class="p">,</span><span class="n">τ</span><span class="o">::</span><span class="kt">Integer</span><span class="p">)</span>
 	
 <span class="k">end</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>colormap (generic function with 2 methods)
 </pre></div>
 </div>
 </div>
@@ -675,11 +714,16 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>setjulia
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">begin</span>
-	
+	<span class="c">## Su código aquí	</span>
 <span class="k">end</span>
 </pre></div>
 </div>
@@ -713,11 +757,16 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>setmandelbrot
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">begin</span>
-	
+	<span class="c">## Su código aquí	</span>
 <span class="k">end</span>
 </pre></div>
 </div>
@@ -754,11 +803,16 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>setbiomorph
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">begin</span>
-	
+	<span class="c">## Su código aquí</span>
 <span class="k">end</span>
 </pre></div>
 </div>
@@ -785,11 +839,16 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>setmandelbrot
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">begin</span>
-	
+	<span class="c">## Su código aquí</span>
 <span class="k">end</span>
 </pre></div>
 </div>
@@ -802,7 +861,7 @@
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">begin</span>
-	
+	<span class="c">## Su código aquí	</span>
 <span class="k">end</span>
 </pre></div>
 </div>
@@ -815,15 +874,15 @@
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">begin</span>
-	
+	<span class="c">## Su código aquí	</span>
 <span class="k">end</span>
 </pre></div>
 </div>
 </div>
 </div>
 </div>
-<div class="section" id="completar-un-ejercicio-que-forma-parte-de-los-challenges-problems">
-<h4>7) Completar un ejercicio que forma parte de los  challenges problems.<a class="headerlink" href="#completar-un-ejercicio-que-forma-parte-de-los-challenges-problems" title="Enlazar permanentemente con este título">¶</a></h4>
+<div class="section" id="completar-un-ejercicio-que-forma-parte-de-los-challenge-problems">
+<h4>7) Completar un ejercicio que forma parte de los challenge problems.<a class="headerlink" href="#completar-un-ejercicio-que-forma-parte-de-los-challenge-problems" title="Enlazar permanentemente con este título">¶</a></h4>
 </div>
 </div>
 </div>
