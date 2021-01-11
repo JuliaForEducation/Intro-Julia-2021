@@ -26,16 +26,16 @@ jobs:
     - name: Set up Julia 1.5.1
       uses: julia-actions/setup-julia@v1
       with:
-      	version: '1.5.1'
+        version: '1.5.1'
       	
     - name: Instantiate project
       run: |
-      	 "julia -e 'using Pkg; Pkg.instantiate()'
+        "julia -e 'using Pkg; Pkg.instantiate()'
 
     # Build the book
     - name: Build the book
       run: |
-      	 jupyter-book build .
+        jupyter-book build .
 #        jupyter-book build . --config _remote_config.yml
 
     # Push the book's HTML to github-pages
