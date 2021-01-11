@@ -1483,7 +1483,7 @@
 <div class="section" id="sintaxis-basica">
 <h3>Sintaxis básica<a class="headerlink" href="#sintaxis-basica" title="Enlazar permanentemente con este título">¶</a></h3>
 <p>Como mencionado anteriormente, Julia prioritiza y enfoca mucho la legibilidad del código. Esto es en gran parte posible gracias a lo expresivos que pueden ser los nombres y definiciones de variables y funciones.</p>
-<p>Por ejemplo, imaginemos que queremos llevar registro del número de conejitos y lobos en una zona en particular.</p>
+<p>Por ejemplo, nuestras variables podrían ser muy explícitas de contar el número de conejitos y lobos en una zona en particular.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">🐰</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span> <span class="n">🐺</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
@@ -1876,16 +1876,38 @@
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">test</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">7</span><span class="p">)</span>
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">test</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">7</span><span class="p">),</span> <span class="n">typeof</span><span class="p">(</span><span class="n">test</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">7</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(14, 12)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>((14, 12), Tuple{Int64,Int64})
 </pre></div>
 </div>
 </div>
 </div>
+<p>Notemos que el tipo de retorno de una función con múltiples retornos es lo que conocemos como una <strong>tupla</strong>. Más información de ellas en la sección de estructuras de datos. En general, cualquier agrupación ordenada de números es representada en Julia por una tupla, eso incluye los argumentos de una función. Considere el siguiente ejemplo:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">begin</span>
+	<span class="n">test₂</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">z</span><span class="p">)</span> <span class="o">=</span> <span class="n">x</span><span class="o">*</span><span class="n">y</span> <span class="o">-</span> <span class="n">z</span>
+	<span class="n">tupla_test</span> <span class="o">=</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+	<span class="n">test₂</span><span class="p">(</span><span class="n">tupla_test</span><span class="o">...</span><span class="p">)</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>11
+</pre></div>
+</div>
+</div>
+</div>
+<p>Notemos que la función <code class="docutils literal notranslate"><span class="pre">test₂</span></code> requiere tres argumentos para ser evaluada, no obstante, le hemos pasado solamente uno: <code class="docutils literal notranslate"><span class="pre">tupla_test</span></code>. Esto funciona debido a dos razones:</p>
+<ul class="simple">
+<li><p>La variable <code class="docutils literal notranslate"><span class="pre">tupla_test</span></code> es una agrupación de tres elementos que <em>podrían</em> ser pasados como argumentos a <code class="docutils literal notranslate"><span class="pre">test₂</span></code>, aunque pasarlo como <code class="docutils literal notranslate"><span class="pre">test₂(tupla_test)</span></code> generaría un error.</p></li>
+<li><p>Para evitar el error, debemos realizar el procedimiento llamado como <em>desempacamiento</em> (unpacking). Esto es, extrae los elementos de una tupla como si fueran elementos individuales; de esa forma evaluándolos. Esto se hace con los <a class="reference external" href="https://en.wikipedia.org/wiki/Ellipsis##:~:text=The%20ellipsis%20...%2C%20.,without%20altering%20its%20original%20meaning."><strong>ellipsis</strong></a> <code class="docutils literal notranslate"><span class="pre">...</span></code> contiguo a la tupla.</p></li>
+</ul>
 </div>
 <div class="section" id="determinacion-de-tipos-en-las-funciones">
 <h3>Determinación de tipos en las funciones<a class="headerlink" href="#determinacion-de-tipos-en-las-funciones" title="Enlazar permanentemente con este título">¶</a></h3>
