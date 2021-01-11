@@ -30,7 +30,7 @@ jobs:
       	
     - name: Instantiate project
       run: |
-      	 julia -e 'using Pkg; Pkg.instantiate()'
+      	 "julia -e 'using Pkg; Pkg.instantiate()'
 
     # Build the book
     - name: Build the book
