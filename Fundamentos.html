@@ -353,6 +353,11 @@
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tuplas-como-argumentos-de-funciones">
+     Tuplas como argumentos de funciones
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#determinacion-de-tipos-en-las-funciones">
      Determinación de tipos en las funciones
     </a>
@@ -1876,7 +1881,11 @@
 </div>
 </div>
 </div>
-<p>Notemos que el tipo de retorno de una función con múltiples retornos es lo que conocemos como una <strong>tupla</strong>. Más información de ellas en la sección de estructuras de datos. En general, cualquier agrupación ordenada de números es representada en Julia por una tupla, eso incluye los argumentos de una función. Considere el siguiente ejemplo:</p>
+<p>Notemos que el tipo de retorno de una función con múltiples retornos es lo que conocemos como una <strong>tupla</strong>. Más información de ellas en la sección de estructuras de datos.</p>
+</div>
+<div class="section" id="tuplas-como-argumentos-de-funciones">
+<h3>Tuplas como argumentos de funciones<a class="headerlink" href="#tuplas-como-argumentos-de-funciones" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>En general, cualquier agrupación ordenada de números es representada en Julia por una tupla, eso incluye los argumentos de una función. Considere el siguiente ejemplo:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">begin</span>
@@ -1898,6 +1907,55 @@
 <li><p>La variable <code class="docutils literal notranslate"><span class="pre">tupla_test</span></code> es una agrupación de tres elementos que <em>podrían</em> ser pasados como argumentos a <code class="docutils literal notranslate"><span class="pre">test₂</span></code>, aunque pasarlo como <code class="docutils literal notranslate"><span class="pre">test₂(tupla_test)</span></code> generaría un error.</p></li>
 <li><p>Para evitar el error, debemos realizar el procedimiento llamado como <em>desempacamiento</em> (unpacking). Esto es, extrae los elementos de una tupla como si fueran elementos individuales; de esa forma evaluándolos. Esto se hace con los <a class="reference external" href="https://en.wikipedia.org/wiki/Ellipsis##:~:text=The%20ellipsis%20...%2C%20.,without%20altering%20its%20original%20meaning."><strong>ellipsis</strong></a> <code class="docutils literal notranslate"><span class="pre">...</span></code> contiguo a la tupla.</p></li>
 </ul>
+<p>Esto puede ser utilizado en la definición de las funciones también, para lograr tener un número variable de parámetros.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">function</span> <span class="n">argumentosVariables</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">x</span><span class="o">...</span><span class="p">)</span>
+	<span class="n">sum</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">/</span><span class="n">length</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="n">a</span><span class="o">*</span><span class="n">b</span> 
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>argumentosVariables (generic function with 1 method)
+</pre></div>
+</div>
+</div>
+</div>
+<p>La función anterior toma dos números, <code class="docutils literal notranslate"><span class="pre">a</span></code> y <code class="docutils literal notranslate"><span class="pre">b</span></code>, que son parámetros obligatorios y los multiplica, pero a ello, le sumará la media de todos los números que le siguen.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">argumentosVariables</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>18.0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">argumentosVariables</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>16.166666666666668
+</pre></div>
+</div>
+</div>
+</div>
+<p>Observemos que <code class="docutils literal notranslate"><span class="pre">x</span></code> no es realmente opcional, pues necesita tener al menos un número para que tenga sentido efectuar <code class="docutils literal notranslate"><span class="pre">length(x)</span></code> y <code class="docutils literal notranslate"><span class="pre">sum(x)</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="c">## Genera error debido a que la función no está bien definida para cuando x es vacío</span>
+<span class="c">## argumentosVariables(4,3) </span>
+</pre></div>
+</div>
+</div>
+</div>
 </div>
 <div class="section" id="determinacion-de-tipos-en-las-funciones">
 <h3>Determinación de tipos en las funciones<a class="headerlink" href="#determinacion-de-tipos-en-las-funciones" title="Enlazar permanentemente con este título">¶</a></h3>

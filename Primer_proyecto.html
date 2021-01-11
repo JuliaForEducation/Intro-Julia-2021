@@ -432,7 +432,10 @@
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">Plots</span><span class="o">.</span><span class="n">default</span><span class="p">(</span><span class="n">size</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2200</span><span class="p">,</span><span class="mi">2200</span><span class="p">))</span>
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">begin</span>
+	<span class="n">size</span> <span class="o">=</span> <span class="mi">50</span>
+	<span class="n">Plots</span><span class="o">.</span><span class="n">default</span><span class="p">(</span><span class="n">size</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2200</span><span class="p">,</span><span class="mi">2200</span><span class="p">),</span><span class="n">titlefontsize</span> <span class="o">=</span> <span class="n">size</span><span class="p">,</span> <span class="n">tickfontsize</span> <span class="o">=</span> <span class="n">size</span><span class="p">,</span> <span class="n">legendfontsize</span> <span class="o">=</span> <span class="n">size</span><span class="p">,</span> <span class="n">guidefontsize</span> <span class="o">=</span> <span class="n">size</span><span class="p">,</span> <span class="n">legendtitlefontsize</span> <span class="o">=</span> <span class="n">size</span><span class="p">)</span>
+<span class="k">end</span>
 </pre></div>
 </div>
 </div>
@@ -447,13 +450,13 @@
 	<span class="n">scatter</span><span class="p">(</span><span class="n">zcomplejo</span><span class="p">,</span> <span class="n">seriescolor</span><span class="o">=:</span><span class="n">white</span><span class="p">,</span>
 		    <span class="n">markerstrokecolor</span><span class="o">=:</span><span class="n">blue</span><span class="p">,</span>
 		    <span class="n">aspectratio</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
-		    <span class="n">title</span><span class="o">=</span><span class="s">&quot;Gráfica de ejemplo&quot;</span><span class="p">)</span>
+		    <span class="n">title</span><span class="o">=</span><span class="s">&quot;Gráfica de ejemplo&quot;</span><span class="p">,</span>
+			<span class="n">legend</span><span class="o">=</span><span class="kc">false</span><span class="p">,</span>
+			<span class="n">markersize</span><span class="o">=</span><span class="mi">40</span><span class="p">)</span>
 <span class="k">end</span>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<img alt="_images/Primer_proyecto_6_0.svg" src="_images/Primer_proyecto_6_0.svg" /></div>
 </div>
 <p>Para colorear los gráficos del conjunto de Julia, Mandelbrot y las formas biológicas, utilizando el algoritmo de Tiempo de Escape,  se pueden utilizar mapas de calor.</p>
 <div class="cell docutils container">
@@ -468,8 +471,6 @@
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<img alt="_images/Primer_proyecto_8_0.svg" src="_images/Primer_proyecto_8_0.svg" /></div>
 </div>
 <p>Para el mapa de calor, se necesita hacer una malla (las listas “x” y “y” del ejemplo anterior) y una matriz donde se guardan los valores que definen el color para cada punto de la malla.</p>
 </div>
