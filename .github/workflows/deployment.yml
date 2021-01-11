@@ -24,10 +24,13 @@ jobs:
         pip install -r requirements.txt
         
     - name: Set up Julia 1.5.1
-	  uses: julia-actions/setup-julia@v1
-  	  with:
-  	  	version: '1.5.1'
-  	  run: julia -e 'using Pkg; Pkg.instantiate(".")'
+      uses: julia-actions/setup-julia@v1
+      with:
+      	version: '1.5.1'
+      	
+    - name: Instantiate project
+	      run: |
+		 julia -e 'using Pkg; Pkg.instantiate(".")'
 
     # Build the book
     - name: Build the book
