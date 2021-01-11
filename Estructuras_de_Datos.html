@@ -263,6 +263,18 @@
       <a class="reference internal nav-link" href="#inicializacion-de-arrays-especiales">
        Inicialización de arrays especiales
       </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#array-de-ceros">
+         Array de ceros
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#array-de-unos">
+         Array de unos
+        </a>
+       </li>
+      </ul>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#accediendo-a-los-elementos-de-un-array">
@@ -553,8 +565,9 @@
 <div class="section" id="inicializacion-de-arrays-especiales">
 <h4>Inicialización de arrays especiales<a class="headerlink" href="#inicializacion-de-arrays-especiales" title="Enlazar permanentemente con este título">¶</a></h4>
 <p>Julia implementa métodos que pueden ser útiles para crear array de forma rápida</p>
-<p>####### Array de ceros
-Un array de ceros puede ser creado con el método <code class="docutils literal notranslate"><span class="pre">zeros</span></code>, que admite como argumentos el tipo de datos y luego las dimensiones del array.</p>
+<div class="section" id="array-de-ceros">
+<h5>Array de ceros<a class="headerlink" href="#array-de-ceros" title="Enlazar permanentemente con este título">¶</a></h5>
+<p>Un array de ceros puede ser creado con el método <code class="docutils literal notranslate"><span class="pre">zeros</span></code>, que admite como argumentos el tipo de datos y luego las dimensiones del array.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">zeros</span><span class="p">(</span><span class="kt">Int64</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
@@ -569,8 +582,10 @@ Un array de ceros puede ser creado con el método <code class="docutils literal 
 </div>
 </div>
 </div>
-<p>####### Array de unos
-Un array de unos puede ser creado con el método <code class="docutils literal notranslate"><span class="pre">ones</span></code>, que admite como argumentos el tipo de datos y luego las dimensiones del array.</p>
+</div>
+<div class="section" id="array-de-unos">
+<h5>Array de unos<a class="headerlink" href="#array-de-unos" title="Enlazar permanentemente con este título">¶</a></h5>
+<p>Un array de unos puede ser creado con el método <code class="docutils literal notranslate"><span class="pre">ones</span></code>, que admite como argumentos el tipo de datos y luego las dimensiones del array.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">ones</span><span class="p">(</span><span class="kt">Float64</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
@@ -590,6 +605,7 @@ Un array de unos puede ser creado con el método <code class="docutils literal n
 <li><p>La sección <a class="reference external" href="https://docs.julialang.org/en/v1/manual/arrays/##Construction-and-Initialization">Construction and Initialization</a> del capítulo Multi-dimensional Arrays del manual de Julia.</p></li>
 <li><p>La sección <a class="reference external" href="https://docs.julialang.org/en/v1/base/arrays/##Constructors-and-Types">Constructors and Types</a> del capítulo Arrays en el manual de Julia.</p></li>
 </ul>
+</div>
 </div>
 <div class="section" id="accediendo-a-los-elementos-de-un-array">
 <h4>Accediendo a los elementos de un Array<a class="headerlink" href="#accediendo-a-los-elementos-de-un-array" title="Enlazar permanentemente con este título">¶</a></h4>

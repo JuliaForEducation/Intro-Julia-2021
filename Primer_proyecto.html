@@ -239,15 +239,10 @@
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#proyecto-1">
-   Proyecto 1
+  <a class="reference internal nav-link" href="#marco-teorico">
+   Marco teórico
   </a>
   <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#descripcion">
-     Descripción
-    </a>
-   </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#requisitos">
      Requisitos
@@ -257,25 +252,23 @@
     <a class="reference internal nav-link" href="#criterios-de-evaluacion">
      Criterios de Evaluación
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#ayuda">
-       AYUDA
-      </a>
-      <ul class="nav section-nav flex-column">
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#graficas">
-         Gráficas
-        </a>
-       </li>
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#pseudocodigo">
-         Pseudocódigo
-        </a>
-       </li>
-      </ul>
-     </li>
-    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bosquejo">
+   Bosquejo
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#graficas">
+     Gráficas
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pseudocodigo">
+     Pseudocódigo
+    </a>
    </li>
   </ul>
  </li>
@@ -288,20 +281,22 @@
     <a class="reference internal nav-link" href="#definicion-de-objetos-y-funciones">
      Definición de objetos y funciones
     </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#solucion-a-los-incisos">
-     Solución a los incisos
-    </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#graficar-un-conjunto-de-julia-para-un-c-arbitrario-monocromatico">
-       1) Graficar un conjunto de Julia, para un
-       <span class="math notranslate nohighlight">
-        \(c\)
-       </span>
-       arbitrario (monocromático).
+      <a class="reference internal nav-link" href="#solucion-a-los-incisos">
+       Solución a los incisos
       </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#graficar-un-conjunto-de-julia-para-un-c-arbitrario-monocromatico">
+         1) Graficar un conjunto de Julia, para un
+         <span class="math notranslate nohighlight">
+          \(c\)
+         </span>
+         arbitrario (monocromático).
+        </a>
+       </li>
+      </ul>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#graficar-el-conjunto-de-mandelbrot-monocromatico">
@@ -354,10 +349,8 @@
                 
   <div class="section" id="primer-proyecto">
 <h1>Primer proyecto<a class="headerlink" href="#primer-proyecto" title="Enlazar permanentemente con este título">¶</a></h1>
-<div class="section" id="proyecto-1">
-<h2>Proyecto 1<a class="headerlink" href="#proyecto-1" title="Enlazar permanentemente con este título">¶</a></h2>
-<div class="section" id="descripcion">
-<h3>Descripción<a class="headerlink" href="#descripcion" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="section" id="marco-teorico">
+<h2>Marco teórico<a class="headerlink" href="#marco-teorico" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Se escribirá un código para visualizar diferentes familias del conjunto de Julia y Mandelbrot, en el proceso se modelarán diversas formas biológicas. Ambos conjuntos se forman a partir del estudio de ciertas funciones, <span class="math notranslate nohighlight">\(f_c\)</span>, sobre las cuales se iteran los números complejos. La notación para la función, <span class="math notranslate nohighlight">\(f_c\)</span>, denota que ésta depende de un parámetro <span class="math notranslate nohighlight">\(c \in C\)</span>.</p>
 <p>El conjunto de Julia <span class="math notranslate nohighlight">\(J_{f_c}\)</span>, para una constante <span class="math notranslate nohighlight">\(c\)</span> particular, está formado por todos aquellos puntos del plano complejo en el cual la sucesión siguiente es acotada:</p>
 <div class="math notranslate nohighlight">
@@ -394,7 +387,6 @@
 \[|Im(z_n)|&lt;\tau\]</div>
 <p>Una manera de graficar los conjuntos de Julia, Mandelbrot y las formas biológicas, es graficar solamente los puntos que pertenecen al conjunto con un color determinado (monocromático).</p>
 <p>Para agregar colores a los gráficos, generalmente se utiliza el algoritmo de: Tiempo de Escape, aunque no es el único. El algoritmo consiste en asignar un color dependiendo del número de iteraciones realizadas antes que el elemento de la órbita no satisfaga el criterio de convergencia. De esta manera se visualiza aquellos elementos que pertenecen al conjunto y los que no, además, revela la velocidad de divergencia de la órbita en cada punto.</p>
-</div>
 <div class="section" id="requisitos">
 <h3>Requisitos<a class="headerlink" href="#requisitos" title="Enlazar permanentemente con este título">¶</a></h3>
 <p>Para el desarrollo del proyecto deberá utilizar solamente los elementos abarcados en la primera semana del workshop, esto es, el uso de: estructuras de datos y control, tipos de datos primitivos del lenguaje. Por lo que <strong>no utilizará</strong> ningún paquete adicional, creado o desarrollado por la comunidad de Julia, a excepción del paquete Plots.</p>
@@ -418,16 +410,23 @@
 <li><p>Completitud del proyecto, haciendo todas las partes que lo componen.</p></li>
 <li><p>Analizar y comentar el trabajo de otros grupos (Mediante el peer review).</p></li>
 </ul>
-<hr class="docutils" />
-<div class="section" id="ayuda">
-<h4>AYUDA<a class="headerlink" href="#ayuda" title="Enlazar permanentemente con este título">¶</a></h4>
-<hr class="docutils" />
+</div>
+</div>
+<div class="section" id="bosquejo">
+<h2>Bosquejo<a class="headerlink" href="#bosquejo" title="Enlazar permanentemente con este título">¶</a></h2>
 <div class="section" id="graficas">
-<h5>Gráficas<a class="headerlink" href="#graficas" title="Enlazar permanentemente con este título">¶</a></h5>
+<h3>Gráficas<a class="headerlink" href="#graficas" title="Enlazar permanentemente con este título">¶</a></h3>
 <p>Para realizar las gráficas se utilizará el paquete Plots, por lo tanto el paquete debe ser importado:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">using</span> <span class="n">Pkg</span><span class="p">;</span> <span class="n">Pkg</span><span class="o">.</span><span class="n">activate</span><span class="p">(</span><span class="s">&quot;.&quot;</span><span class="p">);</span> <span class="k">using</span> <span class="n">Plots</span>
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">using</span> <span class="n">Plots</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">Plots</span><span class="o">.</span><span class="n">default</span><span class="p">(</span><span class="n">size</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2200</span><span class="p">,</span><span class="mi">2200</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -442,7 +441,6 @@
 	<span class="n">scatter</span><span class="p">(</span><span class="n">zcomplejo</span><span class="p">,</span> <span class="n">seriescolor</span><span class="o">=:</span><span class="n">white</span><span class="p">,</span>
 		    <span class="n">markerstrokecolor</span><span class="o">=:</span><span class="n">blue</span><span class="p">,</span>
 		    <span class="n">aspectratio</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
-			<span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">700</span><span class="p">,</span> <span class="mi">550</span><span class="p">),</span>
 		    <span class="n">title</span><span class="o">=</span><span class="s">&quot;Gráfica de ejemplo&quot;</span><span class="p">)</span>
 <span class="k">end</span>
 </pre></div>
@@ -456,7 +454,7 @@
 	<span class="n">x</span> <span class="o">=</span> <span class="o">-</span><span class="mi">2</span><span class="o">:</span><span class="mf">0.3</span><span class="o">:</span><span class="mi">2</span>  
 	<span class="n">y</span> <span class="o">=</span> <span class="o">-</span><span class="mi">2</span><span class="o">:</span><span class="mf">0.3</span><span class="o">:</span><span class="mi">2</span>
 	<span class="n">colores</span> <span class="o">=</span> <span class="p">[</span><span class="n">i₁</span><span class="o">*</span><span class="n">i₂</span> <span class="k">for</span> <span class="n">i₁</span> <span class="kp">in</span> <span class="n">x</span><span class="p">,</span> <span class="n">i₂</span> <span class="kp">in</span> <span class="n">y</span><span class="p">]</span>
-	<span class="n">heatmap</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">colores</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">cgrad</span><span class="p">([</span><span class="o">:</span><span class="n">black</span><span class="p">,</span><span class="o">:</span><span class="n">blue</span><span class="p">,</span><span class="o">:</span><span class="n">white</span><span class="p">]),</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">700</span><span class="p">,</span> <span class="mi">550</span><span class="p">),</span> 
+	<span class="n">heatmap</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">colores</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">cgrad</span><span class="p">([</span><span class="o">:</span><span class="n">black</span><span class="p">,</span><span class="o">:</span><span class="n">blue</span><span class="p">,</span><span class="o">:</span><span class="n">white</span><span class="p">]),</span> 
 		    <span class="n">title</span><span class="o">=</span><span class="s">&quot;Ejemplo Mapa de Calor&quot;</span><span class="p">,</span> <span class="n">xlabel</span><span class="o">=</span><span class="s">&quot;Re(z)&quot;</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="s">&quot;Im(z)&quot;</span><span class="p">)</span>
 <span class="k">end</span>
 </pre></div>
@@ -466,7 +464,7 @@
 <p>Para el mapa de calor, se necesita hacer una malla (las listas “x” y “y” del ejemplo anterior) y una matriz donde se guardan los valores que definen el color para cada punto de la malla.</p>
 </div>
 <div class="section" id="pseudocodigo">
-<h5>Pseudocódigo<a class="headerlink" href="#pseudocodigo" title="Enlazar permanentemente con este título">¶</a></h5>
+<h3>Pseudocódigo<a class="headerlink" href="#pseudocodigo" title="Enlazar permanentemente con este título">¶</a></h3>
 <p>Para clarificar los pasos a realizar, se muestra el siguiente algoritmo, cuando se desee obtener un gráfico con colores:</p>
 <p><em>NOTAS:</em></p>
 <ul class="simple">
@@ -498,8 +496,6 @@
 <span class="mi">20</span>	  <span class="n">Fin</span>
 <span class="mi">21</span>  <span class="n">Fin</span>
 </pre></div>
-</div>
-</div>
 </div>
 </div>
 </div>
@@ -627,12 +623,11 @@
 </div>
 </div>
 </div>
-</div>
 <div class="section" id="solucion-a-los-incisos">
-<h3>Solución a los incisos<a class="headerlink" href="#solucion-a-los-incisos" title="Enlazar permanentemente con este título">¶</a></h3>
+<h4>Solución a los incisos<a class="headerlink" href="#solucion-a-los-incisos" title="Enlazar permanentemente con este título">¶</a></h4>
 <p>Usando las definiciones anteriores realice lo indicado.</p>
 <div class="section" id="graficar-un-conjunto-de-julia-para-un-c-arbitrario-monocromatico">
-<h4>1) Graficar un conjunto de Julia, para un <span class="math notranslate nohighlight">\(c\)</span> arbitrario (monocromático).<a class="headerlink" href="#graficar-un-conjunto-de-julia-para-un-c-arbitrario-monocromatico" title="Enlazar permanentemente con este título">¶</a></h4>
+<h5>1) Graficar un conjunto de Julia, para un <span class="math notranslate nohighlight">\(c\)</span> arbitrario (monocromático).<a class="headerlink" href="#graficar-un-conjunto-de-julia-para-un-c-arbitrario-monocromatico" title="Enlazar permanentemente con este título">¶</a></h5>
 <ul class="simple">
 <li><p>Defina una funcion que retorne el conjunto de puntos que pertenecen al conjunto de Julia.</p></li>
 </ul>
@@ -666,6 +661,7 @@
 	
 <span class="k">end</span>
 </pre></div>
+</div>
 </div>
 </div>
 </div>
