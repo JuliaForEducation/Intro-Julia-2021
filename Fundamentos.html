@@ -430,11 +430,21 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>7
+</pre></div>
+</div>
+</div>
 </div>
 <p>El resultado de sumar un float con un entero es un float. Veremos luego más sobre este proceso de <strong>promoción de tipos</strong>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="mf">5.0</span><span class="o">+</span><span class="mi">2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>7.0
 </pre></div>
 </div>
 </div>
@@ -446,11 +456,21 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>15
+</pre></div>
+</div>
+</div>
 </div>
 <p>Pero notemos que, a diferencia de en otros lenguajes como Python, la exponenciación se utiliza con <code class="docutils literal notranslate"><span class="pre">^</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="mi">2</span><span class="o">^</span><span class="mi">3</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>8
 </pre></div>
 </div>
 </div>
@@ -462,11 +482,21 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.5
+</pre></div>
+</div>
+</div>
 </div>
 <p>Podemos realizar también la división «al revés». Muy común en Octave/Matlab y es una sintaxis que se trasladará para el caso de matrices.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="mi">2</span><span class="o">\</span><span class="mi">3</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.5
 </pre></div>
 </div>
 </div>
@@ -482,10 +512,20 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Inf
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="mi">5</span><span class="o">/</span><span class="mi">0</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-Inf
 </pre></div>
 </div>
 </div>
@@ -494,6 +534,11 @@
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="mi">5</span><span class="o">+</span><span class="mi">2</span><span class="nb">im</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mi">2</span><span class="o">-</span><span class="mi">4</span><span class="nb">im</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>18 - 16im
 </pre></div>
 </div>
 </div>
@@ -506,11 +551,21 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Inf + Inf*im
+</pre></div>
+</div>
+</div>
 </div>
 <p>Los números racionales son un tipo en sí mismo construidos con su numerador y denominador separados por <code class="docutils literal notranslate"><span class="pre">\\</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="mi">3</span><span class="o">//</span><span class="mi">4</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3//4
 </pre></div>
 </div>
 </div>
@@ -522,6 +577,11 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3//4
+</pre></div>
+</div>
+</div>
 </div>
 <p>Los siguientes son equivalentes respectivamente al «infinito racional» y el «cero racional»</p>
 <div class="cell docutils container">
@@ -530,11 +590,21 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(1//0, 0//1)
+</pre></div>
+</div>
+</div>
 </div>
 <p>Esto se ilustra mejor a continuación:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="mi">0</span><span class="o">//</span><span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="o">//</span><span class="mi">3</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="o">//</span><span class="mi">0</span> <span class="o">==</span> <span class="nb">Inf</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(true, true)
 </pre></div>
 </div>
 </div>
@@ -549,11 +619,21 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(Inf, NaN, NaN)
+</pre></div>
+</div>
+</div>
 </div>
 <p>Los racionales pueden sumarse y restarse, obteniendo un resultado ya en forma simplificada, aunque en caso de que el resultado sea un número entero <code class="docutils literal notranslate"><span class="pre">a</span></code>, se expresa en la forma <code class="docutils literal notranslate"><span class="pre">a//1</span></code> para preservar su tipo racional hasta que se necesite cambiar a entero de nuevo (si aun caso).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span><span class="o">//</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">3</span><span class="o">//</span><span class="mi">2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2//1
 </pre></div>
 </div>
 </div>
@@ -564,11 +644,21 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1//1
+</pre></div>
+</div>
+</div>
 </div>
 <p>Los números complejos tienen también su aritmética usual como mostrado arriba. Aquí tenemos un ejemplo con la exponenciación con base y potencia compleja:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="nb">im</span><span class="p">)</span><span class="o">^</span><span class="p">(</span><span class="nb">im</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.20787957635076193 + 0.0im
 </pre></div>
 </div>
 </div>
@@ -581,6 +671,11 @@
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">typeof</span><span class="p">(</span><span class="mi">5</span><span class="p">),</span> <span class="n">typeof</span><span class="p">(</span><span class="mi">100_000_000_000_000_000_000_000</span><span class="p">),</span> <span class="n">typeof</span><span class="p">(</span><span class="mf">5.0</span><span class="p">),</span> <span class="n">typeof</span><span class="p">(</span><span class="sc">&#39;c&#39;</span><span class="p">),</span> <span class="n">typeof</span><span class="p">(</span><span class="s">&quot;Hola&quot;</span><span class="p">),</span> <span class="n">typeof</span><span class="p">(</span><span class="kc">true</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(Int64, Int128, Float64, Char, String, Bool)
 </pre></div>
 </div>
 </div>
@@ -608,11 +703,21 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(Int32, Int16, Int8)
+</pre></div>
+</div>
+</div>
 </div>
 <p>La <strong>representación binaria</strong> o de <strong>bits</strong> de cualquier tipo primitivo en Julia (booleano, flotante, entero, caracter) se puede obtener mediante la función <code class="docutils literal notranslate"><span class="pre">bitstring</span></code>). Esto nos permite hacernos una mejor idea de cómo se guardan en memoria estos objetos.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">bitstring</span><span class="p">(</span><span class="kt">Int8</span><span class="p">(</span><span class="mi">5</span><span class="p">)),</span> <span class="n">bitstring</span><span class="p">(</span><span class="kt">Int16</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&quot;00000101&quot;, &quot;0000000000000101&quot;)
 </pre></div>
 </div>
 </div>
@@ -624,12 +729,19 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"># 6 methods for generic function <b>bitstring</b>:<ul><li> bitstring(x::<b>Union{Bool, Int8, UInt8}</b>) in Base at <a href="https://github.com/JuliaLang/julia/tree/697e782ab86bfcdd7fd15550241fe162c51d9f98/base/intfuncs.jl#L729" target="_blank">intfuncs.jl:729</a></li> <li> bitstring(x::<b>Union{Float16, Int16, UInt16}</b>) in Base at <a href="https://github.com/JuliaLang/julia/tree/697e782ab86bfcdd7fd15550241fe162c51d9f98/base/intfuncs.jl#L730" target="_blank">intfuncs.jl:730</a></li> <li> bitstring(x::<b>Union{Char, Float32, Int32, UInt32}</b>) in Base at <a href="https://github.com/JuliaLang/julia/tree/697e782ab86bfcdd7fd15550241fe162c51d9f98/base/intfuncs.jl#L731" target="_blank">intfuncs.jl:731</a></li> <li> bitstring(x::<b>Union{Float64, Int64, UInt64}</b>) in Base at <a href="https://github.com/JuliaLang/julia/tree/697e782ab86bfcdd7fd15550241fe162c51d9f98/base/intfuncs.jl#L732" target="_blank">intfuncs.jl:732</a></li> <li> bitstring(x::<b>Union{Int128, UInt128}</b>) in Base at <a href="https://github.com/JuliaLang/julia/tree/697e782ab86bfcdd7fd15550241fe162c51d9f98/base/intfuncs.jl#L733" target="_blank">intfuncs.jl:733</a></li> <li> bitstring(B::<b>BitArray</b>) in Base at <a href="https://github.com/JuliaLang/julia/tree/697e782ab86bfcdd7fd15550241fe162c51d9f98/base/show.jl#L2302" target="_blank">show.jl:2302</a></li> </ul></div></div>
 </div>
 <p>El hecho que cada tipo de dato sea representado por una cadena <strong>finita</strong> de <span class="math notranslate nohighlight">\(0\)</span>s y <span class="math notranslate nohighlight">\(1\)</span>s implica que tendremos límites en los valores de nuestros datos. En particular, podemos ver los máximos de cada tipo de entero:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="c">## Estos valores son 2^(n-1) - 1, donde n es el número de bits.</span>
 <span class="n">typemax</span><span class="p">(</span><span class="kt">Int8</span><span class="p">),</span> <span class="n">typemax</span><span class="p">(</span><span class="kt">Int16</span><span class="p">),</span> <span class="n">typemax</span><span class="p">(</span><span class="kt">Int32</span><span class="p">),</span> <span class="n">typemax</span><span class="p">(</span><span class="kt">Int64</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(127, 32767, 2147483647, 9223372036854775807)
 </pre></div>
 </div>
 </div>
@@ -642,6 +754,11 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(-128, -32768, -2147483648, -9223372036854775808)
+</pre></div>
+</div>
+</div>
 </div>
 <p>Estos valores extremos son importantes puesto a que pueden causar lo que conocemos como <strong>integer overflow</strong> o <strong>integer underflow</strong> (“desbordamiento” de enteros, aunque el término en español no es comúnmente utilizado).</p>
 <p>Ésto es: Que el valor resultante de operaciones de enteros excede el máximo o mínimo de un tipo de entero y retornamos valores en el extremo opuesto:</p>
@@ -651,10 +768,20 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-2147483648
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">typemin</span><span class="p">(</span><span class="kt">Int32</span><span class="p">)</span> <span class="o">-</span> <span class="kt">Int32</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="c">## &lt;- Integer underflow</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2147483647
 </pre></div>
 </div>
 </div>
@@ -668,10 +795,20 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2147483648
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">typeof</span><span class="p">(</span><span class="n">typemax</span><span class="p">(</span><span class="kt">Int32</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span> <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Int64
 </pre></div>
 </div>
 </div>
@@ -692,6 +829,11 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>64
+</pre></div>
+</div>
+</div>
 </div>
 </div>
 <div class="section" id="numeros-de-punto-flotante">
@@ -704,10 +846,20 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Inf32
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">typemin</span><span class="p">(</span><span class="kt">Float32</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-Inf32
 </pre></div>
 </div>
 </div>
@@ -719,11 +871,21 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(Float64, Float32)
+</pre></div>
+</div>
+</div>
 </div>
 <p>Con aritmética que “absorbe” cualquier otro número a ser <code class="docutils literal notranslate"><span class="pre">NaN</span></code> y además representar expresiones matemáticas no definidas.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="nb">NaN</span> <span class="o">+</span> <span class="nb">NaN</span><span class="p">,</span> <span class="nb">NaN</span><span class="o">*</span><span class="nb">NaN</span><span class="p">,</span> <span class="nb">NaN</span><span class="o">/</span><span class="nb">NaN</span><span class="p">,</span> <span class="mi">5</span> <span class="o">+</span> <span class="nb">NaN</span><span class="p">,</span> <span class="mi">0</span><span class="o">/</span><span class="mi">0</span><span class="p">,</span> <span class="nb">Inf</span><span class="o">/</span><span class="nb">Inf</span><span class="p">,</span>  <span class="nb">Inf</span> <span class="o">-</span> <span class="nb">Inf</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(NaN, NaN, NaN, NaN, NaN, NaN, NaN)
 </pre></div>
 </div>
 </div>
@@ -735,11 +897,21 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&quot;0100010100000000&quot;, &quot;01000000101000000000000000000000&quot;, &quot;0000000000000101&quot;)
+</pre></div>
+</div>
+</div>
 </div>
 <p>Notemos que la cadena binaria del número 5 en su representación flotante cambia de la representación de entero en la adición de una cadena larga de <span class="math notranslate nohighlight">\(0\)</span>s a la derecha, la cual se utiliza para presentar su parte decimal. Ejemplo:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">bitstring</span><span class="p">(</span><span class="kt">Float16</span><span class="p">(</span><span class="mf">5.1</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&quot;0100010100011010&quot;
 </pre></div>
 </div>
 </div>
@@ -752,10 +924,20 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Float16(3.14)
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="kt">Float64</span><span class="p">(</span><span class="nb">pi</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.141592653589793
 </pre></div>
 </div>
 </div>
@@ -767,10 +949,20 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>π = 3.1415926535897...
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">typeof</span><span class="p">(</span><span class="nb">pi</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Irrational{:π}
 </pre></div>
 </div>
 </div>
@@ -782,6 +974,11 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>9.42477796076938
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -789,10 +986,20 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>9.869604401089358
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="kt">BigFloat</span><span class="p">(</span><span class="nb">pi</span><span class="p">,</span> <span class="n">precision</span> <span class="o">=</span> <span class="mi">256</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.141592653589793238462643383279502884197169399375105820974944592307816406286198
 </pre></div>
 </div>
 </div>
@@ -805,11 +1012,21 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(2.220446049250313e-16, 1.1920929f-7)
+</pre></div>
+</div>
+</div>
 </div>
 <p>El epsilon de máquina depende de en que rango esté el número utilizado, no solo su tipo:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">eps</span><span class="p">(</span><span class="mf">1.0</span><span class="p">),</span> <span class="n">eps</span><span class="p">(</span><span class="mf">10000.0</span><span class="p">)</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(2.220446049250313e-16, 1.8189894035458565e-12)
 </pre></div>
 </div>
 </div>
@@ -825,11 +1042,21 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(Char, Char)
+</pre></div>
+</div>
+</div>
 </div>
 <p>O también characteres especiales de otros alfabetos o incluso emojis:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">typeof</span><span class="p">(</span><span class="sc">&#39;尊&#39;</span><span class="p">)</span> <span class="c">## &lt;- Respeto/honor</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Char
 </pre></div>
 </div>
 </div>
@@ -840,11 +1067,21 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Char
+</pre></div>
+</div>
+</div>
 </div>
 <p>Muy cercanamente asociados a los <code class="docutils literal notranslate"><span class="pre">Char</span></code> tenemos a los <code class="docutils literal notranslate"><span class="pre">Strings</span></code> (cadenas de caracteres), un <strong>tipo compuesto</strong> que se genera a partir de <code class="docutils literal notranslate"><span class="pre">Chars</span></code>. La diferencia de sintaxis crucial es el uso de doble comillas » en lugar de comillas simples, “ .</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">typeof</span><span class="p">(</span><span class="s">&quot;¡Hola!&quot;</span><span class="p">),</span> <span class="n">typeof</span><span class="p">(</span><span class="s">&quot;안녕하세요&quot;</span><span class="p">),</span> <span class="n">typeof</span><span class="p">(</span><span class="s">&quot;Z&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(String, String, String)
 </pre></div>
 </div>
 </div>
@@ -862,6 +1099,11 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(Bool, Bool)
+</pre></div>
+</div>
+</div>
 </div>
 <ul class="simple">
 <li><p>Numericamente, son equivalentes <code class="docutils literal notranslate"><span class="pre">1</span></code> y a <code class="docutils literal notranslate"><span class="pre">0</span></code> respectivamente.</p></li>
@@ -872,6 +1114,11 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(true, true, 2, false)
+</pre></div>
+</div>
+</div>
 </div>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">false</span></code> puede ser utilizado como un <code class="docutils literal notranslate"><span class="pre">0</span></code> “más fuerte” que, por ejemplo, puede volver <code class="docutils literal notranslate"><span class="pre">0</span></code> incluso a <code class="docutils literal notranslate"><span class="pre">NaN</span></code>.</p></li>
@@ -879,6 +1126,11 @@
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="kc">false</span> <span class="o">*</span> <span class="nb">NaN</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.0
 </pre></div>
 </div>
 </div>
@@ -895,12 +1147,22 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(Complex{Int64}, Complex{Float64}, Float64, Complex{Float64}, Rational{Int64})
+</pre></div>
+</div>
+</div>
 </div>
 <p>Los números complejos y los números racionales son <strong>tipos compuestos</strong>: Su estructura es construida a partir de otros más simples.</p>
 <p>Esta es una idea poderosa en Julia que nos permite construir estructuras de datos arreglos de números (vectores, matrices, etc.)</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">typeof</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>  <span class="c">## Esto es un &quot;vector&quot;/arreglo unidimensional</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Array{Int64,1}
 </pre></div>
 </div>
 </div>
@@ -915,6 +1177,11 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Array{Any,1}
+</pre></div>
+</div>
+</div>
 </div>
 <p>Los anteriores son un análogo de lista para Python, pero igualmente tenemos objetos diseñados para comportarse como matrices, al estilo de lenguajes como Octave/Matlab:</p>
 <div class="cell docutils container">
@@ -923,10 +1190,20 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Array{Int64,2}
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">typeof</span><span class="p">([</span><span class="mf">2.0</span> <span class="mf">3.0</span> <span class="mf">5.0</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Array{Float64,2}
 </pre></div>
 </div>
 </div>
@@ -938,11 +1215,21 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Array{Int64,2}
+</pre></div>
+</div>
+</div>
 </div>
 <p>El siguiente es un arreglo de tipo <code class="docutils literal notranslate"><span class="pre">Float64</span></code>, pues los <code class="docutils literal notranslate"><span class="pre">Int64</span></code> presentes fueron promovidos a <code class="docutils literal notranslate"><span class="pre">Float64.</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">typeof</span><span class="p">([</span><span class="mf">2.0</span> <span class="mi">3</span> <span class="mi">5</span><span class="p">])</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Array{Float64,2}
 </pre></div>
 </div>
 </div>
@@ -961,6 +1248,11 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(5.0, 1.4, 6.0)
+</pre></div>
+</div>
+</div>
 </div>
 <p>Es posible en cualquier momento obtener la jerarquía de supertipos de un tipo en particular:</p>
 <div class="cell docutils container">
@@ -969,10 +1261,20 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(Int64, Signed, Integer, Real, Number, Any)
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">supertypes</span><span class="p">(</span><span class="kt">Float64</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(Float64, AbstractFloat, Real, Number, Any)
 </pre></div>
 </div>
 </div>
@@ -987,11 +1289,24 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1×3 Array{Int64,2}:
+ 4  4  5
+</pre></div>
+</div>
+</div>
 </div>
 <p>Podemos pensar informalmente en los arreglos “sin comas” como “vectores fila” mientras que los vectores “con comas” como “vectores columna”. Esto es útil recordar cuando queremos hacer productos de matriz con vector:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">2</span> <span class="mi">3</span><span class="p">;</span> <span class="mi">6</span> <span class="mi">8</span><span class="p">]</span> <span class="o">*</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2-element Array{Int64,1}:
+  5
+ 14
 </pre></div>
 </div>
 </div>
@@ -1001,6 +1316,13 @@
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">3</span> <span class="mi">4</span><span class="p">;</span> <span class="mi">6</span> <span class="mi">8</span><span class="p">]</span><span class="o">^</span><span class="mi">2</span> <span class="c">## ¿Pueden encontrar más matrices con esta propiedad? :) </span>
 			 <span class="c">## pista: Cayley-Hamilton  </span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2×2 Array{Int64,2}:
+ 33  44
+ 66  88
 </pre></div>
 </div>
 </div>
@@ -1017,6 +1339,8 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html">*(x::<b>Float64</b>, y::<b>Float64</b>) in Base at <a href="https://github.com/JuliaLang/julia/tree/697e782ab86bfcdd7fd15550241fe162c51d9f98/base/float.jl#L405" target="_blank">float.jl:405</a></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1024,6 +1348,8 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html">*(z::<b>Complex</b>, w::<b>Complex</b>) in Base at <a href="https://github.com/JuliaLang/julia/tree/697e782ab86bfcdd7fd15550241fe162c51d9f98/base/complex.jl#L277" target="_blank">complex.jl:277</a></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1031,6 +1357,8 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html">*(x::<b>Float32</b>, y::<b>Float32</b>) in Base at <a href="https://github.com/JuliaLang/julia/tree/697e782ab86bfcdd7fd15550241fe162c51d9f98/base/float.jl#L404" target="_blank">float.jl:404</a></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1038,6 +1366,8 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html">*(x::<b>T</b>, y::<b>T</b>)<i> where T<:Union{Int128, Int16, Int32, Int64, Int8, UInt128, UInt16, UInt32, UInt64, UInt8}</i> in Base at <a href="https://github.com/JuliaLang/julia/tree/697e782ab86bfcdd7fd15550241fe162c51d9f98/base/int.jl#L87" target="_blank">int.jl:87</a></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1045,6 +1375,8 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html">*(A::<b>AbstractArray{T,2}</b>, x::<b>AbstractArray{S,1}</b>)<i> where {T, S}</i> in LinearAlgebra at <a href="file:///buildworker/worker/package_linux64/build/usr/share/julia/stdlib/v1.5/LinearAlgebra/src/matmul.jl" target="_blank">/opt/hostedtoolcache/julia/1.5.1/x64/share/julia/stdlib/v1.5/LinearAlgebra/src/matmul.jl:49</a></div></div>
 </div>
 <p>Incluso, tenemos operaciones con cadenas de caracteres:</p>
 <div class="cell docutils container">
@@ -1053,6 +1385,8 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html">*(s1::<b>Union{AbstractChar, AbstractString}</b>, ss::<b>Union{AbstractChar, AbstractString}...</b>) in Base at <a href="https://github.com/JuliaLang/julia/tree/697e782ab86bfcdd7fd15550241fe162c51d9f98/base/strings/basic.jl#L251" target="_blank">strings/basic.jl:251</a></div></div>
 </div>
 <p>La operación de multiplicación de cadenas de texto funciona igual a la suma <code class="docutils literal notranslate"><span class="pre">+</span></code> en python. Julia eligió utilizar multiplicación debido a que no es una operación conmutativa, y tiene más sentido tener una notación consistente con la de un <a class="reference external" href="https://en.wikipedia.org/wiki/Monoid">monoide</a>:</p>
 <div class="cell docutils container">
@@ -1061,11 +1395,21 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&quot;Hola mundo&quot;, &quot;HolaHolaHola&quot;)
+</pre></div>
+</div>
+</div>
 </div>
 <p>cuyo elemento identidad es la cadena vacía: <code class="docutils literal notranslate"><span class="pre">\&quot;\&quot;</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="s">&quot;hola&quot;</span> <span class="o">*</span> <span class="s">&quot;&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&quot;hola&quot;
 </pre></div>
 </div>
 </div>
@@ -1078,10 +1422,20 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>30
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="o">+</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>16
 </pre></div>
 </div>
 </div>
@@ -1092,6 +1446,11 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>9
+</pre></div>
+</div>
+</div>
 </div>
 <p>Para poder indagar mejor en cómo están definidos estos operadores, y cualquier parte de código de Julia, se pueden utilizar <strong>macros</strong> como <code class="docutils literal notranslate"><span class="pre">&#64;edit</span></code> o <code class="docutils literal notranslate"><span class="pre">&#64;doc</span></code>:</p>
 <div class="cell docutils container">
@@ -1099,6 +1458,12 @@
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="nd">@doc</span> <span class="mi">4</span><span class="o">*</span><span class="mi">5</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="o">...</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Multiplication operator. <code class="docutils literal notranslate"><span class="pre">x*y*z*...</span></code> calls this function with all arguments, i.e. <code class="docutils literal notranslate"><span class="pre">*(x,</span> <span class="pre">y,</span> <span class="pre">z,</span> <span class="pre">...)</span></code>.</p>
 </div>
 </div>
 </div>
@@ -1123,10 +1488,20 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="mi">2</span><span class="o">*</span><span class="n">🐺</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4
 </pre></div>
 </div>
 </div>
@@ -1135,6 +1510,11 @@
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5
 </pre></div>
 </div>
 </div>
@@ -1150,6 +1530,11 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
+</pre></div>
+</div>
+</div>
 </div>
 <p>La notación para crear funciones es bastante flexible. La siguiente es una forma estándar en muchos lenguajes de programación.</p>
 <div class="cell docutils container">
@@ -1160,10 +1545,20 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>sumaUno (generic function with 1 method)
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">sumaUno</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6
 </pre></div>
 </div>
 </div>
@@ -1175,10 +1570,20 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>f (generic function with 1 method)
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6
 </pre></div>
 </div>
 </div>
@@ -1190,10 +1595,20 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>w (generic function with 1 method)
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">w</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2
 </pre></div>
 </div>
 </div>
@@ -1207,11 +1622,21 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>OtraForma (generic function with 1 method)
+</pre></div>
+</div>
+</div>
 </div>
 <p>Esta es una combinación entre la claridad en el nombre de la variable del segundo método y la capacidad de tener un bloque grande de instrucciones entre el <code class="docutils literal notranslate"><span class="pre">begin</span></code> y <code class="docutils literal notranslate"><span class="pre">end</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="o">-&gt;</span><span class="n">x</span><span class="o">+</span><span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>#1 (generic function with 1 method)
 </pre></div>
 </div>
 </div>
@@ -1223,11 +1648,21 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6
+</pre></div>
+</div>
+</div>
 </div>
 <p>Aunque pueden igual guardarse dentro de una variable para darles nombre si uno lo desea…</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">función_desanonimizada</span> <span class="o">=</span> <span class="n">x</span><span class="o">-&gt;</span><span class="n">x</span><span class="o">+</span><span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>#5 (generic function with 1 method)
 </pre></div>
 </div>
 </div>
@@ -1239,6 +1674,11 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>#7 (generic function with 1 method)
+</pre></div>
+</div>
+</div>
 </div>
 </div>
 <div class="section" id="mejorando-la-legibilidad-de-las-funciones">
@@ -1247,6 +1687,11 @@
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">g</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">=</span> <span class="mi">2</span><span class="n">x</span><span class="o">^</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">3</span><span class="n">x</span> <span class="o">+</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>g (generic function with 1 method)
 </pre></div>
 </div>
 </div>
@@ -1265,11 +1710,21 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5
+</pre></div>
+</div>
+</div>
 </div>
 <p>Lo anterior evalúa primero <span class="math notranslate nohighlight">\(f₂(2) = 2 + 1 = 3\)</span>, y ese resultado lo evalúa en la función <span class="math notranslate nohighlight">\(f₁\)</span>. Es decir, el resultado será <span class="math notranslate nohighlight">\(f₁(3) = 3 + 2 = 5\)</span>. Un ejemplo de <strong>composición de funciones</strong>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="mi">3</span> <span class="o">÷</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">123551</span> <span class="o">÷</span> <span class="mi">19723</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(1, 6)
 </pre></div>
 </div>
 </div>
@@ -1282,11 +1737,21 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(false, false, true)
+</pre></div>
+</div>
+</div>
 </div>
 <p>Tenemos un símbolo de aproximación (<code class="docutils literal notranslate"><span class="pre">\approx</span> <span class="pre">+</span> <span class="pre">&lt;TAB&gt;</span></code>) para comparar cantidades flotantes y considerarlas equivalentes si difieren en alguna <em>pequeña</em> cantidad respecto a lo que la precisión de punto flotante considera pequeño (dependiendo de qué tipo de flotante se utiliza, qué tan cercano estamos de 0, etc.)</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="o">√</span><span class="mi">16</span><span class="p">,</span> <span class="o">√</span><span class="p">(</span><span class="mi">5</span><span class="o">^</span><span class="mi">2</span> <span class="o">-</span> <span class="mi">3</span><span class="o">^</span><span class="mi">2</span><span class="p">),</span> <span class="mi">4</span> <span class="o">≠</span> <span class="mi">5</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(4.0, 4.0, true)
 </pre></div>
 </div>
 </div>
@@ -1299,10 +1764,20 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>⨳ (generic function with 1 method)
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="mi">4</span> <span class="n">⨳</span> <span class="mi">5</span> <span class="c">## 3(4) + 5^2 = 12 + 25 = 37 </span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>37
 </pre></div>
 </div>
 </div>
@@ -1311,6 +1786,11 @@
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="mi">4</span> <span class="n">⨳</span> <span class="p">(</span><span class="mi">5</span> <span class="n">⨳</span> <span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="mi">4</span> <span class="n">⨳</span> <span class="mi">5</span> <span class="n">⨳</span> <span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="mi">4</span> <span class="n">⨳</span> <span class="mi">5</span><span class="p">)</span> <span class="n">⨳</span> <span class="mi">1</span> <span class="o">==</span> <span class="mi">4</span> <span class="n">⨳</span> <span class="mi">5</span> <span class="n">⨳</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(false, true)
 </pre></div>
 </div>
 </div>
@@ -1327,10 +1807,20 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>test_retorno (generic function with 1 method)
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">test_retorno</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3
 </pre></div>
 </div>
 </div>
@@ -1342,6 +1832,11 @@
 	<span class="n">x</span><span class="o">-</span><span class="mi">1</span>
 	<span class="k">return</span><span class="p">(</span><span class="nb">nothing</span><span class="p">)</span>
 <span class="k">end</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>test_retorno₂ (generic function with 1 method)
 </pre></div>
 </div>
 </div>
@@ -1363,10 +1858,20 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>test (generic function with 1 method)
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">test</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">7</span><span class="p">),</span> <span class="n">typeof</span><span class="p">(</span><span class="n">test</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">7</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>((14, 12), Tuple{Int64,Int64})
 </pre></div>
 </div>
 </div>
@@ -1379,6 +1884,11 @@
 	<span class="n">tupla_test</span> <span class="o">=</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
 	<span class="n">test₂</span><span class="p">(</span><span class="n">tupla_test</span><span class="o">...</span><span class="p">)</span>
 <span class="k">end</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>11
 </pre></div>
 </div>
 </div>
@@ -1400,6 +1910,11 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>duplicadorDeTexto (generic function with 1 method)
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1409,11 +1924,21 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>alPoderDeDos (generic function with 1 method)
+</pre></div>
+</div>
+</div>
 </div>
 <p>Su nombre, así como el de sus argumentos, documenta bien qué es lo que las funciones pretenden hacer. No obstante, ¿Realmente necesitamos dos funciones?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">duplicadorDeTexto</span><span class="p">(</span><span class="s">&quot;Hola&quot;</span><span class="p">),</span> <span class="n">duplicadorDeTexto</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&quot;HolaHola&quot;, 9)
 </pre></div>
 </div>
 </div>
@@ -1428,6 +1953,11 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>duplicador (generic function with 1 method)
+</pre></div>
+</div>
+</div>
 </div>
 <p>Si nosotros quisieramos proveer la funcionalidad también para los números, hacemos uso de lo llamado <strong>Multiple dispatch</strong>, o bien puesto en concepto: la producción de múltiples definiciones para una sola función, dependientes del contexto de sus argumentos.</p>
 <p>Cada una de estas múltiples definiciones son llamadas <strong>métodos</strong>, aunque no deben confundirse con lo que se conoce como método en <strong>programación orientada a objetos</strong>.</p>
@@ -1439,10 +1969,20 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>duplicador (generic function with 2 methods)
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">duplicador</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6
 </pre></div>
 </div>
 </div>
@@ -1458,11 +1998,21 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>media (generic function with 1 method)
+</pre></div>
+</div>
+</div>
 </div>
 <p>Notemos que como el tipo de salida se ha especificado a ser <code class="docutils literal notranslate"><span class="pre">Float32</span></code>, los números  <code class="docutils literal notranslate"><span class="pre">x</span></code> y <code class="docutils literal notranslate"><span class="pre">y</span></code>, que pueden ser <code class="docutils literal notranslate"><span class="pre">Floats</span></code> de cualquier número de bits (al pertenecer  a su clase abstracta) van a ser siempre convertidos a su representación de 32 bits tras operarse con la función.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">media</span><span class="p">(</span><span class="mf">5.0</span><span class="p">,</span> <span class="mf">3.5</span><span class="p">),</span> <span class="n">typeof</span><span class="p">(</span><span class="n">media</span><span class="p">(</span><span class="mf">5.0</span><span class="p">,</span> <span class="mf">3.5</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(4.25f0, Float32)
 </pre></div>
 </div>
 </div>
@@ -1481,10 +2031,20 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>#9 (generic function with 1 method)
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">h</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1//5
 </pre></div>
 </div>
 </div>
@@ -1499,10 +2059,25 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3-element Array{Int64,1}:
+  6
+ 15
+ 45
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">g</span><span class="o">.</span><span class="p">([</span><span class="mi">1</span> <span class="mi">2</span> <span class="mi">4</span><span class="p">;</span> <span class="mi">3</span> <span class="mi">5</span> <span class="mi">6</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2×3 Array{Int64,2}:
+  6  15  45
+ 28  66  91
 </pre></div>
 </div>
 </div>
@@ -1514,10 +2089,22 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>g₂ (generic function with 1 method)
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">g₂</span><span class="p">([</span><span class="mi">1</span> <span class="mi">2</span> <span class="mi">4</span><span class="p">;</span> <span class="mi">3</span> <span class="mi">5</span> <span class="mi">6</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2×3 Array{Int64,2}:
+  6  15  45
+ 28  66  91
 </pre></div>
 </div>
 </div>
@@ -1534,10 +2121,20 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>extracción_dominio (generic function with 1 method)
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">extracción_dominio</span><span class="p">(</span><span class="s">&quot;correo_ejemplo@julia.com&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&quot;julia.com&quot;
 </pre></div>
 </div>
 </div>
@@ -1555,6 +2152,15 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4-element Array{SubString{String},1}:
+ &quot;tutanota.com&quot;
+ &quot;julia.com&quot;
+ &quot;yahoo.com&quot;
+ &quot;lukesmith.xyz&quot;
+</pre></div>
+</div>
+</div>
 </div>
 </div>
 <div class="section" id="funciones-como-tipos">
@@ -1566,12 +2172,23 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Function</span>
+</pre></div>
+</div>
+<p>Abstract type of all functions.</p>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">function</span> <span class="n">evalua_funciones</span><span class="p">(</span><span class="n">f</span><span class="o">::</span><span class="kt">Function</span><span class="p">,</span> <span class="n">argumento</span><span class="p">)</span>
 	<span class="n">f</span><span class="p">(</span><span class="n">argumento</span><span class="p">)</span>
 <span class="k">end</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>evalua_funciones (generic function with 1 method)
 </pre></div>
 </div>
 </div>
@@ -1582,10 +2199,20 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">evalua_funciones</span><span class="p">(</span><span class="n">extracción_dominio</span><span class="p">,</span> <span class="s">&quot;correo_falso@wikipedia.org&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&quot;wikipedia.org&quot;
 </pre></div>
 </div>
 </div>
