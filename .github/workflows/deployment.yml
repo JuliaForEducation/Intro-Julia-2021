@@ -29,8 +29,8 @@ jobs:
       	version: '1.5.1'
       	
     - name: Instantiate project
-	      run: |
-		 julia -e 'using Pkg; Pkg.instantiate(".")'
+      run: |
+	 julia -e 'using Pkg; Pkg.instantiate(".")'
 
     # Build the book
     - name: Build the book
