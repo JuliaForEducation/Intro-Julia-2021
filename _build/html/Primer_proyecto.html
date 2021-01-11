@@ -433,10 +433,19 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>┌ Info: Precompiling Plots [91a5bcdd-55d7-5caf-9e0b-520d859cae80]
+└ @ Base loading.jl:1278
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">Plots</span><span class="o">.</span><span class="n">default</span><span class="p">(</span><span class="n">size</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2200</span><span class="p">,</span><span class="mi">2200</span><span class="p">))</span>
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">begin</span>
+	<span class="n">size</span> <span class="o">=</span> <span class="mi">50</span>
+	<span class="n">Plots</span><span class="o">.</span><span class="n">default</span><span class="p">(</span><span class="n">size</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2200</span><span class="p">,</span><span class="mi">2200</span><span class="p">),</span><span class="n">titlefontsize</span> <span class="o">=</span> <span class="n">size</span><span class="p">,</span> <span class="n">tickfontsize</span> <span class="o">=</span> <span class="n">size</span><span class="p">,</span> <span class="n">legendfontsize</span> <span class="o">=</span> <span class="n">size</span><span class="p">,</span> <span class="n">guidefontsize</span> <span class="o">=</span> <span class="n">size</span><span class="p">,</span> <span class="n">legendtitlefontsize</span> <span class="o">=</span> <span class="n">size</span><span class="p">)</span>
+<span class="k">end</span>
 </pre></div>
 </div>
 </div>
@@ -451,13 +460,13 @@
 	<span class="n">scatter</span><span class="p">(</span><span class="n">zcomplejo</span><span class="p">,</span> <span class="n">seriescolor</span><span class="o">=:</span><span class="n">white</span><span class="p">,</span>
 		    <span class="n">markerstrokecolor</span><span class="o">=:</span><span class="n">blue</span><span class="p">,</span>
 		    <span class="n">aspectratio</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
-		    <span class="n">title</span><span class="o">=</span><span class="s">&quot;Gráfica de ejemplo&quot;</span><span class="p">)</span>
+		    <span class="n">title</span><span class="o">=</span><span class="s">&quot;Gráfica de ejemplo&quot;</span><span class="p">,</span>
+			<span class="n">legend</span><span class="o">=</span><span class="kc">false</span><span class="p">,</span>
+			<span class="n">markersize</span><span class="o">=</span><span class="mi">40</span><span class="p">)</span>
 <span class="k">end</span>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<img alt="_images/Primer_proyecto_6_0.svg" src="_images/Primer_proyecto_6_0.svg" /></div>
 </div>
 <p>Para colorear los gráficos del conjunto de Julia, Mandelbrot y las formas biológicas, utilizando el algoritmo de Tiempo de Escape,  se pueden utilizar mapas de calor.</p>
 <div class="cell docutils container">
@@ -472,8 +481,6 @@
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<img alt="_images/Primer_proyecto_8_0.svg" src="_images/Primer_proyecto_8_0.svg" /></div>
 </div>
 <p>Para el mapa de calor, se necesita hacer una malla (las listas “x” y “y” del ejemplo anterior) y una matriz donde se guardan los valores que definen el color para cada punto de la malla.</p>
 </div>
@@ -532,11 +539,6 @@
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Grid
-</pre></div>
-</div>
-</div>
 </div>
 <ul class="simple">
 <li><p>Defina una función que cree una matriz de rangos para los ejes de las abcisas y ordenas.</p></li>
@@ -550,11 +552,6 @@
 <span class="k">function</span> <span class="n">makeGrid</span><span class="p">(</span><span class="n">g</span><span class="o">::</span><span class="n">Grid</span><span class="p">)</span>
 	
 <span class="k">end</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>makeGrid
 </pre></div>
 </div>
 </div>
@@ -586,11 +583,6 @@
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>testJM
-</pre></div>
-</div>
-</div>
 </div>
 <ul class="simple">
 <li><p>Defina una función que <code class="docutils literal notranslate"><span class="pre">true</span></code> si el criterio de convergencia para las formas biológicas se cumple, <code class="docutils literal notranslate"><span class="pre">false</span></code> en caso contrario.</p></li>
@@ -604,11 +596,6 @@
 <span class="k">function</span> <span class="n">testbiomorph</span><span class="p">(</span><span class="n">z</span><span class="o">::</span><span class="kt">Complex</span><span class="p">,</span><span class="n">τ</span><span class="o">::</span><span class="kt">Real</span><span class="p">)</span>
 	
 <span class="k">end</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>testbiomorph
 </pre></div>
 </div>
 </div>
@@ -628,11 +615,6 @@
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>iterate
-</pre></div>
-</div>
-</div>
 </div>
 <ul class="simple">
 <li><p>Defina un función que devuelva el número de iteraciones realizadas para un dado z (número complejo), hasta que se no se cumple el criterio de divergencia.</p></li>
@@ -649,11 +631,6 @@
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>colormap
-</pre></div>
-</div>
-</div>
 </div>
 <ul class="simple">
 <li><p>Usando multiple dispatch, defina nuevamente la función colormap agregando un nuevo parámetro de entrada <span class="math notranslate nohighlight">\(\tau\)</span>, de modo que se pueda usar el test de convergencia para la forma biológica</p></li>
@@ -663,11 +640,6 @@
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">function</span> <span class="n">colormap</span><span class="p">(</span><span class="n">f</span><span class="o">::</span><span class="kt">Function</span><span class="p">,</span><span class="n">test</span><span class="o">::</span><span class="kt">Function</span><span class="p">,</span><span class="n">z</span><span class="o">::</span><span class="kt">Complex</span><span class="p">,</span><span class="n">c</span><span class="o">::</span><span class="kt">Complex</span><span class="p">,</span><span class="n">iter</span><span class="o">::</span><span class="kt">Integer</span><span class="p">,</span><span class="n">τ</span><span class="o">::</span><span class="kt">Integer</span><span class="p">)</span>
 	
 <span class="k">end</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>colormap (generic function with 2 methods)
 </pre></div>
 </div>
 </div>
@@ -700,11 +672,6 @@
 		<span class="n">iter</span><span class="o">::</span><span class="kt">Integer</span><span class="p">)</span>
 	
 <span class="k">end</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>setjulia
 </pre></div>
 </div>
 </div>
@@ -743,11 +710,6 @@
 		<span class="n">iter</span><span class="o">::</span><span class="kt">Integer</span><span class="p">)</span>
 	
 <span class="k">end</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>setmandelbrot
 </pre></div>
 </div>
 </div>
@@ -792,11 +754,6 @@
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>setbiomorph
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -825,11 +782,6 @@
 	<span class="p">)</span>
 	
 <span class="k">end</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>setmandelbrot
 </pre></div>
 </div>
 </div>

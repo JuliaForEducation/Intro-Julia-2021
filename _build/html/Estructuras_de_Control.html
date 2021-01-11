@@ -929,34 +929,11 @@ Este operador retorna el valor booleano contrario sobre el cual opera. En Julia 
 <div class="section" id="instruccion-switch">
 <h4>Instrucción switch<a class="headerlink" href="#instruccion-switch" title="Enlazar permanentemente con este título">¶</a></h4>
 <p>Julia a diferencia de otros lenguajes de programación no implementa la instrucción <code class="docutils literal notranslate"><span class="pre">Switch</span></code>. Esta instrucción permite cambiar el flujo de un programa dependiendo del valor de una variable o expresión, permitiendo tomar decisiones cuando existe más de dos opciones.</p>
-<p>Julia ofrece un paquetes adicional para implementar esta instrucción, el paquete <code class="docutils literal notranslate"><span class="pre">Match.jl</span></code>.</p>
+<p>Julia ofrece un paquetes adicional para implementar esta instrucción, el paquete <code class="docutils literal notranslate"><span class="pre">Match.jl</span></code>. Este paquete, así como los que usaremos el resto del curso, estarán ya especificados en los archivos <code class="docutils literal notranslate"><span class="pre">Project.toml</span></code> y <code class="docutils literal notranslate"><span class="pre">Manifest.toml</span></code> que controlan las dependencias de un proyecto.</p>
+<p>De esta manera, para instalar paquetes, podemos ejecutar <code class="docutils literal notranslate"><span class="pre">Pkg.instantiage()</span></code> para actualizar nuestros paquetes hacia lo que <code class="docutils literal notranslate"><span class="pre">Project.toml</span></code> y <code class="docutils literal notranslate"><span class="pre">Manifest.toml</span></code> especifican.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">using</span> <span class="n">Pkg</span><span class="p">;</span> <span class="n">Pkg</span><span class="o">.</span><span class="n">activate</span><span class="p">(</span><span class="s">&quot;.&quot;</span><span class="p">);</span> <span class="n">Pkg</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s">&quot;Match&quot;</span><span class="p">);</span> <span class="k">using</span> <span class="n">Match</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold -Color-Bold-Green"> Activating</span> environment at `~/computer_science/git_repositories/project_oriented_julia_workshop/book/Project.toml`
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold -Color-Bold-Green">   Updating</span> registry at `~/.julia/registries/General`
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>?25l
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold -Color-Bold-Green">   Updating</span> git-repo `https://github.com/JuliaRegistries/General.git`
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>?25h
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold -Color-Bold-Green">  Resolving</span> package versions...
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold -Color-Bold-Green">No Changes</span> to `~/computer_science/git_repositories/project_oriented_julia_workshop/book/Project.toml`
-<span class=" -Color -Color-Bold -Color-Bold-Green">No Changes</span> to `~/computer_science/git_repositories/project_oriented_julia_workshop/book/Manifest.toml`
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">using</span> <span class="n">Pkg</span><span class="p">;</span> <span class="n">Pkg</span><span class="o">.</span><span class="n">instantiate</span><span class="p">();</span> <span class="k">using</span> <span class="n">Match</span>
 </pre></div>
 </div>
 </div>
