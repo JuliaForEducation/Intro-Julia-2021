@@ -32,7 +32,7 @@ Esto significa que todo un flujo de desarrollo de modelos y cálculos que previa
 
 <span style="font-size:2em;"> Contacto </span> 
 
-Contacto para información, consultas o comentarios relacionados con el curso o el proyecto **Julia For Education** [aquí](juliaforeducation@gmail.com)
+Contacto para información, consultas o comentarios relacionados con el curso o el proyecto **Julia For Education** [aquí](mailto:juliaforeducation@gmail.com)
 
 <!-- No se pueden incluir más headers, pues el PDF compila 
      la sección del primer archivo siempre en una página preambular
