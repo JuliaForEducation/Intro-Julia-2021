@@ -392,7 +392,7 @@
 <div class="section" id="el-problema">
 <h3>El problema<a class="headerlink" href="#el-problema" title="Enlazar permanentemente con este título">¶</a></h3>
 <p>El proceso de producir resultados en ciencia e ingeniería depende de múltiples etapas para las cuales, históricamente, se han requerido especialistas dedicados y apenas comunicándose sus resultados parciales para hacer funcionar un sistema.</p>
-<p>Esto, en un mundo de creciente multidisciplina e interdisciplina, se vuelve menos conveniente, pues comunicar conceptos y justificiaciones complejas entre diversos especialistas se ha hecho crucial para progresar con eficiencia una investigación y desarrollo de tecnología.</p>
+<p>Esto, en un mundo de creciente multidisciplina e interdisciplina, se vuelve menos conveniente, pues comunicar conceptos y justificaciones complejas entre diversos especialistas se ha hecho crucial para progresar con eficiencia una investigación y desarrollo de tecnología.</p>
 </div>
 <div class="section" id="una-solucion-elegante">
 <h3>Una solución elegante<a class="headerlink" href="#una-solucion-elegante" title="Enlazar permanentemente con este título">¶</a></h3>
@@ -408,15 +408,15 @@
 </pre></div>
 </div>
 <p>Dejando muy en claro lo que hace el código para cualquiera que conozca los símbolos, incluso con poca experiencia con el lenguaje.</p>
-<p>Esta énfasis en legibilidad y eficiencia de escritura de código es algo que ya existe en lenguajes como Python, pero en menor grado de especialización para las ciencias y definitivamente con un costo de eficiencia de cómputo…</p>
+<p>Está énfasis en legibilidad y eficiencia de escritura de código es algo que ya existe en lenguajes como Python, pero en menor grado de especialización para las ciencias y definitivamente con un costo de eficiencia de cómputo…</p>
 <p>Es por eso que rubros de la academia y tecnología persisten en utilizar lenguajes altamente eficientes como Fortran, C/C++, o incluso Octave. <strong>Julia puede ser ambos: Legible y eficiente.</strong> Emparejando muy de cerca velocidades de cómputo de C y Fortran (como visto <a class="reference external" href="https://julialang.org/benchmarks/">aquí</a>), y a veces superando, sin comprometer la legibilidad o la interactividad</p>
 </div>
 <div class="section" id="como-lo-logra-julia">
 <h3>¿Cómo lo logra Julia?<a class="headerlink" href="#como-lo-logra-julia" title="Enlazar permanentemente con este título">¶</a></h3>
 <p>Julia, a diferencia de Python, R y Octave, <strong>no</strong> es un lenguaje interpretado, si no compilado. No obstante, sigue siendo interactivo como estos anteriores, lo que nos permite recibir los resultados de nuestro código a tiempo real ¿Cómo lo hace?</p>
 <p>Julia utiliza un compilador <a class="reference external" href="https://en.wikipedia.org/wiki/Just-in-time_compilation">JIT</a> (Just-In-Time) implementado en <a class="reference external" href="https://en.wikipedia.org/wiki/LLVM">LLVM</a>, que quiere decir que compila el código hasta el momento en que es necesario compilarlo y así proveer velocidades de lenguajes compilador como C/C++ pero interactividad y dinamismo de Python.</p>
-<p>Además, Julia es un lenguaje <strong>opcionalmente tipado</strong>, lo que quiere decir que, al igual que Python, es posible escribir código sin restringir el tipo de una variable o salida de función; incluso cambiándo su valor de tipo dinámicamente. Pero, tenemos también la opción de restringir los tipos como en C/C++ para ayudarle al compilador JIT a optimizar mejor nuestro código.</p>
-<p>Ésta y más técnicas son las utilizadas para escribir código máximalmente eficiente, pero aún tan fácil de leer y aprender como lo anteriormente mostrado.</p>
+<p>Además, Julia es un lenguaje <strong>opcionalmente tipado</strong>, lo que quiere decir que, al igual que Python, es posible escribir código sin restringir el tipo de una variable o salida de función; incluso cambiando su valor de tipo dinámicamente. Pero, tenemos también la opción de restringir los tipos como en C/C++ para ayudarle al compilador JIT a optimizar mejor nuestro código.</p>
+<p>Ésta y más técnicas son las utilizadas para escribir código máximamente eficiente, pero aún tan fácil de leer y aprender cómo lo anteriormente mostrado.</p>
 </div>
 <div class="section" id="paradigmas-y-diseno-del-lenguaje-julia">
 <h3>Paradigmas y diseño del lenguaje Julia<a class="headerlink" href="#paradigmas-y-diseno-del-lenguaje-julia" title="Enlazar permanentemente con este título">¶</a></h3>
@@ -428,7 +428,7 @@
 <h2>Operaciones fundamentales y tipos primitivos<a class="headerlink" href="#operaciones-fundamentales-y-tipos-primitivos" title="Enlazar permanentemente con este título">¶</a></h2>
 <div class="section" id="aritmetica-basica">
 <h3>Aritmética básica<a class="headerlink" href="#aritmetica-basica" title="Enlazar permanentemente con este título">¶</a></h3>
-<p>Tenemos aritmética usual (<code class="docutils literal notranslate"><span class="pre">+</span></code>, <code class="docutils literal notranslate"><span class="pre">*</span></code>, <code class="docutils literal notranslate"><span class="pre">-</span></code>, <code class="docutils literal notranslate"><span class="pre">/</span></code>, <code class="docutils literal notranslate"><span class="pre">^</span></code>). A continuación ilustramo la sintaxis básica:</p>
+<p>Tenemos aritmética usual (<code class="docutils literal notranslate"><span class="pre">+</span></code>, <code class="docutils literal notranslate"><span class="pre">*</span></code>, <code class="docutils literal notranslate"><span class="pre">-</span></code>, <code class="docutils literal notranslate"><span class="pre">/</span></code>, <code class="docutils literal notranslate"><span class="pre">^</span></code>). A continuación ilustramos la sintaxis básica:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="mi">5</span><span class="o">+</span><span class="mi">2</span>
@@ -695,13 +695,13 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">Float64</span></code>: Una representación decimal finita que intenta aproximar un número real utilizando 64 bits de información.</p>
 <p>Esto es logrado por lo que se conoce como <strong>sistema numérico de punto flotante</strong>. La forma en que ésta es representada en memoria es más complicada que los <code class="docutils literal notranslate"><span class="pre">Int</span></code>, pero se puede leer más <a class="reference external" href="https://en.wikipedia.org/wiki/Floating-point_arithmetic">aquí</a></p>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Char</span></code>: Un caracter de texto, representado mediante codificación <a class="reference external" href="https://en.wikipedia.org/wiki/Unicode">Unicode</a>. Ésto quiere decir que Julia permite desde caractéres de nuestro alfabeto usual, caractéres con tildes y diéresis, así como japoneses, coreanos y chinos, subíndices, simbología matemática, alfabeto griego, emoticones y más.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Char</span></code>: Un carácter de texto, representado mediante codificación <a class="reference external" href="https://en.wikipedia.org/wiki/Unicode">Unicode</a>. Ésto quiere decir que Julia permite desde caracteres de nuestro alfabeto usual, caracteres con tildes y diéresis, así como japoneses, coreanos y chinos, subíndices, simbología matemática, alfabeto griego, emoticones y más.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">String</span></code>: Una cadena de más de un caracter.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">Bool</span></code>: Un Booleano. Solamente puede tener dos valores: Verdadero o falso. Se utiliza para representar condiciones y controlar flujos del código.</p></li>
 </ul>
 <div class="section" id="numeros-enteros">
 <h4>Números enteros<a class="headerlink" href="#numeros-enteros" title="Enlazar permanentemente con este título">¶</a></h4>
-<p>Como comentado anteriormentre, Julia tiene diferentes tipos de enteros dependiendo del espacio en memoria que se utiliza para guardarlos/representarlos. Estos pueden ser generados utilizando el nombre del tipo como una función:</p>
+<p>Como comentado anteriormente, Julia tiene diferentes tipos de enteros dependiendo del espacio en memoria que se utiliza para guardarlos/representarlos. Estos pueden ser generados utilizando el nombre del tipo como una función:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">typeof</span><span class="p">(</span><span class="kt">Int32</span><span class="p">(</span><span class="mi">5</span><span class="p">)),</span> <span class="n">typeof</span><span class="p">(</span><span class="kt">Int16</span><span class="p">(</span><span class="mi">5</span><span class="p">)),</span> <span class="n">typeof</span><span class="p">(</span><span class="kt">Int8</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span> 
@@ -714,7 +714,7 @@
 </div>
 </div>
 </div>
-<p>La <strong>representación binaria</strong> o de <strong>bits</strong> de cualquier tipo primitivo en Julia (booleano, flotante, entero, caracter) se puede obtener mediante la función <code class="docutils literal notranslate"><span class="pre">bitstring</span></code>). Esto nos permite hacernos una mejor idea de cómo se guardan en memoria estos objetos.</p>
+<p>La <strong>representación binaria</strong> o de <strong>bits</strong> de cualquier tipo primitivo en Julia (booleano, flotante, entero, carácter) se puede obtener mediante la función <code class="docutils literal notranslate"><span class="pre">bitstring</span></code>). Esto nos permite hacernos una mejor idea de cómo se guardan en memoria estos objetos.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">bitstring</span><span class="p">(</span><span class="kt">Int8</span><span class="p">(</span><span class="mi">5</span><span class="p">)),</span> <span class="n">bitstring</span><span class="p">(</span><span class="kt">Int16</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
@@ -869,7 +869,7 @@
 </div>
 </div>
 </div>
-<p>Además como visto anteriormennte, tenemos un número flotante especial (una versión para cada  número de bits), <code class="docutils literal notranslate"><span class="pre">NaN</span></code> (<a class="reference external" href="https://en.wikipedia.org/wiki/NaN">“Not a Number”</a>), que sirve para representar datos que no podríann ser representados de otra manera o que señalizan un error sin necesitar levantar un error que paralice el flujo de un programa.</p>
+<p>Además como visto anteriormente, tenemos un número flotante especial (una versión para cada  número de bits), <code class="docutils literal notranslate"><span class="pre">NaN</span></code> (<a class="reference external" href="https://en.wikipedia.org/wiki/NaN">“Not a Number”</a>), que sirve para representar datos que no podrían ser representados de otra manera o que señalizan un error sin necesitar levantar un error que paralice el flujo de un programa.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">typeof</span><span class="p">(</span><span class="nb">NaN</span><span class="p">),</span> <span class="n">typeof</span><span class="p">(</span><span class="kt">Float32</span><span class="p">(</span><span class="nb">NaN</span><span class="p">))</span>
@@ -1010,7 +1010,7 @@
 </div>
 </div>
 <p>Aquí el argumento <code class="docutils literal notranslate"><span class="pre">precision</span></code> es el número de bits que utilizaremos en la representación de dicho número. Entre más sean, más cifras significativas podremos representar; esto puede ser crucial en caso de necesitar realizar cálculos sumamente precisos, aunque viene con el costo de mayor memoria por número.</p>
-<p>Para tener una mejor medida de cuántos bits necesitamos para obtener “x” precisión, presentamos brevemente el concepto de <a class="reference external" href="https://en.wikipedia.org/wiki/Machine_epsilon">“épsilon de máquina”</a>: El máximo error relativo que puede ocurrir por medio del procedimiendo de redondeo. En cierto sentido, ésto es una cota de la precisión para una cantidad selecta de bits.</p>
+<p>Para tener una mejor medida de cuántos bits necesitamos para obtener “x” precisión, presentamos brevemente el concepto de <a class="reference external" href="https://en.wikipedia.org/wiki/Machine_epsilon">“épsilon de máquina”</a>: El máximo error relativo que puede ocurrir por medio del procedimiento de redondeo. En cierto sentido, ésto es una cota de la precisión para una cantidad selecta de bits.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">eps</span><span class="p">(</span><span class="kt">Float64</span><span class="p">),</span> <span class="n">eps</span><span class="p">(</span><span class="kt">Float32</span><span class="p">)</span>
@@ -1040,7 +1040,7 @@
 </div>
 <div class="section" id="caracteres">
 <h4>Caracteres<a class="headerlink" href="#caracteres" title="Enlazar permanentemente con este título">¶</a></h4>
-<p>Los <code class="docutils literal notranslate"><span class="pre">Char</span></code> son un tipo de dato primitivo que representa cualquier caracter definido en cualquier codificación bajo el <a class="reference external" href="https://en.wikipedia.org/wiki/Unicode">estándar Unicode</a> (ej. UTF-8, UTF-16, GB18030). Esto incluyen caracteres alfanuméricos a los que estamos acostumbrados:</p>
+<p>Los <code class="docutils literal notranslate"><span class="pre">Char</span></code> son un tipo de dato primitivo que representa cualquier carácter definido en cualquier codificación bajo el <a class="reference external" href="https://en.wikipedia.org/wiki/Unicode">estándar Unicode</a> (ej. UTF-8, UTF-16, GB18030). Esto incluyen caracteres alfanuméricos a los que estamos acostumbrados:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">typeof</span><span class="p">(</span><span class="sc">&#39;r&#39;</span><span class="p">),</span> <span class="n">typeof</span><span class="p">(</span><span class="sc">&#39;5&#39;</span><span class="p">)</span>
@@ -1053,7 +1053,7 @@
 </div>
 </div>
 </div>
-<p>O también characteres especiales de otros alfabetos o incluso emojis:</p>
+<p>O también caracteres especiales de otros alfabetos o incluso emojis:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">typeof</span><span class="p">(</span><span class="sc">&#39;尊&#39;</span><span class="p">)</span> <span class="c">## &lt;- Respeto/honor</span>
@@ -1174,7 +1174,7 @@
 </div>
 <p>El anterior es un tipo compuesto llamado <strong>arreglo</strong>, en general, o en particular por su forma: <strong>vector</strong>. Su tipo se identifica con <code class="docutils literal notranslate"><span class="pre">Int64</span></code>, ya que todos sus sub-unidades (sus entradas) son de tipo <code class="docutils literal notranslate"><span class="pre">Int64</span></code>.</p>
 <p>Este tipo global que se identifica para los tipos compuestos ayuda al compilador a asignar memoria eficientemente al objeto completo. Por ejemplo, en este caso, cada entrada (con un total de <span class="math notranslate nohighlight">\(3\)</span>), al ser <code class="docutils literal notranslate"><span class="pre">Int64</span></code>, solamente ocupa 64 bits para almacenarse, y no tenemos el riesgo de necesitar más que eso. Por ello, el compilador puede buscar una sección de memoria con <span class="math notranslate nohighlight">\(3*64\)</span> bits contiguos que posteriormente facilite y acelere el acceso entre elementos para operarlos, por ejemplo, al querer sumarlos, sacar su promedio, hacer una búsqueda, etc.</p>
-<p>Esta es una desventaja general de los objetos por defecto de lenguajes como la lista de Python, la cual equivale a un arreglo pero de cualquier tipo, por lo que su almacenamento en memoria no puede ser optimizado.</p>
+<p>Esta es una desventaja general de los objetos por defecto de lenguajes como la lista de Python, la cual equivale a un arreglo pero de cualquier tipo, por lo que su almacenamiento en memoria no puede ser optimizado.</p>
 <p>No obstante, de necesitarlo, Julia igualmente puede tener un arreglo que pueda contener cualquier tipo, al tener como tipo global <code class="docutils literal notranslate"><span class="pre">Any</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2017,7 +2017,7 @@
 </div>
 </div>
 </div>
-<p>Si nosotros quisieramos proveer la funcionalidad también para los números, hacemos uso de lo llamado <strong>Multiple dispatch</strong>, o bien puesto en concepto: la producción de múltiples definiciones para una sola función, dependientes del contexto de sus argumentos.</p>
+<p>Si nosotros quisiéramos proveer la funcionalidad también para los números, hacemos uso de lo llamado <strong>Multiple dispatch</strong>, o bien puesto en concepto: la producción de múltiples definiciones para una sola función, dependientes del contexto de sus argumentos.</p>
 <p>Cada una de estas múltiples definiciones son llamadas <strong>métodos</strong>, aunque no deben confundirse con lo que se conoce como método en <strong>programación orientada a objetos</strong>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">

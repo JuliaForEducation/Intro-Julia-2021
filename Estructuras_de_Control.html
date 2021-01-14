@@ -468,7 +468,7 @@
 </div>
 <div class="section" id="operador-de-comparacion-mayor-y-menor-que">
 <h4>Operador de comparación mayor y menor que:<a class="headerlink" href="#operador-de-comparacion-mayor-y-menor-que" title="Enlazar permanentemente con este título">¶</a></h4>
-<p>Tenemos múltiples operadores de comparación de órden, o comúnmente conocidos por desigualdades (en dicho caso, se llama a las comparaciones anteriores no-igualdades). Estas son:</p>
+<p>Tenemos múltiples operadores de comparación de orden, o comúnmente conocidos por desigualdades (en dicho caso, se llama a las comparaciones anteriores no-igualdades). Estas son:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="o">-</span><span class="mi">1</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span> <span class="o">&lt;=</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span> <span class="o">≤</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mf">1.0</span> <span class="o">&gt;</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span> <span class="o">&gt;=</span> <span class="mf">1.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.5</span> <span class="o">≥</span> <span class="mf">1.0</span><span class="p">)</span>
@@ -656,7 +656,7 @@ Este operador retorna el valor booleano contrario sobre el cual opera. En Julia 
 </div>
 </div>
 </div>
-<p>Finalmente, la última expresión se evalúa de izquierda a derecha. Aunque es útil saber la manera en que Julia ejecuta los operadores lógicos, a menudo se prefiere utilizar los paréntesis para eliminar las ambiguedades, permite que exista más legibilidad en el código.</p>
+<p>Finalmente, la última expresión se evalúa de izquierda a derecha. Aunque es útil saber la manera en que Julia ejecuta los operadores lógicos, a menudo se prefiere utilizar los paréntesis para eliminar las ambigüedades, permite que exista más legibilidad en el código.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span> <span class="p">((</span><span class="mi">1</span><span class="o">-</span><span class="mi">5</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="mi">2</span><span class="o">+</span><span class="mi">2</span> <span class="o">==</span> <span class="mi">4</span><span class="p">)</span><span class="o">||</span> <span class="mi">10</span><span class="o">-</span><span class="mi">4</span> <span class="o">==</span> <span class="mi">2</span><span class="o">*</span><span class="mi">3</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="kc">true</span>
@@ -753,7 +753,7 @@ Este operador retorna el valor booleano contrario sobre el cual opera. En Julia 
 </div>
 </div>
 </div>
-<p>Los keywords <code class="docutils literal notranslate"><span class="pre">begin</span></code> y <code class="docutils literal notranslate"><span class="pre">end</span></code> conforman delimitadores para un bloque de código, considerandolo como una expresión. Incluso, el bloque de código puede ser asignado a una variable. Su principal uso consiste en evaluar varias expresiones encadenadas, retornando el valor de la última subexpresión.</p>
+<p>Los keywords <code class="docutils literal notranslate"><span class="pre">begin</span></code> y <code class="docutils literal notranslate"><span class="pre">end</span></code> conforman delimitadores para un bloque de código, considerándolo como una expresión. Incluso, el bloque de código puede ser asignado a una variable. Su principal uso consiste en evaluar varias expresiones encadenadas, retornando el valor de la última subexpresión.</p>
 </div>
 <div class="section" id="estructura-de-seleccion">
 <h3>Estructura de selección<a class="headerlink" href="#estructura-de-seleccion" title="Enlazar permanentemente con este título">¶</a></h3>
@@ -766,7 +766,7 @@ Este operador retorna el valor booleano contrario sobre el cual opera. En Julia 
 <div class="section" id="instruccion-if">
 <h4>Instrucción if<a class="headerlink" href="#instruccion-if" title="Enlazar permanentemente con este título">¶</a></h4>
 <p>La instrucción <code class="docutils literal notranslate"><span class="pre">if</span></code> permite comprobar el cumplimiento de una condición, en dicho caso se ejecuta un determinado bloque de código, si es lo contrario es posible ejecutar un grupo diferente de líneas de código.</p>
-<p>La función <code class="docutils literal notranslate"><span class="pre">testtriangle</span></code> respresenta un test de comprobación para saber si dada una terna de números, estos pueden representar las longitudes de los lados de un triángulo.</p>
+<p>La función <code class="docutils literal notranslate"><span class="pre">testtriangle</span></code> representa un test de comprobación para saber si dada una terna de números, estos pueden representar las longitudes de los lados de un triángulo.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">function</span> <span class="n">testtriangle</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">)</span>
@@ -797,7 +797,7 @@ Este operador retorna el valor booleano contrario sobre el cual opera. En Julia 
 </div>
 </div>
 </div>
-<p>En el dessarrollo de la función se implementa la estructura de control <code class="docutils literal notranslate"><span class="pre">if</span></code>, donde si en efecto se cumple el criterio que en un triángulo la longitud de cada lado debe ser menor que la suma de los otros dos lados, se imprime la oración “Las longitudes dadas representan los lados de un triángulo”, en caso contrario se imprime “Las longitudes dadas no representan los lados de un triángulo”.</p>
+<p>En el desarrollo de la función se implementa la estructura de control <code class="docutils literal notranslate"><span class="pre">if</span></code>, donde si en efecto se cumple el criterio que en un triángulo la longitud de cada lado debe ser menor que la suma de los otros dos lados, se imprime la oración “Las longitudes dadas representan los lados de un triángulo”, en caso contrario se imprime “Las longitudes dadas no representan los lados de un triángulo”.</p>
 <p>El bloque de código alternativo, <code class="docutils literal notranslate"><span class="pre">else</span></code>, es opcional, por ello puede prescindirse de dicho bloque si en el problema no se considera necesario.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -911,9 +911,9 @@ Este operador retorna el valor booleano contrario sobre el cual opera. En Julia 
 </div>
 <p><strong>NOTAS:</strong></p>
 <ul class="simple">
-<li><p>Las estructuras de control if no introducen un nuevo ámbito local, significa que se puede declarar una nueva variable en la estructura y  utilizarla fuera de este. Sin embargo, debe usarse con cuidado ya que puede introducir errores de sitaxis.</p></li>
+<li><p>Las estructuras de control if no introducen un nuevo ámbito local, significa que se puede declarar una nueva variable en la estructura y  utilizarla fuera de este. Sin embargo, debe usarse con cuidado ya que puede introducir errores de sintaxis.</p></li>
 <li><p>Devuelve el valor de la última expresión ejecutada en la estructura.</p></li>
-<li><p>Los únicos valores aceptados en la condicional son los del tipo booleano. Significa que, a diferecia de otros lenguajes, no se permiten el uso de <code class="docutils literal notranslate"><span class="pre">0</span></code> o <code class="docutils literal notranslate"><span class="pre">1</span></code> en la condición.</p></li>
+<li><p>Los únicos valores aceptados en la condicional son los del tipo booleano. Significa que, a diferencia de otros lenguajes, no se permiten el uso de <code class="docutils literal notranslate"><span class="pre">0</span></code> o <code class="docutils literal notranslate"><span class="pre">1</span></code> en la condición.</p></li>
 </ul>
 </div>
 <div class="section" id="instruccion-switch">
@@ -965,7 +965,7 @@ Este operador retorna el valor booleano contrario sobre el cual opera. En Julia 
 </div>
 </div>
 </div>
-<p>Las posibilidades con el paquete mencionados son varias, este guía la macro bajo la política de primera coinicidencia y se pueden establecer comparaciones entre distintos tipos de datos, además, coincidencia profunda con matrices. Puede encontrar mayor información en la <a class="reference external" href="https://kmsquire.github.io/Match.jl/latest/">documentación del paquete Match.jl</a></p>
+<p>Las posibilidades con el paquete mencionados son varias, este guía la macro bajo la política de primera coincidencia y se pueden establecer comparaciones entre distintos tipos de datos, además, coincidencia profunda con matrices. Puede encontrar mayor información en la <a class="reference external" href="https://kmsquire.github.io/Match.jl/latest/">documentación del paquete Match.jl</a></p>
 <p>En determinadas ocasiones esta instrucción suele ser más eficiente que el encadenamiento de instrucciones <code class="docutils literal notranslate"><span class="pre">if</span></code>. Lo anterior debido que, cuando se tienen múltiples casos los <code class="docutils literal notranslate"><span class="pre">if</span></code> encadenados son evaluados hasta que se encuentra la condición que se cumple y en el peor de los casos se pueden evaluar todas las condiciones sin encontrar una condición que se cumple, ello hace que se tome un tiempo considerable de cálculo. Mientras que en la instrucción <code class="docutils literal notranslate"><span class="pre">switch</span></code>, la ejecución de un bloque de código está atada al valor de una expresión, por ello la ejecución o no del bloque es más directa que las los <code class="docutils literal notranslate"><span class="pre">if</span></code> encadenados.</p>
 </div>
 </div>
@@ -1107,7 +1107,7 @@ Este operador retorna el valor booleano contrario sobre el cual opera. En Julia 
 </div>
 </div>
 <p>Como se puede observar el valor de la cadena final solo contiene  los elementos que son impares, debido a que <code class="docutils literal notranslate"><span class="pre">w</span> <span class="pre">*=</span> <span class="pre">\&quot;$i\&quot;</span></code> no se ejecuta para <code class="docutils literal notranslate"><span class="pre">i</span></code> par, lo anterior porque se observa el efecto de ejecutar <code class="docutils literal notranslate"><span class="pre">continue</span></code>.</p>
-<p><strong>NOTA:</strong> Para conocer más detalles acerca de las estructura de control en Julia puede consultar la sección <a class="reference external" href="https://docs.julialang.org/en/v1/manual/control-flow/##Control-Flow">Control Flow</a> del maual de Julia.</p>
+<p><strong>NOTA:</strong> Para conocer más detalles acerca de las estructura de control en Julia puede consultar la sección <a class="reference external" href="https://docs.julialang.org/en/v1/manual/control-flow/##Control-Flow">Control Flow</a> del manual de Julia.</p>
 </div>
 </div>
 </div>

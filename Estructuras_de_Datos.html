@@ -364,14 +364,14 @@
 <h1>Estructuras de Datos<a class="headerlink" href="#estructuras-de-datos" title="Enlazar permanentemente con este título">¶</a></h1>
 <div class="section" id="id1">
 <h2>Estructuras de Datos<a class="headerlink" href="#id1" title="Enlazar permanentemente con este título">¶</a></h2>
-<p>Las estructurtas de datos son formatos especiales de datos que permiten guardar, organizar y manipular información. En particular, cada estructura especifica la forma en la cual se pueden realizar operaciones sobre los datos que contiene y a la vez sobre qué tipo de datos trabajan.</p>
+<p>Las estructuras de datos son formatos especiales de datos que permiten guardar, organizar y manipular información. En particular, cada estructura especifica la forma en la cual se pueden realizar operaciones sobre los datos que contiene y a la vez sobre qué tipo de datos trabajan.</p>
 <p>Las estructuras de datos ocultan al programador la manera en que se maneja la memoria y la gestionan de forma eficiente, por ende genera eficiencia en los algoritmos que los implementan.</p>
 <p>Existen numerosas estructuras de datos cada una diseñada para una aplicación en específico, Julia incorpora algunos tipos de datos básicos y sus procedimientos correspondientes, sin embargo no incorpora por defecto todos los tipos conocidos. Por ello, la comunidad de Julia ha trabajado en un paquete que incorpora diferentes estructuras de datos procurando rendimiento (revisar el paquete <a class="reference external" href="https://juliacollections.github.io/DataStructures.jl/latest/circ_buffer/">DataStructures.jl</a>).</p>
 <p>A continuación, se disertará sobre algunos de los tipos de datos básicos incorporados por defecto en Julia.</p>
 <div class="section" id="rangos">
 <h3>Rangos<a class="headerlink" href="#rangos" title="Enlazar permanentemente con este título">¶</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">(:)(start,[step],stop)</span></code></p>
-<p>Esta estructura permite crear secuencias de números, desde un número dado (<code class="docutils literal notranslate"><span class="pre">start</span></code> ) hasta otro (<code class="docutils literal notranslate"><span class="pre">stop</span></code>) con un tamaño de paso (<code class="docutils literal notranslate"><span class="pre">[step]</span></code>) que puede ser inidicado de forma opcional.</p>
+<p>Esta estructura permite crear secuencias de números, desde un número dado (<code class="docutils literal notranslate"><span class="pre">start</span></code> ) hasta otro (<code class="docutils literal notranslate"><span class="pre">stop</span></code>) con un tamaño de paso (<code class="docutils literal notranslate"><span class="pre">[step]</span></code>) que puede ser indicado de forma opcional.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">begin</span>
@@ -469,18 +469,18 @@
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5×2×2 Array{Float64,3}:
 [:, :, 1] =
- 6.94628e-310  6.94629e-310
- 6.94628e-310  6.94628e-310
- 6.94628e-310  6.94628e-310
- 6.94628e-310  6.94628e-310
- 6.94628e-310  6.94628e-310
+ 6.94674e-310  6.94674e-310
+ 6.94674e-310  6.94674e-310
+ 6.94674e-310  6.94674e-310
+ 6.94674e-310  6.94674e-310
+ 6.94674e-310  6.94674e-310
 
 [:, :, 2] =
- 6.94628e-310  6.94628e-310
- 6.94628e-310  6.94628e-310
- 6.94628e-310  6.94628e-310
- 6.94628e-310  6.94628e-310
- 6.94628e-310  0.0
+ 6.94674e-310  6.94674e-310
+ 6.94674e-310  6.94674e-310
+ 6.94674e-310  6.94674e-310
+ 6.94674e-310  6.94674e-310
+ 6.94674e-310  6.94674e-310
 </pre></div>
 </div>
 </div>
@@ -492,7 +492,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6.9462822018238e-310
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6.94674491220684e-310
 </pre></div>
 </div>
 </div>
@@ -530,7 +530,7 @@
 </div>
 </div>
 <p>En las inicializaciones anteriores el array acepta cualquier tipo de valor, pues su definición contempla elementos con el supertipo <code class="docutils literal notranslate"><span class="pre">Any</span></code> (en el caso de <code class="docutils literal notranslate"><span class="pre">array₂</span></code> se define de forma explícita y en el de <code class="docutils literal notranslate"><span class="pre">array₃</span></code> de forma implícita).</p>
-<p>Pueden existir casos en que el array solo deba contener elementos de un número limitado de tipos, en tales casos la declaración del tipo del array puede ser decalarado mediante <code class="docutils literal notranslate"><span class="pre">Union</span></code>, por ejemplo: <code class="docutils literal notranslate"><span class="pre">Array{Union{Int64,Float64,String},2}</span></code>. En el ejemplo el array solo podrá contener elementos del tipo: <code class="docutils literal notranslate"><span class="pre">Int64</span></code>, <code class="docutils literal notranslate"><span class="pre">Float64</span></code> o <code class="docutils literal notranslate"><span class="pre">String</span></code>.</p>
+<p>Pueden existir casos en que el array solo deba contener elementos de un número limitado de tipos, en tales casos la declaración del tipo del array puede ser declarado mediante <code class="docutils literal notranslate"><span class="pre">Union</span></code>, por ejemplo: <code class="docutils literal notranslate"><span class="pre">Array{Union{Int64,Float64,String},2}</span></code>. En el ejemplo el array solo podrá contener elementos del tipo: <code class="docutils literal notranslate"><span class="pre">Int64</span></code>, <code class="docutils literal notranslate"><span class="pre">Float64</span></code> o <code class="docutils literal notranslate"><span class="pre">String</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">array₄</span> <span class="o">=</span> <span class="kt">Array</span><span class="p">{</span><span class="kt">Float64</span><span class="p">,</span><span class="mi">1</span><span class="p">}()</span>
@@ -555,7 +555,7 @@
 </div>
 </div>
 </div>
-<p>Los arrays anteriores están vacios, pero solo aceptan elementos que son del tipo <code class="docutils literal notranslate"><span class="pre">Float64</span></code> o que pueden ser promovidos a ese tipo (por ejemplo Int64 puede ser convertido a Float64).</p>
+<p>Los arrays anteriores están vacíos, pero solo aceptan elementos que son del tipo <code class="docutils literal notranslate"><span class="pre">Float64</span></code> o que pueden ser promovidos a ese tipo (por ejemplo Int64 puede ser convertido a Float64).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">push!</span><span class="p">(</span><span class="n">array₄</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
@@ -874,7 +874,7 @@
 </div>
 </div>
 </div>
-<p>Con el símbolo <code class="docutils literal notranslate"><span class="pre">:</span></code> se indica que todos los elementos de una dimensión del array deben ser extraidos; en el caso del array de una dimensión, todos los elementos del mismo.</p>
+<p>Con el símbolo <code class="docutils literal notranslate"><span class="pre">:</span></code> se indica que todos los elementos de una dimensión del array deben ser extraídos; en el caso del array de una dimensión, todos los elementos del mismo.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">array3dim</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="o">:</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
@@ -939,7 +939,7 @@
 </div>
 </div>
 </div>
-<p>Ello indica que Julia almacena los elementos del array de forma concecutiva por columnas. Por ende, si el array se recorre por filas se tendrán que hacer cálculos adicionales llevando un costo de tiempo; por esa razón el costo por acceder a un array por columnas es menor que si se hiciera por filas.</p>
+<p>Ello indica que Julia almacena los elementos del array de forma consecutiva por columnas. Por ende, si el array se recorre por filas se tendrán que hacer cálculos adicionales llevando un costo de tiempo; por esa razón el costo por acceder a un array por columnas es menor que si se hiciera por filas.</p>
 </div>
 <div class="section" id="metodos-utiles">
 <h4>Métodos útiles<a class="headerlink" href="#metodos-utiles" title="Enlazar permanentemente con este título">¶</a></h4>
@@ -1286,7 +1286,7 @@
 </div>
 </div>
 </div>
-<p>Para que <code class="docutils literal notranslate"><span class="pre">splice!</span></code> funcione de la manera mostrada anteriormente, es necesario que el índice de los elementos donde se desea insertaer se indiquen de la forma <code class="docutils literal notranslate"><span class="pre">n:n-1</span></code>.</p>
+<p>Para que <code class="docutils literal notranslate"><span class="pre">splice!</span></code> funcione de la manera mostrada anteriormente, es necesario que el índice de los elementos donde se desea insertar se indiquen de la forma <code class="docutils literal notranslate"><span class="pre">n:n-1</span></code>.</p>
 <p>Existe un método para vaciar un array, este método presenta los dos casos: el que modifca el array y el que no, el método <code class="docutils literal notranslate"><span class="pre">empty</span></code> y <code class="docutils literal notranslate"><span class="pre">empty!</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1446,7 +1446,7 @@
 </div>
 </div>
 </div>
-<p><strong>NOTA:</strong> Más funciones e información acerca de los arrays en Julia puede encontrarlo en el manual en la seción <a class="reference external" href="https://docs.julialang.org/en/v1/base/collections/##Base.maximum">Multi-dimensional Arrays</a></p>
+<p><strong>NOTA:</strong> Más funciones e información acerca de los arrays en Julia puede encontrarlo en el manual en la sección <a class="reference external" href="https://docs.julialang.org/en/v1/base/collections/##Base.maximum">Multi-dimensional Arrays</a></p>
 </div>
 <div class="section" id="precauciones">
 <h4>Precauciones<a class="headerlink" href="#precauciones" title="Enlazar permanentemente con este título">¶</a></h4>
@@ -1594,7 +1594,7 @@
 </div>
 <div class="section" id="tuplas">
 <h3>Tuplas<a class="headerlink" href="#tuplas" title="Enlazar permanentemente con este título">¶</a></h3>
-<p>Las tuplas (<code class="docutils literal notranslate"><span class="pre">Tuples</span></code>) son listas, pero a diferencia de los arrays son inmutables. Lo anterior quiere decir que una vez creada la tupla esta no puede ser: modificada, eliminada o sobreescrita, como sí sucede con los arrays. Al igual que los arrays, las tuplas pueden contener diferentes tipos de datos.</p>
+<p>Las tuplas (<code class="docutils literal notranslate"><span class="pre">Tuples</span></code>) son listas, pero a diferencia de los arrays son inmutables. Lo anterior quiere decir que una vez creada la tupla esta no puede ser: modificada, eliminada o sobrescrita, como sí sucede con los arrays. Al igual que los arrays, las tuplas pueden contener diferentes tipos de datos.</p>
 <p>Para crear una tupla, los elementos de esta se encierran entre <code class="docutils literal notranslate"><span class="pre">()</span></code>. Se accede a los elementos de las tuplas de la misma forma en que se acceden a los elementos de un array.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1850,7 +1850,7 @@
 </div>
 </div>
 </div>
-<p>Las claves de un diccionario pueden obtenerse uando el método <code class="docutils literal notranslate"><span class="pre">keys</span></code>, el cual retorna un iterador. Se puede utilizar el método collect para transformarlo en un array.</p>
+<p>Las claves de un diccionario pueden obtenerse usando el método <code class="docutils literal notranslate"><span class="pre">keys</span></code>, el cual retorna un iterador. Se puede utilizar el método collect para transformarlo en un array.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">keys</span><span class="p">(</span><span class="n">dict₂</span><span class="p">)</span>
@@ -1915,7 +1915,7 @@
 </div>
 <div class="section" id="tipos-de-datos-y-los-diccionarios">
 <h4>Tipos de datos y los diccionarios<a class="headerlink" href="#tipos-de-datos-y-los-diccionarios" title="Enlazar permanentemente con este título">¶</a></h4>
-<p>En los diccionarios mostrados, el tipo de dato para la clave y los valores podian ser de diferentes tipos. La definición del diccionario es la siguiente:</p>
+<p>En los diccionarios mostrados, el tipo de dato para la clave y los valores podían ser de diferentes tipos. La definición del diccionario es la siguiente:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">typeof</span><span class="p">(</span><span class="n">dict₂</span><span class="p">)</span>
@@ -1929,7 +1929,7 @@
 </div>
 </div>
 <p>Como se observa <code class="docutils literal notranslate"><span class="pre">Dict{Any,Any}</span></code> indica que el tipo de dato para la clave es <code class="docutils literal notranslate"><span class="pre">Any</span></code> y para el valor es <code class="docutils literal notranslate"><span class="pre">Any</span></code>.</p>
-<p>Puede crearse un dicconario que restrinja el tipo de datos para la clave y valor, de esta manera puede crearse una estructura más compleja.</p>
+<p>Puede crearse un diccionario que restrinja el tipo de datos para la clave y valor, de esta manera puede crearse una estructura más compleja.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">typeof</span><span class="p">(</span><span class="kt">Dict</span><span class="p">{</span><span class="n">String</span><span class="p">,</span><span class="kt">Int64</span><span class="p">}(</span><span class="s">&quot;1&quot;</span><span class="o">=&gt;</span><span class="mi">1</span><span class="p">,</span> <span class="s">&quot;2&quot;</span><span class="o">=&gt;</span><span class="mi">2</span><span class="p">))</span>
@@ -2102,7 +2102,7 @@
 </div>
 </div>
 </div>
-<p>Con el método <code class="docutils literal notranslate"><span class="pre">union</span></code> los conjuntos pueden fusionarse, retornando el conjunto resultante. Es decir, un conjunto cuyo elementos se ecuentra en cualquiera de los conjuntos.</p>
+<p>Con el método <code class="docutils literal notranslate"><span class="pre">union</span></code> los conjuntos pueden fusionarse, retornando el conjunto resultante. Es decir, un conjunto cuyo elementos se encuentra en cualquiera de los conjuntos.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">union</span><span class="p">(</span><span class="n">set₅</span><span class="p">,</span><span class="n">set₄</span><span class="p">)</span>
@@ -2169,7 +2169,7 @@
 </div>
 </div>
 </div>
-<p>Con el método <code class="docutils literal notranslate"><span class="pre">intersect</span></code> se obtiene la interseción de los conjuntos, es decir, devuelve un conjunto cuyos elementos se encuentra en ambos conjuntos.</p>
+<p>Con el método <code class="docutils literal notranslate"><span class="pre">intersect</span></code> se obtiene la intercesión de los conjuntos, es decir, devuelve un conjunto cuyos elementos se encuentra en ambos conjuntos.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">intersect</span><span class="p">(</span><span class="n">set₄</span><span class="p">,</span><span class="n">set₅</span><span class="p">)</span>
@@ -2262,7 +2262,7 @@
 </div>
 <div class="section" id="list-comprehensions">
 <h3>List Comprehensions<a class="headerlink" href="#list-comprehensions" title="Enlazar permanentemente con este título">¶</a></h3>
-<p>Es un forma poderosa de crear listas o array, que también ha sido implementado en otros lenguages de programación.  Tiene la peculiaridad de definir los elementos del array de manera similar a la notación constructiva en matemática. Tiene la siguiente sintaxis:</p>
+<p>Es un forma poderosa de crear listas o array, que también ha sido implementado en otros lenguajes de programación.  Tiene la peculiaridad de definir los elementos del array de manera similar a la notación constructiva en matemática. Tiene la siguiente sintaxis:</p>
 <p><code class="docutils literal notranslate"><span class="pre">[</span> <span class="pre">expresión</span> <span class="pre">for</span> <span class="pre">elemento</span> <span class="pre">∈</span> <span class="pre">colección]</span></code></p>
 <p>Por ejemplo, un matemático podría decir: <em>“Sea <span class="math notranslate nohighlight">\(S\)</span> el conjunto de todos los elementos <span class="math notranslate nohighlight">\(n\)</span>, donde <span class="math notranslate nohighlight">\(n\)</span> es mayor o igual a <span class="math notranslate nohighlight">\(1\)</span> y menor o igual a <span class="math notranslate nohighlight">\(10\)</span>”</em>. En tal caso se puede crear en Julia un conjunto que responda a la definición anterior.</p>
 <div class="cell docutils container">
