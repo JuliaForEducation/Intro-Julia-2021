@@ -125,6 +125,18 @@
 </ul>
 <p class="caption collapsible-parent">
  <span class="caption-text">
+  Segunda Semana
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Paquete_Plots.html">
+   Paquete Plots
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
   Proyectos
  </span>
 </p>
@@ -134,13 +146,14 @@
    Primer proyecto
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lista_proyectos.html">
+   Opciones proyectos segunda semana
+  </a>
+ </li>
 </ul>
 
 </nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
 
 </div>
 
@@ -923,7 +936,7 @@ Este operador retorna el valor booleano contrario sobre el cual opera. En Julia 
 <p>De esta manera, para instalar paquetes, podemos ejecutar <code class="docutils literal notranslate"><span class="pre">Pkg.instantiage()</span></code> para actualizar nuestros paquetes hacia lo que <code class="docutils literal notranslate"><span class="pre">Project.toml</span></code> y <code class="docutils literal notranslate"><span class="pre">Manifest.toml</span></code> especifican.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">using</span> <span class="n">Pkg</span><span class="p">;</span> <span class="n">Pkg</span><span class="o">.</span><span class="n">activate</span><span class="p">(</span><span class="s">&quot;.&quot;</span><span class="p">);</span> <span class="k">using</span> <span class="n">Match</span>
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">using</span> <span class="n">Pkg</span><span class="p">;</span> <span class="n">Pkg</span><span class="o">.</span><span class="n">activate</span><span class="p">(</span><span class="s">&quot;.&quot;</span><span class="p">);</span> <span class="n">Pkg</span><span class="o">.</span><span class="n">instantiate</span><span class="p">();</span> <span class="k">using</span> <span class="n">Match</span>
 </pre></div>
 </div>
 </div>

@@ -1,0 +1,927 @@
+
+<!DOCTYPE html>
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Paquete Plots &#8212; Project-oriented workshop in Julia computing</title>
+    
+  <link rel="stylesheet" href="_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/translations.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="_static/logo.ico"/>
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Búsqueda" href="search.html" />
+    <link rel="next" title="Primer proyecto" href="Primer_proyecto.html" />
+    <link rel="prev" title="Estructuras de Datos" href="Estructuras_de_Datos.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="index.html">
+  
+  <img src="_static/julia_logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Project-oriented workshop in Julia computing</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Buscar este libro ..." aria-label="Buscar este libro ..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Intro.html">
+   Project-oriented workshop in Julia computing
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Primera Semana
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Git_y_GitHub.html">
+   Git y GitHub
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Fundamentos.html">
+   Fundamentos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Estructuras_de_Control.html">
+   Estructuras de Control
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Estructuras_de_Datos.html">
+   Estructuras de Datos
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Segunda Semana
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Paquete Plots
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Proyectos
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Primer_proyecto.html">
+   Primer proyecto
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lista_proyectos.html">
+   Opciones proyectos segunda semana
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Navegación de palanca" aria-controls="site-navigation"
+            title="Navegación de palanca" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Descarga esta pagina"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/Paquete_Plots.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Descargar archivo fuente" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimir en PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/JuliaForEducation/Intro-Julia-2021"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Repositorio de origen"><i
+                    class="fab fa-github"></i>repositorio</button></a>
+        <a class="issues-button"
+            href="https://github.com/JuliaForEducation/Intro-Julia-2021/issues/new?title=Issue%20on%20page%20%2FPaquete_Plots.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Abrir un problema"><i class="fas fa-lightbulb"></i>Tema abierto</button></a>
+        <a class="edit-button" href="https://github.com/JuliaForEducation/Intro-Julia-2021/edit/master/Paquete_Plots.ipynb"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edita esta página"><i class="fas fa-pencil-alt"></i>Tema abierto</button></a>
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Modo de pantalla completa"
+                title="Modo de pantalla completa"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/JuliaForEducation/Intro-Julia-2021/master?urlpath=tree/Paquete_Plots.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Lanzamiento Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contenido
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#plots-jl">
+   Plots.jl
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#comandos-basicos">
+     Comandos básicos
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#atributos-de-los-graficos">
+     Atributos de los gráficos
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#leyenda">
+       Leyenda
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#titulo">
+       Título
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#ejes">
+       Ejes
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#grilla">
+       Grilla
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#otros">
+       Otros
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tipos-de-serie">
+     Tipos de serie
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#serie-line">
+       Serie
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         :line
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#serie-scatter">
+       Serie
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         :scatter
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#serie-histogram">
+       Serie
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         :histogram
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#serie-heatmap">
+       Serie
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         :heatmap
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#serie-image">
+       Serie
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         :image
+        </span>
+       </code>
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#creando-subgraficas">
+     Creando subgráficas
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#guardando-una-grafica">
+     Guardando una gráfica
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#referencias-e-informacion-adicional">
+     Referencias e información adicional
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="paquete-plots">
+<h1>Paquete Plots<a class="headerlink" href="#paquete-plots" title="Enlazar permanentemente con este título">¶</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">begin</span>
+	<span class="k">using</span> <span class="n">Pkg</span><span class="p">;</span> <span class="n">Pkg</span><span class="o">.</span><span class="n">activate</span><span class="p">(</span><span class="s">&quot;.&quot;</span><span class="p">);</span> <span class="n">Pkg</span><span class="o">.</span><span class="n">instantiate</span><span class="p">()</span>
+	<span class="k">using</span> <span class="n">Plots</span>
+	<span class="n">theme</span><span class="p">(</span><span class="o">:</span><span class="n">wong</span><span class="p">)</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold -Color-Bold-Green"> Activating</span> environment at `~/work/Intro-Julia-2021/Intro-Julia-2021/Project.toml`
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="plots-jl">
+<h2>Plots.jl<a class="headerlink" href="#plots-jl" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Plots.jl es un paquete en Julia que permite realizar diferentes tipos de trazados o gráficos, sin embargo, no es un paquete que realiza el trazado de forma estricta. Lo anterior significa que <strong>Plots.jl es un metapaquete y constituye una interfaz entre diferentes paquetes de trazado</strong>, simplificando trabajar con dichos paquetes.</p>
+<p>Que Plots.jl sea un metapaquete es una ventaja, ya que solamente se necesita aprender la forma en que se realiza gráficos con Plots.jl y no las particularidades de los paquetes para realizar gráficos.</p>
+<p>Por tanto, con Plots.jl es posible utilizar el mismo código para trabajar con diferentes paquetes de trazado. Los paquetes de trazado, en Plots.jl, se conocen como   “backends” de los cuales se pueden mencionar:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://gr-framework.org/about.html">GR</a></p></li>
+<li><p><a class="reference external" href="https://plotly.com/julia/">PlotlyJS</a></p></li>
+<li><p><a class="reference external" href="https://github.com/JuliaPy/PyPlot.jl">PyPlot</a></p></li>
+<li><p><a class="reference external" href="https://kristofferc.github.io/PGFPlotsX.jl/stable/index.html">PGFPlotsX</a></p></li>
+<li><p><a class="reference external" href="https://github.com/Evizero/UnicodePlots.jl">UnicodePlots</a></p></li>
+</ul>
+<p>Para conocer con cuál de los backends se está trabajando se utiliza la función <code class="docutils literal notranslate"><span class="pre">backend</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">backend</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Plots.GRBackend()
+</pre></div>
+</div>
+</div>
+</div>
+<p>Pero, ya que se necesita correr de fondo un backend es necesario que éste sea instalado de la forma usual (<code class="docutils literal notranslate"><span class="pre">Pkg.add('nombre_backend')</span></code>) y sea invocado mediante una función que implementa <code class="docutils literal notranslate"><span class="pre">Plots.jl</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="c">##Pkg.add(&quot;GR&quot;);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="c">##Pkg.add(&quot;Plotly&quot;);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Activar un backend se realiza de la siguiente forma:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">begin</span>
+	<span class="n">plotly</span><span class="p">()</span>
+	<span class="n">backend</span><span class="p">();</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>┌ Info: For saving to png with the Plotly backend PlotlyBase has to be installed.
+└ @ Plots /home/runner/.julia/packages/Plots/lmp2A/src/backends.jl:372
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Plots.PlotlyBackend()
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">begin</span>
+	<span class="n">gr</span><span class="p">()</span>
+	<span class="n">backend</span><span class="p">();</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Plots.GRBackend()
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="comandos-basicos">
+<h3>Comandos básicos<a class="headerlink" href="#comandos-basicos" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>El comando más básico cuando se usa Plots.jl es <code class="docutils literal notranslate"><span class="pre">plot</span></code>. El comando <code class="docutils literal notranslate"><span class="pre">plot</span></code> admite diversas formas argumentos entrantes y dependiendo del caso se obtiene un determinado comportamiento.</p>
+<p>Al igual que muchas funciones definidas en Julia, existe la versión mutante (<code class="docutils literal notranslate"><span class="pre">plot!</span></code>). La versión mutante permite modificar una determinada gráfica, añadiendo atributos u otro trazado.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">begin</span>
+	<span class="n">x₁</span> <span class="o">=</span> <span class="o">-</span><span class="mi">10</span><span class="o">:</span><span class="mf">0.1</span><span class="o">:</span><span class="mi">10</span>
+	<span class="n">y₁</span> <span class="o">=</span> <span class="n">x₁</span><span class="o">.^</span><span class="mi">2</span>
+	<span class="n">plot₁</span> <span class="o">=</span> <span class="n">plot</span><span class="p">(</span><span class="n">x₁</span><span class="p">,</span><span class="n">y₁</span><span class="p">)</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Paquete_Plots_11_0.svg" src="_images/Paquete_Plots_11_0.svg" /></div>
+</div>
+<p>Los argumentos de <code class="docutils literal notranslate"><span class="pre">plot</span></code> son dos array: el primero <code class="docutils literal notranslate"><span class="pre">x₁</span></code>, constituye el eje horizontal; el segundo <code class="docutils literal notranslate"><span class="pre">y₁</span></code> constituye el eje vertical. En <code class="docutils literal notranslate"><span class="pre">plot₁</span></code> hay solo una serie graficada.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">begin</span>
+	<span class="n">x₂</span> <span class="o">=</span> <span class="o">-</span><span class="mi">10</span><span class="o">:</span><span class="mf">0.1</span><span class="o">:</span><span class="mi">10</span>
+	<span class="n">series₂</span> <span class="o">=</span> <span class="p">[</span><span class="mi">100</span><span class="n">x₂</span><span class="o">.^</span><span class="mi">2</span> <span class="mi">5</span><span class="n">x₂</span><span class="o">.^</span><span class="mi">3</span><span class="p">]</span>
+	<span class="n">plot₂</span> <span class="o">=</span> <span class="n">plot</span><span class="p">(</span><span class="n">x₂</span><span class="p">,</span> <span class="n">series₂</span><span class="p">)</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Paquete_Plots_13_0.svg" src="_images/Paquete_Plots_13_0.svg" /></div>
+</div>
+<p>En el ejemplo anterior son graficadas dos series, los datos para cada serie están contenidos en las columnas de un array de dos dimensiones (en general, las columnas de un array serán interpretadas como series de datos).</p>
+<p>A esta gráfica se le pueden añadir más series, para ello se utiliza la versión mutante de <code class="docutils literal notranslate"><span class="pre">plot</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">plot!</span><span class="p">(</span><span class="n">x₂</span><span class="p">,</span> <span class="n">x₂</span><span class="o">.^</span><span class="mi">4</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Paquete_Plots_15_0.svg" src="_images/Paquete_Plots_15_0.svg" /></div>
+</div>
+<p>La función mutante <code class="docutils literal notranslate"><span class="pre">plot!</span></code> actúa sobre la gráfica actual: <code class="docutils literal notranslate"><span class="pre">Plots.CURRENT_PLOT</span></code>, por ahora la gráfica actual es <code class="docutils literal notranslate"><span class="pre">plot₂</span></code>. La gráfica actual puede ser consultada mediante la función <code class="docutils literal notranslate"><span class="pre">current()</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">current</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Paquete_Plots_17_0.svg" src="_images/Paquete_Plots_17_0.svg" /></div>
+</div>
+<p>Para que <code class="docutils literal notranslate"><span class="pre">plot!</span></code> actúe sobre un gráfico en específico, este debe ser pasado como argumento.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">plot!</span><span class="p">(</span><span class="n">plot₁</span><span class="p">,</span> <span class="n">x₁</span><span class="p">,</span> <span class="n">x₁</span><span class="o">.^</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Paquete_Plots_19_0.svg" src="_images/Paquete_Plots_19_0.svg" /></div>
+</div>
+<p>Ahora la gráfica actual es plot₁ modificada.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">current</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Paquete_Plots_21_0.svg" src="_images/Paquete_Plots_21_0.svg" /></div>
+</div>
+<p>Para hacer una gráfica en el REPL de Julia se puede utilizar el backend <code class="docutils literal notranslate"><span class="pre">unicodeplots()</span></code>.</p>
+<p>Si se desea realizar una gráfica de 3 dimensiones, se pasa como parámetros tres arrays con los valores a graficar.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">begin</span>
+	<span class="n">plot3d</span> <span class="o">=</span> <span class="n">plot</span><span class="p">(</span><span class="mi">1</span><span class="o">:</span><span class="mi">10</span><span class="p">,</span><span class="mi">1</span><span class="o">:</span><span class="mi">10</span><span class="p">,(</span><span class="mi">1</span><span class="o">:</span><span class="mi">10</span><span class="p">)</span><span class="o">.^</span><span class="mi">2</span><span class="p">)</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Paquete_Plots_23_0.svg" src="_images/Paquete_Plots_23_0.svg" /></div>
+</div>
+</div>
+<div class="section" id="atributos-de-los-graficos">
+<h3>Atributos de los gráficos<a class="headerlink" href="#atributos-de-los-graficos" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Es natural que se desee agregar estilo a los gráficos, es decir, modificar o agregar: título, etiquetas a los ejes, controlar las marcas en el eje, etc. Todo lo anterior es manejado a través de atributos.</p>
+<p>Los atributos se pueden pasar al gráfico de diferentes maneras:</p>
+<ul class="simple">
+<li><p>Mediante la declaración explícita con <code class="docutils literal notranslate"><span class="pre">atributo</span> <span class="pre">=</span> <span class="pre">valor</span></code>.</p></li>
+<li><p>Usando la función implementada al atributo <code class="docutils literal notranslate"><span class="pre">atributo!(valor)</span></code>.
+En caso que se utilice la función es importante recordar que, como con <code class="docutils literal notranslate"><span class="pre">plot!</span></code>, se puede declarar de forma explícita la gráfica al cual se quiere modificar su atributo; si la gráfica no es declarada, se modifica la gráfica actual.</p></li>
+</ul>
+<p>Los atributos pueden estar relacionados con: las gráficas (<a class="reference external" href="http://docs.juliaplots.org/latest/generated/attributes_plot/##Plot">Plot</a>), las series (<a class="reference external" href="http://docs.juliaplots.org/latest/generated/attributes_series/#Series">Series</a>), subgráficas (<a class="reference external" href="http://docs.juliaplots.org/latest/generated/attributes_subplot/#Subplot">Subplot</a>) y los ejes (<a class="reference external" href="http://docs.juliaplots.org/latest/generated/attributes_axis/#Axis">Axis</a>). En el REPL los diferentes atributos, pueden ser consultados mediante:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">plotattr(:Plot)</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">plotattr(:Series)</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">plotattr(:Subplot)</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">plotattr(:Axis)</span></code>
+Con los comandos anteriores solo se obtienen los nombres o alias de los atributos disponibles. Si se conoce el alias del atributo, se puede utilizar la función <code class="docutils literal notranslate"><span class="pre">plotattr</span></code> para obtener una descripción de ese atributo.</p></li>
+</ul>
+<p>Los atributos de las gráficas, pueden ser consultados <a class="reference external" href="http://docs.juliaplots.org/latest/generated/supported/##Keyword-Arguments">aquí</a>. A continuación, se describen atributos que son usualmente usados.</p>
+<div class="section" id="leyenda">
+<h4>Leyenda<a class="headerlink" href="#leyenda" title="Enlazar permanentemente con este título">¶</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">begin</span>
+	<span class="n">x₃</span> <span class="o">=</span> <span class="o">-</span><span class="mi">2</span><span class="nb">pi</span><span class="o">:</span><span class="mf">0.1</span><span class="o">:</span><span class="mi">2</span><span class="nb">pi</span>
+	<span class="n">plotp₃</span> <span class="o">=</span> <span class="n">plot</span><span class="p">(</span><span class="n">x₃</span><span class="p">,</span> <span class="p">[</span><span class="n">sin</span><span class="p">,</span> <span class="n">cos</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="p">[</span><span class="s">&quot;f₁(x)=sin(x)&quot;</span> <span class="s">&quot;f₂(x)=cos()&quot;</span><span class="p">])</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Paquete_Plots_26_0.svg" src="_images/Paquete_Plots_26_0.svg" /></div>
+</div>
+<p>El atributo <code class="docutils literal notranslate"><span class="pre">label</span></code> permite nombrar cada serie de datos, apareciendo dicho nombre en la leyenda. Se pueden utilizar también palabras claves para referirse a los atributos, en el caso de <code class="docutils literal notranslate"><span class="pre">label</span></code> se puede usar: <code class="docutils literal notranslate"><span class="pre">lab</span></code> o <code class="docutils literal notranslate"><span class="pre">labels</span></code>. A diferencia de otros atributos, <code class="docutils literal notranslate"><span class="pre">label</span></code>, se declara cuando el gráfico es creado en la primera ocasión.</p>
+<p>Las leyendas: el color, tamaño, tipo de letra y ubicación; puede ser modificado con los atributos: <code class="docutils literal notranslate"><span class="pre">legendfontcolor</span></code>, <code class="docutils literal notranslate"><span class="pre">legendfontsize</span></code>, <code class="docutils literal notranslate"><span class="pre">legendfont</span></code> y <code class="docutils literal notranslate"><span class="pre">legend</span></code>. El atributo <code class="docutils literal notranslate"><span class="pre">legend</span></code> acepta los siguientes valores: <code class="docutils literal notranslate"><span class="pre">:none</span></code>, <code class="docutils literal notranslate"><span class="pre">:best</span></code>, <code class="docutils literal notranslate"><span class="pre">:inline</span></code>, <code class="docutils literal notranslate"><span class="pre">:inside</span></code>, <code class="docutils literal notranslate"><span class="pre">top</span></code>, <code class="docutils literal notranslate"><span class="pre">bottom</span></code>, <code class="docutils literal notranslate"><span class="pre">left</span></code>, <code class="docutils literal notranslate"><span class="pre">right</span></code>; también acepta las siguientes combinaciones: <code class="docutils literal notranslate"><span class="pre">:(outer</span> <span class="pre">?)(top/bottom</span> <span class="pre">?)(right/left</span> <span class="pre">?)</span></code>.</p>
+<p>Para obtener una mejor tipografía se puede utilizar el paquete “LaTeXStrings”, el cual permite escribir fórmulas matemáticas con el estilo de LaTeX.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">begin</span>
+	<span class="c">##Pkg.add(&quot;LaTeXStrings&quot;)</span>
+	<span class="k">using</span> <span class="n">LaTeXStrings</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">begin</span>
+	<span class="n">plot₃</span> <span class="o">=</span> <span class="n">plot</span><span class="p">(</span><span class="n">x₃</span><span class="p">,</span> <span class="p">[</span><span class="n">sin</span><span class="p">,</span> <span class="n">cos</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="p">[</span><span class="n">L</span><span class="s">&quot;f_1(x)=sin(x)&quot;</span>  <span class="n">L</span><span class="s">&quot;f_2(x)=cos(x)&quot;</span><span class="p">],</span> <span class="n">legend</span><span class="o">=:</span><span class="n">topright</span><span class="p">,</span> <span class="n">legendfontcolor</span><span class="o">=:</span><span class="n">gray</span><span class="p">,</span> <span class="n">legendfontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Paquete_Plots_29_0.svg" src="_images/Paquete_Plots_29_0.svg" /></div>
+</div>
+</div>
+<div class="section" id="titulo">
+<h4>Título<a class="headerlink" href="#titulo" title="Enlazar permanentemente con este título">¶</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">title!</span><span class="p">(</span><span class="n">plot₃</span><span class="p">,</span><span class="n">L</span><span class="s">&quot;</span><span class="se">\t</span><span class="s">extbf{Gráficas de } sin(x) \, </span><span class="se">\t</span><span class="s">extbf{y} \, cos(x)&quot;</span><span class="p">,</span> <span class="n">titlefontsize</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">titlefontcolor</span><span class="o">=:</span><span class="n">gray</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Paquete_Plots_31_0.svg" src="_images/Paquete_Plots_31_0.svg" /></div>
+</div>
+<p>El atributo <code class="docutils literal notranslate"><span class="pre">title</span></code> de utiliza para cambiar el nombre de la gráfica. Los atributos: <code class="docutils literal notranslate"><span class="pre">titlefontsize</span></code> y <code class="docutils literal notranslate"><span class="pre">titlefontcolor</span></code> modifican el tamaño y el color del título de la gráfica.</p>
+</div>
+<div class="section" id="ejes">
+<h4>Ejes<a class="headerlink" href="#ejes" title="Enlazar permanentemente con este título">¶</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">plot!</span><span class="p">(</span><span class="n">plot₃</span><span class="p">,</span> <span class="n">xlabel</span><span class="o">=</span><span class="n">L</span><span class="s">&quot;</span><span class="se">\t</span><span class="s">extbf{x}&quot;</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="n">L</span><span class="s">&quot;</span><span class="se">\t</span><span class="s">extbf{y}&quot;</span><span class="p">)</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Paquete_Plots_33_0.svg" src="_images/Paquete_Plots_33_0.svg" /></div>
+</div>
+<p>Los atributos <code class="docutils literal notranslate"><span class="pre">xlabel</span></code> y <code class="docutils literal notranslate"><span class="pre">ylabel</span></code> se utilizan para etiquetar los ejes respectivamente. Si el gráfico fuera en tres dimensiones se puede etiquetar el eje de la tercera dimensión con <code class="docutils literal notranslate"><span class="pre">zlabel</span></code>.</p>
+<p>Note que los atributos pueden ser modificados o agregados con la función <code class="docutils literal notranslate"><span class="pre">plot!</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">plot!</span><span class="p">(</span><span class="n">plot₃</span><span class="p">,</span> <span class="n">xticks</span><span class="o">=</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="nb">π</span><span class="o">:</span><span class="nb">π</span><span class="o">:</span><span class="mi">2</span><span class="nb">π</span><span class="p">,</span> <span class="p">[</span><span class="s">&quot;-2π&quot;</span><span class="p">,</span><span class="s">&quot;-π&quot;</span><span class="p">,</span><span class="s">&quot;0&quot;</span><span class="p">,</span><span class="s">&quot;π&quot;</span><span class="p">,</span><span class="s">&quot;2π&quot;</span><span class="p">]),</span> <span class="n">xlims</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="nb">π</span><span class="p">),</span> <span class="n">xtickfontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Paquete_Plots_35_0.svg" src="_images/Paquete_Plots_35_0.svg" /></div>
+</div>
+<p>En el ejemplo anterior se modifican las etiquetas de las marcas del eje <span class="math notranslate nohighlight">\(x\)</span>, para ello se utiliza el atributo <code class="docutils literal notranslate"><span class="pre">xticks</span></code>, el cual recibe como valor la secuencia de números que constituirán las marcas. En caso de querer etiquetar las marcas con alguna etiqueta personalizada, al atributo <code class="docutils literal notranslate"><span class="pre">xticks</span></code> se pasa una tupla conteniendo la secuencia y una lista de las marcas personalizadas.</p>
+<p>Note que apesar que la gráfica se ha definido para ser graficada de <code class="docutils literal notranslate"><span class="pre">-2π</span></code> a <code class="docutils literal notranslate"><span class="pre">2π</span></code>, solamente se ha graficado de <code class="docutils literal notranslate"><span class="pre">0</span></code> a <code class="docutils literal notranslate"><span class="pre">2π</span></code>, ello es posible al indicar los límites del eje <span class="math notranslate nohighlight">\(x\)</span> con el atributo <code class="docutils literal notranslate"><span class="pre">xlims</span></code> que recibe una tupla conteniendo el límite inferior y superior.</p>
+<p>Aunque no se mostrará, el eje <span class="math notranslate nohighlight">\(y\)</span> y el eje <span class="math notranslate nohighlight">\(z\)</span> (en caso que la gráfica sea de 3 dimensiones) puede ser modificado de manera similar que el eje <span class="math notranslate nohighlight">\(x\)</span>. La diferencia será que, en lugar de colocar <code class="docutils literal notranslate"><span class="pre">x</span></code> antes de <code class="docutils literal notranslate"><span class="pre">ticks</span></code> o <code class="docutils literal notranslate"><span class="pre">lims</span></code> se deberá colocar el eje que se desea modificar (<code class="docutils literal notranslate"><span class="pre">y</span></code> o <code class="docutils literal notranslate"><span class="pre">z</span></code>).</p>
+<p>Con el atributo <code class="docutils literal notranslate"><span class="pre">xtickfontsize</span></code> se modifica el tamaño de las etiquetas de las marcas del eje <span class="math notranslate nohighlight">\(x\)</span>; como se explica en el párrafo anterior se puede modificar el eje <span class="math notranslate nohighlight">\(y\)</span> y <span class="math notranslate nohighlight">\(z\)</span>.</p>
+</div>
+<div class="section" id="grilla">
+<h4>Grilla<a class="headerlink" href="#grilla" title="Enlazar permanentemente con este título">¶</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">plot!</span><span class="p">(</span><span class="n">plot₃</span><span class="p">,</span> <span class="n">gridlinewidth</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">gridcolor</span><span class="o">=:</span><span class="n">red</span><span class="p">,</span> <span class="n">gridalpha</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">gridstyle</span><span class="o">=:</span><span class="n">dashdotdot</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Paquete_Plots_37_0.svg" src="_images/Paquete_Plots_37_0.svg" /></div>
+</div>
+<p>La grilla puede ser modificada con los atributos: <code class="docutils literal notranslate"><span class="pre">gridlinewidth</span></code>, <code class="docutils literal notranslate"><span class="pre">gridcolor</span></code>, <code class="docutils literal notranslate"><span class="pre">gridalpha</span></code>,<code class="docutils literal notranslate"><span class="pre">gridstyle</span></code> (acepta los valores <code class="docutils literal notranslate"><span class="pre">:solid</span></code>, <code class="docutils literal notranslate"><span class="pre">:dash</span></code>, :<code class="docutils literal notranslate"><span class="pre">dot</span></code>, <code class="docutils literal notranslate"><span class="pre">:dashdot</span></code>, <code class="docutils literal notranslate"><span class="pre">:dashdotdot</span></code>), que modifican respectivamente: el ancho de las líneas de la grilla, el color de la grilla, la intensidad del color de la grilla (por defecto se transparenta) y el estilo de las líneas de la grilla.</p>
+<p>Si no se desea que la grilla aparezca, se debe asignar el valor de <code class="docutils literal notranslate"><span class="pre">false</span></code> al atributo  <code class="docutils literal notranslate"><span class="pre">grid</span></code> (por defecto es <code class="docutils literal notranslate"><span class="pre">true</span></code>).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">plot!</span><span class="p">(</span><span class="n">plot₃</span><span class="p">,</span> <span class="n">grid</span><span class="o">=</span><span class="kc">false</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Paquete_Plots_39_0.svg" src="_images/Paquete_Plots_39_0.svg" /></div>
+</div>
+</div>
+<div class="section" id="otros">
+<h4>Otros<a class="headerlink" href="#otros" title="Enlazar permanentemente con este título">¶</a></h4>
+<p>Para definir los atributos y por tanto el estilo de la gráfica una sola vez, en lugar de hacerlo cada ocasión que la gráfica que se construya, se puede utilizar la función <code class="docutils literal notranslate"><span class="pre">default</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">begin</span>
+	<span class="n">color</span> <span class="o">=</span> <span class="n">RGBA</span><span class="p">(</span><span class="mi">190</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="mi">190</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="mi">190</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+	<span class="n">default</span><span class="p">(</span><span class="n">titlefontsize</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">titlefontcolor</span><span class="o">=</span><span class="n">color</span><span class="p">,</span> <span class="n">tickfontcolor</span><span class="o">=</span><span class="n">color</span><span class="p">,</span> <span class="n">tickfontsize</span><span class="o">=</span><span class="mi">9</span><span class="p">,</span> <span class="n">legendfontcolor</span><span class="o">=</span><span class="n">color</span><span class="p">)</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="tipos-de-serie">
+<h3>Tipos de serie<a class="headerlink" href="#tipos-de-serie" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>En todos los ejemplos anteriores se han graficado líneas (serie <code class="docutils literal notranslate"><span class="pre">:line</span></code>), para graficar un tipo específico, éste puede ser especificado mediante el atributo <code class="docutils literal notranslate"><span class="pre">seriestype</span></code>.</p>
+<p>El atributo <code class="docutils literal notranslate"><span class="pre">seriestype</span></code> admite símbolos, que representan los diferentes tipos de gráficos o series. A continuación, se listan algunos tipos de serie:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">:line</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:scatter</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:histogram</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">heatmap</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:image</span></code></p></li>
+</ul>
+<p>Pueden existir algunos tipos de series que no sean soportados por algunos backends, para conocer cuáles tipos de series son soportados por los backends, puede leer sobre ello <a class="reference external" href="http://docs.juliaplots.org/latest/generated/supported/##supported">aquí</a></p>
+<p>Para cada serie, el paquete incorpora una función que llama directamente  al tipo de serie y recibe el mismo nombre de la serie. También, incorpora una versión mutante y no mutante de dichas funciones.</p>
+<div class="section" id="serie-line">
+<h4>Serie <code class="docutils literal notranslate"><span class="pre">:line</span></code><a class="headerlink" href="#serie-line" title="Enlazar permanentemente con este título">¶</a></h4>
+<p>Esta es la serie por defecto y la que une cada punto graficado con una línea.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">plot</span><span class="p">(</span><span class="n">rand</span><span class="p">(</span><span class="mi">1</span><span class="o">:</span><span class="mi">100</span><span class="p">,</span><span class="mi">30</span><span class="p">),</span> <span class="n">title</span><span class="o">=</span><span class="s">&quot;Serie `line`&quot;</span><span class="p">,</span> <span class="n">seriestype</span><span class="o">=:</span><span class="n">line</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Paquete_Plots_43_0.svg" src="_images/Paquete_Plots_43_0.svg" /></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">plot₄</span> <span class="o">=</span> <span class="n">plot</span><span class="p">(</span><span class="n">rand</span><span class="p">(</span><span class="mi">1</span><span class="o">:</span><span class="mi">100</span><span class="p">,</span><span class="mi">30</span><span class="p">),</span> <span class="n">title</span><span class="o">=</span><span class="s">&quot;Serie `line`&quot;</span><span class="p">,</span> <span class="n">markershape</span><span class="o">=:</span><span class="n">circ</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">linecolor</span><span class="o">=:</span><span class="n">blue</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=:</span><span class="n">dashdot</span><span class="p">,</span> <span class="n">linealpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Paquete_Plots_44_0.svg" src="_images/Paquete_Plots_44_0.svg" /></div>
+</div>
+<p>En el ejemplo se muestra cómo personalizar la línea que es trazada, esto es, personalizar: el ancho de la línea, el color, el estilo de la línea y la transparencia de esta, mediante los atributos:  <code class="docutils literal notranslate"><span class="pre">linewidth</span></code>, <code class="docutils literal notranslate"><span class="pre">linecolor</span></code>, <code class="docutils literal notranslate"><span class="pre">linestyle</span></code> y <code class="docutils literal notranslate"><span class="pre">linealpha</span></code> respectivamente. Los estilos de las líneas admitidos, ya fueron mencionados cuando se discutía el atributo <code class="docutils literal notranslate"><span class="pre">grid</span></code>.</p>
+<p>En este último ejemplo, también se grafican los puntos que componen a la gráfica, más detalles sobre los atributos de las marcas se discuten en la siguiente sección.</p>
+</div>
+<div class="section" id="serie-scatter">
+<h4>Serie <code class="docutils literal notranslate"><span class="pre">:scatter</span></code><a class="headerlink" href="#serie-scatter" title="Enlazar permanentemente con este título">¶</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">plot</span><span class="p">([</span><span class="n">rand</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span> <span class="n">rand</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span> <span class="n">rand</span><span class="p">(</span><span class="mi">20</span><span class="p">)],</span> <span class="n">seriestype</span><span class="o">=:</span><span class="n">scatter</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s">&quot;Serie &#39;scatter&#39;&quot;</span><span class="p">,</span> <span class="n">markershape</span><span class="o">=</span><span class="p">[</span><span class="o">:</span><span class="n">rect</span> <span class="o">:</span><span class="n">circ</span> <span class="o">:</span><span class="n">hex</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Paquete_Plots_46_0.svg" src="_images/Paquete_Plots_46_0.svg" /></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">plot₅</span> <span class="o">=</span> <span class="n">scatter</span><span class="p">([</span><span class="n">rand</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span> <span class="n">rand</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span> <span class="n">rand</span><span class="p">(</span><span class="mi">20</span><span class="p">)],</span> <span class="n">title</span><span class="o">=</span><span class="s">&quot;Serie &#39;scatter&#39;&quot;</span><span class="p">,</span> <span class="n">markershape</span><span class="o">=</span><span class="p">[</span><span class="o">:</span><span class="n">star</span>  <span class="o">:</span><span class="n">diamond</span> <span class="o">:</span><span class="n">ltriangle</span><span class="p">],</span> <span class="n">markerstrokecolor</span><span class="o">=:</span><span class="n">red</span><span class="p">,</span> <span class="n">markercolor</span><span class="o">=</span><span class="p">[</span><span class="o">:</span><span class="n">orange</span> <span class="o">:</span><span class="n">green</span> <span class="o">:</span><span class="n">darkblue</span><span class="p">],</span> <span class="n">markeralpha</span><span class="o">=</span><span class="p">[</span><span class="mf">0.5</span> <span class="mi">1</span> <span class="mf">0.2</span><span class="p">],</span>  <span class="n">markersize</span><span class="o">=</span> <span class="p">[</span><span class="mi">3</span> <span class="mi">7</span> <span class="mi">12</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Paquete_Plots_47_0.svg" src="_images/Paquete_Plots_47_0.svg" /></div>
+</div>
+<p>En los ejemplos anteriores han sido realizados graficos de dispersión. Para dar estilo al gráfico, se han añadido atributos que personalizan las marcas que representan los datos.</p>
+<p><code class="docutils literal notranslate"><span class="pre">makershape</span></code> es el atributo que permite modificar la forma de la marca, para saber las distintas formas admitidas puede revisar este <a class="reference external" href="http://docs.juliaplots.org/latest/generated/supported/##Markers">enlace</a>. <code class="docutils literal notranslate"><span class="pre">markerstrokecolor</span></code>
+permite modificar el color del borde de la marca. <code class="docutils literal notranslate"><span class="pre">markercolor</span></code> permite modificar el color de la marca. <code class="docutils literal notranslate"><span class="pre">markeralpha</span></code> permite agregar transparencia al color de la marca. <code class="docutils literal notranslate"><span class="pre">markersize</span></code> permite modificar el tamaño de la marca. Para conocer el resto de atributos relacionados con los gráficos de dispersión, puede revisar el siguiente <a class="reference external" href="http://docs.juliaplots.org/latest/attributes/##marker">enlace</a>.</p>
+</div>
+<div class="section" id="serie-histogram">
+<h4>Serie <code class="docutils literal notranslate"><span class="pre">:histogram</span></code><a class="headerlink" href="#serie-histogram" title="Enlazar permanentemente con este título">¶</a></h4>
+<p>Con esta serie es posible crear histogramas.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span> <span class="n">plot</span><span class="p">(</span><span class="n">rand</span><span class="p">(</span><span class="mi">1</span><span class="o">:</span><span class="mi">20</span><span class="p">,</span><span class="mi">50</span><span class="p">),</span> <span class="n">title</span><span class="o">=</span><span class="s">&quot;Serie &#39;histogram&#39;&quot;</span><span class="p">,</span><span class="n">seriestype</span><span class="o">=:</span><span class="n">histogram</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Paquete_Plots_50_0.svg" src="_images/Paquete_Plots_50_0.svg" /></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">plot₆</span> <span class="o">=</span> <span class="n">histogram</span><span class="p">(</span><span class="n">rand</span><span class="p">(</span><span class="mi">1</span><span class="o">:</span><span class="mi">20</span><span class="p">,</span><span class="mi">100</span><span class="p">),</span> <span class="n">title</span><span class="o">=</span><span class="s">&quot;Serie &#39;histogram&#39;&quot;</span><span class="p">,</span> <span class="n">normalized</span><span class="o">=</span><span class="kc">true</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="o">:</span><span class="mi">21</span><span class="p">),</span> <span class="n">orientation</span><span class="o">=:</span><span class="n">v</span><span class="p">,</span> <span class="n">bar_width</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="p">[</span><span class="o">:</span><span class="n">red</span><span class="p">,</span><span class="o">:</span><span class="n">orange</span><span class="p">,</span><span class="o">:</span><span class="n">green</span><span class="p">],</span> <span class="n">xticks</span><span class="o">=</span><span class="p">(</span><span class="mf">1.5</span><span class="o">:</span><span class="mf">21.5</span><span class="p">,[</span><span class="s">&quot;</span><span class="si">$i</span><span class="s">&quot;</span> <span class="k">for</span> <span class="n">i</span> <span class="o">∈</span> <span class="mi">1</span><span class="o">:</span><span class="mi">20</span><span class="p">]),</span> <span class="n">legend</span><span class="o">=:</span><span class="n">none</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Paquete_Plots_51_0.svg" src="_images/Paquete_Plots_51_0.svg" /></div>
+</div>
+<p>Para esta serie, los siguientes atributos aplican: <code class="docutils literal notranslate"><span class="pre">normalized</span></code>, que permite la altura de las barras se encuentre entre los valores 0 y 1; <code class="docutils literal notranslate"><span class="pre">bins</span></code>, permite indicar los valores de las etiquetas del eje <span class="math notranslate nohighlight">\(x\)</span> y finalmente las barras que serán graficadas; <code class="docutils literal notranslate"><span class="pre">orientation</span></code>, permite graficar las barras de forma vertical  u horizontal; <code class="docutils literal notranslate"><span class="pre">bar_width</span></code>, permite modificar el ancho de la barra; <code class="docutils literal notranslate"><span class="pre">color</span></code>, permite graficar las barras con diferentes colores.</p>
+<p>En el ejemplo se utiliza el atributo <code class="docutils literal notranslate"><span class="pre">xticks</span></code> para modificar las etiquetas asociada a cada gráfica.</p>
+</div>
+<div class="section" id="serie-heatmap">
+<h4>Serie <code class="docutils literal notranslate"><span class="pre">:heatmap</span></code><a class="headerlink" href="#serie-heatmap" title="Enlazar permanentemente con este título">¶</a></h4>
+<p>Con esta serie se pueden crear mapas de calor.  Para ello, se especifican los puntos del plano pasando como parámetros los puntos del eje <span class="math notranslate nohighlight">\(x\)</span> y <span class="math notranslate nohighlight">\(y\)</span>, además, se pasa como parámetro una matriz (array) que define un valor numérico para cada punto del plano que es graficado en el mapa de calor.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">plot</span><span class="p">(</span><span class="mi">1</span><span class="o">:</span><span class="mi">10</span><span class="p">,</span> <span class="mi">1</span><span class="o">:</span><span class="mi">10</span><span class="p">,</span> <span class="p">[</span><span class="n">i</span><span class="o">*</span><span class="n">y</span> <span class="k">for</span> <span class="n">i</span> <span class="o">∈</span> <span class="mi">1</span><span class="o">:</span><span class="mi">10</span><span class="p">,</span> <span class="n">y</span> <span class="o">∈</span> <span class="mi">1</span><span class="o">:</span><span class="mi">10</span><span class="p">],</span> <span class="n">title</span><span class="o">=</span><span class="s">&quot;Serie &#39;heatmap&#39;&quot;</span><span class="p">,</span> <span class="n">seriestype</span><span class="o">=:</span><span class="n">heatmap</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Paquete_Plots_54_0.svg" src="_images/Paquete_Plots_54_0.svg" /></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">plot₇</span> <span class="o">=</span> <span class="n">heatmap</span><span class="p">(</span><span class="mi">1</span><span class="o">:</span><span class="mf">0.03</span><span class="o">:</span><span class="mi">10</span><span class="p">,</span> <span class="mi">1</span><span class="o">:</span><span class="mf">0.03</span><span class="o">:</span><span class="mi">10</span><span class="p">,</span> <span class="p">[</span><span class="n">i</span><span class="o">*</span><span class="n">y</span> <span class="k">for</span> <span class="n">i</span> <span class="o">∈</span> <span class="mi">1</span><span class="o">:</span><span class="mf">0.03</span><span class="o">:</span><span class="mi">10</span><span class="p">,</span> <span class="n">y</span> <span class="o">∈</span> <span class="mi">1</span><span class="o">:</span><span class="mf">0.03</span><span class="o">:</span><span class="mi">10</span><span class="p">],</span> <span class="n">title</span><span class="o">=</span><span class="s">&quot;Serie &#39;heatmap&#39;&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">cgrad</span><span class="p">([</span><span class="o">:</span><span class="n">black</span><span class="p">,</span> <span class="o">:</span><span class="n">orange</span><span class="p">,</span> <span class="o">:</span><span class="n">red</span><span class="p">,</span> <span class="o">:</span><span class="n">blue</span><span class="p">]))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Paquete_Plots_55_0.svg" src="_images/Paquete_Plots_55_0.svg" /></div>
+</div>
+<p>En el ejemplo anterior se utiliza el atributo <code class="docutils literal notranslate"><span class="pre">color</span></code> para establecer el color del mapa de calor. La función <code class="docutils literal notranslate"><span class="pre">cgrad</span></code> permite crear nuesta propia paleta de colores, aunque Julia incorpora paletas y gradientes decolores, más de ello puede conocer <a class="reference external" href="http://docs.juliaplots.org/latest/generated/colorschemes/##Colorschemes">aquí</a>.</p>
+</div>
+<div class="section" id="serie-image">
+<h4>Serie <code class="docutils literal notranslate"><span class="pre">:image</span></code><a class="headerlink" href="#serie-image" title="Enlazar permanentemente con este título">¶</a></h4>
+<p>Una imagen puede mostrarse con la serie <code class="docutils literal notranslate"><span class="pre">image</span></code>. Para cargar la imagen en el proyecto se puede hacer con el método <code class="docutils literal notranslate"><span class="pre">load</span></code> del paquete <code class="docutils literal notranslate"><span class="pre">Images</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="c">## Pkg.add(&quot;Images&quot;); Pkg.add(&quot;ImageMagick&quot;);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">using</span> <span class="n">Images</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">begin</span>
+	<span class="nb">im</span> <span class="o">=</span> <span class="n">load</span><span class="p">(</span><span class="s">&quot;images/julia.jpg&quot;</span><span class="p">)</span>
+	<span class="n">plot₈</span> <span class="o">=</span> <span class="n">plot</span><span class="p">(</span><span class="nb">im</span><span class="p">,</span> <span class="n">seriestype</span><span class="o">=:</span><span class="n">image</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s">&quot;Serie &#39;image&#39;&quot;</span><span class="p">,</span> <span class="n">ticks</span><span class="o">=</span><span class="kc">false</span><span class="p">)</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Paquete_Plots_60_0.svg" src="_images/Paquete_Plots_60_0.svg" /></div>
+</div>
+</div>
+</div>
+<div class="section" id="creando-subgraficas">
+<h3>Creando subgráficas<a class="headerlink" href="#creando-subgraficas" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Las librerías de trazado, por lo general implementan formas de combinar varias gráficas como subgráficas. Con el paquete Plots se pueden crear diversos diseños, siendo el más sencillo de utilizar el diseño de malla o grilla.</p>
+<p>El diseño puede ser creado asignando una tupla, con las dimensiones de la grilla, al atributo <code class="docutils literal notranslate"><span class="pre">layout</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">plot</span><span class="p">(</span><span class="n">plot₆</span><span class="p">,</span> <span class="n">plot₇</span><span class="p">,</span> <span class="n">layout</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Paquete_Plots_62_0.svg" src="_images/Paquete_Plots_62_0.svg" /></div>
+</div>
+<p>Diseños más complejos pueden ser creados con la macro <code class="docutils literal notranslate"><span class="pre">&#64;layout</span></code>, para más información revisar <a class="reference external" href="http://docs.juliaplots.org/latest/layouts/##Advanced-Layouts">Layouts</a>.</p>
+</div>
+<div class="section" id="guardando-una-grafica">
+<h3>Guardando una gráfica<a class="headerlink" href="#guardando-una-grafica" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Para obtener una imagen con la gráfica realizada, se utiliza la función <code class="docutils literal notranslate"><span class="pre">savefig</span></code>, los argumentos que admiten son:</p>
+<ul class="simple">
+<li><p>El nombre con el que se desea guardar la imagen, junto con la extensión.</p></li>
+<li><p>El gráfico que se desea guardar. Si no se especifica el gráfico, se guarda el gráfico actual (<code class="docutils literal notranslate"><span class="pre">Plots.CURRENT_PLOT</span></code>).
+Hay que tener en cuenta que la extensión del archivo a guardar, depende del backend que se está usando ya que no todos admiten la misma extensión.</p></li>
+</ul>
+</div>
+<div class="section" id="referencias-e-informacion-adicional">
+<h3>Referencias e información adicional<a class="headerlink" href="#referencias-e-informacion-adicional" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>El paquete de Julia ha sido extendido, en su funcionalidad y aplicación, mediante el desarrollo de diferentes paquetes que constituyen un entorno muy completo para los gráficos, una revisión rápida del ambiente de Julia para gráficos puede encontrarlo <a class="reference external" href="http://docs.juliaplots.org/latest/ecosystem/">aquí</a>.</p>
+<p>Referencias e información interesante puede encontrar en los siguientes enlaces:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/JuliaPlots/ExamplePlots.jl/tree/master/notebooks">Ejemplos de diferentes tipos de gráficas</a></p></li>
+<li><p><a class="reference external" href="http://www.breloff.com/Graphs/">Visualizing Graphs in Julia using Plots and PlotRecipes</a></p></li>
+<li><p><a class="reference external" href="https://daschw.github.io/recipes/">How do Recipes actually work?</a></p></li>
+<li><p><a class="reference external" href="https://en.wikibooks.org/wiki/Introducing_Julia/Plotting">Introducing Julia/Plotting</a></p></li>
+</ul>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "julia-1.5"
+        },
+        kernelOptions: {
+            kernelName: "julia-1.5",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'julia-1.5'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="Estructuras_de_Datos.html" title="previous page">Estructuras de Datos</a>
+    <a class='right-next' id="next-link" href="Primer_proyecto.html" title="next page">Primer proyecto</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Luis Felipe Flores Machado, René David Hernández<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>
