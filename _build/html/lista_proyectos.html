@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Opciones proyectos segunda semana &#8212; Project-oriented workshop in Julia computing</title>
     
-  <link rel="stylesheet" href="_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+  <link rel="stylesheet" href="_static/css/index.d431a4ee1c1efae0e38bdfebc22debff.css">
 
     
   <link rel="stylesheet"
@@ -25,8 +25,8 @@
     href="_static/vendor/lato_latin-ext/1.44.1/index.css">
 
     
+    <link rel="stylesheet" href="_static/sphinx-book-theme.bfb7730f9caf2ec0b46a44615585038c.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/sphinx-book-theme.2d2078699c18a0efb88233928e1cf6ed.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
@@ -34,12 +34,13 @@
     <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="_static/js/index.3da636dd464baa7582d2.js">
+  <link rel="preload" as="script" href="_static/js/index.30270b6e4c972e43c488.js">
 
     <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
     <script src="_static/togglebutton.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
@@ -58,6 +59,7 @@
     <link rel="shortcut icon" href="_static/logo.ico"/>
     <link rel="index" title="Índice" href="genindex.html" />
     <link rel="search" title="Búsqueda" href="search.html" />
+    <link rel="prev" title="Primer proyecto" href="Primer_proyecto.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -126,13 +128,30 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Proyectos
+  Segunda Semana
  </span>
 </p>
 <ul class="nav sidenav_l1">
  <li class="toctree-l1">
+  <a class="reference internal" href="Paquete_Plots.html">
+   Paquete Plots
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Proyectos
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
   <a class="reference internal" href="Primer_proyecto.html">
    Primer proyecto
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Opciones proyectos segunda semana
   </a>
  </li>
 </ul>
@@ -140,10 +159,6 @@
 </nav>
 
  <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
 
 </div>
 
@@ -209,8 +224,7 @@
 
         <!-- Full screen (wrap in <a> to have style consistency -->
         <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Modo de pantalla completa"
-                title="Modo de pantalla completa"><i
+                data-placement="bottom" onclick="toggleFullScreen()" title="Modo de pantalla completa"><i
                     class="fas fa-expand"></i></button></a>
 
         <!-- Launch buttons -->
@@ -219,6 +233,52 @@
 
     <!-- Table of contents -->
     <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contenido
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ciencias-de-datos">
+   Ciencias de datos
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ecuaciones-diferenciales">
+   Ecuaciones diferenciales
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#procesamiento-del-lenguaje-natural">
+   Procesamiento del lenguaje natural
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#algebra-lineal-numerica">
+   Álgebra lineal numérica
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#algoritmo-clasico">
+     Algoritmo clásico
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#aplicaciones">
+     Aplicaciones
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#desarrollo-web">
+   Desarrollo web
+  </a>
+ </li>
+</ul>
+
+        </nav>
         
     </div>
 </div>
@@ -229,51 +289,144 @@
                 
   <div class="section" id="opciones-proyectos-segunda-semana">
 <h1>Opciones proyectos segunda semana<a class="headerlink" href="#opciones-proyectos-segunda-semana" title="Enlazar permanentemente con este título">¶</a></h1>
-<p>Como actividad de proyecto de la segunda semana, se tiene la libertad de elegir cualquier campo del conocimiento, no obstante, a continuación sugerimos algunos proyectos con unna</p>
+<p>Como actividad de proyecto de la segunda semana, se tiene la libertad de elegir cualquier campo del conocimiento, no obstante, a continuación sugerimos algunos proyectos bosquejados, los cuales seremos capaces de darle un seguimiento asistencia, y que además ilustran la estructura general de tareas a realizar. Se enlistan a continuación</p>
+<div class="section" id="ciencias-de-datos">
+<h2>Ciencias de datos<a class="headerlink" href="#ciencias-de-datos" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>El área de ciencias de datos, ampliamente popularizada en los años recientes, consiste en un flujo completo desde el diseñó de experimentos necesarios para la obtención de datos relevantes a un estudio o propósito, su obtención, limpieza, exploración y análisis, hasta incluir modelos sofisticados auxiliados por estadística, probabilidad, y matemática difusa, comúnmente conocidos en el contexto como inteligencia artificial.</p>
+<p>El proyecto en ciencias de datos consiste en tener la experiencia por las etapas posibles de ese flujo. Específicamente, a continuación se describen los pasos a realizar:</p>
+<ol class="simple">
+<li><p><strong>Encontrar datos:</strong> Se debe encontrar una base de datos (colección de observaciones o «filas» que consistan de al menos dos variables o «columnas») tal que cumpla los siguientes criterios:</p>
 <ul class="simple">
-<li><p>Proyecto en área de ciencias de datos:</p>
-<ol class="simple">
-<li><p>Encontrar datos:</p>
-<ul>
-<li><p>Tiene al menos una variable cuantitativa que pueda contrastarse con una segunda variable que puede también ser cuantitativa (en dicho caso podría ser un problema/estudio de correlación o predicción) o cualitativa (en dicho caso sería de categorización o de predicción categórica). Existe además un tercer caso si se entiende una de las variables como un progreso temporal en algún sentido (ya sea el tiempo mismo o algún evento periódico respecto del cual se está analizando algún otro observable). En dicho caso, se entiende el estudio como una serie de tiempo. Estos tres casos determinan el tipo de base de datos a elegir, y cabe recalcar que pueden estar presentes todos en una misma base datos</p></li>
-<li><p>Que tengamos un poco más de 30 observaciones, para que las conclusiones puedan tener esperanza de representar a la realidad y contrastarle.</p></li>
+<li><p>La base de datos tiene al menos una variable cuantitativa que pueda contrastarse con una segunda variable que puede también ser cuantitativa (en dicho caso podría ser un problema/estudio de correlación o predicción) o cualitativa (en dicho caso sería de categorización o de predicción categórica).
+Existe además un tercer caso posible si se entiende una de las variables como un progreso temporal en algún sentido (ya sea el tiempo mismo o algún evento periódico respecto del cual se está analizando algún otro observable). En dicho caso, se entiende el estudio como una serie de tiempo. Estos tres casos determinan el tipo de base de datos a elegir, y cabe recalcar que pueden estar presentes todos en una misma base datos</p></li>
+<li><p>Que tengamos suficientes observaciones para que las conclusiones puedan tener esperanza de representar a la realidad y contrastarle. Este número es en principio dependiente del fenómeno que subyace las observaciones, pero podemos estandarizar como aceptable algo mayor a 30 observaciones.</p></li>
 </ul>
 </li>
-<li><p>Limpieza de base de datos: Para la limpieza, uno necesita tener claro el objetivo del estudio que usualmente es en forma de una pregunta, hipótesis o problema a estudiar. una vez determinado el propósito, se debe pensar en la forma ideal de nuestros datos (es decir, la forma de la tabla que contiene los datos) que nos permita, con la menor cantidad de trasnformaciones de columnas y filas, lograr el propósito.</p></li>
-<li><p>Análisis central: Éste puede ser de índole explorativo, lógico, estadístico y modelativo.</p>
-<ul>
-<li><p>Explorativo: Es uno que nos permite indagar en la estrutura relacional de las variables presentes, usualmente mediante gráficos (aunque también es posible combinarse con tests estadísticos o condicionales lógicos). Esta clase de análisis se caracteriza por utilizar criterios de variables categóricas o rangos de variables cuantitativas para filtrar la data utilizando dataframes.</p></li>
-<li><p>Lógico: Este tipo de análisis de consiste en capturar un subconjunto de nuestros datos que representa una definición de algún sub-fenómeno de nuestro estudio. Es decir, si los datos provienen de alguna medición a un fenómeno F, este fenómeno puede estarse estudiando para ilustrar casos (estados de la materia, comportamientos dinámicos específicos, categorías latentes, etc.) y para ello, se realiza un filtrado basado solamente en condiciones lógicas que sabemos que deben cumplirse para corresponder a esos sub-fenómenos o sub-estados.</p></li>
-<li><p>Estadístico: Utiliza probabilidad y estadística para realizar ajustes de datos (regresión), pronósticos estocásticos (modelos de series de tiempo), tests de significancia (ej. ¿Es el efecto del tratamiento A significativamente diferente al efecto del tratamiento B? ¿O es solo una diferencia por casualidad?)</p></li>
-<li><p>Modelativo: Utilizar los datos para alimentar un modelo mayor, usualmente en un contexto de inteligenciaartificial general o modelo dinámico.</p></li>
+<li><p><strong>Limpieza de base de datos</strong>: Para la limpieza, uno necesita tener claro el objetivo del estudio que usualmente es en forma de una pregunta, hipótesis o problema a estudiar. una vez determinado el propósito, se debe pensar en la forma ideal de nuestros datos (es decir, la forma de la tabla que contiene los datos) que nos permita, con la menor cantidad de trasnformaciones de columnas y filas, lograr el propósito.</p></li>
+<li><p><strong>Análisis central</strong>: Éste puede ser de índole explorativo, lógico, estadístico y modelativo (como «tipos» ideales, pues en la práctica resultamos realizar una combinación de ellos). Aquí una breve discusión de ellos:</p>
+<ul class="simple">
+<li><p><strong>Explorativo</strong>: Es uno que nos permite indagar en la estrutura relacional de las variables presentes, usualmente mediante gráficos (aunque también es posible combinarse con tests estadísticos o condicionales lógicos). Esta clase de análisis se caracteriza por utilizar criterios de variables categóricas o rangos de variables cuantitativas para filtrar la data utilizando dataframes.</p></li>
+<li><p><strong>Lógico</strong>: Este tipo de análisis de consiste en capturar un subconjunto de nuestros datos que representa una definición de algún sub-fenómeno de nuestro estudio. Es decir, si los datos provienen de alguna medición a un fenómeno, este fenómeno puede estarse estudiando para ilustrar casos (estados de la materia, comportamientos dinámicos específicos, categorías latentes, etc.) y para ello, se realiza un filtrado basado solamente en condiciones lógicas que sabemos que deben cumplirse para corresponder a esos sub-fenómenos o sub-estados.</p></li>
+<li><p><strong>Estadístico</strong>: Utiliza probabilidad y estadística para realizar ajustes de datos (regresión), pronósticos estocásticos (modelos de series de tiempo), tests de significancia (ej. ¿Es el efecto del tratamiento A significativamente diferente al efecto del tratamiento B? ¿O es solo una diferencia por casualidad?)</p></li>
+<li><p><strong>Modelativo</strong>: Utilizar los datos para alimentar un modelo mayor, usualmente en un contexto de inteligenciaartificial general o modelo dinámico.</p></li>
 </ul>
 </li>
-<li><p>Conclusiones: Interpretar los resultados, independientemente si corresponden a la hipótesis inicialmente planteada.</p></li>
+<li><p><strong>Conclusiones</strong>: Interpretar los resultados, independientemente si corresponden a la hipótesis inicialmente planteada.</p></li>
 </ol>
-</li>
-<li><p>Differential Equations: Resolver un modelo basado en ecuaciones diferenciales siguiendo las siguientes etapas:</p>
+</div>
+<div class="section" id="ecuaciones-diferenciales">
+<h2>Ecuaciones diferenciales<a class="headerlink" href="#ecuaciones-diferenciales" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>El proyecto de modelamiento consiste en plantear y resolver un modelo basado en ecuaciones diferenciales siguiendo las siguientes etapas:</p>
 <ol class="simple">
-<li><p>Modelo determinista: Se especificará el método utilizado y explicar porqué tiene sentido en el contexto del tipode ecuación que prsenta el problema.</p></li>
-<li><p>Agregarle una componente estocástica para modelar una situación más apegada a la realidad o una modificación del fenómeno que ustedes pueden proponer</p></li>
-<li><p>Introducir una de las dos siguientes:</p>
-<ul>
+<li><p><strong>Modelo determinista</strong>: Se especifica el método utilizado y se explica porqué tiene sentido en el contexto del tipo de ecuación que presenta el problema.</p></li>
+<li><p><strong>Modelo estocástico:</strong> Agregarle una componente estocástica para modelar una situación más apegada a la realidad o una modificación del fenómeno que ustedes pueden proponer.</p></li>
+<li><p><strong>Refinación adicional:</strong> Para enriquecer las aplicaciones de su modelo, se propone introducir una de las dos siguientes:</p>
+<ul class="simple">
 <li><p>Un elemento de delay (retraso): Es decir, hipotetizar que alguna variable del modelo (ya sea explícita o latente) tiene cierto retraso de acción luego de ser estimulada. (ej. la luz propagándose en electromagnetismo).</p></li>
-<li><p>Un elemento condicional lógico: Utilizar alguna condición para afectar el sistema cuando llegue a poseer ciertas características, es decir, teoría de control.</p></li>
+<li><p>Un elemento condicional lógico: Utilizar alguna condición para afectar el sistema cuando cierto parámetro o variable observable llegue a poseer ciertas características, es decir, utilizar teoría de control. Un ejemplo sería una propagación de calor que es controlada tras alcanzar cierto valor muy cercano a un valor crítico.</p></li>
 </ul>
 </li>
 </ol>
-</li>
-<li><p>NLP</p></li>
-<li><p>Numerical LinearAlgebra: Implementar un algoritmo</p></li>
-<li><p>Rest API / Pag Web: Que programen una REST API conectada a una base de datos local siguiendo las siguientes etapas:</p>
+<p>Cada etapa debe ser explicada por un lado teórico que justifique los métodos utilizados e interprete tanto las ecuaciones, sus términos y los resultados obtenidos. Además deben incluir gráficas de las soluciones.</p>
+</div>
+<div class="section" id="procesamiento-del-lenguaje-natural">
+<h2>Procesamiento del lenguaje natural<a class="headerlink" href="#procesamiento-del-lenguaje-natural" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>El proyecto de procesamiento del lenguaje natural (referido como NLP a partir de ahora, por sus siglas en inglés) busca ilustrar las capacidades de realizar procesamiento de texto utilizando ecosistemas ya existentes en Julia. Estos combinan la elegancia de escritura de código de Julia junto con el alto rendimiento para ser capaces de realizar análisis a gran escala.</p>
+<p>Esto se hará con el paquete <code class="docutils literal notranslate"><span class="pre">TextAnalysis</span></code>, el cual podría para algunas aplicaciones extenderse por <code class="docutils literal notranslate"><span class="pre">TextModels</span></code>. Se debe utilizar algún archivo de texto con tamaño no trivial (más de algún par de párrafos) y partir de allí para realizar los siguientes pasos:</p>
+<ul class="simple">
+<li><p>Cargar el archivo en las estructuras nativas de <code class="docutils literal notranslate"><span class="pre">TextAnalysis</span></code>, procurando que la metadata sea descriptiva.</p></li>
+<li><p>Realizar análisis descriptivos como frecuencia y ubicación de términos (posible con un léxicon o con la <a class="reference external" href="https://datacadamia.com/natural_language/term_document">matriz de términos del documento</a>).</p></li>
+<li><p>Hacer algún análisis intermedio:</p>
 <ol class="simple">
-<li><p>Crear rutas básicas que respondan a uno o múltiples argumentos que sean números o strings</p></li>
-<li><p>Crear rutas que acepten parámetros complejos como arreglos o números complejos</p></li>
-<li><p>Implementación de distintos tipos de protocólos (GET, POSt, etc.)</p></li>
-<li><p>challenge: Utilizar un framework completo</p></li>
+<li><p>Sentiment Analysis</p></li>
+<li><p>Named Entity Recnognition</p></li>
+<li><p>Latent Semantic Analysis</p></li>
+<li><p>Clasificador basado en Naive Bayes</p></li>
+<li><p>Latent Dirichlet Allocation</p></li>
+<li><p>etc.</p></li>
 </ol>
 </li>
 </ul>
+</div>
+<div class="section" id="algebra-lineal-numerica">
+<h2>Álgebra lineal numérica<a class="headerlink" href="#algebra-lineal-numerica" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>El proyecto puede tomar dos vías posibles:</p>
+<ul class="simple">
+<li><p>Implementación de un algoritmo clásico o variante especial que esté ya implementado en el paquete de <code class="docutils literal notranslate"><span class="pre">LinearAlgebra</span></code> de la base de Julia para comparación.</p></li>
+<li><p>Aplicación de los algoritmos de álgebra lineal numérica ya implementados en Julia. Esto puede ser cualquiera que consista en resolver sistemas de ecuaciones y emerja de la naturaleza, tecnología, sistemas sociales, etc.</p></li>
+</ul>
+<div class="section" id="algoritmo-clasico">
+<h3>Algoritmo clásico<a class="headerlink" href="#algoritmo-clasico" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Algunas ideas de algoritmos clásicos a considerar son:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://apps.dtic.mil/dtic/tr/fulltext/u2/a211415.pdf">Factorización de Bunch-Kaufman</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Cholesky_decomposition">Factorización de Cholesky</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/LU_decomposition">Factorización LU</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/QR_decomposition">Factorización QR</a></p></li>
+<li><p><a class="reference external" href="http://mathworld.wolfram.com/HessenbergDecomposition.html">Factorización de Hessenberg</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Eigendecomposition_of_a_matrix">Factorización espectral</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Singular_value_decomposition">Descomposición de valores singulares (SVD)</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Schur_decomposition">Descomposición de Schur</a></p></li>
+</ul>
+<p>Además, se pueden considerar variantes que igualmente estén implementadas en Julia para comparación:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Cholesky_decomposition#LDL_decomposition">Factorización LDLt</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Pivot_element">Factorización Pivoteada de Cholesky o QR</a></p></li>
+<li><p>Versiones generalizadas de la <a class="reference external" href="https://en.wikipedia.org/wiki/Eigendecomposition_of_a_matrix#Generalized_eigenvalue_problem">descomposición espectral</a>, <a class="reference external" href="https://en.wikipedia.org/wiki/Generalized_singular_value_decomposition#Higher_order_version">SVD</a>, <a class="reference external" href="https://en.wikipedia.org/wiki/Schur_decomposition#Generalized_Schur_decomposition">descomposición de Shur</a>
+El proyecto consiste en las siguientes etapas:</p></li>
+<li><p>Implementación manual del algoritmo selecto de la lista de arriba, la cual no puede utilizar las implementaciones arriba mencionadas, integrada  en <code class="docutils literal notranslate"><span class="pre">LinearAlgebra</span></code> pero sí sus demás funciones.</p></li>
+<li><p>Comparación de rendimiento respecto a la implementación integrada basándose en memoria, velocidad de ejecución y funcionamiento correcto de casos (¿Funciona para todos los tipos de matrices para las cuales se espera funcionar? ¿Cómo se maneja el caso de matrices no funcionales?]</p></li>
+<li><p>Comentarios finales de comparación y resultados.</p></li>
+</ul>
+</div>
+<div class="section" id="aplicaciones">
+<h3>Aplicaciones<a class="headerlink" href="#aplicaciones" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Cuenta como aplicación cualquier uso de algoritmos mencionados en la sección anterior o algoritmos adicionales que puedan ser construidos a partir de estos en el contexto de un problema en otra área diferente al álgebra lineal numérica. Estas podrían ser:</p>
+<ul class="simple">
+<li><p>Métodos de elemento o volumen finito</p></li>
+<li><p>Resolución de sistemas grandes de ecuaciones lineales</p></li>
+<li><p>Análisis matricial</p></li>
+<li><p>Aplicaciones fenomenológica: Circuitos, estequiometría, finanzas, etc.</p></li>
+<li><p>Teoría algebraica de grafos</p></li>
+<li><p>Optimización (ej. método simplex)</p></li>
+</ul>
+<p>La lista anterior <strong>no</strong> es exhaustiva. Las etapas a realizar serían:</p>
+<ul class="simple">
+<li><p>Planteamiento de la aplicación y explicación del rol del álgebra lineal numérica en ella</p></li>
+<li><p>Resolución base de un caso de dicha aplicación</p></li>
+<li><p>Resolución con algún método alterno (que podría ser también de álgebra lineal numérica) para fines comparativos</p></li>
+<li><p>Comentarios finales de comparación y conclusiones.</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="desarrollo-web">
+<h2>Desarrollo web<a class="headerlink" href="#desarrollo-web" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>El proyecto de desarrollo web consiste en utilizar lo aprendido de REST APIs para aplicarlo en un contexto práctico. Esto puede ser desde métodos mediante HTTP descritos abajo para interactuar con data local, hasta funcionalidades completas de una página web con HTML y CSS (no obligatorio) con estructura de base de datos más elaborada. El bosquejo general de lo que se desea es:</p>
+<ul class="simple">
+<li><p>Crear rutas básicas que respondan a uno o múltiples argumentos que sean números o strings</p></li>
+<li><p>Crear rutas que acepten parámetros compuestos como arreglos o números complejos</p></li>
+<li><p>Implementación de distintos tipos de protocólos (GET, POSt, etc.)</p></li>
+<li><p>challenge: utilizar dicho backend para una página completa.</p></li>
+</ul>
+<p>Algunas propuestas de tópicos son:</p>
+<ol class="simple">
+<li><p><strong>Intercambio de moneda:</strong> Implementar métodos para:</p>
+<ul class="simple">
+<li><p>Obtener tasas de intercambio de alguna moneda (GET)</p></li>
+<li><p>Ingresar cantidad de alguna monedad y devolver el equivalente en otra (POST)</p></li>
+<li><p>Modificación de tasas mediante PUT o DELETE</p></li>
+<li><p>etc. (Agregar cualquiér otro método de request en el contexto adecuado)</p></li>
+</ul>
+</li>
+<li><p><strong>Base de datos básica de usuarios y credenciales:</strong></p>
+<ul class="simple">
+<li><p>Ingreso de usuarios con campos caracteristicos (podría dársele un contexto donde tenga sentido pedirles su nombre, edad, nivel de educación, etc.) mediante PUT o POST</p></li>
+<li><p>Solicitud de estadísticas del estado actual de la base de datos (GET)</p></li>
+<li><p>Manejo de cookies para uso de credenciales con expiración apropiada</p></li>
+</ul>
+</li>
+</ol>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -304,6 +457,7 @@
     
     <div class='prev-next-bottom'>
         
+    <a class='left-prev' id="prev-link" href="Primer_proyecto.html" title="previous page">Primer proyecto</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
@@ -323,7 +477,7 @@
     </div>
 
     
-  <script src="_static/js/index.3da636dd464baa7582d2.js"></script>
+  <script src="_static/js/index.30270b6e4c972e43c488.js"></script>
 
 
     

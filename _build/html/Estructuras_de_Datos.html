@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Estructuras de Datos &#8212; Project-oriented workshop in Julia computing</title>
     
-  <link rel="stylesheet" href="_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+  <link rel="stylesheet" href="_static/css/index.d431a4ee1c1efae0e38bdfebc22debff.css">
 
     
   <link rel="stylesheet"
@@ -25,8 +25,8 @@
     href="_static/vendor/lato_latin-ext/1.44.1/index.css">
 
     
+    <link rel="stylesheet" href="_static/sphinx-book-theme.bfb7730f9caf2ec0b46a44615585038c.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/sphinx-book-theme.2d2078699c18a0efb88233928e1cf6ed.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
@@ -34,12 +34,13 @@
     <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="_static/js/index.3da636dd464baa7582d2.js">
+  <link rel="preload" as="script" href="_static/js/index.30270b6e4c972e43c488.js">
 
     <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
     <script src="_static/togglebutton.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
@@ -58,7 +59,7 @@
     <link rel="shortcut icon" href="_static/logo.ico"/>
     <link rel="index" title="Índice" href="genindex.html" />
     <link rel="search" title="Búsqueda" href="search.html" />
-    <link rel="next" title="Primer proyecto" href="Primer_proyecto.html" />
+    <link rel="next" title="Paquete Plots" href="Paquete_Plots.html" />
     <link rel="prev" title="Estructuras de Control" href="Estructuras_de_Control.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -128,6 +129,18 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
+  Segunda Semana
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Paquete_Plots.html">
+   Paquete Plots
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
   Proyectos
  </span>
 </p>
@@ -137,15 +150,16 @@
    Primer proyecto
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lista_proyectos.html">
+   Opciones proyectos segunda semana
+  </a>
+ </li>
 </ul>
 
 </nav>
 
  <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
 
 </div>
 
@@ -211,8 +225,7 @@
 
         <!-- Full screen (wrap in <a> to have style consistency -->
         <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Modo de pantalla completa"
-                title="Modo de pantalla completa"><i
+                data-placement="bottom" onclick="toggleFullScreen()" title="Modo de pantalla completa"><i
                     class="fas fa-expand"></i></button></a>
 
         <!-- Launch buttons -->
@@ -479,18 +492,18 @@
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5×2×2 Array{Float64,3}:
 [:, :, 1] =
- 6.9312e-310   6.9312e-310
- 6.93118e-310  6.93118e-310
- 6.93118e-310  6.93118e-310
- 6.93118e-310  6.93118e-310
- 6.93118e-310  6.93118e-310
+ 6.94882e-310  6.94883e-310
+ 6.94882e-310  6.94882e-310
+ 6.94882e-310  6.94882e-310
+ 6.94883e-310  6.94883e-310
+ 6.94882e-310  6.94882e-310
 
 [:, :, 2] =
- 6.93118e-310  6.93118e-310
- 6.93118e-310  6.93118e-310
- 6.9312e-310   6.93118e-310
- 6.93118e-310  6.93118e-310
- 6.93118e-310  6.93118e-310
+ 6.94882e-310  6.94882e-310
+ 6.94882e-310  6.94882e-310
+ 6.94883e-310  6.94882e-310
+ 6.94882e-310  6.94882e-310
+ 6.94882e-310  6.94883e-310
 </pre></div>
 </div>
 </div>
@@ -502,7 +515,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6.9311772303976e-310
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6.9488222288549e-310
 </pre></div>
 </div>
 </div>
@@ -2507,7 +2520,7 @@
     <div class='prev-next-bottom'>
         
     <a class='left-prev' id="prev-link" href="Estructuras_de_Control.html" title="previous page">Estructuras de Control</a>
-    <a class='right-next' id="next-link" href="Primer_proyecto.html" title="next page">Primer proyecto</a>
+    <a class='right-next' id="next-link" href="Paquete_Plots.html" title="next page">Paquete Plots</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
@@ -2527,7 +2540,7 @@
     </div>
 
     
-  <script src="_static/js/index.3da636dd464baa7582d2.js"></script>
+  <script src="_static/js/index.30270b6e4c972e43c488.js"></script>
 
 
     

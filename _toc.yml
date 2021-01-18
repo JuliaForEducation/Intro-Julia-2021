@@ -3,12 +3,16 @@
 - part: Primera Semana
   chapters:
   - file: Git_y_GitHub
-  - file: Fundamentos 
+  - file: Fundamentos
   - file: Estructuras_de_Control
   - file: Estructuras_de_Datos
+- part: Segunda Semana
+  chapters:
+  - file: Paquete_Plots
 - part: Proyectos
   chapters:
   - file: Primer_proyecto
+  - file: lista_proyectos
 
 # - file: Fundamentos
 # - file: archivo_prueba

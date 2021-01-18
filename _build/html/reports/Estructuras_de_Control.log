@@ -1,0 +1,36 @@
+Traceback (most recent call last):
+  File "/home/felipe/miniconda3/lib/python3.7/site-packages/jupyter_cache/executors/utils.py", line 56, in single_nb_execution
+    record_timing=False,
+  File "/home/felipe/miniconda3/lib/python3.7/site-packages/nbclient/client.py", line 1082, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "/home/felipe/miniconda3/lib/python3.7/site-packages/nbclient/util.py", line 74, in wrapped
+    return just_run(coro(*args, **kwargs))
+  File "/home/felipe/miniconda3/lib/python3.7/site-packages/nbclient/util.py", line 53, in just_run
+    return loop.run_until_complete(coro)
+  File "/home/felipe/miniconda3/lib/python3.7/asyncio/base_events.py", line 583, in run_until_complete
+    return future.result()
+  File "/home/felipe/miniconda3/lib/python3.7/site-packages/nbclient/client.py", line 536, in async_execute
+    cell, index, execution_count=self.code_cells_executed + 1
+  File "/home/felipe/miniconda3/lib/python3.7/site-packages/nbclient/client.py", line 827, in async_execute_cell
+    self._check_raise_for_error(cell, exec_reply)
+  File "/home/felipe/miniconda3/lib/python3.7/site-packages/nbclient/client.py", line 735, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply['content'])
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+using Pkg; Pkg.activate("."); using Match
+
+------------------
+
+ArgumentError: Package Match [7eb4fadd-790c-5f42-8a69-bfa0b872bfbf] is required but does not seem to be installed:
+ - Run `Pkg.instantiate()` to install all recorded dependencies.
+
+
+Stacktrace:
+ [1] _require(::Base.PkgId) at ./loading.jl:999
+ [2] require(::Base.PkgId) at ./loading.jl:928
+ [3] require(::Module, ::Symbol) at ./loading.jl:923
+ [4] include_string(::Function, ::Module, ::String, ::String) at ./loading.jl:1091
+LoadError: ArgumentError: Package Match [7eb4fadd-790c-5f42-8a69-bfa0b872bfbf] is required but does not seem to be installed:
+ - Run `Pkg.instantiate()` to install all recorded dependencies.
+
+

@@ -1,10 +1,10 @@
 title: Project-oriented workshop in Julia computing
 author: Luis Felipe Flores Machado, René David Hernández
 logo: 'images/julia_logo.png'
-latex: 
+latex:
   latex_engine: xelatex
   latex_documents:
-    targetname: julia.tex 
+    targetname: julia.tex
 sphinx:
   config:
 #    latex_toplevel_sectioning: 'part'
@@ -20,3 +20,4 @@ html:
   use_issues_button: true
   use_edit_page_button: true
   favicon: "images/logo.ico"
+  extra_navbar: ""
