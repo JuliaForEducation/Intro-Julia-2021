@@ -21,3 +21,5 @@ html:
   use_edit_page_button: true
   favicon: "images/logo.ico"
   extra_navbar: ""
+execute:
+  timeout: 100

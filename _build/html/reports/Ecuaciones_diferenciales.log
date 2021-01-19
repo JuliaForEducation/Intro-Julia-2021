@@ -17,22 +17,18 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply['content'])
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-begin
-<<<<<<< HEAD
-	using Pkg; Pkg.activate("."); Pkg.instantiate()
-=======
-	using Pkg; Pkg.activate("."); ##Pkg.add("Plots") 
->>>>>>> d794a78be66323303844ff1ece4cfafcecafab07
-	using Plots
-	theme(:wong)
-end
+using DifferentalEduations
 
 ------------------
 
-syntax: "<<" is not a unary operator
+ArgumentError: Package DifferentalEduations not found in current path:
+- Run `import Pkg; Pkg.add("DifferentalEduations")` to install the DifferentalEduations package.
+
 
 Stacktrace:
- [1] top-level scope at In[1]:2
+ [1] require(::Module, ::Symbol) at ./loading.jl:893
  [2] include_string(::Function, ::Module, ::String, ::String) at ./loading.jl:1091
-LoadError: syntax: "<<" is not a unary operator
+LoadError: ArgumentError: Package DifferentalEduations not found in current path:
+- Run `import Pkg; Pkg.add("DifferentalEduations")` to install the DifferentalEduations package.
+
 

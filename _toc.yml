@@ -9,6 +9,7 @@
 - part: Segunda Semana
   chapters:
   - file: Paquete_Plots
+  - file: Ecuaciones_diferenciales
 - part: Proyectos
   chapters:
   - file: Primer_proyecto

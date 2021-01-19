@@ -1,0 +1,810 @@
+
+<!DOCTYPE html>
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ecuaciones diferenciales &#8212; Project-oriented workshop in Julia computing</title>
+    
+  <link rel="stylesheet" href="_static/css/index.d431a4ee1c1efae0e38bdfebc22debff.css">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="_static/sphinx-book-theme.bfb7730f9caf2ec0b46a44615585038c.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.30270b6e4c972e43c488.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/translations.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.be0a4a0c39cd630af62a2fcf693f3f06.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="_static/logo.ico"/>
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Búsqueda" href="search.html" />
+    <link rel="next" title="Primer proyecto" href="Primer_proyecto.html" />
+    <link rel="prev" title="Paquete Plots" href="Paquete_Plots.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="index.html">
+  
+  <img src="_static/julia_logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Project-oriented workshop in Julia computing</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Buscar este libro ..." aria-label="Buscar este libro ..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Intro.html">
+   Project-oriented workshop in Julia computing
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Primera Semana
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Git_y_GitHub.html">
+   Git y GitHub
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Fundamentos.html">
+   Fundamentos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Estructuras_de_Control.html">
+   Estructuras de Control
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Estructuras_de_Datos.html">
+   Estructuras de Datos
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Segunda Semana
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Paquete_Plots.html">
+   Paquete Plots
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Ecuaciones diferenciales
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Proyectos
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Primer_proyecto.html">
+   Primer proyecto
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lista_proyectos.html">
+   Opciones proyectos segunda semana
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Navegación de palanca" aria-controls="site-navigation"
+            title="Navegación de palanca" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Descarga esta pagina"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/Ecuaciones_diferenciales.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Descargar archivo fuente" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimir en PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/JuliaForEducation/Intro-Julia-2021"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Repositorio de origen"><i
+                    class="fab fa-github"></i>repositorio</button></a>
+        <a class="issues-button"
+            href="https://github.com/JuliaForEducation/Intro-Julia-2021/issues/new?title=Issue%20on%20page%20%2FEcuaciones_diferenciales.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Abrir un problema"><i class="fas fa-lightbulb"></i>Tema abierto</button></a>
+        <a class="edit-button" href="https://github.com/JuliaForEducation/Intro-Julia-2021/edit/master/Ecuaciones_diferenciales.ipynb"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edita esta página"><i class="fas fa-pencil-alt"></i>Tema abierto</button></a>
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Modo de pantalla completa"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/JuliaForEducation/Intro-Julia-2021/master?urlpath=tree/Ecuaciones_diferenciales.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Lanzamiento Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/JuliaForEducation/Intro-Julia-2021/blob/master/Ecuaciones_diferenciales.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Lanzamiento Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contenido
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ecuaciones-diferenciales-ordinarias">
+   Ecuaciones diferenciales ordinarias
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#modelos">
+   Modelos
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#preliminares-de-ecuaciones-diferenciales">
+     Preliminares de ecuaciones diferenciales
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pendulo-caotico">
+     2. Péndulo caótico
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#sistema-de-henon-heiles">
+     3. Sistema de Hénon-Heiles
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bibliografia">
+   Bibliografía
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="ecuaciones-diferenciales">
+<h1>Ecuaciones diferenciales<a class="headerlink" href="#ecuaciones-diferenciales" title="Enlazar permanentemente con este título">¶</a></h1>
+<div class="section" id="ecuaciones-diferenciales-ordinarias">
+<h2>Ecuaciones diferenciales ordinarias<a class="headerlink" href="#ecuaciones-diferenciales-ordinarias" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">import</span> <span class="n">Pkg</span><span class="p">;</span> <span class="n">Pkg</span><span class="o">.</span><span class="n">activate</span><span class="p">(</span><span class="s">&quot;.&quot;</span><span class="p">);</span> <span class="n">Pkg</span><span class="o">.</span><span class="n">instantiate</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold -Color-Bold-Green"> Activating</span> environment at `~/julia_for_education/book/Project.toml`
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">using</span> <span class="n">DifferentialEquations</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">using</span> <span class="n">Plots</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">begin</span>
+	<span class="n">size</span> <span class="o">=</span> <span class="mi">50</span>
+	<span class="n">Plots</span><span class="o">.</span><span class="n">default</span><span class="p">(</span><span class="n">size</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2800</span><span class="p">,</span><span class="mi">2000</span><span class="p">),</span><span class="n">titlefontsize</span> <span class="o">=</span> <span class="n">size</span><span class="p">,</span> <span class="n">tickfontsize</span> <span class="o">=</span> <span class="n">size</span><span class="p">,</span> <span class="n">legendfontsize</span> <span class="o">=</span> <span class="n">size</span><span class="p">,</span> <span class="n">guidefontsize</span> <span class="o">=</span> <span class="n">size</span><span class="p">,</span> <span class="n">legendtitlefontsize</span> <span class="o">=</span> <span class="n">size</span><span class="p">,</span> <span class="n">lw</span> <span class="o">=</span> <span class="mi">5</span><span class="p">)</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="modelos">
+<h2>Modelos<a class="headerlink" href="#modelos" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="section" id="preliminares-de-ecuaciones-diferenciales">
+<h3>Preliminares de ecuaciones diferenciales<a class="headerlink" href="#preliminares-de-ecuaciones-diferenciales" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Gracias a la gran eficiencia de métodos iterativos y de álgebra lineal, la forma preferencial de pensar en ecuaciones diferenciales es en su forma de <em>sistema de ecuaciones de primer órden</em>. Esto siempre es posible de obtener mediante <a class="reference external" href="https://en.wikipedia.org/wiki/Ordinary_differential_equation##Reduction_of_order">reducción de órden</a>.</p>
+<p>Una vez realizado, la forma que obtenemos, para ecuaciones autónomas (no dependientes de manera explícita del tiempo), es:</p>
+<div class="math notranslate nohighlight">
+\[
+x'(t) = F(x(t))
+\]</div>
+<p>donde <span class="math notranslate nohighlight">\(x: \mathbb{R} \rightarrow \mathbb{R}^n\)</span> es una trayectoria en el espacio para la cual deseamos resolver y obedece la dinámica del campo vectorial:</p>
+<div class="math notranslate nohighlight">
+\[F: \mathbb{R}^n \rightarrow \mathbb{R}^n\]</div>
+<p>Esto define un sistema de <span class="math notranslate nohighlight">\(n\)</span> ecuaciones a resolver. A continuación veremos algunos ejemplos.</p>
+</div>
+<div class="section" id="pendulo-caotico">
+<h3>2. Péndulo caótico<a class="headerlink" href="#pendulo-caotico" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>El péndulo doble es un sistema muy famosamente estudiado por exhibir un comportamiento <strong>caótico</strong> (cuya definición matemática es rigurosa). Sus ecuaciones del movimiento son las siguientes:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\frac{d}{dt}
+\begin{pmatrix}
+\alpha \\ l_\alpha \\ \beta \\ l_\beta
+\end{pmatrix}=
+\begin{pmatrix}
+2\frac{l_\alpha - (1+\cos\beta)l_\beta}{3-\cos 2\beta} \\
+-2\sin\alpha - \sin(\alpha + \beta) \\
+2\frac{-(1+\cos\beta)l_\alpha + (3+2\cos\beta)l_\beta}{3-\cos2\beta}\\
+-\sin(\alpha+\beta) - 2\sin(\beta)\frac{(l_\alpha-l_\beta)l_\beta}{3-\cos2\beta} + 2\sin(2\beta)\frac{l_\alpha^2-2(1+\cos\beta)l_\alpha l_\beta + (3+2\cos\beta)l_\beta^2}{(3-\cos2\beta)^2}
+\end{pmatrix}\end{split}\]</div>
+<p>Resolveremos este sistema utilizando los métodos del paquetes <code class="docutils literal notranslate"><span class="pre">DifferentialEquations.jl</span></code>.</p>
+<p>El movimiento generado por esta ecuaciones se ve similar a:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">html</span><span class="s">&quot;</span>
+<span class="s">&lt;p align=&#39;center&#39;&gt;</span>
+<span class="s">&lt;img width=&#39;216&#39; height=&#39;190&#39; src=&#39;https://upload.wikimedia.org/wikipedia/commons/6/65/Trajektorie_eines_Doppelpendels.gif&#39;&gt;</span>
+<span class="s">&lt;/p&gt;</span>
+<span class="s">&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<p align='center'>
+<img width='216' height='190' src='https://upload.wikimedia.org/wikipedia/commons/6/65/Trajektorie_eines_Doppelpendels.gif'>
+</p>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="c">## El prefijo const es opcional y no significa VALOR constante, si no tipo constante.</span>
+<span class="k">begin</span>
+	<span class="kd">const</span> <span class="n">m₁</span><span class="p">,</span> <span class="n">m₂</span><span class="p">,</span> <span class="n">L₁</span><span class="p">,</span> <span class="n">L₂</span><span class="p">,</span> <span class="n">g</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mf">9.81</span>   
+	<span class="n">initial</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="nb">π</span><span class="o">/</span><span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="nb">pi</span><span class="o">/</span><span class="mi">5</span><span class="p">]</span>
+	<span class="n">tspan</span> <span class="o">=</span> <span class="p">(</span><span class="mf">0.</span><span class="p">,</span> <span class="mf">50.</span><span class="p">)</span>
+<span class="k">end</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Se define una función auxiliar para transformar de coordenadas polares a cartesianas:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">function</span> <span class="n">polar2cart</span><span class="p">(</span><span class="n">sol</span><span class="p">;</span> <span class="n">dt</span><span class="o">=</span><span class="mf">0.02</span><span class="p">,</span> <span class="n">l1</span><span class="o">=</span><span class="n">L₁</span><span class="p">,</span> <span class="n">l2</span><span class="o">=</span><span class="n">L₂</span><span class="p">,</span> <span class="n">vars</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+    <span class="n">u</span> <span class="o">=</span> <span class="n">sol</span><span class="o">.</span><span class="n">t</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">:</span><span class="n">dt</span><span class="o">:</span><span class="n">sol</span><span class="o">.</span><span class="n">t</span><span class="p">[</span><span class="k">end</span><span class="p">]</span>
+    <span class="n">p1</span> <span class="o">=</span> <span class="n">l1</span><span class="o">*</span><span class="n">map</span><span class="p">(</span><span class="n">x</span><span class="o">-&gt;</span><span class="n">x</span><span class="p">[</span><span class="n">vars</span><span class="p">[</span><span class="mi">1</span><span class="p">]],</span> <span class="n">sol</span><span class="o">.</span><span class="p">(</span><span class="n">u</span><span class="p">))</span>
+    <span class="n">p2</span> <span class="o">=</span> <span class="n">l2</span><span class="o">*</span><span class="n">map</span><span class="p">(</span><span class="n">y</span><span class="o">-&gt;</span><span class="n">y</span><span class="p">[</span><span class="n">vars</span><span class="p">[</span><span class="mi">2</span><span class="p">]],</span> <span class="n">sol</span><span class="o">.</span><span class="p">(</span><span class="n">u</span><span class="p">))</span>
+    <span class="n">x1</span> <span class="o">=</span> <span class="n">l1</span><span class="o">*</span><span class="n">sin</span><span class="o">.</span><span class="p">(</span><span class="n">p1</span><span class="p">)</span>
+    <span class="n">y1</span> <span class="o">=</span> <span class="n">l1</span><span class="o">*-</span><span class="n">cos</span><span class="o">.</span><span class="p">(</span><span class="n">p1</span><span class="p">)</span>
+    <span class="p">(</span><span class="n">u</span><span class="p">,</span> <span class="p">(</span><span class="n">x1</span> <span class="o">+</span> <span class="n">l2</span><span class="o">*</span><span class="n">sin</span><span class="o">.</span><span class="p">(</span><span class="n">p2</span><span class="p">),</span>
+     <span class="n">y1</span> <span class="o">-</span> <span class="n">l2</span><span class="o">*</span><span class="n">cos</span><span class="o">.</span><span class="p">(</span><span class="n">p2</span><span class="p">)))</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>polar2cart (generic function with 1 method)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">function</span> <span class="n">double_pendulum</span><span class="p">(</span><span class="n">xdot</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">p</span><span class="p">,</span><span class="n">t</span><span class="p">)</span>
+    <span class="n">xdot</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+    <span class="n">xdot</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span> <span class="p">((</span><span class="n">g</span><span class="o">*</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">m₁</span><span class="o">+</span><span class="n">m₂</span><span class="p">)</span><span class="o">*</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">+</span> <span class="n">m₂</span><span class="o">*</span><span class="p">(</span><span class="n">g</span><span class="o">*</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span> <span class="o">+</span> 
+				<span class="mi">2</span><span class="o">*</span><span class="p">(</span><span class="n">L₂</span><span class="o">*</span><span class="n">x</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="o">^</span><span class="mi">2</span><span class="o">+</span><span class="n">L₁</span><span class="o">*</span><span class="n">x</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">^</span><span class="mi">2</span><span class="o">*</span><span class="n">cos</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="n">x</span><span class="p">[</span><span class="mi">3</span><span class="p">]))</span><span class="o">*</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="n">x</span><span class="p">[</span><span class="mi">3</span><span class="p">])))</span><span class="o">/</span>
+		        <span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">L₁</span><span class="o">*</span><span class="p">(</span><span class="n">m₁</span><span class="o">+</span><span class="n">m₂</span><span class="o">-</span><span class="n">m₂</span><span class="o">*</span><span class="n">cos</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="n">x</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span><span class="o">^</span><span class="mi">2</span><span class="p">)))</span>
+    <span class="n">xdot</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span>
+    <span class="n">xdot</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="p">(((</span><span class="n">m₁</span><span class="o">+</span><span class="n">m₂</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">L₁</span><span class="o">*</span><span class="n">x</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">^</span><span class="mi">2</span><span class="o">+</span><span class="n">g</span><span class="o">*</span><span class="n">cos</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span> <span class="o">+</span> 
+			   <span class="n">L₂</span><span class="o">*</span><span class="n">m₂</span><span class="o">*</span><span class="n">x</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="o">^</span><span class="mi">2</span><span class="o">*</span><span class="n">cos</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="n">x</span><span class="p">[</span><span class="mi">3</span><span class="p">]))</span><span class="o">*</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="n">x</span><span class="p">[</span><span class="mi">3</span><span class="p">]))</span><span class="o">/</span>
+			   <span class="p">(</span><span class="n">L₂</span><span class="o">*</span><span class="p">(</span><span class="n">m₁</span><span class="o">+</span><span class="n">m₂</span><span class="o">-</span><span class="n">m₂</span><span class="o">*</span><span class="n">cos</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="n">x</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span><span class="o">^</span><span class="mi">2</span><span class="p">))</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>double_pendulum (generic function with 1 method)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">double_pendulum_problem</span> <span class="o">=</span> <span class="n">ODEProblem</span><span class="p">(</span><span class="n">double_pendulum</span><span class="p">,</span> <span class="n">initial</span><span class="p">,</span> <span class="n">tspan</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">sol</span> <span class="o">=</span> <span class="n">solve</span><span class="p">(</span><span class="n">double_pendulum_problem</span><span class="p">,</span> <span class="n">Vern7</span><span class="p">(),</span> <span class="n">abs_tol</span><span class="o">=</span><span class="mf">1e-10</span><span class="p">,</span> <span class="n">dt</span><span class="o">=</span><span class="mf">0.05</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>retcode: Success
+Interpolation: specialized 7th order lazy interpolation
+t: 302-element Array{Float64,1}:
+  0.0
+  0.05
+  0.1223079052234777
+  0.21763564439678446
+  0.32592132827555614
+  0.45428546205171927
+  0.609957416358271
+  0.7734779293497827
+  0.9540060574595153
+  1.1799033713407105
+  1.403442437872348
+  1.5857800225971301
+  1.7547534996346459
+  ⋮
+ 48.10013873938749
+ 48.26086940221816
+ 48.51276681735055
+ 48.68829170708072
+ 48.90897270610238
+ 49.074198457665524
+ 49.26762992059672
+ 49.41331132773069
+ 49.58656471302393
+ 49.73635419325158
+ 49.929069338760755
+ 50.0
+u: 302-element Array{Array{Float64,1},1}:
+ [0.0, 1.0471975511965976, 0.0, 1.8849555921538759]
+ [0.05276815671595484, 1.071438957072351, 0.09384176137401032, 1.8607344940613866]
+ [0.13361722361756873, 1.1748571429557286, 0.2248435889699277, 1.749602555594999]
+ [0.2537554611755441, 1.3400852896072526, 0.38108445951036796, 1.518757313193717]
+ [0.40410119950098694, 1.4024410831505718, 0.5301603161398095, 1.2396279286879397]
+ [0.5728649474072226, 1.169954418422348, 0.6718502052458136, 0.9854204230486661]
+ [0.7088857697515267, 0.5369386864730226, 0.8084759913872458, 0.7786857878244005]
+ [0.7353785982784866, -0.19338512009518283, 0.9169953717631636, 0.5291567670987339]
+ [0.6472090513598847, -0.715269349725902, 0.9734453010510711, 0.0543580496299323]
+ [0.46935732113951517, -0.7327102879675962, 0.887866370720516, -0.86279081696396]
+ [0.37225084287475957, -0.08343101301168705, 0.5743822024889788, -1.9236009700729089]
+ [0.3419732736206664, -0.6055412037246396, 0.19590319502068296, -1.9975724150479082]
+ [0.11351472321247819, -2.0721701874347174, -0.08424980592934868, -1.281496345624497]
+ ⋮
+ [-0.42641322931863473, -0.3495803765321254, -1.0156807674608763, -0.6419671254245816]
+ [-0.4973969181679087, -0.5006444011316504, -1.0574689947805727, 0.11204124902755815]
+ [-0.630914582747322, -0.5147537467276151, -0.8911329999018179, 1.1679719640654815]
+ [-0.67975290420246, 0.13973286964103626, -0.6514876665177031, 1.4454143327848226]
+ [-0.4549919175434134, 1.9015781454592204, -0.36771741048108453, 1.0727040751077042]
+ [-0.08586635119481108, 2.28552090644888, -0.19809628081445166, 1.112713727902364]
+ [0.2498746728460613, 1.030480739331191, 0.08577212263454681, 1.8451390168903863]
+ [0.3320815110176066, 0.25499621194857525, 0.3793211991189911, 2.071661061898589]
+ [0.39238335257281043, 0.5691064464087552, 0.6955158132179681, 1.4770421393438187]
+ [0.5050439638383725, 0.8813133553208242, 0.8649801258453232, 0.7945405264152658]
+ [0.6711792406408479, 0.7375180832629122, 0.9459177363546021, 0.09015063400030744]
+ [0.7166955252930275, 0.5339053276716273, 0.9454344718959518, -0.09727163755146666]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">begin</span>
+	<span class="n">ts</span><span class="p">,</span> <span class="n">ps</span> <span class="o">=</span> <span class="n">polar2cart</span><span class="p">(</span><span class="n">sol</span><span class="p">,</span> <span class="n">l1</span><span class="o">=</span><span class="n">L₁</span><span class="p">,</span> <span class="n">l2</span><span class="o">=</span><span class="n">L₂</span><span class="p">,</span> <span class="n">dt</span><span class="o">=</span><span class="mf">0.01</span><span class="p">)</span>
+	<span class="n">plot</span><span class="p">(</span><span class="n">ps</span><span class="o">...</span><span class="p">)</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Ecuaciones_diferenciales_14_0.svg" src="_images/Ecuaciones_diferenciales_14_0.svg" /></div>
+</div>
+</div>
+<div class="section" id="sistema-de-henon-heiles">
+<h3>3. Sistema de Hénon-Heiles<a class="headerlink" href="#sistema-de-henon-heiles" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Es un sistema dinámico que modela el movimiento de una estrella orbitando alrededor de su centro galáctico mientras yace restringido en un plano. Éste es un ejemplo de un sistema Hamiltoniano, y tiene la forma:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align}
+\frac{d^2x}{dt^2}&amp;=-\frac{\partial V}{\partial x}\\
+\frac{d^2y}{dt^2}&amp;=-\frac{\partial V}{\partial y}
+\end{align}
+\end{split}\]</div>
+<p>donde</p>
+<div class="math notranslate nohighlight">
+\[V(x,y)={\frac {1}{2}}(x^{2}+y^{2})+\lambda \left(x^{2}y-{\frac {y^{3}}{3}}\right).\]</div>
+<p>es conocido como el <strong>potencial de Hénon–Heiles</strong>. De éste puede derivarse su Hamiltoniano:</p>
+<div class="math notranslate nohighlight">
+\[H={\frac {1}{2}}(p_{x}^{2}+p_{y}^{2})+{\frac {1}{2}}(x^{2}+y^{2})+\lambda \left(x^{2}y-{\frac {y^{3}}{3}}\right).\]</div>
+<p>Esta cantidad representa un invariante del sistema dinámico: Una cantidad conservada. En este caso, es la energía total del sistema.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">begin</span>
+	<span class="c">## Parámetros</span>
+	<span class="n">initial₂</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.</span><span class="p">,</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">0.5</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
+	<span class="n">tspan₂</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mf">100.</span><span class="p">)</span>
+	<span class="c">## V: Potencial, T: Energía cinética total, E: Energía total</span>
+	<span class="n">V</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span> <span class="o">=</span> <span class="mi">1</span><span class="o">//</span><span class="mi">2</span> <span class="o">*</span> <span class="p">(</span><span class="n">x</span><span class="o">^</span><span class="mi">2</span> <span class="o">+</span> <span class="n">y</span><span class="o">^</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span><span class="n">x</span><span class="o">^</span><span class="mi">2</span><span class="o">*</span><span class="n">y</span> <span class="o">-</span> <span class="mi">2</span><span class="o">//</span><span class="mi">3</span> <span class="o">*</span> <span class="n">y</span><span class="o">^</span><span class="mi">3</span><span class="p">)</span>
+	<span class="n">E</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">dx</span><span class="p">,</span><span class="n">dy</span><span class="p">)</span> <span class="o">=</span> <span class="n">V</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="o">//</span><span class="mi">2</span> <span class="o">*</span> <span class="p">(</span><span class="n">dx</span><span class="o">^</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dy</span><span class="o">^</span><span class="mi">2</span><span class="p">);</span>
+<span class="k">end</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Definimos el modelo en una función:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">function</span> <span class="n">Hénon_Heiles</span><span class="p">(</span><span class="n">du</span><span class="p">,</span><span class="n">u</span><span class="p">,</span><span class="n">p</span><span class="p">,</span><span class="n">t</span><span class="p">)</span>
+    <span class="n">x</span>  <span class="o">=</span> <span class="n">u</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">y</span>  <span class="o">=</span> <span class="n">u</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+    <span class="n">dx</span> <span class="o">=</span> <span class="n">u</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+    <span class="n">dy</span> <span class="o">=</span> <span class="n">u</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span>
+    <span class="n">du</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">dx</span>
+    <span class="n">du</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">dy</span>
+    <span class="n">du</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="n">x</span> <span class="o">-</span> <span class="mi">2</span><span class="n">x</span><span class="o">*</span><span class="n">y</span>
+    <span class="n">du</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="n">y</span><span class="o">^</span><span class="mi">2</span> <span class="o">-</span> <span class="n">y</span> <span class="o">-</span><span class="n">x</span><span class="o">^</span><span class="mi">2</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hénon_Heiles (generic function with 1 method)
+</pre></div>
+</div>
+</div>
+</div>
+<p>Resolvemos el problema:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">begin</span>
+	<span class="n">prob₂</span> <span class="o">=</span> <span class="n">ODEProblem</span><span class="p">(</span><span class="n">Hénon_Heiles</span><span class="p">,</span> <span class="n">initial₂</span><span class="p">,</span> <span class="n">tspan₂</span><span class="p">)</span>
+	<span class="n">sol₂</span> <span class="o">=</span> <span class="n">solve</span><span class="p">(</span><span class="n">prob₂</span><span class="p">,</span> <span class="n">Vern9</span><span class="p">(),</span> <span class="n">abs_tol</span><span class="o">=</span><span class="mf">1e-16</span><span class="p">,</span> <span class="n">rel_tol</span><span class="o">=</span><span class="mf">1e-16</span><span class="p">);</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>retcode: Success
+Interpolation: specialized 9th order lazy interpolation
+t: 92-element Array{Float64,1}:
+   0.0
+   0.002767153900836259
+   0.019390834923504494
+   0.12119935187168689
+   0.530301790748649
+   1.1815820951240696
+   1.9076818589199944
+   2.760621588805973
+   3.605356397694905
+   4.619986523154658
+   5.645461607705661
+   6.628534205499573
+   7.693582537682585
+   ⋮
+  87.998350712816
+  89.12549586531028
+  90.34475976436744
+  91.46207401166643
+  92.80356604989571
+  93.85953574845666
+  95.06904060013457
+  96.26535461031364
+  97.42922082465732
+  98.66129338374192
+  99.77739539466218
+ 100.0
+u: 92-element Array{Array{Float64,1},1}:
+ [0.0, 0.1, 0.5, 0.0]
+ [0.0013835748315707893, 0.09999965542762242, 0.4999977028602053, -0.00024904536251688065]
+ [0.00969468838029096, 0.09998307727738429, 0.4998872044881803, -0.0017456951735989768]
+ [0.06042185852124362, 0.09933514655181921, 0.49560211524963727, -0.011034331488800994]
+ [0.25058314954625777, 0.08601880052006405, 0.41888733977799825, -0.05742234854837401]
+ [0.4444070725050881, 0.011729989621118292, 0.15861982132709898, -0.17862147581375334]
+ [0.4473066382282281, -0.16320285100673101, -0.13126053699732168, -0.278919260652333]
+ [0.2584572479002514, -0.35063663280889906, -0.2790546850571461, -0.09910177915852485]
+ [0.004597212445906916, -0.2765685142768536, -0.312548979741221, 0.26654022206668787]
+ [-0.2725985862807251, 0.0888755547420482, -0.17762619800611465, 0.36446229045208195]
+ [-0.2359649523333103, 0.33539268583553616, 0.2639673601222507, 0.0963845261733765]
+ [0.1265413408705088, 0.30963375665407095, 0.371111092458688, -0.1399949538666176]
+ [0.3331864229707778, 0.02777322267904361, -0.008512405641007949, -0.3759318157658049]
+ ⋮
+ [0.4186977554232182, 0.02225898651098427, 0.21193927276905847, -0.1756847863354898]
+ [0.40581590801727596, -0.26179610944305776, -0.18430403170494647, -0.25779590723676926]
+ [0.09926832114771249, -0.32419636125803547, -0.28889656169215455, 0.21128012800300267]
+ [-0.2114517878067161, 0.0730906156176862, -0.2152584827559103, 0.3958776870516688]
+ [-0.1651820081856587, 0.39689185721893394, 0.3024690065429725, 0.05584713594737721]
+ [0.1983089199690154, 0.31747189605713433, 0.2712578251378906, -0.20508331912354352]
+ [0.2589198172932789, -0.09448897836357471, -0.1423573171660115, -0.4186496601369496]
+ [0.012425073399517497, -0.4034830628308482, -0.22915816033577166, 0.01615845936515269]
+ [-0.23244506354682215, -0.08009238032616647, -0.15414702520990145, 0.42836918054426903]
+ [-0.18927473635920564, 0.34544617499081803, 0.2560388635086127, 0.20350117082002062]
+ [0.1741544372800989, 0.41603304066553226, 0.26940699405279905, -0.07855686343548968]
+ [0.2254464439669529, 0.3916330728294025, 0.18834406694149203, -0.14125776488921374]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">plot</span><span class="p">(</span><span class="n">sol₂</span><span class="p">,</span> <span class="n">vars</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span> <span class="n">title</span> <span class="o">=</span> <span class="s">&quot;Órbita del sistema de Hénon-Heiles&quot;</span><span class="p">,</span> <span class="n">xaxis</span> <span class="o">=</span> <span class="s">&quot;x&quot;</span><span class="p">,</span> <span class="n">yaxis</span> <span class="o">=</span> <span class="s">&quot;y&quot;</span><span class="p">,</span> <span class="n">leg</span><span class="o">=</span><span class="kc">false</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Ecuaciones_diferenciales_21_0.svg" src="_images/Ecuaciones_diferenciales_21_0.svg" /></div>
+</div>
+<p>Parece estar correctamente resuelto pero… examinando la evolución de la energía total/Hamiltoniano podemos encontrar lo siguiente:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">begin</span>
+	<span class="n">energy</span> <span class="o">=</span> <span class="n">map</span><span class="p">(</span><span class="n">x</span><span class="o">-&gt;</span><span class="n">E</span><span class="p">(</span><span class="n">x</span><span class="o">...</span><span class="p">),</span> <span class="n">sol₂</span><span class="o">.</span><span class="n">u</span><span class="p">)</span>
+	<span class="n">plot</span><span class="p">(</span><span class="n">sol₂</span><span class="o">.</span><span class="n">t</span><span class="p">,</span> <span class="n">energy</span> <span class="o">.-</span> <span class="n">energy</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">title</span> <span class="o">=</span> <span class="s">&quot;Cambio de la energía en el tiempo&quot;</span><span class="p">,</span> <span class="n">xaxis</span> <span class="o">=</span> <span class="s">&quot;Número de iteraciones&quot;</span><span class="p">,</span> <span class="n">yaxis</span> <span class="o">=</span> <span class="s">&quot;Cambio en energía&quot;</span><span class="p">)</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Ecuaciones_diferenciales_23_0.svg" src="_images/Ecuaciones_diferenciales_23_0.svg" /></div>
+</div>
+<p>¡La energía total cambia! Eso quiere decir que la ley de conservación que esperamos que se cumpla físicamente no parece cumplirse en nuestra simulación. Esto delata un error en la resolución de la ecuación, específicamente por el método utilizado.</p>
+<p>Para evitar eso, podemos utilizar algo conocido como un <strong>integrador simplético</strong> que considere la estructura de sistema Hamiltoniano que tiene nuestras ecuaciones.</p>
+<p>Éste lo implementamos a continuación:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">function</span> <span class="n">HH_acceleration!</span><span class="p">(</span><span class="n">dv</span><span class="p">,</span><span class="n">v</span><span class="p">,</span><span class="n">u</span><span class="p">,</span><span class="n">p</span><span class="p">,</span><span class="n">t</span><span class="p">)</span>
+    <span class="n">x</span><span class="p">,</span><span class="n">y</span>  <span class="o">=</span> <span class="n">u</span>
+    <span class="n">dx</span><span class="p">,</span><span class="n">dy</span> <span class="o">=</span> <span class="n">dv</span>
+    <span class="n">dv</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="n">x</span> <span class="o">-</span> <span class="mi">2</span><span class="n">x</span><span class="o">*</span><span class="n">y</span>
+    <span class="n">dv</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">y</span><span class="o">^</span><span class="mi">2</span> <span class="o">-</span> <span class="n">y</span> <span class="o">-</span><span class="n">x</span><span class="o">^</span><span class="mi">2</span>
+<span class="k">end</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Debemos ahora definir la condición inicial por separado, pues nuestro sistema, al ser Hamiltoniano, tiene una segmentación natural en esos pares de variables.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">begin</span>
+	<span class="n">initial_positions</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">0.1</span><span class="p">]</span>
+	<span class="n">initial_velocities</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">0.0</span><span class="p">]</span>
+<span class="k">end</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Resolvemos el problema ahora como una ecuación de segundo orden pero con estructura simpléctica detectada:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">begin</span>
+	<span class="n">prob₃</span> <span class="o">=</span> <span class="n">SecondOrderODEProblem</span><span class="p">(</span><span class="n">HH_acceleration!</span><span class="p">,</span> 
+								 <span class="n">initial_velocities</span><span class="p">,</span>
+								 <span class="n">initial_positions</span><span class="p">,</span>
+								 <span class="n">tspan₂</span><span class="p">)</span>
+	<span class="n">sol₃</span> <span class="o">=</span> <span class="n">solve</span><span class="p">(</span><span class="n">prob₃</span><span class="p">,</span> <span class="n">KahanLi8</span><span class="p">(),</span> <span class="n">dt</span><span class="o">=</span><span class="mi">1</span><span class="o">/</span><span class="mi">10</span><span class="p">)</span>
+<span class="k">end</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Ahora podemos observar cómo la energía se mantiene muy cercana a cero, oscilando solamente por errores de precisión numérica pero sin existir una tendencia de crecimiento anómala.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">begin</span>
+	<span class="n">energy₂</span> <span class="o">=</span> <span class="n">map</span><span class="p">(</span><span class="n">x</span><span class="o">-&gt;</span><span class="n">E</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">x</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">x</span><span class="p">[</span><span class="mi">2</span><span class="p">]),</span> <span class="n">sol₃</span><span class="o">.</span><span class="n">u</span><span class="p">)</span>
+	<span class="n">plot</span><span class="p">(</span><span class="n">sol₃</span><span class="o">.</span><span class="n">t</span><span class="p">,</span> <span class="n">energy₂</span> <span class="o">.-</span> <span class="n">energy₂</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">title</span> <span class="o">=</span> <span class="s">&quot;Cambio de la energía en el tiempo&quot;</span><span class="p">,</span> <span class="n">xaxis</span> <span class="o">=</span> <span class="s">&quot;Número de iteraciones&quot;</span><span class="p">,</span> <span class="n">yaxis</span> <span class="o">=</span> <span class="s">&quot;Cambio en energía&quot;</span><span class="p">)</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Ecuaciones_diferenciales_31_0.svg" src="_images/Ecuaciones_diferenciales_31_0.svg" /></div>
+</div>
+</div>
+</div>
+<div class="section" id="bibliografia">
+<h2>Bibliografía<a class="headerlink" href="#bibliografia" title="Enlazar permanentemente con este título">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://sciml.ai/">Documentación de SciML</a></p></li>
+<li><p><a class="reference external" href="https://github.com/SciML/SciMLTutorials.jl">Tutoriales de SciML</a></p></li>
+<li><p>Hénon, Michel (1983), «Numerical exploration of Hamiltonian Systems», in Iooss, G. (ed.), Chaotic Behaviour of Deterministic Systems, Elsevier Science Ltd, pp. 53–170, ISBN 044486542X</p></li>
+<li><p>Aguirre, Jacobo; Vallejo, Juan C.; Sanjuán, Miguel A. F. (2001-11-27). «Wada basins and chaotic invariant sets in the Hénon-Heiles system». Physical Review E. American Physical Society (APS). 64 (6): 066208. doi:10.1103/physreve.64.066208. ISSN 1063-651X.</p></li>
+<li><p>Steven Johnson. 18.335J Introduction to Numerical Methods . Spring 2019. Massachusetts Institute of Technology: MIT OpenCourseWare, https://ocw.mit.edu. License: Creative Commons BY-NC-SA.</p></li>
+</ul>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "julia-1.5"
+        },
+        kernelOptions: {
+            kernelName: "julia-1.5",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'julia-1.5'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="Paquete_Plots.html" title="previous page">Paquete Plots</a>
+    <a class='right-next' id="next-link" href="Primer_proyecto.html" title="next page">Primer proyecto</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Luis Felipe Flores Machado, René David Hernández<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="_static/js/index.30270b6e4c972e43c488.js"></script>
+
+
+    
+  </body>
+</html>
