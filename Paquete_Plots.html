@@ -58,7 +58,7 @@
     <link rel="shortcut icon" href="_static/logo.ico"/>
     <link rel="index" title="Índice" href="genindex.html" />
     <link rel="search" title="Búsqueda" href="search.html" />
-    <link rel="next" title="Primer proyecto" href="Primer_proyecto.html" />
+    <link rel="next" title="Ecuaciones diferenciales" href="Ecuaciones_diferenciales.html" />
     <link rel="prev" title="Estructuras de Datos" href="Estructuras_de_Datos.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -132,6 +132,11 @@
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    Paquete Plots
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Ecuaciones_diferenciales.html">
+   Ecuaciones diferenciales
   </a>
  </li>
 </ul>
@@ -385,6 +390,7 @@
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">begin</span>
 	<span class="k">using</span> <span class="n">Pkg</span><span class="p">;</span> <span class="n">Pkg</span><span class="o">.</span><span class="n">activate</span><span class="p">(</span><span class="s">&quot;.&quot;</span><span class="p">);</span> <span class="n">Pkg</span><span class="o">.</span><span class="n">instantiate</span><span class="p">()</span>
+	<span class="k">using</span> <span class="n">Pkg</span><span class="p">;</span> <span class="n">Pkg</span><span class="o">.</span><span class="n">activate</span><span class="p">(</span><span class="s">&quot;.&quot;</span><span class="p">);</span> <span class="c">##Pkg.add(&quot;Plots&quot;) </span>
 	<span class="k">using</span> <span class="n">Plots</span>
 	<span class="n">theme</span><span class="p">(</span><span class="o">:</span><span class="n">wong</span><span class="p">)</span>
 <span class="k">end</span>
@@ -392,6 +398,9 @@
 </div>
 </div>
 <div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold -Color-Bold-Green"> Activating</span> environment at `~/work/Intro-Julia-2021/Intro-Julia-2021/Project.toml`
+</pre></div>
+</div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold -Color-Bold-Green"> Activating</span> environment at `~/work/Intro-Julia-2021/Intro-Julia-2021/Project.toml`
 </pre></div>
 </div>
@@ -899,7 +908,7 @@ Hay que tener en cuenta que la extensión del archivo a guardar, depende del bac
     <div class='prev-next-bottom'>
         
     <a class='left-prev' id="prev-link" href="Estructuras_de_Datos.html" title="previous page">Estructuras de Datos</a>
-    <a class='right-next' id="next-link" href="Primer_proyecto.html" title="next page">Primer proyecto</a>
+    <a class='right-next' id="next-link" href="Ecuaciones_diferenciales.html" title="next page">Ecuaciones diferenciales</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
