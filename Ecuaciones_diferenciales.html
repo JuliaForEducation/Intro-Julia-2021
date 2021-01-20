@@ -258,23 +258,50 @@
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#ecuaciones-diferenciales-ordinarias">
-   Ecuaciones diferenciales ordinarias
+  <a class="reference internal nav-link" href="#preparacion">
+   Preparación
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#modelos">
-   Modelos
+  <a class="reference internal nav-link" href="#modelos-de-ecuaciones-diferenciales-ordinarias-odes">
+   Modelos de ecuaciones diferenciales ordinarias (ODEs)
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#preliminares-de-ecuaciones-diferenciales">
-     Preliminares de ecuaciones diferenciales
+    <a class="reference internal nav-link" href="#preliminares">
+     Preliminares
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ejemplo-introductorio-la-estructura-general">
+     Ejemplo introductorio: La estructura general
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#definicion-de-la-funcion">
+       1. Definición de la función
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#definicion-de-las-condiciones-iniciales-y-de-frontera">
+       2. Definición de las condiciones iniciales y de frontera
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#planteamiento-del-problema">
+       3. Planteamiento del problema
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#resolucion-y-exploracion">
+       4. Resolución y exploración
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#pendulo-caotico">
-     2. Péndulo caótico
+     Péndulo caótico
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -283,6 +310,11 @@
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ecuaciones-diferenciales-estocasticas">
+   Ecuaciones diferenciales Estocásticas
+  </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#bibliografia">
@@ -302,8 +334,9 @@
                 
   <div class="section" id="ecuaciones-diferenciales">
 <h1>Ecuaciones diferenciales<a class="headerlink" href="#ecuaciones-diferenciales" title="Enlazar permanentemente con este título">¶</a></h1>
-<div class="section" id="ecuaciones-diferenciales-ordinarias">
-<h2>Ecuaciones diferenciales ordinarias<a class="headerlink" href="#ecuaciones-diferenciales-ordinarias" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="section" id="preparacion">
+<h2>Preparación<a class="headerlink" href="#preparacion" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Proseguimos a activar el ambiente de trabajo y cargar los paquetes a utilizar.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">import</span> <span class="n">Pkg</span><span class="p">;</span> <span class="n">Pkg</span><span class="o">.</span><span class="n">activate</span><span class="p">(</span><span class="s">&quot;.&quot;</span><span class="p">);</span> <span class="n">Pkg</span><span class="o">.</span><span class="n">instantiate</span><span class="p">()</span>
@@ -330,21 +363,22 @@
 </div>
 </div>
 </div>
+<p>La siguiente configuración por defecto se coloca para la versión específica de Julia, Plots y backend GR utilizada en construir este documento. Puede ser óptimo cambiarlo a otra para uso personal:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">begin</span>
 	<span class="n">size</span> <span class="o">=</span> <span class="mi">50</span>
-	<span class="n">Plots</span><span class="o">.</span><span class="n">default</span><span class="p">(</span><span class="n">size</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2800</span><span class="p">,</span><span class="mi">2000</span><span class="p">),</span><span class="n">titlefontsize</span> <span class="o">=</span> <span class="n">size</span><span class="p">,</span> <span class="n">tickfontsize</span> <span class="o">=</span> <span class="n">size</span><span class="p">,</span> <span class="n">legendfontsize</span> <span class="o">=</span> <span class="n">size</span><span class="p">,</span> <span class="n">guidefontsize</span> <span class="o">=</span> <span class="n">size</span><span class="p">,</span> <span class="n">legendtitlefontsize</span> <span class="o">=</span> <span class="n">size</span><span class="p">,</span> <span class="n">lw</span> <span class="o">=</span> <span class="mi">5</span><span class="p">)</span>
+	<span class="n">Plots</span><span class="o">.</span><span class="n">default</span><span class="p">(</span><span class="n">size</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2600</span><span class="p">,</span><span class="mi">2000</span><span class="p">),</span><span class="n">titlefontsize</span> <span class="o">=</span> <span class="n">size</span><span class="p">,</span> <span class="n">tickfontsize</span> <span class="o">=</span> <span class="n">size</span><span class="p">,</span> <span class="n">legendfontsize</span> <span class="o">=</span> <span class="n">size</span><span class="p">,</span> <span class="n">guidefontsize</span> <span class="o">=</span> <span class="n">size</span><span class="p">,</span> <span class="n">legendtitlefontsize</span> <span class="o">=</span> <span class="n">size</span><span class="p">,</span> <span class="n">lw</span> <span class="o">=</span> <span class="mi">5</span><span class="p">)</span>
 <span class="k">end</span>
 </pre></div>
 </div>
 </div>
 </div>
 </div>
-<div class="section" id="modelos">
-<h2>Modelos<a class="headerlink" href="#modelos" title="Enlazar permanentemente con este título">¶</a></h2>
-<div class="section" id="preliminares-de-ecuaciones-diferenciales">
-<h3>Preliminares de ecuaciones diferenciales<a class="headerlink" href="#preliminares-de-ecuaciones-diferenciales" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="section" id="modelos-de-ecuaciones-diferenciales-ordinarias-odes">
+<h2>Modelos de ecuaciones diferenciales ordinarias (ODEs)<a class="headerlink" href="#modelos-de-ecuaciones-diferenciales-ordinarias-odes" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="section" id="preliminares">
+<h3>Preliminares<a class="headerlink" href="#preliminares" title="Enlazar permanentemente con este título">¶</a></h3>
 <p>Gracias a la gran eficiencia de métodos iterativos y de álgebra lineal, la forma preferencial de pensar en ecuaciones diferenciales es en su forma de <em>sistema de ecuaciones de primer órden</em>. Esto siempre es posible de obtener mediante <a class="reference external" href="https://en.wikipedia.org/wiki/Ordinary_differential_equation##Reduction_of_order">reducción de órden</a>.</p>
 <p>Una vez realizado, la forma que obtenemos, para ecuaciones autónomas (no dependientes de manera explícita del tiempo), es:</p>
 <div class="math notranslate nohighlight">
@@ -356,8 +390,88 @@ x'(t) = F(x(t))
 \[F: \mathbb{R}^n \rightarrow \mathbb{R}^n\]</div>
 <p>Esto define un sistema de <span class="math notranslate nohighlight">\(n\)</span> ecuaciones a resolver. A continuación veremos algunos ejemplos.</p>
 </div>
+<div class="section" id="ejemplo-introductorio-la-estructura-general">
+<h3>Ejemplo introductorio: La estructura general<a class="headerlink" href="#ejemplo-introductorio-la-estructura-general" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Se ejemplifica el procedimiento general de resolución de ecuaciones diferenciales utilizando el paquete <code class="docutils literal notranslate"><span class="pre">DifferentialEquations</span></code> utilizando el ejemplo:</p>
+<div class="math notranslate nohighlight">
+\[\frac{du}{dx} = f(u, p, t) = \alpha u\]</div>
+<p>donde <span class="math notranslate nohighlight">\(u\)</span> es el observable dinámico a encontrar, y la forma general <span class="math notranslate nohighlight">\(f(u, p, t)\)</span> describe la evolución temporal de <span class="math notranslate nohighlight">\(u\)</span> y puede depender de dicho observable: <span class="math notranslate nohighlight">\(u\)</span>, el tiempo paramétrico que describe su dinámica: <span class="math notranslate nohighlight">\(t\)</span>, y parámetros potencialmente exteriores que caracterizan el contexto específico del fenómeno (ejemplo: constantes físicas (masa, aceleración debido a gravedad, permitividad, etc.), indicadores socio-económicos (tasas constantes, natalidad, migración, etc.)).</p>
+<p>Los pasos se presentan a continuación</p>
+<div class="section" id="definicion-de-la-funcion">
+<h4>1. Definición de la función<a class="headerlink" href="#definicion-de-la-funcion" title="Enlazar permanentemente con este título">¶</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="p">(</span><span class="n">u</span><span class="p">,</span><span class="n">p</span><span class="p">,</span><span class="n">t</span><span class="p">)</span> <span class="o">=</span> <span class="mf">1.01</span><span class="o">*</span><span class="n">u</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>f (generic function with 1 method)
+</pre></div>
+</div>
+</div>
+</div>
+<p>Como descrito anteriormente, <span class="math notranslate nohighlight">\(f\)</span> depende de <span class="math notranslate nohighlight">\(u, p, t\)</span>, pero solamente es obligatoria la dependencia de <span class="math notranslate nohighlight">\(u\)</span> (salvo el caso trivial donde <span class="math notranslate nohighlight">\(f\)</span> es constante y en dado caso no necesitamos resolución numérica), mientras que, en este caso, no tenemos parámetros movibles <span class="math notranslate nohighlight">\(p\)</span> ni tampoco el tiempo <span class="math notranslate nohighlight">\(t\)</span> explícito, aunque por supuesto <span class="math notranslate nohighlight">\(u\)</span> se asume ser función del tiempo (<span class="math notranslate nohighlight">\(u = u(t)\)</span>).</p>
+</div>
+<div class="section" id="definicion-de-las-condiciones-iniciales-y-de-frontera">
+<h4>2. Definición de las condiciones iniciales y de frontera<a class="headerlink" href="#definicion-de-las-condiciones-iniciales-y-de-frontera" title="Enlazar permanentemente con este título">¶</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">u₀</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span> <span class="n">tspan_u</span> <span class="o">=</span> <span class="p">(</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">1.0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(0.0, 1.0)
+</pre></div>
+</div>
+</div>
+</div>
+<p>Aquí <span class="math notranslate nohighlight">\(u_0\)</span> es el valor inicial tomado por la variable dinámica <span class="math notranslate nohighlight">\(u\)</span>. El tiempo inicial se define en el intervalo <code class="docutils literal notranslate"><span class="pre">tspan_u</span></code>, que es una tupla de un valor inicial y un valor final (<span class="math notranslate nohighlight">\(t_0\)</span>, <span class="math notranslate nohighlight">\(t_f\)</span>).</p>
+<p>Es este intervalo el cual será particionado en una cadena discreta de puntos <span class="math notranslate nohighlight">\(\{t_0, t_1, t_2, \ldots, t_{n-1}, t_f\}\)</span> y obtener los valores de <span class="math notranslate nohighlight">\(u\)</span> en dichos tiempos: <span class="math notranslate nohighlight">\(\{u(t_0), u(t_1), u(t_2), \ldots, u(t_{n-1}), u(t_f)\}\)</span>.</p>
+</div>
+<div class="section" id="planteamiento-del-problema">
+<h4>3. Planteamiento del problema<a class="headerlink" href="#planteamiento-del-problema" title="Enlazar permanentemente con este título">¶</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">prob_u</span> <span class="o">=</span> <span class="n">ODEProblem</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="n">u₀</span><span class="p">,</span><span class="n">tspan_u</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Este es un ejemplo de un problema planteado como una ecuación diferencial ordinaria de primer orden. En su lugar, pudimos haber definido una de orden superior, una estocástica, integrodiferencial, etc.</p>
+<p>Ejemplos de estos serán mostrados luego.</p>
+</div>
+<div class="section" id="resolucion-y-exploracion">
+<h4>4. Resolución y exploración<a class="headerlink" href="#resolucion-y-exploracion" title="Enlazar permanentemente con este título">¶</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">sol_u</span> <span class="o">=</span> <span class="n">solve</span><span class="p">(</span><span class="n">prob_u</span><span class="p">,</span> <span class="n">Tsit5</span><span class="p">(),</span> <span class="n">reltol</span><span class="o">=</span><span class="mf">1e-8</span><span class="p">,</span> <span class="n">abstol</span><span class="o">=</span><span class="mf">1e-8</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>La función <code class="docutils literal notranslate"><span class="pre">solve</span></code> es una de las funciones más complejas (en cuanto a completitud y flexibilidad) del paquete, siendo la misma redefinida mediante multiple-dispatch para poder reaccionar sin aparente dificultad a cualquier tipo de problema planteado y permitiendo argumentos que personalicen el proceso de solución para cada una de ellas.</p>
+<p>Como ejemplo, aquí tenemos que el problema <code class="docutils literal notranslate"><span class="pre">prob_u</span></code> se resuelve mediante un <strong>solver</strong> llamado <code class="docutils literal notranslate"><span class="pre">Tsit5</span></code>. La lista de solvers incluidos en el paquete puede encontrarse en su documentación <a class="reference external" href="https://diffeq.sciml.ai/stable/tutorials/ode_example/##Choosing-a-Solver-Algorithm">aquí</a>, y de éstos se habla en mayor profundidad luego.</p>
+<p>Además, se ilustra que podemos elegir un error relativo y error absoluto que queremos aceptar para que el solver lo garantice. Leer más sobre los tipos de errores de aproximación <a class="reference external" href="https://en.wikipedia.org/wiki/Approximation_error">aquí</a>.</p>
+<p>Posterior a resolver la ecuación diferencial, podemos explorar su comportamiento de manera gráfica:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">begin</span>
+	<span class="n">plot</span><span class="p">(</span><span class="n">sol_u</span><span class="p">,</span><span class="n">linewidth</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s">&quot;Solución aproximada al problema&quot;</span><span class="p">,</span>
+     <span class="n">xaxis</span><span class="o">=</span><span class="s">&quot;Time (t)&quot;</span><span class="p">,</span> <span class="n">yaxis</span><span class="o">=</span><span class="s">&quot;u(t) (in μm)&quot;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s">&quot;Aproximación&quot;</span><span class="p">)</span>
+	<span class="n">plot!</span><span class="p">(</span><span class="n">sol_u</span><span class="o">.</span><span class="n">t</span><span class="p">,</span> <span class="n">t</span><span class="o">-&gt;</span><span class="mf">0.5</span><span class="o">*</span><span class="n">exp</span><span class="p">(</span><span class="mf">1.01</span><span class="n">t</span><span class="p">),</span><span class="n">lw</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span><span class="n">ls</span><span class="o">=:</span><span class="n">dash</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s">&quot;Solución exacta&quot;</span><span class="p">)</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Ecuaciones_diferenciales_17_0.svg" src="_images/Ecuaciones_diferenciales_17_0.svg" /></div>
+</div>
+</div>
+</div>
 <div class="section" id="pendulo-caotico">
-<h3>2. Péndulo caótico<a class="headerlink" href="#pendulo-caotico" title="Enlazar permanentemente con este título">¶</a></h3>
+<h3>Péndulo caótico<a class="headerlink" href="#pendulo-caotico" title="Enlazar permanentemente con este título">¶</a></h3>
 <p>El péndulo doble es un sistema muy famosamente estudiado por exhibir un comportamiento <strong>caótico</strong> (cuya definición matemática es rigurosa). Sus ecuaciones del movimiento son las siguientes:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\frac{d}{dt}
@@ -527,7 +641,7 @@ u: 302-element Array{Array{Float64,1},1}:
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/Ecuaciones_diferenciales_14_0.svg" src="_images/Ecuaciones_diferenciales_14_0.svg" /></div>
+<img alt="_images/Ecuaciones_diferenciales_26_0.svg" src="_images/Ecuaciones_diferenciales_26_0.svg" /></div>
 </div>
 </div>
 <div class="section" id="sistema-de-henon-heiles">
@@ -661,7 +775,7 @@ u: 92-element Array{Array{Float64,1},1}:
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/Ecuaciones_diferenciales_21_0.svg" src="_images/Ecuaciones_diferenciales_21_0.svg" /></div>
+<img alt="_images/Ecuaciones_diferenciales_33_0.svg" src="_images/Ecuaciones_diferenciales_33_0.svg" /></div>
 </div>
 <p>Parece estar correctamente resuelto pero… examinando la evolución de la energía total/Hamiltoniano podemos encontrar lo siguiente:</p>
 <div class="cell docutils container">
@@ -674,7 +788,7 @@ u: 92-element Array{Array{Float64,1},1}:
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/Ecuaciones_diferenciales_23_0.svg" src="_images/Ecuaciones_diferenciales_23_0.svg" /></div>
+<img alt="_images/Ecuaciones_diferenciales_35_0.svg" src="_images/Ecuaciones_diferenciales_35_0.svg" /></div>
 </div>
 <p>¡La energía total cambia! Eso quiere decir que la ley de conservación que esperamos que se cumpla físicamente no parece cumplirse en nuestra simulación. Esto delata un error en la resolución de la ecuación, específicamente por el método utilizado.</p>
 <p>Para evitar eso, podemos utilizar algo conocido como un <strong>integrador simplético</strong> que considere la estructura de sistema Hamiltoniano que tiene nuestras ecuaciones.</p>
@@ -727,9 +841,12 @@ u: 92-element Array{Array{Float64,1},1}:
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/Ecuaciones_diferenciales_31_0.svg" src="_images/Ecuaciones_diferenciales_31_0.svg" /></div>
+<img alt="_images/Ecuaciones_diferenciales_43_0.svg" src="_images/Ecuaciones_diferenciales_43_0.svg" /></div>
 </div>
 </div>
+</div>
+<div class="section" id="ecuaciones-diferenciales-estocasticas">
+<h2>Ecuaciones diferenciales Estocásticas<a class="headerlink" href="#ecuaciones-diferenciales-estocasticas" title="Enlazar permanentemente con este título">¶</a></h2>
 </div>
 <div class="section" id="bibliografia">
 <h2>Bibliografía<a class="headerlink" href="#bibliografia" title="Enlazar permanentemente con este título">¶</a></h2>
