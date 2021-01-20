@@ -17,18 +17,14 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply['content'])
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-using DifferentalEduations
+prob_u = ODEProblem(f,u₀,tspan);
 
 ------------------
 
-ArgumentError: Package DifferentalEduations not found in current path:
-- Run `import Pkg; Pkg.add("DifferentalEduations")` to install the DifferentalEduations package.
-
+UndefVarError: tspan not defined
 
 Stacktrace:
- [1] require(::Module, ::Symbol) at ./loading.jl:893
+ [1] top-level scope at In[7]:1
  [2] include_string(::Function, ::Module, ::String, ::String) at ./loading.jl:1091
-LoadError: ArgumentError: Package DifferentalEduations not found in current path:
-- Run `import Pkg; Pkg.add("DifferentalEduations")` to install the DifferentalEduations package.
-
+LoadError: UndefVarError: tspan not defined
 
