@@ -17,14 +17,18 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply['content'])
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-prob_u = ODEProblem(f,u₀,tspan);
+begin
+	plot(sol,linewidth=5, title="Solución aproximada al problema",
+     xaxis="Time (t)", yaxis="u(t) (in μm)",label="Aproximación")
+	plot!(sol.t, t->0.5*exp(1.01t),lw=3,ls=:dash,label="Solución exacta")
+end
 
 ------------------
 
-UndefVarError: tspan not defined
+UndefVarError: sol not defined
 
 Stacktrace:
- [1] top-level scope at In[7]:1
+ [1] top-level scope at In[9]:2
  [2] include_string(::Function, ::Module, ::String, ::String) at ./loading.jl:1091
-LoadError: UndefVarError: tspan not defined
+LoadError: UndefVarError: sol not defined
 
