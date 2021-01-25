@@ -1,0 +1,960 @@
+
+<!DOCTYPE html>
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Natural Language Processing &#8212; Project-oriented workshop in Julia computing</title>
+    
+  <link rel="stylesheet" href="_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/translations.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="_static/logo.ico"/>
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Búsqueda" href="search.html" />
+    <link rel="next" title="Primer proyecto" href="Primer_proyecto.html" />
+    <link rel="prev" title="Paquete DataFrames" href="Paquete_DataFrames.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="index.html">
+  
+  <img src="_static/julia_logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Project-oriented workshop in Julia computing</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Buscar este libro ..." aria-label="Buscar este libro ..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Intro.html">
+   Project-oriented workshop in Julia computing
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Primera Semana
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Git_y_GitHub.html">
+   Git y GitHub
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Fundamentos.html">
+   Fundamentos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Estructuras_de_Control.html">
+   Estructuras de Control
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Estructuras_de_Datos.html">
+   Estructuras de Datos
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Segunda Semana
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Paquete_Plots.html">
+   Paquete Plots
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Ecuaciones_diferenciales.html">
+   Ecuaciones diferenciales
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Paquete_DataFrames.html">
+   Paquete DataFrames
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Natural Language Processing
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Proyectos
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Primer_proyecto.html">
+   Primer proyecto
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lista_proyectos.html">
+   Opciones proyectos segunda semana
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Navegación de palanca" aria-controls="site-navigation"
+            title="Navegación de palanca" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Descarga esta pagina"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/Natural_Language_Processing.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Descargar archivo fuente" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimir en PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/JuliaForEducation/Intro-Julia-2021"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Repositorio de origen"><i
+                    class="fab fa-github"></i>repositorio</button></a>
+        <a class="issues-button"
+            href="https://github.com/JuliaForEducation/Intro-Julia-2021/issues/new?title=Issue%20on%20page%20%2FNatural_Language_Processing.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Abrir un problema"><i class="fas fa-lightbulb"></i>Tema abierto</button></a>
+        <a class="edit-button" href="https://github.com/JuliaForEducation/Intro-Julia-2021/edit/master/Natural_Language_Processing.ipynb"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edita esta página"><i class="fas fa-pencil-alt"></i>Tema abierto</button></a>
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Modo de pantalla completa"
+                title="Modo de pantalla completa"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/JuliaForEducation/Intro-Julia-2021/master?urlpath=tree/Natural_Language_Processing.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Lanzamiento Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contenido
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#marco-teorico">
+   Marco teórico
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#documentos">
+     Documentos
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#documentos-de-tipo-string-cadena">
+       Documentos de tipo string/cadena
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#documentos-de-tipo-archivo">
+       Documentos de tipo archivo
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#documentos-de-tipo-token">
+       Documentos de tipo token
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#documento-de-tipo-n-grama">
+       Documento de tipo N-grama
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#procesamiento">
+   Procesamiento
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#funciones">
+     Funciones
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#texto">
+       Texto
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#tokens">
+       Tokens
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#n-gramas">
+       N-gramas
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#metadata">
+       Metadata
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#procesamiento-de-documentos">
+     Procesamiento de documentos
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="natural-language-processing">
+<h1>Natural Language Processing<a class="headerlink" href="#natural-language-processing" title="Enlazar permanentemente con este título">¶</a></h1>
+<div class="section" id="marco-teorico">
+<h2>Marco teórico<a class="headerlink" href="#marco-teorico" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>El procesamiento de lenguaje natural, mencionado como NLP a partir de ahora por sus siglas en inglés (Natural Language Processing), Es una rama de la inteligencia artficial que busca realizar análisis y transformaciones a cuerpos de texto para encontrar patrones, inferir significados y relaciones entre elementos (palabras, párrafos, oraciones, etc.) o, en general, servir en un modelo con algún propósito de toma de decisiones, inferencia o predicción.</p>
+<p>Aquí veremos los básicos de esta área utilizando el paquete <code class="docutils literal notranslate"><span class="pre">TextAnalysis</span></code> en Julia.</p>
+<div class="section" id="documentos">
+<h3>Documentos<a class="headerlink" href="#documentos" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Los documentos se definen como cualquier cuerpo de texto que puede ser representado de alguna manera específica en el disco de la computadora. Existen los siguientes tipos:</p>
+<ul class="simple">
+<li><p>Tipo archivo (FileDocument): Un documento representado como texto plano en el disco.</p></li>
+<li><p>Tipo string (StringDocument): Un documento representado como un string codificado en UTF8 en memoria RAM</p></li>
+<li><p>Tipo Token: (TokenDocument): Un documento representado como una sucesión de tokens UTF8, es decir, palabras o símbolos individuales (strings tras ser “tokenizados”).</p></li>
+<li><p>Tipo N-grama: (NGramDocument): Un documento representado como una colección de pares donde un elemento es un token y el otro es un entero que representa el una frecuencia de ocurrencia de dicho string.</p></li>
+</ul>
+<p>Observemos los tipos continuación:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">using</span> <span class="n">TextAnalysis</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="documentos-de-tipo-string-cadena">
+<h4>Documentos de tipo string/cadena<a class="headerlink" href="#documentos-de-tipo-string-cadena" title="Enlazar permanentemente con este título">¶</a></h4>
+<p>Los documentos de tipo cadena suelen ser oraciones individuales, párrafos o textos más completos. No obstante, parte de tener una conjunto de datos limpio yace en organizar los textos en archivo o más pequeño posible.</p>
+<p>Además, éstos se guardan en memoria ram, representados como una cadena de bits en codificación UTF-8. Por ello, tener textos muy grandes localizados en una sola variable identificadora puede dificultar su manipulación.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">str</span> <span class="o">=</span> <span class="s">&quot;Este es un texto de prueba. Este es la segunda oración&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&quot;Este es un texto de prueba. Este es la segunda oración&quot;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">sd</span> <span class="o">=</span> <span class="n">StringDocument</span><span class="p">(</span><span class="n">str</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>A StringDocument{String}
+ * Language: Languages.English()
+ * Title: Untitled Document
+ * Author: Unknown Author
+ * Timestamp: Unknown Time
+ * Snippet: Este es un texto de prueba. Este es la segunda ora
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="documentos-de-tipo-archivo">
+<h4>Documentos de tipo archivo<a class="headerlink" href="#documentos-de-tipo-archivo" title="Enlazar permanentemente con este título">¶</a></h4>
+<p>Los documentos de tipo archivo se utilizan cuando tenemos un archivo contenedor del texto que queremos analizar. Para generarlo en julia basta con poner la ruta hacia el archivo:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">pathname</span> <span class="o">=</span> <span class="s">&quot;./nlp/archivo.txt&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&quot;./nlp/archivo.txt&quot;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">fd</span> <span class="o">=</span> <span class="n">FileDocument</span><span class="p">(</span><span class="n">pathname</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="n">Can</span><span class="s1">&#39;t find file: ./nlp/archivo.txt</span>
+
+<span class="ne">Stacktrace</span>:
+ <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">error</span><span class="p">(::</span><span class="n">String</span><span class="p">)</span> <span class="n">at</span> <span class="o">./</span><span class="n">error</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">33</span>
+ <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">text</span> <span class="n">at</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">runner</span><span class="o">/.</span><span class="n">julia</span><span class="o">/</span><span class="n">packages</span><span class="o">/</span><span class="n">TextAnalysis</span><span class="o">/</span><span class="mi">32</span><span class="n">jBX</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">document</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">214</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
+ <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="n">summary</span><span class="p">(::</span><span class="n">FileDocument</span><span class="p">)</span> <span class="n">at</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">runner</span><span class="o">/.</span><span class="n">julia</span><span class="o">/</span><span class="n">packages</span><span class="o">/</span><span class="n">TextAnalysis</span><span class="o">/</span><span class="mi">32</span><span class="n">jBX</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">show</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">16</span>
+ <span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="n">show</span> <span class="n">at</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">runner</span><span class="o">/.</span><span class="n">julia</span><span class="o">/</span><span class="n">packages</span><span class="o">/</span><span class="n">TextAnalysis</span><span class="o">/</span><span class="mi">32</span><span class="n">jBX</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">show</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">45</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
+ <span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="n">limitstringmime</span><span class="p">(::</span><span class="n">MIME</span><span class="p">{</span><span class="n">Symbol</span><span class="p">(</span><span class="s2">&quot;text/plain&quot;</span><span class="p">)},</span> <span class="p">::</span><span class="n">FileDocument</span><span class="p">)</span> <span class="n">at</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">runner</span><span class="o">/.</span><span class="n">julia</span><span class="o">/</span><span class="n">packages</span><span class="o">/</span><span class="n">IJulia</span><span class="o">/</span><span class="n">IDNmS</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">inline</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">43</span>
+ <span class="p">[</span><span class="mi">6</span><span class="p">]</span> <span class="n">display_mimestring</span> <span class="n">at</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">runner</span><span class="o">/.</span><span class="n">julia</span><span class="o">/</span><span class="n">packages</span><span class="o">/</span><span class="n">IJulia</span><span class="o">/</span><span class="n">IDNmS</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">display</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">71</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
+ <span class="p">[</span><span class="mi">7</span><span class="p">]</span> <span class="n">display_dict</span><span class="p">(::</span><span class="n">FileDocument</span><span class="p">)</span> <span class="n">at</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">runner</span><span class="o">/.</span><span class="n">julia</span><span class="o">/</span><span class="n">packages</span><span class="o">/</span><span class="n">IJulia</span><span class="o">/</span><span class="n">IDNmS</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">display</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">102</span>
+ <span class="p">[</span><span class="mi">8</span><span class="p">]</span> <span class="c1">#invokelatest#1 at ./essentials.jl:710 [inlined]</span>
+ <span class="p">[</span><span class="mi">9</span><span class="p">]</span> <span class="n">invokelatest</span> <span class="n">at</span> <span class="o">./</span><span class="n">essentials</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">709</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
+ <span class="p">[</span><span class="mi">10</span><span class="p">]</span> <span class="n">execute_request</span><span class="p">(::</span><span class="n">ZMQ</span><span class="o">.</span><span class="n">Socket</span><span class="p">,</span> <span class="p">::</span><span class="n">IJulia</span><span class="o">.</span><span class="n">Msg</span><span class="p">)</span> <span class="n">at</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">runner</span><span class="o">/.</span><span class="n">julia</span><span class="o">/</span><span class="n">packages</span><span class="o">/</span><span class="n">IJulia</span><span class="o">/</span><span class="n">IDNmS</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">execute_request</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">112</span>
+ <span class="p">[</span><span class="mi">11</span><span class="p">]</span> <span class="c1">#invokelatest#1 at ./essentials.jl:710 [inlined]</span>
+ <span class="p">[</span><span class="mi">12</span><span class="p">]</span> <span class="n">invokelatest</span> <span class="n">at</span> <span class="o">./</span><span class="n">essentials</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">709</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
+ <span class="p">[</span><span class="mi">13</span><span class="p">]</span> <span class="n">eventloop</span><span class="p">(::</span><span class="n">ZMQ</span><span class="o">.</span><span class="n">Socket</span><span class="p">)</span> <span class="n">at</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">runner</span><span class="o">/.</span><span class="n">julia</span><span class="o">/</span><span class="n">packages</span><span class="o">/</span><span class="n">IJulia</span><span class="o">/</span><span class="n">IDNmS</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">eventloop</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">8</span>
+ <span class="p">[</span><span class="mi">14</span><span class="p">]</span> <span class="p">(::</span><span class="n">IJulia</span><span class="o">.</span><span class="n">var</span><span class="s2">&quot;#15#18&quot;</span><span class="p">)()</span> <span class="n">at</span> <span class="o">./</span><span class="n">task</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">356</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="documentos-de-tipo-token">
+<h4>Documentos de tipo token<a class="headerlink" href="#documentos-de-tipo-token" title="Enlazar permanentemente con este título">¶</a></h4>
+<p>Los token en el contexto de procesamiento de lenguaje natural son elementos individuales y uniformes que yacen en una colección. Se habla de token usualmente para referirse a palabras individuales cuando tenemos un alfabtero latino, no obstante, para otros alfabetos puede que el concepto cambie ligeramente.</p>
+<p>Además, los tokens podrían referirse a letras individuales, oraciones o cualquier forma de agrupar el texto que posea información estructural. No obstante, esas dos agrupaciones mencionadas no suelen poseer información útil al ser respectivamente muy pequeñas y muy grandes.</p>
+<p>Para crearlas en Julia podemos crear un arreglo de ellas:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">mis_tokens</span> <span class="o">=</span> <span class="n">String</span><span class="p">[</span><span class="s">&quot;Esta&quot;</span><span class="p">,</span> <span class="s">&quot;es&quot;</span><span class="p">,</span> <span class="s">&quot;una&quot;</span><span class="p">,</span> <span class="s">&quot;oración&quot;</span><span class="p">,</span> <span class="s">&quot;de&quot;</span><span class="p">,</span> <span class="s">&quot;prueba&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6-element Array{String,1}:
+ &quot;Esta&quot;
+ &quot;es&quot;
+ &quot;una&quot;
+ &quot;oración&quot;
+ &quot;de&quot;
+ &quot;prueba&quot;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Aquí aprovechamos a mostrar además que para crear arreglos de un tipo uniforme en Julia, podemos anteponer el nombre del tipo y el compilador sabrá que debe esperar y forzar dicho tipo (ejemplo, <code class="docutils literal notranslate"><span class="pre">Int32</span></code> en un arreglo forzaría a todos los <code class="docutils literal notranslate"><span class="pre">Integer</span></code> dentro a que sean representado por 32 bits)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">typeof</span><span class="p">(</span><span class="n">mis_tokens</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Array{String,1}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">td</span> <span class="o">=</span> <span class="n">TokenDocument</span><span class="p">(</span><span class="n">mis_tokens</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>A TokenDocument{String}
+ * Language: Languages.English()
+ * Title: Untitled Document
+ * Author: Unknown Author
+ * Timestamp: Unknown Time
+ * Snippet: ***SAMPLE TEXT NOT AVAILABLE***
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="documento-de-tipo-n-grama">
+<h4>Documento de tipo N-grama<a class="headerlink" href="#documento-de-tipo-n-grama" title="Enlazar permanentemente con este título">¶</a></h4>
+<p>Podemos pensar en que el documento de tipo token puede ser generado a partir de un documento de tipo string, y así también el de tipo string ser generado a partir de uno de tipo archivo. Esto es correcto y existen métodos específicos para ello.</p>
+<p>Por una parte, para pasar de un string a una lista de tokens podemos utilizar el paquete <code class="docutils literal notranslate"><span class="pre">WordTokenizer</span></code>, el cual tiene múltiples métodos de tokenización de alto rendimiento para procesar grandes cuerpos de texto y reducirlos a tokens listos para el análisis.</p>
+<p>Ahora, el documento de tipo N-grama tiene más sentido pensarlo viniendo de uno de tipo token, pues al tokenizar un texto grande, es muy probable que tengamos palabras repetidas y obtener la frecuencia en la que éstas palabras ocurren a lo largo de dicho texto juega un rol en el análisis exploratorio inicial.</p>
+<p>Los documento de tipo N-grama son precisamente pares de tokens con un número entero que cuenta las ocurrencias de dicho token en algún texto. Aquí podemos generarlo de las siguientes maneras:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">dict_ocurrencias</span> <span class="o">=</span> <span class="kt">Dict</span><span class="p">(</span><span class="s">&quot;hola&quot;</span> <span class="o">=&gt;</span> <span class="mi">1</span><span class="p">,</span> <span class="s">&quot;mundo&quot;</span> <span class="o">=&gt;</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Dict{String,Int64} with 2 entries:
+  &quot;hola&quot;  =&gt; 1
+  &quot;mundo&quot; =&gt; 1
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">ngd</span> <span class="o">=</span> <span class="n">NGramDocument</span><span class="p">(</span><span class="n">dict_ocurrencias</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>A NGramDocument{AbstractString}
+ * Language: Languages.English()
+ * Title: Untitled Document
+ * Author: Unknown Author
+ * Timestamp: Unknown Time
+ * Snippet: ***SAMPLE TEXT NOT AVAILABLE***
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="procesamiento">
+<h2>Procesamiento<a class="headerlink" href="#procesamiento" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="section" id="funciones">
+<h3>Funciones<a class="headerlink" href="#funciones" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>La siguiente es una exploración a algunas funciones ya definidas (para todos los tipos anteriores mediante multiple dispatch) en el paquete.</p>
+<div class="section" id="texto">
+<h4>Texto<a class="headerlink" href="#texto" title="Enlazar permanentemente con este título">¶</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">text</span><span class="p">(</span><span class="n">sd</span><span class="p">),</span> <span class="n">text</span><span class="p">(</span><span class="n">fd</span><span class="p">),</span> <span class="n">text</span><span class="p">(</span><span class="n">td</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="n">Can</span><span class="s1">&#39;t find file: ./nlp/archivo.txt</span>
+
+<span class="ne">Stacktrace</span>:
+ <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">error</span><span class="p">(::</span><span class="n">String</span><span class="p">)</span> <span class="n">at</span> <span class="o">./</span><span class="n">error</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">33</span>
+ <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">text</span><span class="p">(::</span><span class="n">FileDocument</span><span class="p">)</span> <span class="n">at</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">runner</span><span class="o">/.</span><span class="n">julia</span><span class="o">/</span><span class="n">packages</span><span class="o">/</span><span class="n">TextAnalysis</span><span class="o">/</span><span class="mi">32</span><span class="n">jBX</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">document</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">214</span>
+ <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">11</span><span class="p">]:</span><span class="mi">1</span>
+ <span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(::</span><span class="n">Function</span><span class="p">,</span> <span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">)</span> <span class="n">at</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1091</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="tokens">
+<h4>Tokens<a class="headerlink" href="#tokens" title="Enlazar permanentemente con este título">¶</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">tokens</span><span class="p">(</span><span class="n">sd</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>11-element Array{String,1}:
+ &quot;Este&quot;
+ &quot;es&quot;
+ &quot;un&quot;
+ &quot;texto&quot;
+ &quot;de&quot;
+ &quot;prueba.&quot;
+ &quot;Este&quot;
+ &quot;es&quot;
+ &quot;la&quot;
+ &quot;segunda&quot;
+ &quot;oración&quot;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span> <span class="n">tokens</span><span class="p">(</span><span class="n">fd</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="n">Can</span><span class="s1">&#39;t find file: ./nlp/archivo.txt</span>
+
+<span class="ne">Stacktrace</span>:
+ <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">error</span><span class="p">(::</span><span class="n">String</span><span class="p">)</span> <span class="n">at</span> <span class="o">./</span><span class="n">error</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">33</span>
+ <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">text</span> <span class="n">at</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">runner</span><span class="o">/.</span><span class="n">julia</span><span class="o">/</span><span class="n">packages</span><span class="o">/</span><span class="n">TextAnalysis</span><span class="o">/</span><span class="mi">32</span><span class="n">jBX</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">document</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">214</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
+ <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="n">tokens</span><span class="p">(::</span><span class="n">FileDocument</span><span class="p">)</span> <span class="n">at</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">runner</span><span class="o">/.</span><span class="n">julia</span><span class="o">/</span><span class="n">packages</span><span class="o">/</span><span class="n">TextAnalysis</span><span class="o">/</span><span class="mi">32</span><span class="n">jBX</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">document</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">264</span>
+ <span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">13</span><span class="p">]:</span><span class="mi">1</span>
+ <span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(::</span><span class="n">Function</span><span class="p">,</span> <span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">)</span> <span class="n">at</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1091</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="n-gramas">
+<h4>N-gramas<a class="headerlink" href="#n-gramas" title="Enlazar permanentemente con este título">¶</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">ngrams</span><span class="p">(</span><span class="n">sd</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Dict{String,Int64} with 9 entries:
+  &quot;la&quot;      =&gt; 1
+  &quot;un&quot;      =&gt; 1
+  &quot;prueba.&quot; =&gt; 1
+  &quot;oración&quot; =&gt; 1
+  &quot;segunda&quot; =&gt; 1
+  &quot;texto&quot;   =&gt; 1
+  &quot;Este&quot;    =&gt; 2
+  &quot;es&quot;      =&gt; 2
+  &quot;de&quot;      =&gt; 1
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">ngrams</span><span class="p">(</span><span class="n">fd</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="n">Can</span><span class="s1">&#39;t find file: ./nlp/archivo.txt</span>
+
+<span class="ne">Stacktrace</span>:
+ <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">error</span><span class="p">(::</span><span class="n">String</span><span class="p">)</span> <span class="n">at</span> <span class="o">./</span><span class="n">error</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">33</span>
+ <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">text</span> <span class="n">at</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">runner</span><span class="o">/.</span><span class="n">julia</span><span class="o">/</span><span class="n">packages</span><span class="o">/</span><span class="n">TextAnalysis</span><span class="o">/</span><span class="mi">32</span><span class="n">jBX</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">document</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">214</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
+ <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="n">tokens</span><span class="p">(::</span><span class="n">FileDocument</span><span class="p">)</span> <span class="n">at</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">runner</span><span class="o">/.</span><span class="n">julia</span><span class="o">/</span><span class="n">packages</span><span class="o">/</span><span class="n">TextAnalysis</span><span class="o">/</span><span class="mi">32</span><span class="n">jBX</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">document</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">264</span>
+ <span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="n">ngrams</span><span class="p">(::</span><span class="n">FileDocument</span><span class="p">,</span> <span class="p">::</span><span class="n">Int64</span><span class="p">)</span> <span class="n">at</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">runner</span><span class="o">/.</span><span class="n">julia</span><span class="o">/</span><span class="n">packages</span><span class="o">/</span><span class="n">TextAnalysis</span><span class="o">/</span><span class="mi">32</span><span class="n">jBX</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">document</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">312</span>
+ <span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="n">ngrams</span><span class="p">(::</span><span class="n">FileDocument</span><span class="p">)</span> <span class="n">at</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">runner</span><span class="o">/.</span><span class="n">julia</span><span class="o">/</span><span class="n">packages</span><span class="o">/</span><span class="n">TextAnalysis</span><span class="o">/</span><span class="mi">32</span><span class="n">jBX</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">document</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">314</span>
+ <span class="p">[</span><span class="mi">6</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">15</span><span class="p">]:</span><span class="mi">1</span>
+ <span class="p">[</span><span class="mi">7</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(::</span><span class="n">Function</span><span class="p">,</span> <span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">)</span> <span class="n">at</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1091</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">ngrams</span><span class="p">(</span><span class="n">sd</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Dict{AbstractString,Int64} with 9 entries:
+  &quot;prueba. Este&quot;    =&gt; 1
+  &quot;un texto&quot;        =&gt; 1
+  &quot;Este es&quot;         =&gt; 2
+  &quot;texto de&quot;        =&gt; 1
+  &quot;es la&quot;           =&gt; 1
+  &quot;la segunda&quot;      =&gt; 1
+  &quot;es un&quot;           =&gt; 1
+  &quot;de prueba.&quot;      =&gt; 1
+  &quot;segunda oración&quot; =&gt; 1
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">ngrams</span><span class="p">(</span><span class="n">sd</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Dict{AbstractString,Int64} with 18 entries:
+  &quot;texto de&quot;           =&gt; 1
+  &quot;la segunda&quot;         =&gt; 1
+  &quot;es un texto&quot;        =&gt; 1
+  &quot;es la segunda&quot;      =&gt; 1
+  &quot;prueba. Este&quot;       =&gt; 1
+  &quot;es la&quot;              =&gt; 1
+  &quot;Este es un&quot;         =&gt; 1
+  &quot;texto de prueba.&quot;   =&gt; 1
+  &quot;segunda oración&quot;    =&gt; 1
+  &quot;prueba. Este es&quot;    =&gt; 1
+  &quot;Este es la&quot;         =&gt; 1
+  &quot;la segunda oración&quot; =&gt; 1
+  &quot;Este es&quot;            =&gt; 2
+  &quot;es un&quot;              =&gt; 1
+  &quot;un texto de&quot;        =&gt; 1
+  &quot;de prueba. Este&quot;    =&gt; 1
+  &quot;un texto&quot;           =&gt; 1
+  &quot;de prueba.&quot;         =&gt; 1
+</pre></div>
+</div>
+</div>
+</div>
+<p>Podemos también extraer la estructura de un documento de N-gramas para entender si tiene bigramas o trigramas, etc.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">ngram_complexity</span><span class="p">(</span><span class="n">NGramDocument</span><span class="p">(</span><span class="n">ngrams</span><span class="p">(</span><span class="n">sd</span><span class="p">),</span> <span class="mi">2</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="metadata">
+<h4>Metadata<a class="headerlink" href="#metadata" title="Enlazar permanentemente con este título">¶</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">language</span><span class="p">(</span><span class="n">sd</span><span class="p">)</span> <span class="c">## El lenguaje por defecto es inglés...</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Languages.English()
+</pre></div>
+</div>
+</div>
+</div>
+<p>Podemos cambiarlo utilizando la versión “mutadora” de la función <code class="docutils literal notranslate"><span class="pre">language</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">language!</span><span class="p">(</span><span class="n">sd</span><span class="p">,</span> <span class="n">TextAnalysis</span><span class="o">.</span><span class="n">Languages</span><span class="o">.</span><span class="n">Spanish</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Languages.Spanish()
+</pre></div>
+</div>
+</div>
+</div>
+<p>Así igual los demás elementos de la metadata…</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">title</span><span class="p">(</span><span class="n">sd</span><span class="p">),</span> <span class="n">author</span><span class="p">(</span><span class="n">sd</span><span class="p">),</span> <span class="n">timestamp</span><span class="p">(</span><span class="n">sd</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&quot;Untitled Document&quot;, &quot;Unknown Author&quot;, &quot;Unknown Time&quot;)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">title!</span><span class="p">(</span><span class="n">sd</span><span class="p">,</span> <span class="s">&quot;Mi título&quot;</span><span class="p">),</span> <span class="n">author!</span><span class="p">(</span><span class="n">sd</span><span class="p">,</span> <span class="s">&quot;Yo&quot;</span><span class="p">),</span> <span class="n">timestamp!</span><span class="p">(</span><span class="n">sd</span><span class="p">,</span> <span class="s">&quot;Desconocido&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&quot;Mi título&quot;, &quot;Yo&quot;, &quot;Desconocido&quot;)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">sd</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>A StringDocument{String}
+ * Language: Languages.Spanish()
+ * Title: Mi título
+ * Author: Yo
+ * Timestamp: Desconocido
+ * Snippet: Este es un texto de prueba. Este es la segunda ora
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="procesamiento-de-documentos">
+<h3>Procesamiento de documentos<a class="headerlink" href="#procesamiento-de-documentos" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Antes de comenzar a hacer transformaciones y análisis a los documentos, nos puede interesar hacer una limpieza en caso de tener caracteres corruptos o pequeñas molestias de formato que nos haría más limpio nuestro trabajo si no estuvieran</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">remove_corrupt_utf8!</span><span class="p">(</span><span class="n">sd</span><span class="p">)</span> <span class="c">## &lt;- ejemplo de ello</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">str_2</span> <span class="o">=</span> <span class="n">StringDocument</span><span class="p">(</span><span class="s">&quot;HolA!!!,. Soy un teXto, que No está mUy Bien escrito..&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>A StringDocument{String}
+ * Language: Languages.English()
+ * Title: Untitled Document
+ * Author: Unknown Author
+ * Timestamp: Unknown Time
+ * Snippet: HolA!!!,. Soy un teXto, que No está mUy Bien escr
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">prepare!</span><span class="p">(</span><span class="n">str_2</span><span class="p">,</span> <span class="n">strip_punctuation</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">text</span><span class="p">(</span><span class="n">str_2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&quot;HolA Soy un teXto que No está mUy Bien escrito&quot;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Removiendo las mayúsculas…</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">remove_case!</span><span class="p">(</span><span class="n">str_2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">text</span><span class="p">(</span><span class="n">str_2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&quot;hola soy un texto que no está muy bien escrito&quot;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Podemos además remover ciertas palabras..</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">remove_words!</span><span class="p">(</span><span class="n">str_2</span><span class="p">,</span> <span class="p">[</span><span class="s">&quot; no&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">text</span><span class="p">(</span><span class="n">str_2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&quot;hola soy un texto que está muy bien escrito&quot;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Otras posibilidades son:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>- prepare!(sd, strip_articles)
+- prepare!(sd, strip_indefinite_articles)
+- prepare!(sd, strip_definite_articles)
+- prepare!(sd, strip_preposition)
+- prepare!(sd, strip_pronouns)
+- prepare!(sd, strip_stopwords)
+- prepare!(sd, strip_numbers)
+- prepare!(sd, strip_non_letters)
+- prepare!(sd, strip_spares_terms)
+- prepare!(sd, strip_frequent_terms)
+- prepare!(sd, strip_html_tags)
+</pre></div>
+</div>
+<p>Además de poder ser utilizadas juntas:</p>
+<p><code class="docutils literal notranslate"><span class="pre">prepare!(sd,</span> <span class="pre">strip_articles|</span> <span class="pre">strip_numbers|</span> <span class="pre">strip_html_tags)</span></code></p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "julia-1.5"
+        },
+        kernelOptions: {
+            kernelName: "julia-1.5",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'julia-1.5'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="Paquete_DataFrames.html" title="previous page">Paquete DataFrames</a>
+    <a class='right-next' id="next-link" href="Primer_proyecto.html" title="next page">Primer proyecto</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Luis Felipe Flores Machado, René David Hernández<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+  </body>
+</html>
