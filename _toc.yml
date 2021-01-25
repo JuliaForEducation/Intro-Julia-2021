@@ -10,6 +10,8 @@
   chapters:
   - file: Paquete_Plots
   - file: Ecuaciones_diferenciales
+  - file: Paquete_DataFrames
+  - file: Natural_Language_Processing
 - part: Proyectos
   chapters:
   - file: Primer_proyecto
