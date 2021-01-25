@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Paquete DataFrames &#8212; Project-oriented workshop in Julia computing</title>
     
-  <link rel="stylesheet" href="_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+  <link rel="stylesheet" href="_static/css/index.d431a4ee1c1efae0e38bdfebc22debff.css">
 
     
   <link rel="stylesheet"
@@ -25,8 +25,8 @@
     href="_static/vendor/lato_latin-ext/1.44.1/index.css">
 
     
+    <link rel="stylesheet" href="_static/sphinx-book-theme.bfb7730f9caf2ec0b46a44615585038c.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
@@ -34,18 +34,19 @@
     <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="_static/js/index.d3f166471bb80abb5163.js">
+  <link rel="preload" as="script" href="_static/js/index.30270b6e4c972e43c488.js">
 
     <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
     <script src="_static/togglebutton.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
     <script src="_static/translations.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script src="_static/sphinx-book-theme.be0a4a0c39cd630af62a2fcf693f3f06.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
@@ -58,8 +59,6 @@
     <link rel="shortcut icon" href="_static/logo.ico"/>
     <link rel="index" title="Índice" href="genindex.html" />
     <link rel="search" title="Búsqueda" href="search.html" />
-    <link rel="next" title="Natural Language Processing" href="Natural_Language_Processing.html" />
-    <link rel="prev" title="Ecuaciones diferenciales" href="Ecuaciones_diferenciales.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -84,19 +83,22 @@
   <h1 class="site-logo" id="site-title">Project-oriented workshop in Julia computing</h1>
   
 </a>
-</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+</div>
+
+<form class="bd-search d-flex align-items-center" action="search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Buscar este libro ..." aria-label="Buscar este libro ..." autocomplete="off" >
 </form>
+
 <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-    <ul class="nav sidenav_l1">
+  <ul class="nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="Intro.html">
    Project-oriented workshop in Julia computing
   </a>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   Primera Semana
  </span>
@@ -123,12 +125,12 @@
   </a>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   Segunda Semana
  </span>
 </p>
-<ul class="current nav sidenav_l1">
+<ul class="nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="Paquete_Plots.html">
    Paquete Plots
@@ -139,8 +141,8 @@
    Ecuaciones diferenciales
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Paquete_DataFrames.html">
    Paquete DataFrames
   </a>
  </li>
@@ -150,7 +152,7 @@
   </a>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   Tercera Semana
  </span>
@@ -162,7 +164,7 @@
   </a>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   Proyectos
  </span>
@@ -180,7 +182,9 @@
  </li>
 </ul>
 
-</nav> <!-- To handle the deprecated key -->
+</nav>
+
+ <!-- To handle the deprecated key -->
 
 </div>
 
@@ -205,24 +209,24 @@
             <i class="fas fa-arrow-up"></i>
         </button>
         
-        
-<div class="dropdown-buttons-trigger">
+        <div class="dropdown-buttons-trigger">
     <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Descarga esta pagina"><i
             class="fas fa-download"></i></button>
 
+    
     <div class="dropdown-buttons">
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/Paquete_DataFrames.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="_sources/Paquete_DataFrames.backup2.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Descargar archivo fuente" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimir en PDF"
             onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
+    
 </div>
-
         <!-- Source interaction buttons -->
 
 <div class="dropdown-buttons-trigger">
@@ -234,10 +238,10 @@
                 data-toggle="tooltip" data-placement="left" title="Repositorio de origen"><i
                     class="fab fa-github"></i>repositorio</button></a>
         <a class="issues-button"
-            href="https://github.com/JuliaForEducation/Intro-Julia-2021/issues/new?title=Issue%20on%20page%20%2FPaquete_DataFrames.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/JuliaForEducation/Intro-Julia-2021/issues/new?title=Issue%20on%20page%20%2FPaquete_DataFrames.backup2.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Abrir un problema"><i class="fas fa-lightbulb"></i>Tema abierto</button></a>
-        <a class="edit-button" href="https://github.com/JuliaForEducation/Intro-Julia-2021/edit/master/Paquete_DataFrames.ipynb"><button
+        <a class="edit-button" href="https://github.com/JuliaForEducation/Intro-Julia-2021/edit/master/Paquete_DataFrames.backup2.ipynb"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edita esta página"><i class="fas fa-pencil-alt"></i>Tema abierto</button></a>
     </div>
@@ -246,8 +250,7 @@
 
         <!-- Full screen (wrap in <a> to have style consistency -->
         <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Modo de pantalla completa"
-                title="Modo de pantalla completa"><i
+                data-placement="bottom" onclick="toggleFullScreen()" title="Modo de pantalla completa"><i
                     class="fas fa-expand"></i></button></a>
 
         <!-- Launch buttons -->
@@ -257,13 +260,18 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/JuliaForEducation/Intro-Julia-2021/master?urlpath=tree/Paquete_DataFrames.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/JuliaForEducation/Intro-Julia-2021/master?urlpath=tree/Paquete_DataFrames.backup2.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Lanzamiento Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="_static/images/logo_binder.svg"
                     alt="Interact on binder">Binder</button></a>
         
         
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/JuliaForEducation/Intro-Julia-2021/blob/master/Paquete_DataFrames.backup2.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Lanzamiento Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
         
         
     </div>
@@ -390,12 +398,12 @@
 <p>Junto a <a class="reference external" href="https://dataframes.juliadata.org/v0.17/##DataFrames.jl-1"><code class="docutils literal notranslate"><span class="pre">DataFrames</span></code></a> se puede utilizar el paquete <a class="reference external" href="https://www.queryverse.org/"><code class="docutils literal notranslate"><span class="pre">Queryverse</span></code></a>, el cual permite tener a mano diferentes herramientas útiles para: trabajar con archivos, manipular datos y explorarlos; por tanto, permite tener mayor eficiencia.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">using</span> <span class="n">Pkg</span><span class="p">;</span> <span class="n">Pkg</span><span class="o">.</span><span class="n">activate</span><span class="p">(</span><span class="s">&quot;.&quot;</span><span class="p">);</span> <span class="n">Pkg</span><span class="o">.</span><span class="n">instantiate</span><span class="p">()</span> <span class="c">##Activando enviroment local</span>
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">using</span> <span class="n">Pkg</span><span class="p">;</span> <span class="n">Pkg</span><span class="o">.</span><span class="n">activate</span><span class="p">(</span><span class="s">&quot;.&quot;</span><span class="p">)</span> <span class="c">##Activando enviroment local</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold -Color-Bold-Green"> Activating</span> environment at `~/work/Intro-Julia-2021/Intro-Julia-2021/Project.toml`
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold -Color-Bold-Green"> Activating</span> environment at `~/julia_for_education/book/Project.toml`
 </pre></div>
 </div>
 </div>
@@ -404,122 +412,6 @@
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">using</span> <span class="n">Plots</span><span class="p">,</span> <span class="n">Queryverse</span><span class="p">,</span> <span class="n">DataFrames</span> <span class="c">##Importando librerías</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>┌ Info: Precompiling Queryverse [612083be-0b0f-5412-89c1-4e7c75506a58]
-└ @ Base loading.jl:1278
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ERROR: 
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>LoadError: InitError: 
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>PyError (PyImport_ImportModule
-
-The Python package xlrd could not be imported by pyimport. Usually this means
-that you did not install xlrd in the Python version being used by PyCall.
-
-PyCall is currently configured to use the Python version at:
-
-/opt/hostedtoolcache/Python/3.7.9/x64/bin/python3
-
-and you should use whatever mechanism you usually use (apt-get, pip, conda,
-etcetera) to install the Python package containing the xlrd module.
-
-One alternative is to re-configure PyCall to use a different Python
-version on your system: set ENV[&quot;PYTHON&quot;] to the path/name of the python
-executable you want to use, run Pkg.build(&quot;PyCall&quot;), and re-launch Julia.
-
-Another alternative is to configure PyCall to use a Julia-specific Python
-distribution via the Conda.jl package (which installs a private Anaconda
-Python distribution), which has the advantage that packages can be installed
-and kept up-to-date via Julia.  As explained in the PyCall documentation,
-set ENV[&quot;PYTHON&quot;]=&quot;&quot;, run Pkg.build(&quot;PyCall&quot;), and re-launch Julia. Then,
-To install the xlrd module, you can use `pyimport_conda(&quot;xlrd&quot;, PKG)`,
-where PKG is the Anaconda package that contains the module xlrd,
-or alternatively you can use the Conda package directly (via
-`using Conda` followed by `Conda.add` etcetera).
-
-) &lt;class &#39;ModuleNotFoundError&#39;&gt;
-ModuleNotFoundError(&quot;No module named &#39;xlrd&#39;&quot;)
-
-Stacktrace:
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> [1] 
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>pyimport(
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>::
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>String) at /home/runner/.julia/packages/PyCall/tqyST/src/PyCall.jl:547
- [2] pyimport_conda(::String, ::String, ::String) at /home/runner/.julia/packages/PyCall/tqyST/src/PyCall.jl:705
- [3] pyimport_conda at /home/runner/.julia/packages/PyCall/tqyST/src/PyCall.jl:704 [inlined]
- [4] __init__() at /home/runner/.julia/packages/ExcelReaders/PgE1r/src/ExcelReaders.jl:12
- [5] _include_from_serialized(::String, ::Array{Any,1}) at ./loading.jl:697
- [6] _require_search_from_serialized(::Base.PkgId, ::String) at ./loading.jl:782
- [7] _require(::Base.PkgId) at ./loading.jl:1007
- [8] require(::Base.PkgId) at ./loading.jl:928
- [9] require(::Module, ::Symbol) at ./loading.jl:923
- [10] include(::Function, ::Module, ::String) at ./Base.jl:380
- [11] include(::Module, ::String) at ./Base.jl:368
- [12] top-level scope at none:2
- [13] eval at ./boot.jl:331 [inlined]
- [14] eval(::Expr) at ./client.jl:467
- [15] top-level scope at ./none:3
-during initialization of module ExcelReaders
-in expression starting at /home/runner/.julia/packages/ExcelFiles/NtqPa/src/ExcelFiles.jl:4
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ERROR: 
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>LoadError: 
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Failed to precompile ExcelFiles [89b67f3b-d1aa-5f6f-9ca4-282e8d98620d] to /home/runner/.julia/compiled/v1.5/ExcelFiles/cZRj4_jBnw4.ji.
-Stacktrace:
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> [1] 
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>error(
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>::
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>String) at ./error.jl:33
- [2] compilecache(::Base.PkgId, ::String) at ./loading.jl:1305
- [3] _require(::Base.PkgId) at ./loading.jl:1030
- [4] require(::Base.PkgId) at ./loading.jl:928
- [5] require(::Module, ::Symbol) at ./loading.jl:923
- [6] include(::Function, ::Module, ::String) at ./Base.jl:380
- [7] include(::Module, ::String) at ./Base.jl:368
- [8] top-level scope at none:2
- [9] eval at ./boot.jl:331 [inlined]
- [10] eval(::Expr) at ./client.jl:467
- [11] top-level scope at ./none:3
-in expression starting at /home/runner/.julia/packages/Queryverse/XPALb/src/Queryverse.jl:11
-</pre></div>
-</div>
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="n">Failed</span> <span class="n">to</span> <span class="n">precompile</span> <span class="n">Queryverse</span> <span class="p">[</span><span class="mi">612083</span><span class="n">be</span><span class="o">-</span><span class="mb">0b0</span><span class="n">f</span><span class="o">-</span><span class="mi">5412</span><span class="o">-</span><span class="mi">89</span><span class="n">c1</span><span class="o">-</span><span class="mf">4e7</span><span class="n">c75506a58</span><span class="p">]</span> <span class="n">to</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">runner</span><span class="o">/.</span><span class="n">julia</span><span class="o">/</span><span class="n">compiled</span><span class="o">/</span><span class="n">v1</span><span class="o">.</span><span class="mi">5</span><span class="o">/</span><span class="n">Queryverse</span><span class="o">/</span><span class="n">hLJnW_jBnw4</span><span class="o">.</span><span class="n">ji</span><span class="o">.</span>
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">error</span><span class="p">(::</span><span class="n">String</span><span class="p">)</span> <span class="n">at</span> <span class="o">./</span><span class="n">error</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">33</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">compilecache</span><span class="p">(::</span><span class="n">Base</span><span class="o">.</span><span class="n">PkgId</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">)</span> <span class="n">at</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1305</span>
- <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="n">_require</span><span class="p">(::</span><span class="n">Base</span><span class="o">.</span><span class="n">PkgId</span><span class="p">)</span> <span class="n">at</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1030</span>
- <span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="n">require</span><span class="p">(::</span><span class="n">Base</span><span class="o">.</span><span class="n">PkgId</span><span class="p">)</span> <span class="n">at</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">928</span>
- <span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="n">require</span><span class="p">(::</span><span class="n">Module</span><span class="p">,</span> <span class="p">::</span><span class="n">Symbol</span><span class="p">)</span> <span class="n">at</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">923</span>
- <span class="p">[</span><span class="mi">6</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(::</span><span class="n">Function</span><span class="p">,</span> <span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">)</span> <span class="n">at</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1091</span>
 </pre></div>
 </div>
 </div>
@@ -535,11 +427,15 @@ in expression starting at /home/runner/.julia/packages/Queryverse/XPALb/src/Quer
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: load not defined
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">ArgumentError</span>: No file exists at given path: ./titanic/train.csv
 
 <span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">3</span><span class="p">]:</span><span class="mi">1</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(::</span><span class="n">Function</span><span class="p">,</span> <span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">)</span> <span class="n">at</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1091</span>
+ <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">load</span><span class="p">(::</span><span class="n">FileIO</span><span class="o">.</span><span class="n">Formatted</span><span class="p">;</span> <span class="n">options</span><span class="p">::</span><span class="n">Base</span><span class="o">.</span><span class="n">Iterators</span><span class="o">.</span><span class="n">Pairs</span><span class="p">{</span><span class="n">Union</span><span class="p">{},</span><span class="n">Union</span><span class="p">{},</span><span class="n">Tuple</span><span class="p">{},</span><span class="n">NamedTuple</span><span class="p">{(),</span><span class="n">Tuple</span><span class="p">{}}})</span> <span class="n">at</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">felipe</span><span class="o">/.</span><span class="n">julia</span><span class="o">/</span><span class="n">packages</span><span class="o">/</span><span class="n">FileIO</span><span class="o">/</span><span class="n">TyKdX</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">loadsave</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">192</span>
+ <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">load</span> <span class="n">at</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">felipe</span><span class="o">/.</span><span class="n">julia</span><span class="o">/</span><span class="n">packages</span><span class="o">/</span><span class="n">FileIO</span><span class="o">/</span><span class="n">TyKdX</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">loadsave</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">187</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
+ <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="c1">#load#16 at /home/felipe/.julia/packages/FileIO/TyKdX/src/loadsave.jl:136 [inlined]</span>
+ <span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="n">load</span><span class="p">(::</span><span class="n">String</span><span class="p">)</span> <span class="n">at</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">felipe</span><span class="o">/.</span><span class="n">julia</span><span class="o">/</span><span class="n">packages</span><span class="o">/</span><span class="n">FileIO</span><span class="o">/</span><span class="n">TyKdX</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">loadsave</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">136</span>
+ <span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">3</span><span class="p">]:</span><span class="mi">1</span>
+ <span class="p">[</span><span class="mi">6</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(::</span><span class="n">Function</span><span class="p">,</span> <span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">)</span> <span class="n">at</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1091</span>
 </pre></div>
 </div>
 </div>
@@ -552,11 +448,15 @@ in expression starting at /home/runner/.julia/packages/Queryverse/XPALb/src/Quer
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: load not defined
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">ArgumentError</span>: No file exists at given path: ./titanic/test.xlsx
 
 <span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">4</span><span class="p">]:</span><span class="mi">1</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(::</span><span class="n">Function</span><span class="p">,</span> <span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">)</span> <span class="n">at</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1091</span>
+ <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">load</span><span class="p">(::</span><span class="n">FileIO</span><span class="o">.</span><span class="n">Formatted</span><span class="p">,</span> <span class="p">::</span><span class="n">Any</span><span class="p">;</span> <span class="n">options</span><span class="p">::</span><span class="n">Base</span><span class="o">.</span><span class="n">Iterators</span><span class="o">.</span><span class="n">Pairs</span><span class="p">{</span><span class="n">Union</span><span class="p">{},</span><span class="n">Union</span><span class="p">{},</span><span class="n">Tuple</span><span class="p">{},</span><span class="n">NamedTuple</span><span class="p">{(),</span><span class="n">Tuple</span><span class="p">{}}})</span> <span class="n">at</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">felipe</span><span class="o">/.</span><span class="n">julia</span><span class="o">/</span><span class="n">packages</span><span class="o">/</span><span class="n">FileIO</span><span class="o">/</span><span class="n">TyKdX</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">loadsave</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">192</span>
+ <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">load</span> <span class="n">at</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">felipe</span><span class="o">/.</span><span class="n">julia</span><span class="o">/</span><span class="n">packages</span><span class="o">/</span><span class="n">FileIO</span><span class="o">/</span><span class="n">TyKdX</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">loadsave</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">187</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
+ <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="c1">#load#16 at /home/felipe/.julia/packages/FileIO/TyKdX/src/loadsave.jl:136 [inlined]</span>
+ <span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="n">load</span><span class="p">(::</span><span class="n">String</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">)</span> <span class="n">at</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">felipe</span><span class="o">/.</span><span class="n">julia</span><span class="o">/</span><span class="n">packages</span><span class="o">/</span><span class="n">FileIO</span><span class="o">/</span><span class="n">TyKdX</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">loadsave</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">136</span>
+ <span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">4</span><span class="p">]:</span><span class="mi">1</span>
+ <span class="p">[</span><span class="mi">6</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(::</span><span class="n">Function</span><span class="p">,</span> <span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">)</span> <span class="n">at</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1091</span>
 </pre></div>
 </div>
 </div>
@@ -603,7 +503,7 @@ in expression starting at /home/runner/.julia/packages/Queryverse/XPALb/src/Quer
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: DataFrame not defined
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: datatest not defined
 
 <span class="ne">Stacktrace</span>:
  <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">7</span><span class="p">]:</span><span class="mi">1</span>
@@ -727,7 +627,7 @@ in expression starting at /home/runner/.julia/packages/Queryverse/XPALb/src/Quer
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: describe not defined
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: dftrain not defined
 
 <span class="ne">Stacktrace</span>:
  <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">14</span><span class="p">]:</span><span class="mi">1</span>
@@ -743,7 +643,7 @@ in expression starting at /home/runner/.julia/packages/Queryverse/XPALb/src/Quer
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: describe not defined
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: dftest not defined
 
 <span class="ne">Stacktrace</span>:
  <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">15</span><span class="p">]:</span><span class="mi">1</span>
@@ -763,7 +663,7 @@ in expression starting at /home/runner/.julia/packages/Queryverse/XPALb/src/Quer
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: rename! not defined
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: dftrain not defined
 
 <span class="ne">Stacktrace</span>:
  <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">16</span><span class="p">]:</span><span class="mi">1</span>
@@ -779,7 +679,7 @@ in expression starting at /home/runner/.julia/packages/Queryverse/XPALb/src/Quer
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: rename! not defined
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: dftest not defined
 
 <span class="ne">Stacktrace</span>:
  <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">17</span><span class="p">]:</span><span class="mi">1</span>
@@ -1007,15 +907,11 @@ in expression starting at /home/runner/.julia/packages/Queryverse/XPALb/src/Quer
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold -Color-Bold-Green">   Updating</span> registry at `~/.julia/registries/General`
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>#########                                                                  13.6%
-######################################################################### 100.0%
-</pre></div>
-</div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold -Color-Bold-Green">  Resolving</span> package versions...
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold -Color-Bold-Green">No Changes</span> to `~/work/Intro-Julia-2021/Intro-Julia-2021/Project.toml`
-<span class=" -Color -Color-Bold -Color-Bold-Green">No Changes</span> to `~/work/Intro-Julia-2021/Intro-Julia-2021/Manifest.toml`
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold -Color-Bold-Green">No Changes</span> to `~/julia_for_education/book/Project.toml`
+<span class=" -Color -Color-Bold -Color-Bold-Green">No Changes</span> to `~/julia_for_education/book/Manifest.toml`
 </pre></div>
 </div>
 </div>
@@ -1044,11 +940,10 @@ in expression starting at /home/runner/.julia/packages/Queryverse/XPALb/src/Quer
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">LoadError</span>: UndefVarError: @filter not defined
-<span class="ow">in</span> <span class="n">expression</span> <span class="n">starting</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">32</span><span class="p">]:</span><span class="mi">1</span>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: dftrain not defined
 
 <span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span>
+ <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">32</span><span class="p">]:</span><span class="mi">1</span>
  <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(::</span><span class="n">Function</span><span class="p">,</span> <span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">)</span> <span class="n">at</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1091</span>
 </pre></div>
 </div>
@@ -1136,8 +1031,8 @@ in expression starting at /home/runner/.julia/packages/Queryverse/XPALb/src/Quer
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold -Color-Bold-Green">  Resolving</span> package versions...
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold -Color-Bold-Green">No Changes</span> to `~/work/Intro-Julia-2021/Intro-Julia-2021/Project.toml`
-<span class=" -Color -Color-Bold -Color-Bold-Green">No Changes</span> to `~/work/Intro-Julia-2021/Intro-Julia-2021/Manifest.toml`
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold -Color-Bold-Green">No Changes</span> to `~/julia_for_education/book/Project.toml`
+<span class=" -Color -Color-Bold -Color-Bold-Green">No Changes</span> to `~/julia_for_education/book/Manifest.toml`
 </pre></div>
 </div>
 </div>
@@ -1263,7 +1158,7 @@ in expression starting at /home/runner/.julia/packages/Queryverse/XPALb/src/Quer
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: Not not defined
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: dftrain not defined
 
 <span class="ne">Stacktrace</span>:
  <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">45</span><span class="p">]:</span><span class="mi">1</span>
@@ -1291,8 +1186,8 @@ in expression starting at /home/runner/.julia/packages/Queryverse/XPALb/src/Quer
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold -Color-Bold-Green">  Resolving</span> package versions...
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold -Color-Bold-Green">No Changes</span> to `~/work/Intro-Julia-2021/Intro-Julia-2021/Project.toml`
-<span class=" -Color -Color-Bold -Color-Bold-Green">No Changes</span> to `~/work/Intro-Julia-2021/Intro-Julia-2021/Manifest.toml`
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold -Color-Bold-Green">No Changes</span> to `~/julia_for_education/book/Project.toml`
+<span class=" -Color -Color-Bold -Color-Bold-Green">No Changes</span> to `~/julia_for_education/book/Manifest.toml`
 </pre></div>
 </div>
 </div>
@@ -1371,8 +1266,8 @@ md</p>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold -Color-Bold-Green">  Resolving</span> package versions...
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold -Color-Bold-Green">No Changes</span> to `~/work/Intro-Julia-2021/Intro-Julia-2021/Project.toml`
-<span class=" -Color -Color-Bold -Color-Bold-Green">No Changes</span> to `~/work/Intro-Julia-2021/Intro-Julia-2021/Manifest.toml`
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold -Color-Bold-Green">No Changes</span> to `~/julia_for_education/book/Project.toml`
+<span class=" -Color -Color-Bold -Color-Bold-Green">No Changes</span> to `~/julia_for_education/book/Manifest.toml`
 </pre></div>
 </div>
 </div>
@@ -1395,12 +1290,15 @@ md</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">LoadError</span>: UndefVarError: @from not defined
-<span class="ow">in</span> <span class="n">expression</span> <span class="n">starting</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">52</span><span class="p">]:</span><span class="mi">6</span>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">ArgumentError</span>: No file exists at given path: ./titanic/gender_submission.csv
 
 <span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(::</span><span class="n">Function</span><span class="p">,</span> <span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">)</span> <span class="n">at</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1091</span>
+ <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">load</span><span class="p">(::</span><span class="n">FileIO</span><span class="o">.</span><span class="n">Formatted</span><span class="p">;</span> <span class="n">options</span><span class="p">::</span><span class="n">Base</span><span class="o">.</span><span class="n">Iterators</span><span class="o">.</span><span class="n">Pairs</span><span class="p">{</span><span class="n">Union</span><span class="p">{},</span><span class="n">Union</span><span class="p">{},</span><span class="n">Tuple</span><span class="p">{},</span><span class="n">NamedTuple</span><span class="p">{(),</span><span class="n">Tuple</span><span class="p">{}}})</span> <span class="n">at</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">felipe</span><span class="o">/.</span><span class="n">julia</span><span class="o">/</span><span class="n">packages</span><span class="o">/</span><span class="n">FileIO</span><span class="o">/</span><span class="n">TyKdX</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">loadsave</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">192</span>
+ <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">load</span> <span class="n">at</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">felipe</span><span class="o">/.</span><span class="n">julia</span><span class="o">/</span><span class="n">packages</span><span class="o">/</span><span class="n">FileIO</span><span class="o">/</span><span class="n">TyKdX</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">loadsave</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">187</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
+ <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="c1">#load#16 at /home/felipe/.julia/packages/FileIO/TyKdX/src/loadsave.jl:136 [inlined]</span>
+ <span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="n">load</span><span class="p">(::</span><span class="n">String</span><span class="p">)</span> <span class="n">at</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">felipe</span><span class="o">/.</span><span class="n">julia</span><span class="o">/</span><span class="n">packages</span><span class="o">/</span><span class="n">FileIO</span><span class="o">/</span><span class="n">TyKdX</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">loadsave</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">136</span>
+ <span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">52</span><span class="p">]:</span><span class="mi">2</span>
+ <span class="p">[</span><span class="mi">6</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(::</span><span class="n">Function</span><span class="p">,</span> <span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">)</span> <span class="n">at</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1091</span>
 </pre></div>
 </div>
 </div>
@@ -1481,11 +1379,10 @@ md</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">LoadError</span>: UndefVarError: @filter not defined
-<span class="ow">in</span> <span class="n">expression</span> <span class="n">starting</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">57</span><span class="p">]:</span><span class="mi">1</span>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: df not defined
 
 <span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span>
+ <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">57</span><span class="p">]:</span><span class="mi">1</span>
  <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(::</span><span class="n">Function</span><span class="p">,</span> <span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">)</span> <span class="n">at</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1091</span>
 </pre></div>
 </div>
@@ -1498,11 +1395,10 @@ md</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">LoadError</span>: UndefVarError: @filter not defined
-<span class="ow">in</span> <span class="n">expression</span> <span class="n">starting</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">58</span><span class="p">]:</span><span class="mi">1</span>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: df not defined
 
 <span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span>
+ <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">58</span><span class="p">]:</span><span class="mi">1</span>
  <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(::</span><span class="n">Function</span><span class="p">,</span> <span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">)</span> <span class="n">at</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1091</span>
 </pre></div>
 </div>
@@ -1522,11 +1418,10 @@ md</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">LoadError</span>: UndefVarError: @groupby not defined
-<span class="ow">in</span> <span class="n">expression</span> <span class="n">starting</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">59</span><span class="p">]:</span><span class="mi">3</span>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: df not defined
 
 <span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span>
+ <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">59</span><span class="p">]:</span><span class="mi">1</span>
  <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(::</span><span class="n">Function</span><span class="p">,</span> <span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">)</span> <span class="n">at</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1091</span>
 </pre></div>
 </div>
@@ -1599,11 +1494,10 @@ md</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">LoadError</span>: UndefVarError: @groupby not defined
-<span class="ow">in</span> <span class="n">expression</span> <span class="n">starting</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">63</span><span class="p">]:</span><span class="mi">3</span>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: df not defined
 
 <span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span>
+ <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">63</span><span class="p">]:</span><span class="mi">1</span>
  <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(::</span><span class="n">Function</span><span class="p">,</span> <span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">)</span> <span class="n">at</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1091</span>
 </pre></div>
 </div>
@@ -1651,16 +1545,32 @@ md</p>
 <h4>Gráfica con Plots<a class="headerlink" href="#grafica-con-plots" title="Enlazar permanentemente con este título">¶</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">dfplotₛ</span> <span class="o">=</span> <span class="n">DataFrame</span><span class="p">();</span>
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">pyplot</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: DataFrame not defined
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>ArgumentError: Package PyPlot not found in current path:
+- Run `import Pkg; Pkg.add(&quot;PyPlot&quot;)` to install the PyPlot package.
 
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">66</span><span class="p">]:</span><span class="mi">1</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(::</span><span class="n">Function</span><span class="p">,</span> <span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">)</span> <span class="n">at</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1091</span>
+
+Stacktrace:
+ [1] require(::Module, ::Symbol) at ./loading.jl:893
+ [2] top-level scope at /home/felipe/.julia/packages/Plots/lmp2A/src/backends.jl:505
+ [3] eval at ./boot.jl:331 [inlined]
+ [4] _initialize_backend(::Plots.PyPlotBackend) at /home/felipe/.julia/packages/Plots/lmp2A/src/backends.jl:504
+ [5] backend at /home/felipe/.julia/packages/Plots/lmp2A/src/backends.jl:174 [inlined]
+ [6] pyplot(; kw::Base.Iterators.Pairs{Union{},Union{},Tuple{},NamedTuple{(),Tuple{}}}) at /home/felipe/.julia/packages/Plots/lmp2A/src/backends.jl:31
+ [7] pyplot() at /home/felipe/.julia/packages/Plots/lmp2A/src/backends.jl:31
+ [8] top-level scope at In[66]:1
+ [9] include_string(::Function, ::Module, ::String, ::String) at ./loading.jl:1091
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">dfplotₛ</span> <span class="o">=</span> <span class="n">DataFrame</span><span class="p">();</span>
 </pre></div>
 </div>
 </div>
@@ -1676,7 +1586,7 @@ md</p>
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: df not defined
 
 <span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">67</span><span class="p">]:</span><span class="mi">1</span>
+ <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">68</span><span class="p">]:</span><span class="mi">1</span>
  <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(::</span><span class="n">Function</span><span class="p">,</span> <span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">)</span> <span class="n">at</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1091</span>
 </pre></div>
 </div>
@@ -1685,15 +1595,6 @@ md</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">dfplotₙₛ</span> <span class="o">=</span> <span class="n">DataFrame</span><span class="p">();</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: DataFrame not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">68</span><span class="p">]:</span><span class="mi">1</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(::</span><span class="n">Function</span><span class="p">,</span> <span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">)</span> <span class="n">at</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1091</span>
 </pre></div>
 </div>
 </div>
@@ -1709,7 +1610,7 @@ md</p>
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: df not defined
 
 <span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">69</span><span class="p">]:</span><span class="mi">1</span>
+ <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">70</span><span class="p">]:</span><span class="mi">1</span>
  <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(::</span><span class="n">Function</span><span class="p">,</span> <span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">)</span> <span class="n">at</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1091</span>
 </pre></div>
 </div>
@@ -1722,11 +1623,22 @@ md</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: dfplotₛ not defined
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="n">Cannot</span> <span class="n">convert</span> <span class="n">Symbol</span> <span class="n">to</span> <span class="n">series</span> <span class="n">data</span> <span class="k">for</span> <span class="n">plotting</span>
 
 <span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">70</span><span class="p">]:</span><span class="mi">1</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(::</span><span class="n">Function</span><span class="p">,</span> <span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">)</span> <span class="n">at</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1091</span>
+ <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">error</span><span class="p">(::</span><span class="n">String</span><span class="p">)</span> <span class="n">at</span> <span class="o">./</span><span class="n">error</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">33</span>
+ <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">_prepare_series_data</span><span class="p">(::</span><span class="n">Symbol</span><span class="p">)</span> <span class="n">at</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">felipe</span><span class="o">/.</span><span class="n">julia</span><span class="o">/</span><span class="n">packages</span><span class="o">/</span><span class="n">RecipesPipeline</span><span class="o">/</span><span class="n">uPBKQ</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">series</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">8</span>
+ <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="n">_series_data_vector</span><span class="p">(::</span><span class="n">Symbol</span><span class="p">,</span> <span class="p">::</span><span class="n">Dict</span><span class="p">{</span><span class="n">Symbol</span><span class="p">,</span><span class="n">Any</span><span class="p">})</span> <span class="n">at</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">felipe</span><span class="o">/.</span><span class="n">julia</span><span class="o">/</span><span class="n">packages</span><span class="o">/</span><span class="n">RecipesPipeline</span><span class="o">/</span><span class="n">uPBKQ</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">series</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">27</span>
+ <span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="n">macro</span> <span class="n">expansion</span> <span class="n">at</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">felipe</span><span class="o">/.</span><span class="n">julia</span><span class="o">/</span><span class="n">packages</span><span class="o">/</span><span class="n">RecipesPipeline</span><span class="o">/</span><span class="n">uPBKQ</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">series</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">145</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
+ <span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="n">apply_recipe</span><span class="p">(::</span><span class="n">AbstractDict</span><span class="p">{</span><span class="n">Symbol</span><span class="p">,</span><span class="n">Any</span><span class="p">},</span> <span class="p">::</span><span class="n">Type</span><span class="p">{</span><span class="n">RecipesPipeline</span><span class="o">.</span><span class="n">SliceIt</span><span class="p">},</span> <span class="p">::</span><span class="n">Any</span><span class="p">,</span> <span class="p">::</span><span class="n">Any</span><span class="p">,</span> <span class="p">::</span><span class="n">Any</span><span class="p">)</span> <span class="n">at</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">felipe</span><span class="o">/.</span><span class="n">julia</span><span class="o">/</span><span class="n">packages</span><span class="o">/</span><span class="n">RecipesBase</span><span class="o">/</span><span class="mi">92</span><span class="n">zOw</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">RecipesBase</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">282</span>
+ <span class="p">[</span><span class="mi">6</span><span class="p">]</span> <span class="n">_process_userrecipes</span><span class="o">!(</span>::Any, ::Any, ::Any<span class="o">)</span> at /home/felipe/.julia/packages/RecipesPipeline/uPBKQ/src/user_recipe.jl:36
+ <span class="p">[</span><span class="mi">7</span><span class="p">]</span> <span class="n">recipe_pipeline</span><span class="o">!(</span>::Any, ::Any, ::Any<span class="o">)</span> at /home/felipe/.julia/packages/RecipesPipeline/uPBKQ/src/RecipesPipeline.jl:70
+ <span class="p">[</span><span class="mi">8</span><span class="p">]</span> <span class="n">_plot</span><span class="o">!(</span>::Plots.Plot, ::Any, ::Any<span class="o">)</span> at /home/felipe/.julia/packages/Plots/lmp2A/src/plot.jl:172
+ <span class="p">[</span><span class="mi">9</span><span class="p">]</span> <span class="c1">#plot#129 at /home/felipe/.julia/packages/Plots/lmp2A/src/plot.jl:58 [inlined]</span>
+ <span class="p">[</span><span class="mi">10</span><span class="p">]</span> <span class="n">add_label</span><span class="p">(::</span><span class="n">Array</span><span class="p">{</span><span class="n">String</span><span class="p">,</span><span class="mi">1</span><span class="p">},</span> <span class="p">::</span><span class="n">Function</span><span class="p">,</span> <span class="p">::</span><span class="n">Symbol</span><span class="p">;</span> <span class="n">kwargs</span><span class="p">::</span><span class="n">Base</span><span class="o">.</span><span class="n">Iterators</span><span class="o">.</span><span class="n">Pairs</span><span class="p">{</span><span class="n">Symbol</span><span class="p">,</span><span class="n">Any</span><span class="p">,</span><span class="n">NTuple</span><span class="p">{</span><span class="mi">5</span><span class="p">,</span><span class="n">Symbol</span><span class="p">},</span><span class="n">NamedTuple</span><span class="p">{(:</span><span class="n">seriestype</span><span class="p">,</span> <span class="p">:</span><span class="n">legend</span><span class="p">,</span> <span class="p">:</span><span class="n">bar_width</span><span class="p">,</span> <span class="p">:</span><span class="n">xticks</span><span class="p">,</span> <span class="p">:</span><span class="n">title</span><span class="p">),</span><span class="n">Tuple</span><span class="p">{</span><span class="n">Symbol</span><span class="p">,</span><span class="n">Symbol</span><span class="p">,</span><span class="n">Float64</span><span class="p">,</span><span class="n">Tuple</span><span class="p">{</span><span class="n">Array</span><span class="p">{</span><span class="n">Float64</span><span class="p">,</span><span class="mi">1</span><span class="p">},</span><span class="n">Array</span><span class="p">{</span><span class="n">String</span><span class="p">,</span><span class="mi">1</span><span class="p">}},</span><span class="n">String</span><span class="p">}}})</span> <span class="n">at</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">felipe</span><span class="o">/.</span><span class="n">julia</span><span class="o">/</span><span class="n">packages</span><span class="o">/</span><span class="n">StatsPlots</span><span class="o">/</span><span class="n">IMY3F</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">df</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">153</span>
+ <span class="p">[</span><span class="mi">11</span><span class="p">]</span> <span class="p">(::</span><span class="n">var</span><span class="s2">&quot;#47#48&quot;</span><span class="p">)(::</span><span class="n">DataFrame</span><span class="p">)</span> <span class="n">at</span> <span class="o">./</span><span class="n">none</span><span class="p">:</span><span class="mi">0</span>
+ <span class="p">[</span><span class="mi">12</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">71</span><span class="p">]:</span><span class="mi">1</span>
+ <span class="p">[</span><span class="mi">13</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(::</span><span class="n">Function</span><span class="p">,</span> <span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">)</span> <span class="n">at</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1091</span>
 </pre></div>
 </div>
 </div>
@@ -1738,11 +1650,22 @@ md</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: dfplotₙₛ not defined
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="n">Cannot</span> <span class="n">convert</span> <span class="n">Symbol</span> <span class="n">to</span> <span class="n">series</span> <span class="n">data</span> <span class="k">for</span> <span class="n">plotting</span>
 
 <span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">71</span><span class="p">]:</span><span class="mi">1</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(::</span><span class="n">Function</span><span class="p">,</span> <span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">)</span> <span class="n">at</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1091</span>
+ <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">error</span><span class="p">(::</span><span class="n">String</span><span class="p">)</span> <span class="n">at</span> <span class="o">./</span><span class="n">error</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">33</span>
+ <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">_prepare_series_data</span><span class="p">(::</span><span class="n">Symbol</span><span class="p">)</span> <span class="n">at</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">felipe</span><span class="o">/.</span><span class="n">julia</span><span class="o">/</span><span class="n">packages</span><span class="o">/</span><span class="n">RecipesPipeline</span><span class="o">/</span><span class="n">uPBKQ</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">series</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">8</span>
+ <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="n">_series_data_vector</span><span class="p">(::</span><span class="n">Symbol</span><span class="p">,</span> <span class="p">::</span><span class="n">Dict</span><span class="p">{</span><span class="n">Symbol</span><span class="p">,</span><span class="n">Any</span><span class="p">})</span> <span class="n">at</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">felipe</span><span class="o">/.</span><span class="n">julia</span><span class="o">/</span><span class="n">packages</span><span class="o">/</span><span class="n">RecipesPipeline</span><span class="o">/</span><span class="n">uPBKQ</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">series</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">27</span>
+ <span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="n">macro</span> <span class="n">expansion</span> <span class="n">at</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">felipe</span><span class="o">/.</span><span class="n">julia</span><span class="o">/</span><span class="n">packages</span><span class="o">/</span><span class="n">RecipesPipeline</span><span class="o">/</span><span class="n">uPBKQ</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">series</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">145</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
+ <span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="n">apply_recipe</span><span class="p">(::</span><span class="n">AbstractDict</span><span class="p">{</span><span class="n">Symbol</span><span class="p">,</span><span class="n">Any</span><span class="p">},</span> <span class="p">::</span><span class="n">Type</span><span class="p">{</span><span class="n">RecipesPipeline</span><span class="o">.</span><span class="n">SliceIt</span><span class="p">},</span> <span class="p">::</span><span class="n">Any</span><span class="p">,</span> <span class="p">::</span><span class="n">Any</span><span class="p">,</span> <span class="p">::</span><span class="n">Any</span><span class="p">)</span> <span class="n">at</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">felipe</span><span class="o">/.</span><span class="n">julia</span><span class="o">/</span><span class="n">packages</span><span class="o">/</span><span class="n">RecipesBase</span><span class="o">/</span><span class="mi">92</span><span class="n">zOw</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">RecipesBase</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">282</span>
+ <span class="p">[</span><span class="mi">6</span><span class="p">]</span> <span class="n">_process_userrecipes</span><span class="o">!(</span>::Any, ::Any, ::Any<span class="o">)</span> at /home/felipe/.julia/packages/RecipesPipeline/uPBKQ/src/user_recipe.jl:36
+ <span class="p">[</span><span class="mi">7</span><span class="p">]</span> <span class="n">recipe_pipeline</span><span class="o">!(</span>::Any, ::Any, ::Any<span class="o">)</span> at /home/felipe/.julia/packages/RecipesPipeline/uPBKQ/src/RecipesPipeline.jl:70
+ <span class="p">[</span><span class="mi">8</span><span class="p">]</span> <span class="n">_plot</span><span class="o">!(</span>::Plots.Plot, ::Any, ::Any<span class="o">)</span> at /home/felipe/.julia/packages/Plots/lmp2A/src/plot.jl:172
+ <span class="p">[</span><span class="mi">9</span><span class="p">]</span> <span class="c1">#plot#129 at /home/felipe/.julia/packages/Plots/lmp2A/src/plot.jl:58 [inlined]</span>
+ <span class="p">[</span><span class="mi">10</span><span class="p">]</span> <span class="n">add_label</span><span class="p">(::</span><span class="n">Array</span><span class="p">{</span><span class="n">String</span><span class="p">,</span><span class="mi">1</span><span class="p">},</span> <span class="p">::</span><span class="n">Function</span><span class="p">,</span> <span class="p">::</span><span class="n">Symbol</span><span class="p">;</span> <span class="n">kwargs</span><span class="p">::</span><span class="n">Base</span><span class="o">.</span><span class="n">Iterators</span><span class="o">.</span><span class="n">Pairs</span><span class="p">{</span><span class="n">Symbol</span><span class="p">,</span><span class="n">Any</span><span class="p">,</span><span class="n">NTuple</span><span class="p">{</span><span class="mi">5</span><span class="p">,</span><span class="n">Symbol</span><span class="p">},</span><span class="n">NamedTuple</span><span class="p">{(:</span><span class="n">seriestype</span><span class="p">,</span> <span class="p">:</span><span class="n">legend</span><span class="p">,</span> <span class="p">:</span><span class="n">bar_width</span><span class="p">,</span> <span class="p">:</span><span class="n">xticks</span><span class="p">,</span> <span class="p">:</span><span class="n">title</span><span class="p">),</span><span class="n">Tuple</span><span class="p">{</span><span class="n">Symbol</span><span class="p">,</span><span class="n">Symbol</span><span class="p">,</span><span class="n">Float64</span><span class="p">,</span><span class="n">Tuple</span><span class="p">{</span><span class="n">Array</span><span class="p">{</span><span class="n">Float64</span><span class="p">,</span><span class="mi">1</span><span class="p">},</span><span class="n">Array</span><span class="p">{</span><span class="n">String</span><span class="p">,</span><span class="mi">1</span><span class="p">}},</span><span class="n">String</span><span class="p">}}})</span> <span class="n">at</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">felipe</span><span class="o">/.</span><span class="n">julia</span><span class="o">/</span><span class="n">packages</span><span class="o">/</span><span class="n">StatsPlots</span><span class="o">/</span><span class="n">IMY3F</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">df</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">153</span>
+ <span class="p">[</span><span class="mi">11</span><span class="p">]</span> <span class="p">(::</span><span class="n">var</span><span class="s2">&quot;#49#50&quot;</span><span class="p">)(::</span><span class="n">DataFrame</span><span class="p">)</span> <span class="n">at</span> <span class="o">./</span><span class="n">none</span><span class="p">:</span><span class="mi">0</span>
+ <span class="p">[</span><span class="mi">12</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">72</span><span class="p">]:</span><span class="mi">1</span>
+ <span class="p">[</span><span class="mi">13</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(::</span><span class="n">Function</span><span class="p">,</span> <span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">)</span> <span class="n">at</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1091</span>
 </pre></div>
 </div>
 </div>
@@ -1750,15 +1673,6 @@ md</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="n">DataFrame</span><span class="p">(</span><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span><span class="o">:</span><span class="mi">10</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">*</span> <span class="n">rand</span><span class="p">(</span><span class="mi">10</span><span class="p">),</span> <span class="n">c</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">*</span> <span class="n">rand</span><span class="p">(</span><span class="mi">10</span><span class="p">));</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: DataFrame not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">72</span><span class="p">]:</span><span class="mi">1</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(::</span><span class="n">Function</span><span class="p">,</span> <span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">)</span> <span class="n">at</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1091</span>
 </pre></div>
 </div>
 </div>
@@ -1770,14 +1684,7 @@ md</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: f not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">73</span><span class="p">]:</span><span class="mi">1</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(::</span><span class="n">Function</span><span class="p">,</span> <span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">)</span> <span class="n">at</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1091</span>
-</pre></div>
-</div>
-</div>
+<img alt="_images/Paquete_DataFrames.backup2_117_0.svg" src="_images/Paquete_DataFrames.backup2_117_0.svg" /></div>
 </div>
 </div>
 </div>
@@ -1794,8 +1701,8 @@ md</p>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold -Color-Bold-Green">  Resolving</span> package versions...
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold -Color-Bold-Green">No Changes</span> to `~/work/Intro-Julia-2021/Intro-Julia-2021/Project.toml`
-<span class=" -Color -Color-Bold -Color-Bold-Green">No Changes</span> to `~/work/Intro-Julia-2021/Intro-Julia-2021/Manifest.toml`
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold -Color-Bold-Green">No Changes</span> to `~/julia_for_education/book/Project.toml`
+<span class=" -Color -Color-Bold -Color-Bold-Green">No Changes</span> to `~/julia_for_education/book/Manifest.toml`
 </pre></div>
 </div>
 </div>
@@ -1808,7 +1715,7 @@ md</p>
 </div>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">LoadError</span>: UndefVarError: @bind not defined
-<span class="ow">in</span> <span class="n">expression</span> <span class="n">starting</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">75</span><span class="p">]:</span><span class="mi">1</span>
+<span class="ow">in</span> <span class="n">expression</span> <span class="n">starting</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">76</span><span class="p">]:</span><span class="mi">1</span>
 
 <span class="ne">Stacktrace</span>:
  <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span>
@@ -1825,7 +1732,7 @@ md</p>
 </div>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">LoadError</span>: UndefVarError: @bind not defined
-<span class="ow">in</span> <span class="n">expression</span> <span class="n">starting</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">76</span><span class="p">]:</span><span class="mi">1</span>
+<span class="ow">in</span> <span class="n">expression</span> <span class="n">starting</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">77</span><span class="p">]:</span><span class="mi">1</span>
 
 <span class="ne">Stacktrace</span>:
  <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span>
@@ -1844,7 +1751,7 @@ md</p>
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: gender not defined
 
 <span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">77</span><span class="p">]:</span><span class="mi">1</span>
+ <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">78</span><span class="p">]:</span><span class="mi">1</span>
  <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(::</span><span class="n">Function</span><span class="p">,</span> <span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">)</span> <span class="n">at</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1091</span>
 </pre></div>
 </div>
@@ -1860,11 +1767,10 @@ md</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">LoadError</span>: UndefVarError: @vlplot not defined
-<span class="ow">in</span> <span class="n">expression</span> <span class="n">starting</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">78</span><span class="p">]:</span><span class="mi">1</span>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: datatrain not defined
 
 <span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span>
+ <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">79</span><span class="p">]:</span><span class="mi">1</span>
  <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(::</span><span class="n">Function</span><span class="p">,</span> <span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">)</span> <span class="n">at</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1091</span>
 </pre></div>
 </div>
@@ -1881,7 +1787,7 @@ md</p>
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: datatrain not defined
 
 <span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">79</span><span class="p">]:</span><span class="mi">1</span>
+ <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">80</span><span class="p">]:</span><span class="mi">1</span>
  <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(::</span><span class="n">Function</span><span class="p">,</span> <span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">)</span> <span class="n">at</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1091</span>
 </pre></div>
 </div>
@@ -1920,8 +1826,6 @@ md</p>
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="Ecuaciones_diferenciales.html" title="previous page">Ecuaciones diferenciales</a>
-    <a class='right-next' id="next-link" href="Natural_Language_Processing.html" title="next page">Natural Language Processing</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
@@ -1941,7 +1845,7 @@ md</p>
     </div>
 
     
-  <script src="_static/js/index.d3f166471bb80abb5163.js"></script>
+  <script src="_static/js/index.30270b6e4c972e43c488.js"></script>
 
 
     
