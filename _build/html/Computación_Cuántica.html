@@ -360,6 +360,23 @@
    </li>
   </ul>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#algoritmica">
+   Algorítmica
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#transformada-cuantica-de-fourier">
+     Transformada cuántica de Fourier
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#estimacion-de-fase">
+     Estimación de fase
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
 
         </nav>
@@ -539,10 +556,10 @@
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4×1 Array{Complex{Float64},2}:
-   0.3785174648167046 - 0.2691739926644298im
- -0.03170334817933772 - 0.2707726251204369im
- -0.08431568864570724 - 0.7648020763026575im
- -0.24018944274695586 + 0.2454071189384735im
+    0.1107591501016505 + 0.3746875639986465im
+  -0.37422236954457866 + 0.48081350474536616im
+ -0.020950316417709378 + 0.38913756410568046im
+    0.4286192165726467 + 0.3748816339446155im
 </pre></div>
 </div>
 </div>
@@ -779,32 +796,32 @@
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>32×1 Array{Complex{Float64},2}:
-  -0.04780090850769242 - 0.0664194901729719im
-  -0.15748163291873019 - 0.09786276809818792im
-  -0.01748866431398053 - 0.18339677378629968im
-  0.005471149193524436 - 0.08767795913817221im
-   0.11931411592225835 - 0.10598047756656853im
- 0.0026012493549394085 + 0.26402368271767906im
-   0.10632405758809471 + 0.07357876157861098im
-   0.11715576511124001 + 0.16654774571464864im
-   0.16681491535459889 - 0.2919799460374847im
-  0.021392964370805047 + 0.2830362255972639im
-    0.2701826596776606 - 0.057585566530375165im
-  -0.04226335745648542 - 0.12270027088135105im
- -0.005274728915546057 - 0.23852466104849895im
+   0.20563688655024925 + 0.04098790343565623im
+   0.08383133162595909 + 0.055224202963223425im
+   -0.1720975206277203 + 0.023190748584247044im
+    0.3199444786012372 + 0.03822828758511488im
+  -0.04721190056281986 + 0.05275530760213698im
+    0.0878037817702425 - 0.1918655313357905im
+   0.15476757236590205 + 0.15997137555126775im
+   0.10810397864505639 + 0.08017231262802983im
+   0.12686463513486704 - 0.1108864113580091im
+  -0.23654755877154515 + 0.026759769983814925im
+   0.04868013499444064 + 0.06747348259269467im
+  -0.13439302049209376 - 0.07022981801411819im
+    0.2532211305413657 - 0.024018848439077742im
                        ⋮
-   0.06122986525978423 + 0.099944270060267im
-    0.0331260507135512 + 0.01774332562244907im
-  -0.14018202264845234 + 0.165746897831261im
-  -0.07062250618545546 + 0.02265001011364766im
-  0.032264598124325625 - 0.10165864538385674im
-  -0.12182451850115425 + 0.03889997742415395im
-  -0.01811595051325987 + 0.09840118325293341im
-  -0.04573297835367982 + 0.07829906518158343im
-  0.016143797924263743 + 0.1664002035451556im
-   0.19789580863801753 - 0.12958118606826877im
-   0.14094632248075623 + 0.078247812815705im
-  0.019492183785784187 + 0.01563926774156913im
+   0.04062497978215061 - 0.17780954773247407im
+ -0.019529766240725808 + 0.07601048465035004im
+   -0.1792061131707565 + 0.11735508066452076im
+  0.016149066651152292 - 0.023698835834975545im
+  -0.11452407994981921 - 0.02148523428891893im
+   0.09158734785549058 + 0.019510532379093115im
+   0.15800075437520011 + 0.11727031657599324im
+ 0.0011525463351538174 + 0.08606993423394994im
+   -0.1456136916026627 + 0.09952448626790636im
+  -0.08666495668133016 + 0.223065364470211im
+   0.06761102480187127 - 0.02390731050199421im
+  -0.04354340774046506 - 0.09329681192608498im
 </pre></div>
 </div>
 </div>
@@ -857,7 +874,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.0000000000000002 + 0.0im
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.0 + 0.0im
 </pre></div>
 </div>
 </div>
@@ -976,11 +993,11 @@
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5-element Array{BitBasis.BitStr{7,Int64},1}:
- 0000000 ₍₂₎
- 1111100 ₍₂₎
- 0000100 ₍₂₎
- 1101110 ₍₂₎
- 1011011 ₍₂₎
+ 0101100 ₍₂₎
+ 1010010 ₍₂₎
+ 1010101 ₍₂₎
+ 0110111 ₍₂₎
+ 0101100 ₍₂₎
 </pre></div>
 </div>
 </div>
@@ -1097,7 +1114,7 @@
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2×1 Array{Complex{Float64},2}:
  1.0 + 0.0im
- 0.0 + 6.9145683440624e-310im
+ 0.0 + 6.9154881175379e-310im
 </pre></div>
 </div>
 </div>
@@ -1143,6 +1160,22 @@
 </div>
 </div>
 </div>
+<p>La cadena tiene una estructura de árbol que nos permite acceder a cada etapa como si fuese un arreglo (pues es efectivamente un subtipo de arreglo abstracto en Julia):</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">chain</span><span class="p">(</span><span class="n">put</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="o">=&gt;</span><span class="n">X</span><span class="p">),</span> <span class="n">put</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="o">=&gt;</span><span class="n">Y</span><span class="p">))[</span><span class="mi">2</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Cyan">nqubits: 3</span>
+<span class=" -Color -Color-Bold -Color-Bold-Cyan">put on (1)</span>
+└─ Y
+</pre></div>
+</div>
+</div>
+</div>
+<p>La matriz asociada a la cadena será, de nuevo, un operador unitario sobre el espacio vectorial asociado a todo el registro activo:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">mat</span><span class="p">(</span><span class="n">chain</span><span class="p">(</span><span class="n">put</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="o">=&gt;</span><span class="n">X</span><span class="p">),</span> <span class="n">put</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="o">=&gt;</span><span class="n">Y</span><span class="p">)))</span>
@@ -1256,36 +1289,83 @@
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>32×1 Array{Complex{Float64},2}:
-    -0.1761362162040583 + 0.2593450248354838im
-                    0.0 + 0.0im
- -0.0024898299403573465 - 0.17430805298646815im
-                    0.0 + 0.0im
-    -0.1761362162040583 + 0.2593450248354838im
-                    0.0 + 0.0im
- -0.0024898299403573465 - 0.17430805298646815im
-                    0.0 + 0.0im
-    0.08786933402634439 - 0.19208851337911506im
-                    0.0 + 0.0im
-    -0.2627078626179432 + 0.0877055125383473im
-                    0.0 + 0.0im
-    0.08786933402634439 - 0.19208851337911506im
-                        ⋮
-    -0.1761362162040583 + 0.2593450248354838im
-                    0.0 + 0.0im
- -0.0024898299403573465 - 0.17430805298646815im
-                    0.0 + 0.0im
-    0.08786933402634439 - 0.19208851337911506im
-                    0.0 + 0.0im
-    -0.2627078626179432 + 0.0877055125383473im
-                    0.0 + 0.0im
-    0.08786933402634439 - 0.19208851337911506im
-                    0.0 + 0.0im
-    -0.2627078626179432 + 0.0877055125383473im
-                    0.0 + 0.0im
+ -0.18329888081201484 - 0.21777568321332402im
+                  0.0 + 0.0im
+ -0.07909106181919248 - 0.08899645718378356im
+                  0.0 + 0.0im
+ -0.18329888081201484 - 0.21777568321332402im
+                  0.0 + 0.0im
+ -0.07909106181919248 - 0.08899645718378356im
+                  0.0 + 0.0im
+ -0.23215911947521112 + 0.1185324826984002im
+                  0.0 + 0.0im
+ -0.05135658889588815 + 0.2901968318398861im
+                  0.0 + 0.0im
+ -0.23215911947521112 + 0.1185324826984002im
+                      ⋮
+ -0.18329888081201484 - 0.21777568321332402im
+                  0.0 + 0.0im
+ -0.07909106181919248 - 0.08899645718378356im
+                  0.0 + 0.0im
+ -0.23215911947521112 + 0.1185324826984002im
+                  0.0 + 0.0im
+ -0.05135658889588815 + 0.2901968318398861im
+                  0.0 + 0.0im
+ -0.23215911947521112 + 0.1185324826984002im
+                  0.0 + 0.0im
+ -0.05135658889588815 + 0.2901968318398861im
+                  0.0 + 0.0im
 </pre></div>
 </div>
 </div>
 </div>
+<p>Podemos explorar el caso de un registro donde no todos los qubits están activos y utilizar una notación más elegante utilizando <code class="docutils literal notranslate"><span class="pre">Pipe</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">using</span> <span class="kt">Pipe</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="nd">@pipe</span> <span class="n">zero_state</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="o">|&gt;</span> <span class="n">focus!</span><span class="p">(</span><span class="mi">1</span><span class="o">:</span><span class="mi">5</span><span class="p">)</span> <span class="o">|&gt;</span> <span class="n">apply!</span><span class="p">(</span><span class="n">_</span><span class="p">,</span> <span class="n">circuit</span><span class="p">)</span> <span class="o">|&gt;</span> <span class="n">state</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>32×32 Array{Complex{Float64},2}:
+  -0.183299-0.217776im   0.0+0.0im  …  0.0+0.0im  0.0+0.0im  0.0+0.0im
+        0.0+0.0im        0.0+0.0im     0.0+0.0im  0.0+0.0im  0.0+0.0im
+ -0.0790911-0.0889965im  0.0+0.0im     0.0+0.0im  0.0+0.0im  0.0+0.0im
+        0.0+0.0im        0.0+0.0im     0.0+0.0im  0.0+0.0im  0.0+0.0im
+  -0.183299-0.217776im   0.0+0.0im     0.0+0.0im  0.0+0.0im  0.0+0.0im
+        0.0+0.0im        0.0+0.0im  …  0.0+0.0im  0.0+0.0im  0.0+0.0im
+ -0.0790911-0.0889965im  0.0+0.0im     0.0+0.0im  0.0+0.0im  0.0+0.0im
+        0.0+0.0im        0.0+0.0im     0.0+0.0im  0.0+0.0im  0.0+0.0im
+  -0.232159+0.118532im   0.0+0.0im     0.0+0.0im  0.0+0.0im  0.0+0.0im
+        0.0+0.0im        0.0+0.0im     0.0+0.0im  0.0+0.0im  0.0+0.0im
+ -0.0513566+0.290197im   0.0+0.0im  …  0.0+0.0im  0.0+0.0im  0.0+0.0im
+        0.0+0.0im        0.0+0.0im     0.0+0.0im  0.0+0.0im  0.0+0.0im
+  -0.232159+0.118532im   0.0+0.0im     0.0+0.0im  0.0+0.0im  0.0+0.0im
+           ⋮                        ⋱                ⋮       
+  -0.183299-0.217776im   0.0+0.0im  …  0.0+0.0im  0.0+0.0im  0.0+0.0im
+        0.0+0.0im        0.0+0.0im     0.0+0.0im  0.0+0.0im  0.0+0.0im
+ -0.0790911-0.0889965im  0.0+0.0im     0.0+0.0im  0.0+0.0im  0.0+0.0im
+        0.0+0.0im        0.0+0.0im     0.0+0.0im  0.0+0.0im  0.0+0.0im
+  -0.232159+0.118532im   0.0+0.0im     0.0+0.0im  0.0+0.0im  0.0+0.0im
+        0.0+0.0im        0.0+0.0im  …  0.0+0.0im  0.0+0.0im  0.0+0.0im
+ -0.0513566+0.290197im   0.0+0.0im     0.0+0.0im  0.0+0.0im  0.0+0.0im
+        0.0+0.0im        0.0+0.0im     0.0+0.0im  0.0+0.0im  0.0+0.0im
+  -0.232159+0.118532im   0.0+0.0im     0.0+0.0im  0.0+0.0im  0.0+0.0im
+        0.0+0.0im        0.0+0.0im     0.0+0.0im  0.0+0.0im  0.0+0.0im
+ -0.0513566+0.290197im   0.0+0.0im  …  0.0+0.0im  0.0+0.0im  0.0+0.0im
+        0.0+0.0im        0.0+0.0im     0.0+0.0im  0.0+0.0im  0.0+0.0im
+</pre></div>
+</div>
+</div>
+</div>
+<p>Esto muestra el flujo completo del circuito, desde el registro, hasta la medición de su estado final.</p>
 </div>
 <div class="section" id="metricas-de-comparacion-de-registros">
 <h4>Métricas de comparación de registros<a class="headerlink" href="#metricas-de-comparacion-de-registros" title="Enlazar permanentemente con este título">¶</a></h4>
@@ -1298,7 +1378,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.007157617960921923
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.0745484768923264
 </pre></div>
 </div>
 </div>
@@ -1314,7 +1394,7 @@
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1-element Array{Float64,1}:
- 1.9799296728114946
+ 1.976473563016586
 </pre></div>
 </div>
 </div>
@@ -1329,13 +1409,178 @@
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2×2×1 Array{Complex{Float64},3}:
 [:, :, 1] =
- 0.785855+0.0im        0.409958+0.0148805im
- 0.409958-0.0148805im  0.214145+0.0im
+ 0.0185825+0.0im        -0.106247-0.0833597im
+ -0.106247+0.0833597im   0.981417+0.0im
 </pre></div>
 </div>
 </div>
 </div>
 </div>
+</div>
+</div>
+<div class="section" id="algoritmica">
+<h2>Algorítmica<a class="headerlink" href="#algoritmica" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="section" id="transformada-cuantica-de-fourier">
+<h3>Transformada cuántica de Fourier<a class="headerlink" href="#transformada-cuantica-de-fourier" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Como ejemplo de un algoritmo cuántico clásico, construiremos el circuito asociado con la <a class="reference external" href="https://en.wikipedia.org/wiki/Quantum_Fourier_transform">transformada cuántica de Fourier</a>. Este es un algoritmo que equivale a realizar la transformada inversa discreta de Fourier a una cadena de bits, pero utilizando un circuito del tipo que acabamos de construir.</p>
+<p>Los detalles teóricos profundos serán omitidos dada la disponibilidad grande que hay de recursos que ya lo explican. Considere el siguiente diagrama que representa el circuito/algoritmo:</p>
+<p><img alt="QFT" src="https://docs.yaoquantum.org/v0.3/assets/figures/qft.png" /></p>
+<p>Este muestra el caso para un registro de <span class="math notranslate nohighlight">\(5\)</span> qubits, no obstante, programaremos el caso general para un registro de <span class="math notranslate nohighlight">\(n\)</span> qubits. El diagrama sugiere que una forma ordenada de programar este circuito es aprovechar su estructura repetitiva.</p>
+<p>Tenemos el bloque A definido por una compuerta de rotación controlada cuya posición en la cadena es determinada por cuál es su qubit de control y de respuesta, así como el valor de su rotación. Estos son respectivamente <code class="docutils literal notranslate"><span class="pre">i</span></code>, <code class="docutils literal notranslate"><span class="pre">j</span></code>, y <code class="docutils literal notranslate"><span class="pre">k</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">A</span><span class="p">(</span><span class="n">i</span><span class="o">::</span><span class="kt">Int</span><span class="p">,</span> <span class="n">j</span><span class="o">::</span><span class="kt">Int</span><span class="p">,</span> <span class="n">k</span><span class="o">::</span><span class="kt">Int</span><span class="p">)</span> <span class="o">=</span> <span class="n">control</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="o">=&gt;</span><span class="n">shift</span><span class="p">(</span><span class="mi">2</span><span class="nb">π</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span><span class="o">&lt;&lt;</span><span class="n">k</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>A (generic function with 1 method)
+</pre></div>
+</div>
+</div>
+</div>
+<p>El bloque B que está compuesto por el patrón de <span class="math notranslate nohighlight">\(\{H, R_2, \dots, R_{n-i+1}\}\)</span> donde <span class="math notranslate nohighlight">\(i\)</span> es el índice del qubit respuesta donde es aplicado B y <span class="math notranslate nohighlight">\(n\)</span> es el número total de qubits.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">B</span><span class="p">(</span><span class="n">n</span><span class="o">::</span><span class="kt">Int</span><span class="p">,</span> <span class="n">i</span><span class="o">::</span><span class="kt">Int</span><span class="p">)</span> <span class="o">=</span> <span class="n">chain</span><span class="p">(</span><span class="n">i</span><span class="o">==</span><span class="n">j</span> <span class="o">?</span> <span class="n">kron</span><span class="p">(</span><span class="n">i</span><span class="o">=&gt;</span><span class="n">H</span><span class="p">)</span> <span class="o">:</span> <span class="n">A</span><span class="p">(</span><span class="n">j</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="o">-</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="k">for</span> <span class="n">j</span> <span class="o">=</span> <span class="n">i</span><span class="o">:</span><span class="n">n</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>B (generic function with 1 method)
+</pre></div>
+</div>
+</div>
+</div>
+<p>Finalmente, el algoritmo de QFT (Quantum Fourier Transform) es definido por una cadena sencilla de bloques B.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">QFT</span><span class="p">(</span><span class="n">n</span><span class="o">::</span><span class="kt">Int</span><span class="p">)</span> <span class="o">=</span> <span class="n">chain</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">B</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="o">:</span><span class="n">n</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>QFT (generic function with 1 method)
+</pre></div>
+</div>
+</div>
+</div>
+<p>Así, acabamos de programar la versión general del circuito de QFT:</p>
+<p><img alt="QFT-general" src="https://upload.wikimedia.org/wikipedia/commons/6/61/Q_fourier_nqubits.png" /></p>
+<p>Aquí vemos el caso con <span class="math notranslate nohighlight">\(n = 4\)</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">QFT</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Cyan">nqubits: 4</span>
+<span class=" -Color -Color-Bold -Color-Bold-Blue">chain</span>
+├─ <span class=" -Color -Color-Bold -Color-Bold-Blue">chain</span>
+│  ├─ <span class=" -Color -Color-Bold -Color-Bold-Cyan">kron</span>
+│  │  └─ <span class=" -Color -Color-Bold -Color-Bold-White">1</span>=&gt;H
+│  ├─ <span class=" -Color -Color-Bold -Color-Bold-Red">control(2)</span>
+│  │  └─ <span class=" -Color -Color-Bold -Color-Bold-White">(1,)</span> shift(1.5707963267948966)
+│  ├─ <span class=" -Color -Color-Bold -Color-Bold-Red">control(3)</span>
+│  │  └─ <span class=" -Color -Color-Bold -Color-Bold-White">(1,)</span> shift(0.7853981633974483)
+│  └─ <span class=" -Color -Color-Bold -Color-Bold-Red">control(4)</span>
+│     └─ <span class=" -Color -Color-Bold -Color-Bold-White">(1,)</span> shift(0.39269908169872414)
+├─ <span class=" -Color -Color-Bold -Color-Bold-Blue">chain</span>
+│  ├─ <span class=" -Color -Color-Bold -Color-Bold-Cyan">kron</span>
+│  │  └─ <span class=" -Color -Color-Bold -Color-Bold-White">2</span>=&gt;H
+│  ├─ <span class=" -Color -Color-Bold -Color-Bold-Red">control(3)</span>
+│  │  └─ <span class=" -Color -Color-Bold -Color-Bold-White">(2,)</span> shift(1.5707963267948966)
+│  └─ <span class=" -Color -Color-Bold -Color-Bold-Red">control(4)</span>
+│     └─ <span class=" -Color -Color-Bold -Color-Bold-White">(2,)</span> shift(0.7853981633974483)
+├─ <span class=" -Color -Color-Bold -Color-Bold-Blue">chain</span>
+│  ├─ <span class=" -Color -Color-Bold -Color-Bold-Cyan">kron</span>
+│  │  └─ <span class=" -Color -Color-Bold -Color-Bold-White">3</span>=&gt;H
+│  └─ <span class=" -Color -Color-Bold -Color-Bold-Red">control(4)</span>
+│     └─ <span class=" -Color -Color-Bold -Color-Bold-White">(3,)</span> shift(1.5707963267948966)
+└─ <span class=" -Color -Color-Bold -Color-Bold-Blue">chain</span>
+   └─ <span class=" -Color -Color-Bold -Color-Bold-Cyan">kron</span>
+      └─ <span class=" -Color -Color-Bold -Color-Bold-White">4</span>=&gt;H
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">qft</span> <span class="o">=</span> <span class="n">QFT</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span> <span class="n">iqft</span> <span class="o">=</span> <span class="n">QFT</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span><span class="o">&#39;</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="nd">@pipe</span> <span class="n">product_state</span><span class="p">(</span><span class="n">bit</span><span class="s">&quot;0110&quot;</span><span class="p">)</span> <span class="o">|&gt;</span> <span class="n">apply!</span><span class="p">(</span><span class="n">_</span><span class="p">,</span> <span class="n">qft</span><span class="p">)</span> <span class="o">|&gt;</span> <span class="n">state</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>16×1 Array{Complex{Float64},2}:
+    0.24999999999999992 + 0.0im
+   -0.17677669529663678 + 0.17677669529663684im
+ -1.530808498934191e-17 - 0.24999999999999992im
+    0.17677669529663684 + 0.17677669529663678im
+   -0.24999999999999992 + 0.0im
+    0.17677669529663678 - 0.17677669529663684im
+  1.530808498934191e-17 + 0.24999999999999992im
+   -0.17677669529663684 - 0.17677669529663678im
+    0.24999999999999992 + 0.0im
+   -0.17677669529663678 + 0.17677669529663684im
+ -1.530808498934191e-17 - 0.24999999999999992im
+    0.17677669529663684 + 0.17677669529663678im
+   -0.24999999999999992 + 0.0im
+    0.17677669529663678 - 0.17677669529663684im
+  1.530808498934191e-17 + 0.24999999999999992im
+   -0.17677669529663684 - 0.17677669529663678im
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="estimacion-de-fase">
+<h3>Estimación de fase<a class="headerlink" href="#estimacion-de-fase" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>El algoritmo de transformada de Fourier se utiliza como una subrutina en muchos otros algoritmos. Uno de ellos es otro algoritmo básico famoso <em>phase estimation</em> (estimación de fase) que nos permite resolver el siguiente problema:</p>
+<p>Sea <span class="math notranslate nohighlight">\(U\)</span> una matriz unitaria y sea <span class="math notranslate nohighlight">\(v\)</span> un vector propio de <span class="math notranslate nohighlight">\(U\)</span>, es decir, se cumple que <span class="math notranslate nohighlight">\(Uv = e^{2\pi i \theta} v\)</span> para algún <span class="math notranslate nohighlight">\(\theta\)</span>. Queremos estimar el valor de <span class="math notranslate nohighlight">\(\theta\)</span> para un <span class="math notranslate nohighlight">\(U\)</span> y <span class="math notranslate nohighlight">\(v\)</span> fijos.</p>
+<p>El algoritmo de estimación de fase estima <span class="math notranslate nohighlight">\(\theta\)</span> con <a class="reference external" href="https://en.wikipedia.org/wiki/With_high_probability">alta probabilidad</a> (un término técnico en algoritmos probabilísticos que significa que aumentando el tamaño muestral nos acercamos en el límite a probabilidad 1 de estar correctos) con un número de qubits que solo ocupa crecer como <span class="math notranslate nohighlight">\(O(\log(1/\epsilon))\)</span> donde el error aditivo es <span class="math notranslate nohighlight">\(\epsilon\)</span>.</p>
+<p>Considere el siguiente diagrama:
+<img alt="fase" src="https://docs.yaoquantum.org/v0.5/assets/figures/phaseest.png" /></p>
+<p>Notemos que aquí tenemos dos conjuntos independientes de registros, los primeros que van a ser transformados por las compuertas de hadamard y QFT. Éstos controlan el segundo registro, que consiste en el estado <span class="math notranslate nohighlight">\(v\)</span> y una sucesión de aplicaciones de poderes de <span class="math notranslate nohighlight">\(U\)</span> para extraer así fases múltiple de la que estamos buscando, lo cual nos servirá para estimar correctamente <span class="math notranslate nohighlight">\(\theta\)</span>.</p>
+<p>Definamos la cadena de bloques que define la sucesión de poderes de <span class="math notranslate nohighlight">\(U\)</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">ControlU</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">U</span><span class="p">)</span> <span class="o">=</span> <span class="n">chain</span><span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="n">m</span><span class="p">,</span> 
+						  <span class="n">control</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="o">:</span><span class="n">n</span><span class="o">+</span><span class="n">m</span> <span class="o">=&gt;</span> <span class="n">matblock</span><span class="p">(</span><span class="n">U</span><span class="o">^</span><span class="p">(</span><span class="mi">2</span><span class="o">^</span><span class="p">(</span><span class="n">k</span><span class="o">-</span><span class="mi">1</span><span class="p">))))</span> 
+						  <span class="k">for</span> <span class="n">k</span> <span class="kp">in</span> <span class="mi">1</span><span class="o">:</span><span class="n">n</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ControlU (generic function with 1 method)
+</pre></div>
+</div>
+</div>
+</div>
+<p>Luego, crear el algoritmo del circuito arriba mostrado es tan sencillo como:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">PE</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">U</span><span class="p">)</span> <span class="o">=</span><span class="n">chain</span><span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="n">m</span><span class="p">,</span> <span class="c">## Número total de qubits, sumando ambos registros.</span>
+        		   <span class="n">concentrate</span><span class="p">(</span><span class="n">Hadamards</span><span class="p">(</span><span class="n">n</span><span class="p">),</span> <span class="mi">1</span><span class="o">:</span><span class="n">n</span><span class="p">),</span> <span class="c">## H en el primer registro. </span>
+        		   <span class="n">ControlU</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">U</span><span class="p">),</span>
+                   <span class="n">concentrate</span><span class="p">(</span><span class="n">QFT</span><span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="o">&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="o">:</span><span class="n">n</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>PE (generic function with 1 method)
+</pre></div>
+</div>
+</div>
+</div>
+<p>Este algoritmo es utilizado también como base o subrutina de otros algoritmos clásicos, por ejemplo el algoritmo de Shor para factorización de números enteros.</p>
 </div>
 </div>
 </div>
