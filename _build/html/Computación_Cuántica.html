@@ -295,8 +295,8 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#algoritmica">
-   Algorítmica
+  <a class="reference internal nav-link" href="#abstraccion-a-nivel-de-circuito">
+   Abstracción a nivel de circuito
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -330,6 +330,33 @@
     <a class="reference internal nav-link" href="#compuertas-logicas-y-mediciones">
      Compuertas lógicas y mediciones
     </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#mediciones">
+       Mediciones
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#compuertas-comunes">
+       Compuertas comunes
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#compuertas-de-control">
+       Compuertas de control
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#aplicando-bloques-a-registros">
+       Aplicando bloques a registros
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#metricas-de-comparacion-de-registros">
+       Métricas de comparación de registros
+      </a>
+     </li>
+    </ul>
    </li>
   </ul>
  </li>
@@ -354,8 +381,8 @@
 <p><img alt="Capas_QC" src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Jones-2012-figure01.png" /></p>
 <p>Aquí podemos apreciar que la algorítmica es una abstracción de las posibles implementaciones físicas que pueden existir y además es resultado de un conjunto de asunciones teóricas que se deben procurar garantizar en las implementaciones mediante cuidados de la capa 2: Virtual (corrección de error, desacoplamiento dinámico, ciclo de control-retroalimentación del sistema, etc.)</p>
 </div>
-<div class="section" id="algoritmica">
-<h2>Algorítmica<a class="headerlink" href="#algoritmica" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="section" id="abstraccion-a-nivel-de-circuito">
+<h2>Abstracción a nivel de circuito<a class="headerlink" href="#abstraccion-a-nivel-de-circuito" title="Enlazar permanentemente con este título">¶</a></h2>
 <div class="section" id="diseno-de-un-circuito">
 <h3>Diseño de un circuito<a class="headerlink" href="#diseno-de-un-circuito" title="Enlazar permanentemente con este título">¶</a></h3>
 <p>En la algorítmica del cómputo cuántico trabajamos con los siguientes objetos abstractos (que pueden ser implementados de diversas maneras físicamente):</p>
@@ -387,10 +414,6 @@
 </div>
 <div class="cell_output docutils container">
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold -Color-Bold-Green"> Activating</span> environment at `~/julia_for_education/book/Project.toml`
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>┌ Info: Precompiling Yao [5872b779-8223-5990-8dd0-5abbb0748c8c]
-└ @ Base loading.jl:1278
 </pre></div>
 </div>
 </div>
@@ -494,7 +517,7 @@
 </div>
 </div>
 </div>
-<p>A veces no necesitamos especificar el estado explícito, y queremos en su lugar generar un estado aleatorio que nos permita poner a prueba cierto circuito independiente de sus entradas:</p>
+<p>A veces no necesitamos especificar el estado explícito, y queremos en su lugar generar un estado aleatorio (basándonos en una distribución binormal estándar) que nos permita poner a prueba cierto circuito independiente de sus entradas:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">rand_state</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
@@ -516,10 +539,10 @@
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4×1 Array{Complex{Float64},2}:
-   0.8390914035594469 + 0.07901485158826882im
- -0.14968599333400173 + 0.3454643434296483im
- -0.15537556205922404 - 0.13184139510563717im
- -0.26097028569911246 + 0.19570782241126547im
+   0.3785174648167046 - 0.2691739926644298im
+ -0.03170334817933772 - 0.2707726251204369im
+ -0.08431568864570724 - 0.7648020763026575im
+ -0.24018944274695586 + 0.2454071189384735im
 </pre></div>
 </div>
 </div>
@@ -756,32 +779,32 @@
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>32×1 Array{Complex{Float64},2}:
-   0.11287078710569062 - 0.03576544498416294im
- -0.022121614186045385 - 0.11399767426568388im
-  -0.15780343141742695 + 0.21098836985356165im
-   0.16679245213518507 - 0.08068926929989742im
-   0.12357320882774674 + 0.009639152290620692im
-   0.18019703578493296 + 0.00941919276327598im
-   0.21895691158079353 - 0.07275507299397029im
-  0.056755931988829715 - 0.07437606770239902im
-   0.17792625667076922 - 0.025108428840057047im
-  0.029690534742118788 - 0.16228069814710422im
-   0.14854645743653516 + 0.17760928645310262im
-   0.10480493891678745 + 0.12392990598686132im
-  0.040217734401970046 - 0.046957663511412485im
+  -0.04780090850769242 - 0.0664194901729719im
+  -0.15748163291873019 - 0.09786276809818792im
+  -0.01748866431398053 - 0.18339677378629968im
+  0.005471149193524436 - 0.08767795913817221im
+   0.11931411592225835 - 0.10598047756656853im
+ 0.0026012493549394085 + 0.26402368271767906im
+   0.10632405758809471 + 0.07357876157861098im
+   0.11715576511124001 + 0.16654774571464864im
+   0.16681491535459889 - 0.2919799460374847im
+  0.021392964370805047 + 0.2830362255972639im
+    0.2701826596776606 - 0.057585566530375165im
+  -0.04226335745648542 - 0.12270027088135105im
+ -0.005274728915546057 - 0.23852466104849895im
                        ⋮
-  -0.17270606123283322 - 0.2968417290722879im
-  -0.04102519381774606 - 0.18625705145578833im
-  -0.09520149882583517 + 0.09016695772173154im
-   0.04122152100199873 - 0.03268921200498623im
-   0.07637314406685049 + 0.15153643770298555im
-   0.05227842739438906 - 0.13016310080595522im
- -0.014809223788259487 - 0.15146778496453578im
- -0.037965678595138816 - 0.1372126610118868im
-   0.15541126120590593 + 0.033630024167074946im
-   0.09016879270148428 - 0.08608386654683621im
-  -0.01737796388408158 + 0.17332316448909943im
-  -0.05999027221027737 + 0.09679743389433465im
+   0.06122986525978423 + 0.099944270060267im
+    0.0331260507135512 + 0.01774332562244907im
+  -0.14018202264845234 + 0.165746897831261im
+  -0.07062250618545546 + 0.02265001011364766im
+  0.032264598124325625 - 0.10165864538385674im
+  -0.12182451850115425 + 0.03889997742415395im
+  -0.01811595051325987 + 0.09840118325293341im
+  -0.04573297835367982 + 0.07829906518158343im
+  0.016143797924263743 + 0.1664002035451556im
+   0.19789580863801753 - 0.12958118606826877im
+   0.14094632248075623 + 0.078247812815705im
+  0.019492183785784187 + 0.01563926774156913im
 </pre></div>
 </div>
 </div>
@@ -834,7 +857,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.9999999999999999 + 0.0im
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.0000000000000002 + 0.0im
 </pre></div>
 </div>
 </div>
@@ -843,6 +866,8 @@
 </div>
 <div class="section" id="compuertas-logicas-y-mediciones">
 <h3>Compuertas lógicas y mediciones<a class="headerlink" href="#compuertas-logicas-y-mediciones" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="section" id="mediciones">
+<h4>Mediciones<a class="headerlink" href="#mediciones" title="Enlazar permanentemente con este título">¶</a></h4>
 <p>Las compuertas lógicas son la forma en que podemos transformar los estados de los registros de qubits que hemos creados. En Yao estos se pueden definir, al igual que los aparatos de medición, en los denominados <strong>bloques</strong>.</p>
 <p>Primero, preparemos un registro con la suma de dos registros y lo normalizamos posteriormente:</p>
 <div class="cell docutils container">
@@ -929,7 +954,41 @@
 </div>
 </div>
 </div>
-<p>Las compuertas, fuera de bloques, son representados por sus símbolos comunes para las más utilizadas:</p>
+<p>Podemos también especificar el número de veces que quisieramos medir:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">reg</span> <span class="o">=</span> <span class="n">rand_state</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ArrayReg{1, Complex{Float64}, Array...}
+    active qubits: 7/7
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">measure</span><span class="p">(</span><span class="n">reg</span><span class="p">;</span> <span class="n">nshots</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5-element Array{BitBasis.BitStr{7,Int64},1}:
+ 0000000 ₍₂₎
+ 1111100 ₍₂₎
+ 0000100 ₍₂₎
+ 1101110 ₍₂₎
+ 1011011 ₍₂₎
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="compuertas-comunes">
+<h4>Compuertas comunes<a class="headerlink" href="#compuertas-comunes" title="Enlazar permanentemente con este título">¶</a></h4>
+<p>Las compuertas lógicas, fuera de bloques, son representados por sus símbolos comunes para las más utilizadas:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">typeof</span><span class="p">((</span><span class="n">X</span><span class="p">,</span> <span class="n">Z</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">H</span><span class="p">))</span>
@@ -938,6 +997,63 @@
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Tuple{XGate,ZGate,YGate,HGate}
+</pre></div>
+</div>
+</div>
+</div>
+<p>donde sus matrices unitarias asociadas en la base canónica son:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">mat</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2×2 LuxurySparse.PermMatrix{Complex{Float64},Int64,Array{Complex{Float64},1},Array{Int64,1}}:
+ 0.0+0.0im  1.0+0.0im
+ 1.0+0.0im  0.0+0.0im
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span> <span class="n">mat</span><span class="p">(</span><span class="n">Y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2×2 LuxurySparse.PermMatrix{Complex{Float64},Int64,Array{Complex{Float64},1},Array{Int64,1}}:
+ 0.0+0.0im  0.0-1.0im
+ 0.0+1.0im  0.0+0.0im
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">mat</span><span class="p">(</span><span class="n">Z</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2×2 LinearAlgebra.Diagonal{Complex{Float64},Array{Complex{Float64},1}}:
+ 1.0+0.0im       ⋅    
+     ⋅      -1.0+0.0im
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span> <span class="n">mat</span><span class="p">(</span><span class="n">H</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2×2 Array{Complex{Float64},2}:
+ 0.707107+0.0im   0.707107+0.0im
+ 0.707107+0.0im  -0.707107+0.0im
 </pre></div>
 </div>
 </div>
@@ -972,7 +1088,254 @@
 </div>
 </div>
 </div>
-<p>La compuerta <span class="math notranslate nohighlight">\(X\)</span> de pauli se conoce como el <strong>bit flip</strong>. Para una lista más detallada y efecto de las compuertas más utlizadas ver <a class="reference external" href="https://en.wikipedia.org/wiki/Quantum_logic_gate">aquí</a>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">ArrayReg</span><span class="p">(</span><span class="n">bit</span><span class="s">&quot;0&quot;</span><span class="p">)</span> <span class="o">|&gt;</span> <span class="n">repeat</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">X</span><span class="p">))</span><span class="o">.</span><span class="n">state</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2×1 Array{Complex{Float64},2}:
+ 1.0 + 0.0im
+ 0.0 + 6.9145683440624e-310im
+</pre></div>
+</div>
+</div>
+</div>
+<p>La compuerta <span class="math notranslate nohighlight">\(X\)</span> de pauli se conoce como el <strong>bit flip</strong> que, como se muestra arriba, transforma el estado <span class="math notranslate nohighlight">\(|0\rangle\)</span> hacia <span class="math notranslate nohighlight">\(|1\rangle\)</span> y viceversa. Esto significa que al aplicarla dos veces, regresamos al estado original en este caso.</p>
+<p>Para una lista más detallada y efecto de las compuertas más utlizadas ver <a class="reference external" href="https://en.wikipedia.org/wiki/Quantum_logic_gate">aquí</a>.</p>
+<p>Aquí se está operando unqubit individual con una cantidad general <span class="math notranslate nohighlight">\(n\)</span> de compuertas secuenciales. Otra forma importante de operar es especificar la accion en un registro de <span class="math notranslate nohighlight">\(m\)</span> qubits con compuertas presentar en solamente algunos de los qubits. Considere:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">mat</span><span class="p">(</span><span class="n">put</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="o">=&gt;</span><span class="n">X</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>8×8 LuxurySparse.PermMatrix{Complex{Float64},Int64,Array{Complex{Float64},1},Array{Int64,1}}:
+ 0.0+0.0im  0.0+0.0im  1.0+0.0im  …  0.0+0.0im  0.0+0.0im  0.0+0.0im
+ 0.0+0.0im  0.0+0.0im  0.0+0.0im     0.0+0.0im  0.0+0.0im  0.0+0.0im
+ 1.0+0.0im  0.0+0.0im  0.0+0.0im     0.0+0.0im  0.0+0.0im  0.0+0.0im
+ 0.0+0.0im  1.0+0.0im  0.0+0.0im     0.0+0.0im  0.0+0.0im  0.0+0.0im
+ 0.0+0.0im  0.0+0.0im  0.0+0.0im     0.0+0.0im  1.0+0.0im  0.0+0.0im
+ 0.0+0.0im  0.0+0.0im  0.0+0.0im  …  0.0+0.0im  0.0+0.0im  1.0+0.0im
+ 0.0+0.0im  0.0+0.0im  0.0+0.0im     0.0+0.0im  0.0+0.0im  0.0+0.0im
+ 0.0+0.0im  0.0+0.0im  0.0+0.0im     1.0+0.0im  0.0+0.0im  0.0+0.0im
+</pre></div>
+</div>
+</div>
+</div>
+<p>el comando <code class="docutils literal notranslate"><span class="pre">put(m,</span> <span class="pre">k=&gt;C)</span></code> coloca la compuerta <code class="docutils literal notranslate"><span class="pre">C</span></code> en el qubit <code class="docutils literal notranslate"><span class="pre">k</span></code> en el registro con <code class="docutils literal notranslate"><span class="pre">m</span></code> qubits (siendo <code class="docutils literal notranslate"><span class="pre">k&lt;m</span></code>). Esto se representa como una matriz sobre el espacio vectorial del registro entero. Para poder enlazar varios bloques <code class="docutils literal notranslate"><span class="pre">put</span></code>, utilizamos <code class="docutils literal notranslate"><span class="pre">chain</span></code> para crear una cadena de bloques</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">chain</span><span class="p">(</span><span class="n">put</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="o">=&gt;</span><span class="n">X</span><span class="p">),</span> <span class="n">put</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="o">=&gt;</span><span class="n">Y</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Cyan">nqubits: 3</span>
+<span class=" -Color -Color-Bold -Color-Bold-Blue">chain</span>
+├─ <span class=" -Color -Color-Bold -Color-Bold-Cyan">put on (2)</span>
+│  └─ X
+└─ <span class=" -Color -Color-Bold -Color-Bold-Cyan">put on (1)</span>
+   └─ Y
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">mat</span><span class="p">(</span><span class="n">chain</span><span class="p">(</span><span class="n">put</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="o">=&gt;</span><span class="n">X</span><span class="p">),</span> <span class="n">put</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="o">=&gt;</span><span class="n">Y</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>8×8 LuxurySparse.PermMatrix{Complex{Float64},Int64,Array{Complex{Float64},1},Array{Int64,1}}:
+ 0.0+0.0im  0.0+0.0im  0.0+0.0im  …  0.0+0.0im  0.0+0.0im  0.0+0.0im
+ 0.0+0.0im  0.0+0.0im  0.0+1.0im     0.0+0.0im  0.0+0.0im  0.0+0.0im
+ 0.0+0.0im  0.0-1.0im  0.0+0.0im     0.0+0.0im  0.0+0.0im  0.0+0.0im
+ 0.0+1.0im  0.0+0.0im  0.0+0.0im     0.0+0.0im  0.0+0.0im  0.0+0.0im
+ 0.0+0.0im  0.0+0.0im  0.0+0.0im     0.0+0.0im  0.0+0.0im  0.0-1.0im
+ 0.0+0.0im  0.0+0.0im  0.0+0.0im  …  0.0+0.0im  0.0+1.0im  0.0+0.0im
+ 0.0+0.0im  0.0+0.0im  0.0+0.0im     0.0-1.0im  0.0+0.0im  0.0+0.0im
+ 0.0+0.0im  0.0+0.0im  0.0+0.0im     0.0+0.0im  0.0+0.0im  0.0+0.0im
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="compuertas-de-control">
+<h4>Compuertas de control<a class="headerlink" href="#compuertas-de-control" title="Enlazar permanentemente con este título">¶</a></h4>
+<p>El diagrama mostrado al inicio del documento tenía elementos que conectan dos lineas de evolución de qubits. Estas son <strong>compuertas de control</strong> que consisten de un qubit de control y otro de respuesta.</p>
+<p>El qubit de control debe estar en el estado <span class="math notranslate nohighlight">\(|1\rangle\)</span> para que el qubit de respuesta aplique la compuerta especificada. Es decir, tenemos versiones de las compuertas discutidas anteriormente que contienen un control: Control-<span class="math notranslate nohighlight">\(X\)</span>, control-<span class="math notranslate nohighlight">\(H\)</span>, etc.</p>
+<p>Cabe agregar que aquí es donde comienzan a surgir efectos interesantes que contrastan el cómputo cuántico de el cómputo clásico, pues puede ser el caso que un qubit <em>colapse</em> al estado <span class="math notranslate nohighlight">\(|1\rangle\)</span> con cierta probabilidad <span class="math notranslate nohighlight">\(\alpha &lt;1\)</span>.</p>
+<p>Esta propiedad se explota en algoritmos cuánticos para cargar información probabilística condicional que nos pueda garantizar encontrar lo que deseamos con menor cómputo de lo que condicionales clásicos requerirían.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">control</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span> <span class="o">=&gt;</span> <span class="n">X</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Cyan">nqubits: 4</span>
+<span class=" -Color -Color-Bold -Color-Bold-Red">control(3)</span>
+└─ <span class=" -Color -Color-Bold -Color-Bold-White">(1,)</span> X
+</pre></div>
+</div>
+</div>
+</div>
+<p>El anterior comando crea una compuerta de control <span class="math notranslate nohighlight">\(X\)</span> en un registro de tamaño <span class="math notranslate nohighlight">\(4\)</span>, con qubit de control <span class="math notranslate nohighlight">\(3\)</span> y qubit de respuesta <span class="math notranslate nohighlight">\(1\)</span>. Es decir, solamente si el qubit <span class="math notranslate nohighlight">\(3\)</span> resulta tener el estado <span class="math notranslate nohighlight">\(|1\rangle\)</span> vamos a actuar con <span class="math notranslate nohighlight">\(X\)</span> sobre <span class="math notranslate nohighlight">\(1\)</span>.</p>
+<p>Es importante notar que el estado de <span class="math notranslate nohighlight">\(3\)</span> va a ser conocido hasta que realicemos la medición al final del circuito (o que se rompa la coherencia cuántica con otras interacciones con el ambiente, pero de manera ideal, sería mediante la medición controlada). Esto quiere decir que el efecto de <span class="math notranslate nohighlight">\(X\)</span> sobre <span class="math notranslate nohighlight">\(1\)</span> es probabilístico también, y no sabremos si se efectuó hasta medir (y a veces ni midiendo sabremos si un efecto particular se dio a cabo dentro de un circuito complejo).</p>
+</div>
+<div class="section" id="aplicando-bloques-a-registros">
+<h4>Aplicando bloques a registros<a class="headerlink" href="#aplicando-bloques-a-registros" title="Enlazar permanentemente con este título">¶</a></h4>
+<p>Apliquemos todo lo anteriormente visto para crear nuestro primer circuito cuántico.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">using</span> <span class="n">YaoBase</span><span class="o">:</span> <span class="n">rand_unitary</span> <span class="c">## Genera matrices unitarias de manera aleatorio</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">circuit</span> <span class="o">=</span> <span class="n">chain</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> 
+				<span class="n">control</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="o">=&gt;</span><span class="n">Rx</span><span class="p">(</span><span class="mf">0.25</span><span class="nb">π</span><span class="p">)),</span> 
+				<span class="n">put</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span><span class="o">=&gt;</span><span class="n">GeneralMatrixBlock</span><span class="p">(</span><span class="n">rand_unitary</span><span class="p">(</span><span class="mi">4</span><span class="p">))),</span> 
+				<span class="n">swap</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> 
+				<span class="n">repeat</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="n">H</span><span class="p">,</span> <span class="mi">2</span><span class="o">:</span><span class="mi">5</span><span class="p">),</span> 
+				<span class="n">put</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="o">=&gt;</span><span class="n">Ry</span><span class="p">(</span><span class="mf">0.6</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Cyan">nqubits: 5</span>
+<span class=" -Color -Color-Bold -Color-Bold-Blue">chain</span>
+├─ <span class=" -Color -Color-Bold -Color-Bold-Red">control(5)</span>
+│  └─ <span class=" -Color -Color-Bold -Color-Bold-White">(3,)</span> rot(X, 0.7853981633974483)
+├─ <span class=" -Color -Color-Bold -Color-Bold-Cyan">put on (2, 3)</span>
+│  └─ <span class=" -Color -Color-Red">matblock(...)</span>
+├─ <span class=" -Color -Color-Bold -Color-Bold-Cyan">put on (3, 4)</span>
+│  └─ SWAP
+├─ <span class=" -Color -Color-Bold -Color-Bold-Cyan">repeat on (2, 3, 4, 5)</span>
+│  └─ H
+└─ <span class=" -Color -Color-Bold -Color-Bold-Cyan">put on (2)</span>
+   └─ rot(Y, 0.6)
+</pre></div>
+</div>
+</div>
+</div>
+<p>Aquí vemos una cadena de bloques para actuar en un registro de 5 qubits activos. En orden se describen a continuación:</p>
+<ul class="simple">
+<li><p>Bloque de control de un operador de rotación (respecto al eje <span class="math notranslate nohighlight">\(x\)</span>) de fase <span class="math notranslate nohighlight">\(\pi/4\)</span>, controlado por el qubit 5 y respondiendo hacia el qubit 3 (notemos que no le ocupamos pasar el número de registros, pues estamos utilizando un constructor especial de <code class="docutils literal notranslate"><span class="pre">control</span></code> que utiliza <a class="reference external" href="https://en.wikipedia.org/wiki/Lazy_evaluation">lazy evaluation</a>)</p></li>
+<li><p>Una matriz general unitaria siendo ejecutada como compuerta lógica hacia los qubits <span class="math notranslate nohighlight">\(2\)</span> y <span class="math notranslate nohighlight">\(3\)</span>. Observe que la matriz es de rango <span class="math notranslate nohighlight">\(4=2^2\)</span>, por lo que actúa en pares de qubits.</p></li>
+<li><p>Una acción de intercambio de qubits. El qubit <span class="math notranslate nohighlight">\(3\)</span> y <span class="math notranslate nohighlight">\(4\)</span> han sido intercambiados de índice.</p></li>
+<li><p>Un bloque de compuertas de Hadamard, <span class="math notranslate nohighlight">\(H\)</span>, aplicadas en los qubits <span class="math notranslate nohighlight">\(2, 3\)</span>, y <span class="math notranslate nohighlight">\(4\)</span>.</p></li>
+<li><p>Una rotación de fase de 0.6 radianes respecto al eje <span class="math notranslate nohighlight">\(y\)</span></p></li>
+</ul>
+<p>Las rotaciones aquí mencionadas son respecto a los ejes espaciales definidos con el modelo de <a class="reference external" href="https://en.wikipedia.org/wiki/Bloch_sphere">esfera de Block</a>.</p>
+<p>Para aplicar este circuito a algún registro utilizamos el comando <code class="docutils literal notranslate"><span class="pre">apply!</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="n">apply!</span><span class="p">(</span><span class="n">zero_state</span><span class="p">(</span><span class="mi">5</span><span class="p">),</span> <span class="n">circuit</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ArrayReg{1, Complex{Float64}, Array...}
+    active qubits: 5/5
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">result</span><span class="o">.</span><span class="n">state</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>32×1 Array{Complex{Float64},2}:
+    -0.1761362162040583 + 0.2593450248354838im
+                    0.0 + 0.0im
+ -0.0024898299403573465 - 0.17430805298646815im
+                    0.0 + 0.0im
+    -0.1761362162040583 + 0.2593450248354838im
+                    0.0 + 0.0im
+ -0.0024898299403573465 - 0.17430805298646815im
+                    0.0 + 0.0im
+    0.08786933402634439 - 0.19208851337911506im
+                    0.0 + 0.0im
+    -0.2627078626179432 + 0.0877055125383473im
+                    0.0 + 0.0im
+    0.08786933402634439 - 0.19208851337911506im
+                        ⋮
+    -0.1761362162040583 + 0.2593450248354838im
+                    0.0 + 0.0im
+ -0.0024898299403573465 - 0.17430805298646815im
+                    0.0 + 0.0im
+    0.08786933402634439 - 0.19208851337911506im
+                    0.0 + 0.0im
+    -0.2627078626179432 + 0.0877055125383473im
+                    0.0 + 0.0im
+    0.08786933402634439 - 0.19208851337911506im
+                    0.0 + 0.0im
+    -0.2627078626179432 + 0.0877055125383473im
+                    0.0 + 0.0im
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="metricas-de-comparacion-de-registros">
+<h4>Métricas de comparación de registros<a class="headerlink" href="#metricas-de-comparacion-de-registros" title="Enlazar permanentemente con este título">¶</a></h4>
+<p>Posterior a la medición u operación de compuerta lógica hacia un registro, nos puede gustar verificar la fidelidad con la cual el estado cuántico corresponde al que esperamos de manera teórica. En la práctica, dentro de una computadora cuántica, esta fidelidad se ve comprometida en cada operación que realizamos, así como la evolución natural del sistema.</p>
+<p>Algunas de estas métricas ya están implementadas en <code class="docutils literal notranslate"><span class="pre">Yao</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">fidelity</span><span class="p">(</span><span class="n">rand_state</span><span class="p">(</span><span class="mi">6</span><span class="p">),</span> <span class="n">rand_state</span><span class="p">(</span><span class="mi">6</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.007157617960921923
+</pre></div>
+</div>
+</div>
+</div>
+<p>Ésta es calculada con la fórmula
+<span class="math notranslate nohighlight">\( {\displaystyle F(\rho ,\sigma )=\left(\operatorname {tr} {\sqrt {{\sqrt {\rho }}\sigma {\sqrt {\rho }}}}\right)^{2}}\)</span>.</p>
+<p>Donde <span class="math notranslate nohighlight">\(\rho\)</span> y <span class="math notranslate nohighlight">\(\sigma\)</span> son los estados del sistema (pensados en generalidad como operadores de densidad y no como su forma pura como vectores). También tenemos la distancia inducida por la traza en el espacio de estos operadores tipo traza. Éste se define como <span class="math notranslate nohighlight">\(\frac{1}{2} || \rho- \sigma||_{\text{tr}}\)</span> y se utiliza como <code class="docutils literal notranslate"><span class="pre">tracedist</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">tracedist</span><span class="p">(</span><span class="n">rand_state</span><span class="p">(</span><span class="mi">6</span><span class="p">),</span> <span class="n">rand_state</span><span class="p">(</span><span class="mi">6</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1-element Array{Float64,1}:
+ 1.9799296728114946
+</pre></div>
+</div>
+</div>
+</div>
+<p>Ambos métricas mostradas utilizan el operador de densidad general del estado, pero al estar considerando solamente sistemas de dimensión finita, podemos representar sin ambigüedad esta en una matriz de densidad de la siguiente forma:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">rand_state</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">|&gt;</span> <span class="n">ρ</span><span class="p">)</span><span class="o">.</span><span class="n">state</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2×2×1 Array{Complex{Float64},3}:
+[:, :, 1] =
+ 0.785855+0.0im        0.409958+0.0148805im
+ 0.409958-0.0148805im  0.214145+0.0im
+</pre></div>
+</div>
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>

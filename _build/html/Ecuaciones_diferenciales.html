@@ -400,12 +400,6 @@
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>┌ Info: Precompiling Plots [91a5bcdd-55d7-5caf-9e0b-520d859cae80]
-└ @ Base loading.jl:1278
-</pre></div>
-</div>
-</div>
 </div>
 <p>La siguiente configuración por defecto se coloca para la versión específica de Julia, Plots y backend GR utilizada en construir este documento. Puede ser óptimo cambiarlo a otra para uso personal:</p>
 <div class="cell docutils container">
@@ -449,11 +443,6 @@ x'(t) = F(x(t))
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>f (generic function with 1 method)
-</pre></div>
-</div>
-</div>
 </div>
 <p>Como descrito anteriormente, <span class="math notranslate nohighlight">\(f\)</span> depende de <span class="math notranslate nohighlight">\(u, p, t\)</span>, pero solamente es obligatoria la dependencia de <span class="math notranslate nohighlight">\(u\)</span> (salvo el caso trivial donde <span class="math notranslate nohighlight">\(f\)</span> es constante y en dado caso no necesitamos resolución numérica), mientras que, en este caso, no tenemos parámetros movibles <span class="math notranslate nohighlight">\(p\)</span> ni tampoco el tiempo <span class="math notranslate nohighlight">\(t\)</span> explícito, aunque por supuesto <span class="math notranslate nohighlight">\(u\)</span> se asume ser función del tiempo (<span class="math notranslate nohighlight">\(u = u(t)\)</span>).</p>
 </div>
@@ -462,11 +451,6 @@ x'(t) = F(x(t))
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">u₀</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span> <span class="n">tspan_u</span> <span class="o">=</span> <span class="p">(</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">1.0</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(0.0, 1.0)
 </pre></div>
 </div>
 </div>
@@ -509,8 +493,6 @@ x'(t) = F(x(t))
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<img alt="_images/Ecuaciones_diferenciales_17_0.svg" src="_images/Ecuaciones_diferenciales_17_0.svg" /></div>
 </div>
 </div>
 </div>
@@ -540,12 +522,6 @@ x'(t) = F(x(t))
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_html">
-<p align='center'>
-<img width='216' height='190' src='https://upload.wikimedia.org/wikipedia/commons/6/65/Trajektorie_eines_Doppelpendels.gif'>
-</p>
-</div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -574,11 +550,6 @@ x'(t) = F(x(t))
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>polar2cart (generic function with 1 method)
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -592,11 +563,6 @@ x'(t) = F(x(t))
 			   <span class="n">L₂</span><span class="o">*</span><span class="n">m₂</span><span class="o">*</span><span class="n">x</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="o">^</span><span class="mi">2</span><span class="o">*</span><span class="n">cos</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="n">x</span><span class="p">[</span><span class="mi">3</span><span class="p">]))</span><span class="o">*</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="n">x</span><span class="p">[</span><span class="mi">3</span><span class="p">]))</span><span class="o">/</span>
 			   <span class="p">(</span><span class="n">L₂</span><span class="o">*</span><span class="p">(</span><span class="n">m₁</span><span class="o">+</span><span class="n">m₂</span><span class="o">-</span><span class="n">m₂</span><span class="o">*</span><span class="n">cos</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="n">x</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span><span class="o">^</span><span class="mi">2</span><span class="p">))</span>
 <span class="k">end</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>double_pendulum (generic function with 1 method)
 </pre></div>
 </div>
 </div>
@@ -614,66 +580,6 @@ x'(t) = F(x(t))
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>retcode: Success
-Interpolation: specialized 7th order lazy interpolation
-t: 302-element Array{Float64,1}:
-  0.0
-  0.05
-  0.1223079052234777
-  0.21763564439678446
-  0.32592132827555614
-  0.45428546205171927
-  0.609957416358271
-  0.7734779293497827
-  0.9540060574595153
-  1.1799033713407105
-  1.403442437872348
-  1.5857800225971301
-  1.7547534996346459
-  ⋮
- 48.10013873938749
- 48.26086940221816
- 48.51276681735055
- 48.68829170708072
- 48.90897270610238
- 49.074198457665524
- 49.26762992059672
- 49.41331132773069
- 49.58656471302393
- 49.73635419325158
- 49.929069338760755
- 50.0
-u: 302-element Array{Array{Float64,1},1}:
- [0.0, 1.0471975511965976, 0.0, 1.8849555921538759]
- [0.05276815671595484, 1.071438957072351, 0.09384176137401032, 1.8607344940613866]
- [0.13361722361756873, 1.1748571429557286, 0.2248435889699277, 1.749602555594999]
- [0.2537554611755441, 1.3400852896072526, 0.38108445951036796, 1.518757313193717]
- [0.40410119950098694, 1.4024410831505718, 0.5301603161398095, 1.2396279286879397]
- [0.5728649474072226, 1.169954418422348, 0.6718502052458136, 0.9854204230486661]
- [0.7088857697515267, 0.5369386864730226, 0.8084759913872458, 0.7786857878244005]
- [0.7353785982784866, -0.19338512009518283, 0.9169953717631636, 0.5291567670987339]
- [0.6472090513598847, -0.715269349725902, 0.9734453010510711, 0.0543580496299323]
- [0.46935732113951517, -0.7327102879675962, 0.887866370720516, -0.86279081696396]
- [0.37225084287475957, -0.08343101301168705, 0.5743822024889788, -1.9236009700729089]
- [0.3419732736206664, -0.6055412037246396, 0.19590319502068296, -1.9975724150479082]
- [0.11351472321247819, -2.0721701874347174, -0.08424980592934868, -1.281496345624497]
- ⋮
- [-0.42641322931863473, -0.3495803765321254, -1.0156807674608763, -0.6419671254245816]
- [-0.4973969181679087, -0.5006444011316504, -1.0574689947805727, 0.11204124902755815]
- [-0.630914582747322, -0.5147537467276151, -0.8911329999018179, 1.1679719640654815]
- [-0.67975290420246, 0.13973286964103626, -0.6514876665177031, 1.4454143327848226]
- [-0.4549919175434134, 1.9015781454592204, -0.36771741048108453, 1.0727040751077042]
- [-0.08586635119481108, 2.28552090644888, -0.19809628081445166, 1.112713727902364]
- [0.2498746728460613, 1.030480739331191, 0.08577212263454681, 1.8451390168903863]
- [0.3320815110176066, 0.25499621194857525, 0.3793211991189911, 2.071661061898589]
- [0.39238335257281043, 0.5691064464087552, 0.6955158132179681, 1.4770421393438187]
- [0.5050439638383725, 0.8813133553208242, 0.8649801258453232, 0.7945405264152658]
- [0.6711792406408479, 0.7375180832629122, 0.9459177363546021, 0.09015063400030744]
- [0.7166955252930275, 0.5339053276716273, 0.9454344718959518, -0.09727163755146666]
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -684,8 +590,6 @@ u: 302-element Array{Array{Float64,1},1}:
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<img alt="_images/Ecuaciones_diferenciales_26_0.svg" src="_images/Ecuaciones_diferenciales_26_0.svg" /></div>
 </div>
 </div>
 <div class="section" id="sistema-de-henon-heiles">
@@ -735,11 +639,6 @@ u: 302-element Array{Array{Float64,1},1}:
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hénon_Heiles (generic function with 1 method)
-</pre></div>
-</div>
-</div>
 </div>
 <p>Resolvemos el problema:</p>
 <div class="cell docutils container">
@@ -751,66 +650,6 @@ u: 302-element Array{Array{Float64,1},1}:
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>retcode: Success
-Interpolation: specialized 9th order lazy interpolation
-t: 92-element Array{Float64,1}:
-   0.0
-   0.002767153900836259
-   0.019390834923504494
-   0.12119935187168689
-   0.530301790748649
-   1.1815820951240696
-   1.9076818589199944
-   2.760621588805973
-   3.605356397694905
-   4.619986523154658
-   5.645461607705661
-   6.628534205499573
-   7.693582537682585
-   ⋮
-  87.998350712816
-  89.12549586531028
-  90.34475976436744
-  91.46207401166643
-  92.80356604989571
-  93.85953574845666
-  95.06904060013457
-  96.26535461031364
-  97.42922082465732
-  98.66129338374192
-  99.77739539466218
- 100.0
-u: 92-element Array{Array{Float64,1},1}:
- [0.0, 0.1, 0.5, 0.0]
- [0.0013835748315707893, 0.09999965542762242, 0.4999977028602053, -0.00024904536251688065]
- [0.00969468838029096, 0.09998307727738429, 0.4998872044881803, -0.0017456951735989768]
- [0.06042185852124362, 0.09933514655181921, 0.49560211524963727, -0.011034331488800994]
- [0.25058314954625777, 0.08601880052006405, 0.41888733977799825, -0.05742234854837401]
- [0.4444070725050881, 0.011729989621118292, 0.15861982132709898, -0.17862147581375334]
- [0.4473066382282281, -0.16320285100673101, -0.13126053699732168, -0.278919260652333]
- [0.2584572479002514, -0.35063663280889906, -0.2790546850571461, -0.09910177915852485]
- [0.004597212445906916, -0.2765685142768536, -0.312548979741221, 0.26654022206668787]
- [-0.2725985862807251, 0.0888755547420482, -0.17762619800611465, 0.36446229045208195]
- [-0.2359649523333103, 0.33539268583553616, 0.2639673601222507, 0.0963845261733765]
- [0.1265413408705088, 0.30963375665407095, 0.371111092458688, -0.1399949538666176]
- [0.3331864229707778, 0.02777322267904361, -0.008512405641007949, -0.3759318157658049]
- ⋮
- [0.4186977554232182, 0.02225898651098427, 0.21193927276905847, -0.1756847863354898]
- [0.40581590801727596, -0.26179610944305776, -0.18430403170494647, -0.25779590723676926]
- [0.09926832114771249, -0.32419636125803547, -0.28889656169215455, 0.21128012800300267]
- [-0.2114517878067161, 0.0730906156176862, -0.2152584827559103, 0.3958776870516688]
- [-0.1651820081856587, 0.39689185721893394, 0.3024690065429725, 0.05584713594737721]
- [0.1983089199690154, 0.31747189605713433, 0.2712578251378906, -0.20508331912354352]
- [0.2589198172932789, -0.09448897836357471, -0.1423573171660115, -0.4186496601369496]
- [0.012425073399517497, -0.4034830628308482, -0.22915816033577166, 0.01615845936515269]
- [-0.23244506354682215, -0.08009238032616647, -0.15414702520990145, 0.42836918054426903]
- [-0.18927473635920564, 0.34544617499081803, 0.2560388635086127, 0.20350117082002062]
- [0.1741544372800989, 0.41603304066553226, 0.26940699405279905, -0.07855686343548968]
- [0.2254464439669529, 0.3916330728294025, 0.18834406694149203, -0.14125776488921374]
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -818,8 +657,6 @@ u: 92-element Array{Array{Float64,1},1}:
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<img alt="_images/Ecuaciones_diferenciales_33_0.svg" src="_images/Ecuaciones_diferenciales_33_0.svg" /></div>
 </div>
 <p>Parece estar correctamente resuelto pero… examinando la evolución de la energía total/Hamiltoniano podemos encontrar lo siguiente:</p>
 <div class="cell docutils container">
@@ -831,8 +668,6 @@ u: 92-element Array{Array{Float64,1},1}:
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<img alt="_images/Ecuaciones_diferenciales_35_0.svg" src="_images/Ecuaciones_diferenciales_35_0.svg" /></div>
 </div>
 <p>¡La energía total cambia! Eso quiere decir que la ley de conservación que esperamos que se cumpla físicamente no parece cumplirse en nuestra simulación. Esto delata un error en la resolución de la ecuación, específicamente por el método utilizado.</p>
 <p>Para evitar eso, podemos utilizar algo conocido como un <strong>integrador simplético</strong> que considere la estructura de sistema Hamiltoniano que tiene nuestras ecuaciones.</p>
@@ -884,8 +719,6 @@ u: 92-element Array{Array{Float64,1},1}:
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<img alt="_images/Ecuaciones_diferenciales_43_0.svg" src="_images/Ecuaciones_diferenciales_43_0.svg" /></div>
 </div>
 </div>
 </div>

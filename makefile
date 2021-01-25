@@ -1,4 +1,7 @@
-all: simple
+all: instantiate simple
+
+instantiate:
+	julia -e 'using Pkg; Pkg.activate("."); Pkg.instantiate()'
 
 simple:
 	jb build -q .
