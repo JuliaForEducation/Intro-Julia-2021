@@ -22,5 +22,5 @@ html:
   favicon: "images/logo.ico"
   extra_navbar: ""
 execute:
-  timeout: 100
+  timeout: 200
   allow_errors: true

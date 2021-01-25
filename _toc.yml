@@ -12,6 +12,9 @@
   - file: Ecuaciones_diferenciales
   - file: Paquete_DataFrames
   - file: Natural_Language_Processing
+- part: Tercera Semana
+  chapters:
+  - file: Computación_Cuántica
 - part: Proyectos
   chapters:
   - file: Primer_proyecto
