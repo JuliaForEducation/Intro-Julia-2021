@@ -418,37 +418,11 @@
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">ArgumentError</span>: No file exists at given path: ./titanic/train.csv
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">load</span><span class="p">(::</span><span class="n">FileIO</span><span class="o">.</span><span class="n">Formatted</span><span class="p">;</span> <span class="n">options</span><span class="p">::</span><span class="n">Base</span><span class="o">.</span><span class="n">Iterators</span><span class="o">.</span><span class="n">Pairs</span><span class="p">{</span><span class="n">Union</span><span class="p">{},</span><span class="n">Union</span><span class="p">{},</span><span class="n">Tuple</span><span class="p">{},</span><span class="n">NamedTuple</span><span class="p">{(),</span><span class="n">Tuple</span><span class="p">{}}})</span> <span class="n">at</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">runner</span><span class="o">/.</span><span class="n">julia</span><span class="o">/</span><span class="n">packages</span><span class="o">/</span><span class="n">FileIO</span><span class="o">/</span><span class="n">TyKdX</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">loadsave</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">192</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">load</span> <span class="n">at</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">runner</span><span class="o">/.</span><span class="n">julia</span><span class="o">/</span><span class="n">packages</span><span class="o">/</span><span class="n">FileIO</span><span class="o">/</span><span class="n">TyKdX</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">loadsave</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">187</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
- <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="c1">#load#16 at /home/runner/.julia/packages/FileIO/TyKdX/src/loadsave.jl:136 [inlined]</span>
- <span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="n">load</span><span class="p">(::</span><span class="n">String</span><span class="p">)</span> <span class="n">at</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">runner</span><span class="o">/.</span><span class="n">julia</span><span class="o">/</span><span class="n">packages</span><span class="o">/</span><span class="n">FileIO</span><span class="o">/</span><span class="n">TyKdX</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">loadsave</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">136</span>
- <span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">3</span><span class="p">]:</span><span class="mi">1</span>
- <span class="p">[</span><span class="mi">6</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(::</span><span class="n">Function</span><span class="p">,</span> <span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">)</span> <span class="n">at</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1091</span>
-</pre></div>
-</div>
-</div>
 </div>
 <p>A continuación se muestra cómo se carga los datos de una archivo <span class="math notranslate nohighlight">\(^*\)</span>.xlsx, en el cual se especifica el nombre de la hoja de cálculo (en el caso particular del ejemplo “train”).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">datatest</span> <span class="o">=</span> <span class="n">load</span><span class="p">(</span><span class="s">&quot;./titanic/test.xlsx&quot;</span><span class="p">,</span> <span class="s">&quot;test&quot;</span><span class="p">);</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">ArgumentError</span>: No file exists at given path: ./titanic/test.xlsx
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">load</span><span class="p">(::</span><span class="n">FileIO</span><span class="o">.</span><span class="n">Formatted</span><span class="p">,</span> <span class="p">::</span><span class="n">Any</span><span class="p">;</span> <span class="n">options</span><span class="p">::</span><span class="n">Base</span><span class="o">.</span><span class="n">Iterators</span><span class="o">.</span><span class="n">Pairs</span><span class="p">{</span><span class="n">Union</span><span class="p">{},</span><span class="n">Union</span><span class="p">{},</span><span class="n">Tuple</span><span class="p">{},</span><span class="n">NamedTuple</span><span class="p">{(),</span><span class="n">Tuple</span><span class="p">{}}})</span> <span class="n">at</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">runner</span><span class="o">/.</span><span class="n">julia</span><span class="o">/</span><span class="n">packages</span><span class="o">/</span><span class="n">FileIO</span><span class="o">/</span><span class="n">TyKdX</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">loadsave</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">192</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">load</span> <span class="n">at</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">runner</span><span class="o">/.</span><span class="n">julia</span><span class="o">/</span><span class="n">packages</span><span class="o">/</span><span class="n">FileIO</span><span class="o">/</span><span class="n">TyKdX</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">loadsave</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">187</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
- <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="c1">#load#16 at /home/runner/.julia/packages/FileIO/TyKdX/src/loadsave.jl:136 [inlined]</span>
- <span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="n">load</span><span class="p">(::</span><span class="n">String</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">)</span> <span class="n">at</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">runner</span><span class="o">/.</span><span class="n">julia</span><span class="o">/</span><span class="n">packages</span><span class="o">/</span><span class="n">FileIO</span><span class="o">/</span><span class="n">TyKdX</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">loadsave</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">136</span>
- <span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">4</span><span class="p">]:</span><span class="mi">1</span>
- <span class="p">[</span><span class="mi">6</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(::</span><span class="n">Function</span><span class="p">,</span> <span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">)</span> <span class="n">at</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1091</span>
 </pre></div>
 </div>
 </div>
@@ -461,11 +435,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: datatrain not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">5</span><span class="p">]:</span><span class="mi">1</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(::</span><span class="n">Function</span><span class="p">,</span> <span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">)</span> <span class="n">at</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1091</span>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CSVFiles.CSVFile
 </pre></div>
 </div>
 </div>
@@ -473,15 +443,6 @@
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">datatest</span><span class="p">;</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: datatest not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(::</span><span class="n">Function</span><span class="p">,</span> <span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">)</span> <span class="n">at</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1091</span>
 </pre></div>
 </div>
 </div>
@@ -495,11 +456,32 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: datatest not defined
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>PyError ($(Expr(:escape, :(ccall(#= /home/runner/.julia/packages/PyCall/tqyST/src/pyfncall.jl:43 =# @pysym(:PyObject_Call), PyPtr, (PyPtr, PyPtr, PyPtr), o, pyargsptr, kw))))) &lt;class &#39;xlrd.biffh.XLRDError&#39;&gt;
+XLRDError(&#39;Excel xlsx file; not supported&#39;)
+  File &quot;/opt/hostedtoolcache/Python/3.7.9/x64/lib/python3.7/site-packages/xlrd/__init__.py&quot;, line 170, in open_workbook
+    raise XLRDError(FILE_FORMAT_DESCRIPTIONS[file_format]+&#39;; not supported&#39;)
 
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">7</span><span class="p">]:</span><span class="mi">1</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(::</span><span class="n">Function</span><span class="p">,</span> <span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">)</span> <span class="n">at</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1091</span>
+
+Stacktrace:
+ [1] pyerr_check at /home/runner/.julia/packages/PyCall/tqyST/src/exception.jl:62 [inlined]
+ [2] pyerr_check at /home/runner/.julia/packages/PyCall/tqyST/src/exception.jl:66 [inlined]
+ [3] _handle_error(::String) at /home/runner/.julia/packages/PyCall/tqyST/src/exception.jl:83
+ [4] macro expansion at /home/runner/.julia/packages/PyCall/tqyST/src/exception.jl:97 [inlined]
+ [5] #109 at /home/runner/.julia/packages/PyCall/tqyST/src/pyfncall.jl:43 [inlined]
+ [6] disable_sigint at ./c.jl:446 [inlined]
+ [7] __pycall! at /home/runner/.julia/packages/PyCall/tqyST/src/pyfncall.jl:42 [inlined]
+ [8] _pycall!(::PyCall.PyObject, ::PyCall.PyObject, ::Tuple{String}, ::Int64, ::Ptr{Nothing}) at /home/runner/.julia/packages/PyCall/tqyST/src/pyfncall.jl:29
+ [9] _pycall! at /home/runner/.julia/packages/PyCall/tqyST/src/pyfncall.jl:11 [inlined]
+ [10] #_#116 at /home/runner/.julia/packages/PyCall/tqyST/src/pyfncall.jl:86 [inlined]
+ [11] (::PyCall.PyObject)(::String) at /home/runner/.julia/packages/PyCall/tqyST/src/pyfncall.jl:86
+ [12] openxl(::String) at /home/runner/.julia/packages/ExcelReaders/PgE1r/src/ExcelReaders.jl:64
+ [13] getiterator(::ExcelFiles.ExcelFile) at /home/runner/.julia/packages/ExcelFiles/NtqPa/src/ExcelFiles.jl:0
+ [14] nondatavaluerows(::ExcelFiles.ExcelFile) at /home/runner/.julia/packages/Tables/8Ud85/src/tofromdatavalues.jl:24
+ [15] columns at /home/runner/.julia/packages/Tables/8Ud85/src/fallbacks.jl:261 [inlined]
+ [16] DataFrame(::ExcelFiles.ExcelFile; copycols::Bool) at /home/runner/.julia/packages/DataFrames/GtZ1l/src/other/tables.jl:43
+ [17] DataFrame(::ExcelFiles.ExcelFile) at /home/runner/.julia/packages/DataFrames/GtZ1l/src/other/tables.jl:34
+ [18] top-level scope at In[7]:1
+ [19] include_string(::Function, ::Module, ::String, ::String) at ./loading.jl:1091
 </pre></div>
 </div>
 </div>
@@ -511,15 +493,6 @@
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: datatrain not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">8</span><span class="p">]:</span><span class="mi">1</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(::</span><span class="n">Function</span><span class="p">,</span> <span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">)</span> <span class="n">at</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1091</span>
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -528,11 +501,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: datatrain not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">9</span><span class="p">]:</span><span class="mi">1</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(::</span><span class="n">Function</span><span class="p">,</span> <span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">)</span> <span class="n">at</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1091</span>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(CSVFiles.CSVFile, DataFrame)
 </pre></div>
 </div>
 </div>
@@ -553,11 +522,19 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: dftrain not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">10</span><span class="p">]:</span><span class="mi">1</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(::</span><span class="n">Function</span><span class="p">,</span> <span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">)</span> <span class="n">at</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1091</span>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>12-element Array{String,1}:
+ &quot;PassengerId&quot;
+ &quot;Survived&quot;
+ &quot;Pclass&quot;
+ &quot;Name&quot;
+ &quot;Sex&quot;
+ &quot;Age&quot;
+ &quot;SibSp&quot;
+ &quot;Parch&quot;
+ &quot;Ticket&quot;
+ &quot;Fare&quot;
+ &quot;Cabin&quot;
+ &quot;Embarked&quot;
 </pre></div>
 </div>
 </div>
@@ -586,11 +563,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: dftrain not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">12</span><span class="p">]:</span><span class="mi">1</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(::</span><span class="n">Function</span><span class="p">,</span> <span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">)</span> <span class="n">at</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1091</span>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(891, 12)
 </pre></div>
 </div>
 </div>
@@ -615,15 +588,6 @@
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">describe</span><span class="p">(</span><span class="n">dftrain</span><span class="p">);</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: dftrain not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">14</span><span class="p">]:</span><span class="mi">1</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(::</span><span class="n">Function</span><span class="p">,</span> <span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">)</span> <span class="n">at</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1091</span>
 </pre></div>
 </div>
 </div>
@@ -655,14 +619,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: dftrain not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">16</span><span class="p">]:</span><span class="mi">1</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(::</span><span class="n">Function</span><span class="p">,</span> <span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">)</span> <span class="n">at</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1091</span>
-</pre></div>
-</div>
-</div>
+<div class="output text_html"><table class="data-frame"><thead><tr><th></th><th>Id</th><th>Survived</th><th>Class</th><th>Name</th></tr><tr><th></th><th>Int64</th><th>Int64</th><th>Int64</th><th>String</th></tr></thead><tbody><p>891 rows × 12 columns (omitted printing of 8 columns)</p><tr><th>1</th><td>1</td><td>0</td><td>3</td><td>Braund, Mr. Owen Harris</td></tr><tr><th>2</th><td>2</td><td>1</td><td>1</td><td>Cumings, Mrs. John Bradley (Florence Briggs Thayer)</td></tr><tr><th>3</th><td>3</td><td>1</td><td>3</td><td>Heikkinen, Miss. Laina</td></tr><tr><th>4</th><td>4</td><td>1</td><td>1</td><td>Futrelle, Mrs. Jacques Heath (Lily May Peel)</td></tr><tr><th>5</th><td>5</td><td>0</td><td>3</td><td>Allen, Mr. William Henry</td></tr><tr><th>6</th><td>6</td><td>0</td><td>3</td><td>Moran, Mr. James</td></tr><tr><th>7</th><td>7</td><td>0</td><td>1</td><td>McCarthy, Mr. Timothy J</td></tr><tr><th>8</th><td>8</td><td>0</td><td>3</td><td>Palsson, Master. Gosta Leonard</td></tr><tr><th>9</th><td>9</td><td>1</td><td>3</td><td>Johnson, Mrs. Oscar W (Elisabeth Vilhelmina Berg)</td></tr><tr><th>10</th><td>10</td><td>1</td><td>2</td><td>Nasser, Mrs. Nicholas (Adele Achem)</td></tr><tr><th>11</th><td>11</td><td>1</td><td>3</td><td>Sandstrom, Miss. Marguerite Rut</td></tr><tr><th>12</th><td>12</td><td>1</td><td>1</td><td>Bonnell, Miss. Elizabeth</td></tr><tr><th>13</th><td>13</td><td>0</td><td>3</td><td>Saundercock, Mr. William Henry</td></tr><tr><th>14</th><td>14</td><td>0</td><td>3</td><td>Andersson, Mr. Anders Johan</td></tr><tr><th>15</th><td>15</td><td>0</td><td>3</td><td>Vestrom, Miss. Hulda Amanda Adolfina</td></tr><tr><th>16</th><td>16</td><td>1</td><td>2</td><td>Hewlett, Mrs. (Mary D Kingcome) </td></tr><tr><th>17</th><td>17</td><td>0</td><td>3</td><td>Rice, Master. Eugene</td></tr><tr><th>18</th><td>18</td><td>1</td><td>2</td><td>Williams, Mr. Charles Eugene</td></tr><tr><th>19</th><td>19</td><td>0</td><td>3</td><td>Vander Planke, Mrs. Julius (Emelia Maria Vandemoortele)</td></tr><tr><th>20</th><td>20</td><td>1</td><td>3</td><td>Masselmani, Mrs. Fatima</td></tr><tr><th>21</th><td>21</td><td>0</td><td>2</td><td>Fynney, Mr. Joseph J</td></tr><tr><th>22</th><td>22</td><td>1</td><td>2</td><td>Beesley, Mr. Lawrence</td></tr><tr><th>23</th><td>23</td><td>1</td><td>3</td><td>McGowan, Miss. Anna "Annie"</td></tr><tr><th>24</th><td>24</td><td>1</td><td>1</td><td>Sloper, Mr. William Thompson</td></tr><tr><th>25</th><td>25</td><td>0</td><td>3</td><td>Palsson, Miss. Torborg Danira</td></tr><tr><th>26</th><td>26</td><td>1</td><td>3</td><td>Asplund, Mrs. Carl Oscar (Selma Augusta Emilia Johansson)</td></tr><tr><th>27</th><td>27</td><td>0</td><td>3</td><td>Emir, Mr. Farred Chehab</td></tr><tr><th>28</th><td>28</td><td>0</td><td>1</td><td>Fortune, Mr. Charles Alexander</td></tr><tr><th>29</th><td>29</td><td>1</td><td>3</td><td>O'Dwyer, Miss. Ellen "Nellie"</td></tr><tr><th>30</th><td>30</td><td>0</td><td>3</td><td>Todoroff, Mr. Lalio</td></tr><tr><th>&vellip;</th><td>&vellip;</td><td>&vellip;</td><td>&vellip;</td><td>&vellip;</td></tr></tbody></table></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -692,11 +649,33 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: dftrain not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">18</span><span class="p">]:</span><span class="mi">1</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(::</span><span class="n">Function</span><span class="p">,</span> <span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">)</span> <span class="n">at</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1091</span>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>891-element Array{String,1}:
+ &quot;Braund, Mr. Owen Harris&quot;
+ &quot;Cumings, Mrs. John Bradley (Florence Briggs Thayer)&quot;
+ &quot;Heikkinen, Miss. Laina&quot;
+ &quot;Futrelle, Mrs. Jacques Heath (Lily May Peel)&quot;
+ &quot;Allen, Mr. William Henry&quot;
+ &quot;Moran, Mr. James&quot;
+ &quot;McCarthy, Mr. Timothy J&quot;
+ &quot;Palsson, Master. Gosta Leonard&quot;
+ &quot;Johnson, Mrs. Oscar W (Elisabeth Vilhelmina Berg)&quot;
+ &quot;Nasser, Mrs. Nicholas (Adele Achem)&quot;
+ &quot;Sandstrom, Miss. Marguerite Rut&quot;
+ &quot;Bonnell, Miss. Elizabeth&quot;
+ &quot;Saundercock, Mr. William Henry&quot;
+ ⋮
+ &quot;Potter, Mrs. Thomas Jr (Lily Alexenia Wilson)&quot;
+ &quot;Shelley, Mrs. William (Imanita Parrish Hall)&quot;
+ &quot;Markun, Mr. Johann&quot;
+ &quot;Dahlberg, Miss. Gerda Ulrika&quot;
+ &quot;Banfield, Mr. Frederick James&quot;
+ &quot;Sutehall, Mr. Henry Jr&quot;
+ &quot;Rice, Mrs. William (Margaret Norton)&quot;
+ &quot;Montvila, Rev. Juozas&quot;
+ &quot;Graham, Miss. Margaret Edith&quot;
+ &quot;Johnston, Miss. Catherine Helen \&quot;Carrie\&quot;&quot;
+ &quot;Behr, Mr. Karl Howell&quot;
+ &quot;Dooley, Mr. Patrick&quot;
 </pre></div>
 </div>
 </div>
@@ -709,11 +688,33 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: dftrain not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">19</span><span class="p">]:</span><span class="mi">1</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(::</span><span class="n">Function</span><span class="p">,</span> <span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">)</span> <span class="n">at</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1091</span>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>891-element Array{Union{Missing, Float64},1}:
+ 22.0
+ 38.0
+ 26.0
+ 35.0
+ 35.0
+   missing
+ 54.0
+  2.0
+ 27.0
+ 14.0
+  4.0
+ 58.0
+ 20.0
+  ⋮
+ 56.0
+ 25.0
+ 33.0
+ 22.0
+ 28.0
+ 25.0
+ 39.0
+ 27.0
+ 19.0
+   missing
+ 26.0
+ 32.0
 </pre></div>
 </div>
 </div>
@@ -726,11 +727,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: dftrain not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">20</span><span class="p">]:</span><span class="mi">1</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(::</span><span class="n">Function</span><span class="p">,</span> <span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">)</span> <span class="n">at</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1091</span>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&quot;male&quot;
 </pre></div>
 </div>
 </div>
@@ -743,11 +740,33 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: dftrain not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">21</span><span class="p">]:</span><span class="mi">1</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(::</span><span class="n">Function</span><span class="p">,</span> <span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">)</span> <span class="n">at</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1091</span>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>891-element Array{String,1}:
+ &quot;male&quot;
+ &quot;female&quot;
+ &quot;female&quot;
+ &quot;female&quot;
+ &quot;male&quot;
+ &quot;male&quot;
+ &quot;male&quot;
+ &quot;male&quot;
+ &quot;female&quot;
+ &quot;female&quot;
+ &quot;female&quot;
+ &quot;female&quot;
+ &quot;male&quot;
+ ⋮
+ &quot;female&quot;
+ &quot;female&quot;
+ &quot;male&quot;
+ &quot;female&quot;
+ &quot;male&quot;
+ &quot;male&quot;
+ &quot;female&quot;
+ &quot;male&quot;
+ &quot;female&quot;
+ &quot;female&quot;
+ &quot;male&quot;
+ &quot;male&quot;
 </pre></div>
 </div>
 </div>
@@ -759,14 +778,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: dftrain not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">22</span><span class="p">]:</span><span class="mi">1</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(::</span><span class="n">Function</span><span class="p">,</span> <span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">)</span> <span class="n">at</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1091</span>
-</pre></div>
-</div>
-</div>
+<div class="output text_html"><table class="data-frame"><thead><tr><th></th><th>Gender</th></tr><tr><th></th><th>String</th></tr></thead><tbody><p>891 rows × 1 columns</p><tr><th>1</th><td>male</td></tr><tr><th>2</th><td>female</td></tr><tr><th>3</th><td>female</td></tr><tr><th>4</th><td>female</td></tr><tr><th>5</th><td>male</td></tr><tr><th>6</th><td>male</td></tr><tr><th>7</th><td>male</td></tr><tr><th>8</th><td>male</td></tr><tr><th>9</th><td>female</td></tr><tr><th>10</th><td>female</td></tr><tr><th>11</th><td>female</td></tr><tr><th>12</th><td>female</td></tr><tr><th>13</th><td>male</td></tr><tr><th>14</th><td>male</td></tr><tr><th>15</th><td>female</td></tr><tr><th>16</th><td>female</td></tr><tr><th>17</th><td>male</td></tr><tr><th>18</th><td>male</td></tr><tr><th>19</th><td>female</td></tr><tr><th>20</th><td>female</td></tr><tr><th>21</th><td>male</td></tr><tr><th>22</th><td>male</td></tr><tr><th>23</th><td>female</td></tr><tr><th>24</th><td>male</td></tr><tr><th>25</th><td>female</td></tr><tr><th>26</th><td>female</td></tr><tr><th>27</th><td>male</td></tr><tr><th>28</th><td>male</td></tr><tr><th>29</th><td>female</td></tr><tr><th>30</th><td>male</td></tr><tr><th>&vellip;</th><td>&vellip;</td></tr></tbody></table></div></div>
 </div>
 <p>Se puede acceder a un conjunto de columnas a la vez</p>
 <div class="cell docutils container">
@@ -776,14 +788,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: dftrain not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">23</span><span class="p">]:</span><span class="mi">1</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(::</span><span class="n">Function</span><span class="p">,</span> <span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">)</span> <span class="n">at</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1091</span>
-</pre></div>
-</div>
-</div>
+<div class="output text_html"><table class="data-frame"><thead><tr><th></th><th>Id</th><th>Name</th><th>Gender</th><th>Class</th></tr><tr><th></th><th>Int64</th><th>String</th><th>String</th><th>Int64</th></tr></thead><tbody><p>891 rows × 4 columns</p><tr><th>1</th><td>1</td><td>Braund, Mr. Owen Harris</td><td>male</td><td>3</td></tr><tr><th>2</th><td>2</td><td>Cumings, Mrs. John Bradley (Florence Briggs Thayer)</td><td>female</td><td>1</td></tr><tr><th>3</th><td>3</td><td>Heikkinen, Miss. Laina</td><td>female</td><td>3</td></tr><tr><th>4</th><td>4</td><td>Futrelle, Mrs. Jacques Heath (Lily May Peel)</td><td>female</td><td>1</td></tr><tr><th>5</th><td>5</td><td>Allen, Mr. William Henry</td><td>male</td><td>3</td></tr><tr><th>6</th><td>6</td><td>Moran, Mr. James</td><td>male</td><td>3</td></tr><tr><th>7</th><td>7</td><td>McCarthy, Mr. Timothy J</td><td>male</td><td>1</td></tr><tr><th>8</th><td>8</td><td>Palsson, Master. Gosta Leonard</td><td>male</td><td>3</td></tr><tr><th>9</th><td>9</td><td>Johnson, Mrs. Oscar W (Elisabeth Vilhelmina Berg)</td><td>female</td><td>3</td></tr><tr><th>10</th><td>10</td><td>Nasser, Mrs. Nicholas (Adele Achem)</td><td>female</td><td>2</td></tr><tr><th>11</th><td>11</td><td>Sandstrom, Miss. Marguerite Rut</td><td>female</td><td>3</td></tr><tr><th>12</th><td>12</td><td>Bonnell, Miss. Elizabeth</td><td>female</td><td>1</td></tr><tr><th>13</th><td>13</td><td>Saundercock, Mr. William Henry</td><td>male</td><td>3</td></tr><tr><th>14</th><td>14</td><td>Andersson, Mr. Anders Johan</td><td>male</td><td>3</td></tr><tr><th>15</th><td>15</td><td>Vestrom, Miss. Hulda Amanda Adolfina</td><td>female</td><td>3</td></tr><tr><th>16</th><td>16</td><td>Hewlett, Mrs. (Mary D Kingcome) </td><td>female</td><td>2</td></tr><tr><th>17</th><td>17</td><td>Rice, Master. Eugene</td><td>male</td><td>3</td></tr><tr><th>18</th><td>18</td><td>Williams, Mr. Charles Eugene</td><td>male</td><td>2</td></tr><tr><th>19</th><td>19</td><td>Vander Planke, Mrs. Julius (Emelia Maria Vandemoortele)</td><td>female</td><td>3</td></tr><tr><th>20</th><td>20</td><td>Masselmani, Mrs. Fatima</td><td>female</td><td>3</td></tr><tr><th>21</th><td>21</td><td>Fynney, Mr. Joseph J</td><td>male</td><td>2</td></tr><tr><th>22</th><td>22</td><td>Beesley, Mr. Lawrence</td><td>male</td><td>2</td></tr><tr><th>23</th><td>23</td><td>McGowan, Miss. Anna "Annie"</td><td>female</td><td>3</td></tr><tr><th>24</th><td>24</td><td>Sloper, Mr. William Thompson</td><td>male</td><td>1</td></tr><tr><th>25</th><td>25</td><td>Palsson, Miss. Torborg Danira</td><td>female</td><td>3</td></tr><tr><th>26</th><td>26</td><td>Asplund, Mrs. Carl Oscar (Selma Augusta Emilia Johansson)</td><td>female</td><td>3</td></tr><tr><th>27</th><td>27</td><td>Emir, Mr. Farred Chehab</td><td>male</td><td>3</td></tr><tr><th>28</th><td>28</td><td>Fortune, Mr. Charles Alexander</td><td>male</td><td>1</td></tr><tr><th>29</th><td>29</td><td>O'Dwyer, Miss. Ellen "Nellie"</td><td>female</td><td>3</td></tr><tr><th>30</th><td>30</td><td>Todoroff, Mr. Lalio</td><td>male</td><td>3</td></tr><tr><th>&vellip;</th><td>&vellip;</td><td>&vellip;</td><td>&vellip;</td><td>&vellip;</td></tr></tbody></table></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -792,29 +797,13 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: dftrain not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">24</span><span class="p">]:</span><span class="mi">1</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(::</span><span class="n">Function</span><span class="p">,</span> <span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">)</span> <span class="n">at</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1091</span>
-</pre></div>
-</div>
-</div>
+<div class="output text_html"><table class="data-frame"><thead><tr><th></th><th>Id</th><th>Name</th><th>Gender</th><th>Class</th></tr><tr><th></th><th>Int64</th><th>String</th><th>String</th><th>Int64</th></tr></thead><tbody><p>891 rows × 4 columns</p><tr><th>1</th><td>1</td><td>Braund, Mr. Owen Harris</td><td>male</td><td>3</td></tr><tr><th>2</th><td>2</td><td>Cumings, Mrs. John Bradley (Florence Briggs Thayer)</td><td>female</td><td>1</td></tr><tr><th>3</th><td>3</td><td>Heikkinen, Miss. Laina</td><td>female</td><td>3</td></tr><tr><th>4</th><td>4</td><td>Futrelle, Mrs. Jacques Heath (Lily May Peel)</td><td>female</td><td>1</td></tr><tr><th>5</th><td>5</td><td>Allen, Mr. William Henry</td><td>male</td><td>3</td></tr><tr><th>6</th><td>6</td><td>Moran, Mr. James</td><td>male</td><td>3</td></tr><tr><th>7</th><td>7</td><td>McCarthy, Mr. Timothy J</td><td>male</td><td>1</td></tr><tr><th>8</th><td>8</td><td>Palsson, Master. Gosta Leonard</td><td>male</td><td>3</td></tr><tr><th>9</th><td>9</td><td>Johnson, Mrs. Oscar W (Elisabeth Vilhelmina Berg)</td><td>female</td><td>3</td></tr><tr><th>10</th><td>10</td><td>Nasser, Mrs. Nicholas (Adele Achem)</td><td>female</td><td>2</td></tr><tr><th>11</th><td>11</td><td>Sandstrom, Miss. Marguerite Rut</td><td>female</td><td>3</td></tr><tr><th>12</th><td>12</td><td>Bonnell, Miss. Elizabeth</td><td>female</td><td>1</td></tr><tr><th>13</th><td>13</td><td>Saundercock, Mr. William Henry</td><td>male</td><td>3</td></tr><tr><th>14</th><td>14</td><td>Andersson, Mr. Anders Johan</td><td>male</td><td>3</td></tr><tr><th>15</th><td>15</td><td>Vestrom, Miss. Hulda Amanda Adolfina</td><td>female</td><td>3</td></tr><tr><th>16</th><td>16</td><td>Hewlett, Mrs. (Mary D Kingcome) </td><td>female</td><td>2</td></tr><tr><th>17</th><td>17</td><td>Rice, Master. Eugene</td><td>male</td><td>3</td></tr><tr><th>18</th><td>18</td><td>Williams, Mr. Charles Eugene</td><td>male</td><td>2</td></tr><tr><th>19</th><td>19</td><td>Vander Planke, Mrs. Julius (Emelia Maria Vandemoortele)</td><td>female</td><td>3</td></tr><tr><th>20</th><td>20</td><td>Masselmani, Mrs. Fatima</td><td>female</td><td>3</td></tr><tr><th>21</th><td>21</td><td>Fynney, Mr. Joseph J</td><td>male</td><td>2</td></tr><tr><th>22</th><td>22</td><td>Beesley, Mr. Lawrence</td><td>male</td><td>2</td></tr><tr><th>23</th><td>23</td><td>McGowan, Miss. Anna "Annie"</td><td>female</td><td>3</td></tr><tr><th>24</th><td>24</td><td>Sloper, Mr. William Thompson</td><td>male</td><td>1</td></tr><tr><th>25</th><td>25</td><td>Palsson, Miss. Torborg Danira</td><td>female</td><td>3</td></tr><tr><th>26</th><td>26</td><td>Asplund, Mrs. Carl Oscar (Selma Augusta Emilia Johansson)</td><td>female</td><td>3</td></tr><tr><th>27</th><td>27</td><td>Emir, Mr. Farred Chehab</td><td>male</td><td>3</td></tr><tr><th>28</th><td>28</td><td>Fortune, Mr. Charles Alexander</td><td>male</td><td>1</td></tr><tr><th>29</th><td>29</td><td>O'Dwyer, Miss. Ellen "Nellie"</td><td>female</td><td>3</td></tr><tr><th>30</th><td>30</td><td>Todoroff, Mr. Lalio</td><td>male</td><td>3</td></tr><tr><th>&vellip;</th><td>&vellip;</td><td>&vellip;</td><td>&vellip;</td><td>&vellip;</td></tr></tbody></table></div></div>
 </div>
 <p>Es posible que, en lugar de indicar cada columna y dependiendo del nombre que posean las columnas, estas puedan ser indicadas por medio de una expresión regular indicado con <code class="docutils literal notranslate"><span class="pre">r\&quot;--\&quot;</span></code>. Lo anterior trata de hacer match con los nombres de las columnas y cuando se encuentre alguna coincidencia del nombre de la columna con la regla descrita por la expresión regular esta es devuelta.</p>
 <p>En los ejemplos anteriores se accedió a todas las filas de las columnas, sin embargo, puede accederse a un grupo limitado como se muestra a continuación</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">dftrain</span><span class="p">[</span><span class="mi">50</span><span class="o">:</span><span class="mi">100</span><span class="p">,[</span><span class="o">:</span><span class="n">Id</span><span class="p">,</span><span class="o">:</span><span class="n">Name</span><span class="p">,</span><span class="o">:</span><span class="n">Gender</span><span class="p">,</span><span class="o">:</span><span class="n">Class</span><span class="p">]];</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: dftrain not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">25</span><span class="p">]:</span><span class="mi">1</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(::</span><span class="n">Function</span><span class="p">,</span> <span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">)</span> <span class="n">at</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1091</span>
 </pre></div>
 </div>
 </div>
@@ -825,29 +814,11 @@
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: dftrain not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">26</span><span class="p">]:</span><span class="mi">1</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(::</span><span class="n">Function</span><span class="p">,</span> <span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">)</span> <span class="n">at</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1091</span>
-</pre></div>
-</div>
-</div>
 </div>
 <p><strong>Mediante una condición</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">dftrain</span><span class="p">[</span><span class="n">dftrain</span><span class="o">.</span><span class="n">Class</span><span class="o">.==</span><span class="mi">2</span><span class="p">,</span><span class="o">:</span><span class="p">];</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: dftrain not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">27</span><span class="p">]:</span><span class="mi">1</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(::</span><span class="n">Function</span><span class="p">,</span> <span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">)</span> <span class="n">at</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1091</span>
 </pre></div>
 </div>
 </div>
@@ -860,29 +831,11 @@
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: dftrain not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">28</span><span class="p">]:</span><span class="mi">1</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(::</span><span class="n">Function</span><span class="p">,</span> <span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">)</span> <span class="n">at</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1091</span>
-</pre></div>
-</div>
-</div>
 </div>
 <p>Luego el arreglo se pasa en el lugar del primer índice cuado se desea acceder a los elementos del dataframe, el arreglo filtra los datos que serán mostrados (todas las filas que coincidan con el valor booleano true).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">dftrain</span><span class="p">[</span><span class="n">arraybool</span><span class="p">,</span><span class="o">:</span><span class="p">];</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: dftrain not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">29</span><span class="p">]:</span><span class="mi">1</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(::</span><span class="n">Function</span><span class="p">,</span> <span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">)</span> <span class="n">at</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1091</span>
 </pre></div>
 </div>
 </div>
@@ -915,14 +868,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: dftrain not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">31</span><span class="p">]:</span><span class="mi">1</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(::</span><span class="n">Function</span><span class="p">,</span> <span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">)</span> <span class="n">at</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1091</span>
-</pre></div>
-</div>
-</div>
+<div class="output text_html"><table class="data-frame"><thead><tr><th></th><th>Id</th><th>Survived</th><th>Class</th><th>Name</th></tr><tr><th></th><th>Int64</th><th>Int64</th><th>Int64</th><th>String</th></tr></thead><tbody><p>184 rows × 12 columns (omitted printing of 8 columns)</p><tr><th>1</th><td>10</td><td>1</td><td>2</td><td>Nasser, Mrs. Nicholas (Adele Achem)</td></tr><tr><th>2</th><td>16</td><td>1</td><td>2</td><td>Hewlett, Mrs. (Mary D Kingcome) </td></tr><tr><th>3</th><td>18</td><td>1</td><td>2</td><td>Williams, Mr. Charles Eugene</td></tr><tr><th>4</th><td>21</td><td>0</td><td>2</td><td>Fynney, Mr. Joseph J</td></tr><tr><th>5</th><td>22</td><td>1</td><td>2</td><td>Beesley, Mr. Lawrence</td></tr><tr><th>6</th><td>34</td><td>0</td><td>2</td><td>Wheadon, Mr. Edward H</td></tr><tr><th>7</th><td>42</td><td>0</td><td>2</td><td>Turpin, Mrs. William John Robert (Dorothy Ann Wonnacott)</td></tr><tr><th>8</th><td>44</td><td>1</td><td>2</td><td>Laroche, Miss. Simonne Marie Anne Andree</td></tr><tr><th>9</th><td>54</td><td>1</td><td>2</td><td>Faunthorpe, Mrs. Lizzie (Elizabeth Anne Wilkinson)</td></tr><tr><th>10</th><td>57</td><td>1</td><td>2</td><td>Rugg, Miss. Emily</td></tr><tr><th>11</th><td>59</td><td>1</td><td>2</td><td>West, Miss. Constance Mirium</td></tr><tr><th>12</th><td>67</td><td>1</td><td>2</td><td>Nye, Mrs. (Elizabeth Ramell)</td></tr><tr><th>13</th><td>71</td><td>0</td><td>2</td><td>Jenkin, Mr. Stephen Curnow</td></tr><tr><th>14</th><td>73</td><td>0</td><td>2</td><td>Hood, Mr. Ambrose Jr</td></tr><tr><th>15</th><td>79</td><td>1</td><td>2</td><td>Caldwell, Master. Alden Gates</td></tr><tr><th>16</th><td>85</td><td>1</td><td>2</td><td>Ilett, Miss. Bertha</td></tr><tr><th>17</th><td>99</td><td>1</td><td>2</td><td>Doling, Mrs. John T (Ada Julia Bone)</td></tr><tr><th>18</th><td>100</td><td>0</td><td>2</td><td>Kantor, Mr. Sinai</td></tr><tr><th>19</th><td>118</td><td>0</td><td>2</td><td>Turpin, Mr. William John Robert</td></tr><tr><th>20</th><td>121</td><td>0</td><td>2</td><td>Hickman, Mr. Stanley George</td></tr><tr><th>21</th><td>123</td><td>0</td><td>2</td><td>Nasser, Mr. Nicholas</td></tr><tr><th>22</th><td>124</td><td>1</td><td>2</td><td>Webber, Miss. Susan</td></tr><tr><th>23</th><td>134</td><td>1</td><td>2</td><td>Weisz, Mrs. Leopold (Mathilde Francoise Pede)</td></tr><tr><th>24</th><td>135</td><td>0</td><td>2</td><td>Sobey, Mr. Samuel James Hayden</td></tr><tr><th>25</th><td>136</td><td>0</td><td>2</td><td>Richard, Mr. Emile</td></tr><tr><th>26</th><td>145</td><td>0</td><td>2</td><td>Andrew, Mr. Edgardo Samuel</td></tr><tr><th>27</th><td>146</td><td>0</td><td>2</td><td>Nicholls, Mr. Joseph Charles</td></tr><tr><th>28</th><td>149</td><td>0</td><td>2</td><td>Navratil, Mr. Michel ("Louis M Hoffman")</td></tr><tr><th>29</th><td>150</td><td>0</td><td>2</td><td>Byles, Rev. Thomas Roussel Davids</td></tr><tr><th>30</th><td>151</td><td>0</td><td>2</td><td>Bateman, Rev. Robert James</td></tr><tr><th>&vellip;</th><td>&vellip;</td><td>&vellip;</td><td>&vellip;</td><td>&vellip;</td></tr></tbody></table></div></div>
 </div>
 <p>De igual manera, el paquete <code class="docutils literal notranslate"><span class="pre">Queryverse</span></code> proporciona la macro <code class="docutils literal notranslate"><span class="pre">&#64;filter</span></code> para realizar el filtrado, como se muestra a continuación.</p>
 <div class="cell docutils container">
@@ -932,14 +878,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: dftrain not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">32</span><span class="p">]:</span><span class="mi">1</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(::</span><span class="n">Function</span><span class="p">,</span> <span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">)</span> <span class="n">at</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1091</span>
-</pre></div>
-</div>
-</div>
+<div class="output text_html"><table><thead><tr><th>Id</th><th>Survived</th><th>Class</th><th>Name</th><th>Gender</th><th>Age</th><th>SibSp</th><th>Parch</th><th>Ticket</th><th>Fare</th><th>Cabin</th><th>Embarked</th></tr></thead><tbody><tr><td>10</td><td>1</td><td>2</td><td>&quot;Nasser, Mrs. Nicholas &#40;Adele Achem&#41;&quot;</td><td>&quot;female&quot;</td><td>14.0</td><td>1</td><td>0</td><td>&quot;237736&quot;</td><td>30.0708</td><td>&quot;&quot;</td><td>&quot;C&quot;</td></tr><tr><td>16</td><td>1</td><td>2</td><td>&quot;Hewlett, Mrs. &#40;Mary D Kingcome&#41; &quot;</td><td>&quot;female&quot;</td><td>55.0</td><td>0</td><td>0</td><td>&quot;248706&quot;</td><td>16.0</td><td>&quot;&quot;</td><td>&quot;S&quot;</td></tr><tr><td>18</td><td>1</td><td>2</td><td>&quot;Williams, Mr. Charles Eugene&quot;</td><td>&quot;male&quot;</td><td>#NA</td><td>0</td><td>0</td><td>&quot;244373&quot;</td><td>13.0</td><td>&quot;&quot;</td><td>&quot;S&quot;</td></tr><tr><td>21</td><td>0</td><td>2</td><td>&quot;Fynney, Mr. Joseph J&quot;</td><td>&quot;male&quot;</td><td>35.0</td><td>0</td><td>0</td><td>&quot;239865&quot;</td><td>26.0</td><td>&quot;&quot;</td><td>&quot;S&quot;</td></tr><tr><td>22</td><td>1</td><td>2</td><td>&quot;Beesley, Mr. Lawrence&quot;</td><td>&quot;male&quot;</td><td>34.0</td><td>0</td><td>0</td><td>&quot;248698&quot;</td><td>13.0</td><td>&quot;D56&quot;</td><td>&quot;S&quot;</td></tr><tr><td>34</td><td>0</td><td>2</td><td>&quot;Wheadon, Mr. Edward H&quot;</td><td>&quot;male&quot;</td><td>66.0</td><td>0</td><td>0</td><td>&quot;C.A. 24579&quot;</td><td>10.5</td><td>&quot;&quot;</td><td>&quot;S&quot;</td></tr><tr><td>42</td><td>0</td><td>2</td><td>&quot;Turpin, Mrs. William John Robert &#40;Dorothy Ann Wonnacott&#41;&quot;</td><td>&quot;female&quot;</td><td>27.0</td><td>1</td><td>0</td><td>&quot;11668&quot;</td><td>21.0</td><td>&quot;&quot;</td><td>&quot;S&quot;</td></tr><tr><td>44</td><td>1</td><td>2</td><td>&quot;Laroche, Miss. Simonne Marie Anne Andree&quot;</td><td>&quot;female&quot;</td><td>3.0</td><td>1</td><td>2</td><td>&quot;SC/Paris 2123&quot;</td><td>41.5792</td><td>&quot;&quot;</td><td>&quot;C&quot;</td></tr><tr><td>54</td><td>1</td><td>2</td><td>&quot;Faunthorpe, Mrs. Lizzie &#40;Elizabeth Anne Wilkinson&#41;&quot;</td><td>&quot;female&quot;</td><td>29.0</td><td>1</td><td>0</td><td>&quot;2926&quot;</td><td>26.0</td><td>&quot;&quot;</td><td>&quot;S&quot;</td></tr><tr><td>57</td><td>1</td><td>2</td><td>&quot;Rugg, Miss. Emily&quot;</td><td>&quot;female&quot;</td><td>21.0</td><td>0</td><td>0</td><td>&quot;C.A. 31026&quot;</td><td>10.5</td><td>&quot;&quot;</td><td>&quot;S&quot;</td></tr><tr><td>&vellip;</td><td>&vellip;</td><td>&vellip;</td><td>&vellip;</td><td>&vellip;</td><td>&vellip;</td><td>&vellip;</td><td>&vellip;</td><td>&vellip;</td><td>&vellip;</td><td>&vellip;</td><td>&vellip;</td></tr></tbody></table><p>... with more rows.</p></div></div>
 </div>
 <p>Para la primera coincidencia se puede usar la función <code class="docutils literal notranslate"><span class="pre">findfirst</span></code></p>
 <div class="cell docutils container">
@@ -949,14 +888,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: dftrain not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">33</span><span class="p">]:</span><span class="mi">1</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(::</span><span class="n">Function</span><span class="p">,</span> <span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">)</span> <span class="n">at</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1091</span>
-</pre></div>
-</div>
-</div>
+<div class="output text_html"><p>DataFrameRow (12 columns)</p><table class="data-frame"><thead><tr><th></th><th>Id</th><th>Survived</th><th>Class</th><th>Name</th><th>Gender</th><th>Age</th><th>SibSp</th></tr><tr><th></th><th>Int64</th><th>Int64</th><th>Int64</th><th>String</th><th>String</th><th>Float64?</th><th>Int64</th></tr></thead><tbody><tr><th>10</th><td>10</td><td>1</td><td>2</td><td>Nasser, Mrs. Nicholas (Adele Achem)</td><td>female</td><td>14.0</td><td>1</td></tr></tbody></table></div></div>
 </div>
 <p><strong>Funciones del paquete</strong></p>
 <div class="cell docutils container">
@@ -965,28 +897,10 @@
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: dftrain not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">34</span><span class="p">]:</span><span class="mi">1</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(::</span><span class="n">Function</span><span class="p">,</span> <span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">)</span> <span class="n">at</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1091</span>
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">last</span><span class="p">(</span><span class="n">dftrain</span><span class="p">,</span><span class="mi">6</span><span class="p">);</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: dftrain not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">35</span><span class="p">]:</span><span class="mi">1</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(::</span><span class="n">Function</span><span class="p">,</span> <span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">)</span> <span class="n">at</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1091</span>
 </pre></div>
 </div>
 </div>
@@ -1002,11 +916,9 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: dftrain not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">36</span><span class="p">]:</span><span class="mi">1</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(::</span><span class="n">Function</span><span class="p">,</span> <span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">)</span> <span class="n">at</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1091</span>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2-element Array{Int64,1}:
+  342
+ 2057
 </pre></div>
 </div>
 </div>
@@ -1036,11 +948,9 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: dftrain not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">38</span><span class="p">]:</span><span class="mi">1</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(::</span><span class="n">Function</span><span class="p">,</span> <span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">)</span> <span class="n">at</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1091</span>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Dict{String,Int64} with 2 entries:
+  &quot;male&quot;   =&gt; 577
+  &quot;female&quot; =&gt; 314
 </pre></div>
 </div>
 </div>
@@ -1052,11 +962,11 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: dftrain not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">39</span><span class="p">]:</span><span class="mi">1</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(::</span><span class="n">Function</span><span class="p">,</span> <span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">)</span> <span class="n">at</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1091</span>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Dict{String,Int64} with 4 entries:
+  &quot;Q&quot; =&gt; 77
+  &quot;S&quot; =&gt; 644
+  &quot;C&quot; =&gt; 168
+  &quot;&quot;  =&gt; 2
 </pre></div>
 </div>
 </div>
@@ -1069,11 +979,9 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: dftrain not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">40</span><span class="p">]:</span><span class="mi">1</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(::</span><span class="n">Function</span><span class="p">,</span> <span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">)</span> <span class="n">at</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1091</span>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2-element Array{String,1}:
+ &quot;male&quot;
+ &quot;female&quot;
 </pre></div>
 </div>
 </div>
@@ -1085,11 +993,33 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: dftrain not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">41</span><span class="p">]:</span><span class="mi">1</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(::</span><span class="n">Function</span><span class="p">,</span> <span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">)</span> <span class="n">at</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1091</span>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>891-element Array{Int64,1}:
+ 1
+ 1
+ 0
+ 1
+ 0
+ 0
+ 0
+ 4
+ 2
+ 1
+ 2
+ 0
+ 0
+ ⋮
+ 1
+ 1
+ 0
+ 0
+ 0
+ 0
+ 5
+ 0
+ 0
+ 3
+ 0
+ 0
 </pre></div>
 </div>
 </div>
@@ -1116,15 +1046,6 @@
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: dftrain not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">43</span><span class="p">]:</span><span class="mi">1</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(::</span><span class="n">Function</span><span class="p">,</span> <span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">)</span> <span class="n">at</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1091</span>
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1133,14 +1054,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: dftrain not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(::</span><span class="n">Function</span><span class="p">,</span> <span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">)</span> <span class="n">at</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1091</span>
-</pre></div>
-</div>
-</div>
+<div class="output text_html"><table class="data-frame"><thead><tr><th></th><th>Id</th><th>Survived</th><th>Class</th><th>Name</th></tr><tr><th></th><th>Int64</th><th>Int64</th><th>Int64</th><th>String</th></tr></thead><tbody><p>891 rows × 14 columns (omitted printing of 10 columns)</p><tr><th>1</th><td>1</td><td>0</td><td>3</td><td>Braund, Mr. Owen Harris</td></tr><tr><th>2</th><td>2</td><td>1</td><td>1</td><td>Cumings, Mrs. John Bradley (Florence Briggs Thayer)</td></tr><tr><th>3</th><td>3</td><td>1</td><td>3</td><td>Heikkinen, Miss. Laina</td></tr><tr><th>4</th><td>4</td><td>1</td><td>1</td><td>Futrelle, Mrs. Jacques Heath (Lily May Peel)</td></tr><tr><th>5</th><td>5</td><td>0</td><td>3</td><td>Allen, Mr. William Henry</td></tr><tr><th>6</th><td>6</td><td>0</td><td>3</td><td>Moran, Mr. James</td></tr><tr><th>7</th><td>7</td><td>0</td><td>1</td><td>McCarthy, Mr. Timothy J</td></tr><tr><th>8</th><td>8</td><td>0</td><td>3</td><td>Palsson, Master. Gosta Leonard</td></tr><tr><th>9</th><td>9</td><td>1</td><td>3</td><td>Johnson, Mrs. Oscar W (Elisabeth Vilhelmina Berg)</td></tr><tr><th>10</th><td>10</td><td>1</td><td>2</td><td>Nasser, Mrs. Nicholas (Adele Achem)</td></tr><tr><th>11</th><td>11</td><td>1</td><td>3</td><td>Sandstrom, Miss. Marguerite Rut</td></tr><tr><th>12</th><td>12</td><td>1</td><td>1</td><td>Bonnell, Miss. Elizabeth</td></tr><tr><th>13</th><td>13</td><td>0</td><td>3</td><td>Saundercock, Mr. William Henry</td></tr><tr><th>14</th><td>14</td><td>0</td><td>3</td><td>Andersson, Mr. Anders Johan</td></tr><tr><th>15</th><td>15</td><td>0</td><td>3</td><td>Vestrom, Miss. Hulda Amanda Adolfina</td></tr><tr><th>16</th><td>16</td><td>1</td><td>2</td><td>Hewlett, Mrs. (Mary D Kingcome) </td></tr><tr><th>17</th><td>17</td><td>0</td><td>3</td><td>Rice, Master. Eugene</td></tr><tr><th>18</th><td>18</td><td>1</td><td>2</td><td>Williams, Mr. Charles Eugene</td></tr><tr><th>19</th><td>19</td><td>0</td><td>3</td><td>Vander Planke, Mrs. Julius (Emelia Maria Vandemoortele)</td></tr><tr><th>20</th><td>20</td><td>1</td><td>3</td><td>Masselmani, Mrs. Fatima</td></tr><tr><th>21</th><td>21</td><td>0</td><td>2</td><td>Fynney, Mr. Joseph J</td></tr><tr><th>22</th><td>22</td><td>1</td><td>2</td><td>Beesley, Mr. Lawrence</td></tr><tr><th>23</th><td>23</td><td>1</td><td>3</td><td>McGowan, Miss. Anna "Annie"</td></tr><tr><th>24</th><td>24</td><td>1</td><td>1</td><td>Sloper, Mr. William Thompson</td></tr><tr><th>25</th><td>25</td><td>0</td><td>3</td><td>Palsson, Miss. Torborg Danira</td></tr><tr><th>26</th><td>26</td><td>1</td><td>3</td><td>Asplund, Mrs. Carl Oscar (Selma Augusta Emilia Johansson)</td></tr><tr><th>27</th><td>27</td><td>0</td><td>3</td><td>Emir, Mr. Farred Chehab</td></tr><tr><th>28</th><td>28</td><td>0</td><td>1</td><td>Fortune, Mr. Charles Alexander</td></tr><tr><th>29</th><td>29</td><td>1</td><td>3</td><td>O'Dwyer, Miss. Ellen "Nellie"</td></tr><tr><th>30</th><td>30</td><td>0</td><td>3</td><td>Todoroff, Mr. Lalio</td></tr><tr><th>&vellip;</th><td>&vellip;</td><td>&vellip;</td><td>&vellip;</td><td>&vellip;</td></tr></tbody></table></div></div>
 </div>
 <p>En el ejemplo anterior una columna, con el nombre <code class="docutils literal notranslate"><span class="pre">TotalFamily</span></code>, fue añadida al dataframe. Una columna adicional es agregado, <code class="docutils literal notranslate"><span class="pre">new</span></code>, para ilustrar cómo se elimina.</p>
 <div class="cell docutils container">
@@ -1150,14 +1064,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: dftrain not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">45</span><span class="p">]:</span><span class="mi">1</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(::</span><span class="n">Function</span><span class="p">,</span> <span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">)</span> <span class="n">at</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1091</span>
-</pre></div>
-</div>
-</div>
+<div class="output text_html"><table class="data-frame"><thead><tr><th></th><th>Id</th><th>Survived</th><th>Class</th><th>Name</th></tr><tr><th></th><th>Int64</th><th>Int64</th><th>Int64</th><th>String</th></tr></thead><tbody><p>891 rows × 13 columns (omitted printing of 9 columns)</p><tr><th>1</th><td>1</td><td>0</td><td>3</td><td>Braund, Mr. Owen Harris</td></tr><tr><th>2</th><td>2</td><td>1</td><td>1</td><td>Cumings, Mrs. John Bradley (Florence Briggs Thayer)</td></tr><tr><th>3</th><td>3</td><td>1</td><td>3</td><td>Heikkinen, Miss. Laina</td></tr><tr><th>4</th><td>4</td><td>1</td><td>1</td><td>Futrelle, Mrs. Jacques Heath (Lily May Peel)</td></tr><tr><th>5</th><td>5</td><td>0</td><td>3</td><td>Allen, Mr. William Henry</td></tr><tr><th>6</th><td>6</td><td>0</td><td>3</td><td>Moran, Mr. James</td></tr><tr><th>7</th><td>7</td><td>0</td><td>1</td><td>McCarthy, Mr. Timothy J</td></tr><tr><th>8</th><td>8</td><td>0</td><td>3</td><td>Palsson, Master. Gosta Leonard</td></tr><tr><th>9</th><td>9</td><td>1</td><td>3</td><td>Johnson, Mrs. Oscar W (Elisabeth Vilhelmina Berg)</td></tr><tr><th>10</th><td>10</td><td>1</td><td>2</td><td>Nasser, Mrs. Nicholas (Adele Achem)</td></tr><tr><th>11</th><td>11</td><td>1</td><td>3</td><td>Sandstrom, Miss. Marguerite Rut</td></tr><tr><th>12</th><td>12</td><td>1</td><td>1</td><td>Bonnell, Miss. Elizabeth</td></tr><tr><th>13</th><td>13</td><td>0</td><td>3</td><td>Saundercock, Mr. William Henry</td></tr><tr><th>14</th><td>14</td><td>0</td><td>3</td><td>Andersson, Mr. Anders Johan</td></tr><tr><th>15</th><td>15</td><td>0</td><td>3</td><td>Vestrom, Miss. Hulda Amanda Adolfina</td></tr><tr><th>16</th><td>16</td><td>1</td><td>2</td><td>Hewlett, Mrs. (Mary D Kingcome) </td></tr><tr><th>17</th><td>17</td><td>0</td><td>3</td><td>Rice, Master. Eugene</td></tr><tr><th>18</th><td>18</td><td>1</td><td>2</td><td>Williams, Mr. Charles Eugene</td></tr><tr><th>19</th><td>19</td><td>0</td><td>3</td><td>Vander Planke, Mrs. Julius (Emelia Maria Vandemoortele)</td></tr><tr><th>20</th><td>20</td><td>1</td><td>3</td><td>Masselmani, Mrs. Fatima</td></tr><tr><th>21</th><td>21</td><td>0</td><td>2</td><td>Fynney, Mr. Joseph J</td></tr><tr><th>22</th><td>22</td><td>1</td><td>2</td><td>Beesley, Mr. Lawrence</td></tr><tr><th>23</th><td>23</td><td>1</td><td>3</td><td>McGowan, Miss. Anna "Annie"</td></tr><tr><th>24</th><td>24</td><td>1</td><td>1</td><td>Sloper, Mr. William Thompson</td></tr><tr><th>25</th><td>25</td><td>0</td><td>3</td><td>Palsson, Miss. Torborg Danira</td></tr><tr><th>26</th><td>26</td><td>1</td><td>3</td><td>Asplund, Mrs. Carl Oscar (Selma Augusta Emilia Johansson)</td></tr><tr><th>27</th><td>27</td><td>0</td><td>3</td><td>Emir, Mr. Farred Chehab</td></tr><tr><th>28</th><td>28</td><td>0</td><td>1</td><td>Fortune, Mr. Charles Alexander</td></tr><tr><th>29</th><td>29</td><td>1</td><td>3</td><td>O'Dwyer, Miss. Ellen "Nellie"</td></tr><tr><th>30</th><td>30</td><td>0</td><td>3</td><td>Todoroff, Mr. Lalio</td></tr><tr><th>&vellip;</th><td>&vellip;</td><td>&vellip;</td><td>&vellip;</td><td>&vellip;</td></tr></tbody></table></div></div>
 </div>
 <p>Para eliminar una fila del dataframe se puede usar la función <code class="docutils literal notranslate"><span class="pre">delete!</span></code> y para añadir una fila se puede usar la función <code class="docutils literal notranslate"><span class="pre">push!</span></code>. En <code class="docutils literal notranslate"><span class="pre">delete!</span></code> se indica el dataframe y el índice de la fila que debe ser eliminada.</p>
 <p>Existen otro conjunto de funciones que son de utilizada cuando se requiere realizar una consulta compleja en la data, el paquete <code class="docutils literal notranslate"><span class="pre">Queryverse</span></code> por contener el módulo <code class="docutils literal notranslate"><span class="pre">Query</span></code> ofrece opciones interesantes que pueden ser consultados en los siguientes enlaces: <a class="reference external" href="https://www.queryverse.org/2019/02/02/query-v0.11/">link₁</a>, <a class="reference external" href="https://www.queryverse.org/Query.jl/stable/standalonequerycommands/##Standalone-query-operators-1">lin₂</a>, <a class="reference external" href="https://www.queryverse.org/Query.jl/stable/linqquerycommands/#LINQ-Style-Query-Commands-1">lin₃</a>.</p>
@@ -1282,15 +1189,11 @@ md</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">ArgumentError</span>: No file exists at given path: ./titanic/gender_submission.csv
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: dftest not defined
 
 <span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">load</span><span class="p">(::</span><span class="n">FileIO</span><span class="o">.</span><span class="n">Formatted</span><span class="p">;</span> <span class="n">options</span><span class="p">::</span><span class="n">Base</span><span class="o">.</span><span class="n">Iterators</span><span class="o">.</span><span class="n">Pairs</span><span class="p">{</span><span class="n">Union</span><span class="p">{},</span><span class="n">Union</span><span class="p">{},</span><span class="n">Tuple</span><span class="p">{},</span><span class="n">NamedTuple</span><span class="p">{(),</span><span class="n">Tuple</span><span class="p">{}}})</span> <span class="n">at</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">runner</span><span class="o">/.</span><span class="n">julia</span><span class="o">/</span><span class="n">packages</span><span class="o">/</span><span class="n">FileIO</span><span class="o">/</span><span class="n">TyKdX</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">loadsave</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">192</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">load</span> <span class="n">at</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">runner</span><span class="o">/.</span><span class="n">julia</span><span class="o">/</span><span class="n">packages</span><span class="o">/</span><span class="n">FileIO</span><span class="o">/</span><span class="n">TyKdX</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">loadsave</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">187</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
- <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="c1">#load#16 at /home/runner/.julia/packages/FileIO/TyKdX/src/loadsave.jl:136 [inlined]</span>
- <span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="n">load</span><span class="p">(::</span><span class="n">String</span><span class="p">)</span> <span class="n">at</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">runner</span><span class="o">/.</span><span class="n">julia</span><span class="o">/</span><span class="n">packages</span><span class="o">/</span><span class="n">FileIO</span><span class="o">/</span><span class="n">TyKdX</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">loadsave</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">136</span>
- <span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">52</span><span class="p">]:</span><span class="mi">2</span>
- <span class="p">[</span><span class="mi">6</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(::</span><span class="n">Function</span><span class="p">,</span> <span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">)</span> <span class="n">at</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1091</span>
+ <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">52</span><span class="p">]:</span><span class="mi">6</span>
+ <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(::</span><span class="n">Function</span><span class="p">,</span> <span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">)</span> <span class="n">at</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1091</span>
 </pre></div>
 </div>
 </div>
@@ -1302,7 +1205,7 @@ md</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: dftrain not defined
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: dftest₁ not defined
 
 <span class="ne">Stacktrace</span>:
  <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">53</span><span class="p">]:</span><span class="mi">1</span>
@@ -1355,11 +1258,9 @@ md</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: genders not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(::</span><span class="n">Function</span><span class="p">,</span> <span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">)</span> <span class="n">at</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1091</span>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2-element Array{String,1}:
+ &quot;male&quot;
+ &quot;female&quot;
 </pre></div>
 </div>
 </div>
@@ -1734,14 +1635,47 @@ md</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: datatrain not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">78</span><span class="p">]:</span><span class="mi">1</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(::</span><span class="n">Function</span><span class="p">,</span> <span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">)</span> <span class="n">at</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1091</span>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Unable to revert mtime: /usr/share/fonts
+Unable to revert mtime: /usr/share/fonts/cMap
+Unable to revert mtime: /usr/share/fonts/cmap
+Unable to revert mtime: /usr/share/fonts/truetype
+Unable to revert mtime: /usr/share/fonts/type1
+Unable to revert mtime: /usr/share/fonts/cmap/adobe-cns1
 </pre></div>
 </div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Unable to revert mtime: /usr/share/fonts/cmap/adobe-gb1
+</pre></div>
 </div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Unable to revert mtime: /usr/share/fonts/cmap/adobe-japan1
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Unable to revert mtime: /usr/share/fonts/cmap/adobe-japan2
+Unable to revert mtime: /usr/share/fonts/cmap/adobe-korea1
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Unable to revert mtime: /usr/share/fonts/truetype/dejavu
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Unable to revert mtime: /usr/share/fonts/truetype/droid
+Unable to revert mtime: /usr/share/fonts/truetype/lato
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Unable to revert mtime: /usr/share/fonts/truetype/liberation
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Unable to revert mtime: /usr/share/fonts/truetype/noto
+Unable to revert mtime: /usr/share/fonts/type1/gsfonts
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Unable to revert mtime: /usr/share/fonts/cMap
+Unable to revert mtime: /usr/share/fonts/cmap/adobe-cns1
+Unable to revert mtime: /usr/share/fonts/cmap/adobe-gb1
+Unable to revert mtime: /usr/share/fonts/cmap/adobe-japan1
+Unable to revert mtime: /usr/share/fonts/cmap/adobe-japan2
+Unable to revert mtime: /usr/share/fonts/cmap/adobe-korea1
+</pre></div>
+</div>
+<img alt="_images/Paquete_DataFrames_123_9.svg" src="_images/Paquete_DataFrames_123_9.svg" /></div>
 </div>
 <p>Es posible realizar una gráfica como se muestra en el ejemplo, donde no se usa <code class="docutils literal notranslate"><span class="pre">Plots.jl</span></code>.</p>
 <div class="cell docutils container">
@@ -1751,11 +1685,7 @@ md</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: datatrain not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">79</span><span class="p">]:</span><span class="mi">1</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(::</span><span class="n">Function</span><span class="p">,</span> <span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">)</span> <span class="n">at</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1091</span>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(electron:7542): Gtk-WARNING **: 15:46:39.232: cannot open display: 
 </pre></div>
 </div>
 </div>
