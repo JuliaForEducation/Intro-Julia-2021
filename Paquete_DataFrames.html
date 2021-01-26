@@ -456,35 +456,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>PyError ($(Expr(:escape, :(ccall(#= /home/runner/.julia/packages/PyCall/tqyST/src/pyfncall.jl:43 =# @pysym(:PyObject_Call), PyPtr, (PyPtr, PyPtr, PyPtr), o, pyargsptr, kw))))) &lt;class &#39;xlrd.biffh.XLRDError&#39;&gt;
-XLRDError(&#39;Excel xlsx file; not supported&#39;)
-  File &quot;/opt/hostedtoolcache/Python/3.7.9/x64/lib/python3.7/site-packages/xlrd/__init__.py&quot;, line 170, in open_workbook
-    raise XLRDError(FILE_FORMAT_DESCRIPTIONS[file_format]+&#39;; not supported&#39;)
-
-
-Stacktrace:
- [1] pyerr_check at /home/runner/.julia/packages/PyCall/tqyST/src/exception.jl:62 [inlined]
- [2] pyerr_check at /home/runner/.julia/packages/PyCall/tqyST/src/exception.jl:66 [inlined]
- [3] _handle_error(::String) at /home/runner/.julia/packages/PyCall/tqyST/src/exception.jl:83
- [4] macro expansion at /home/runner/.julia/packages/PyCall/tqyST/src/exception.jl:97 [inlined]
- [5] #109 at /home/runner/.julia/packages/PyCall/tqyST/src/pyfncall.jl:43 [inlined]
- [6] disable_sigint at ./c.jl:446 [inlined]
- [7] __pycall! at /home/runner/.julia/packages/PyCall/tqyST/src/pyfncall.jl:42 [inlined]
- [8] _pycall!(::PyCall.PyObject, ::PyCall.PyObject, ::Tuple{String}, ::Int64, ::Ptr{Nothing}) at /home/runner/.julia/packages/PyCall/tqyST/src/pyfncall.jl:29
- [9] _pycall! at /home/runner/.julia/packages/PyCall/tqyST/src/pyfncall.jl:11 [inlined]
- [10] #_#116 at /home/runner/.julia/packages/PyCall/tqyST/src/pyfncall.jl:86 [inlined]
- [11] (::PyCall.PyObject)(::String) at /home/runner/.julia/packages/PyCall/tqyST/src/pyfncall.jl:86
- [12] openxl(::String) at /home/runner/.julia/packages/ExcelReaders/PgE1r/src/ExcelReaders.jl:64
- [13] getiterator(::ExcelFiles.ExcelFile) at /home/runner/.julia/packages/ExcelFiles/NtqPa/src/ExcelFiles.jl:0
- [14] nondatavaluerows(::ExcelFiles.ExcelFile) at /home/runner/.julia/packages/Tables/8Ud85/src/tofromdatavalues.jl:24
- [15] columns at /home/runner/.julia/packages/Tables/8Ud85/src/fallbacks.jl:261 [inlined]
- [16] DataFrame(::ExcelFiles.ExcelFile; copycols::Bool) at /home/runner/.julia/packages/DataFrames/GtZ1l/src/other/tables.jl:43
- [17] DataFrame(::ExcelFiles.ExcelFile) at /home/runner/.julia/packages/DataFrames/GtZ1l/src/other/tables.jl:34
- [18] top-level scope at In[7]:1
- [19] include_string(::Function, ::Module, ::String, ::String) at ./loading.jl:1091
-</pre></div>
-</div>
-</div>
+<div class="output text_html"><table class="data-frame"><thead><tr><th></th><th>PassengerId</th><th>Pclass</th><th>Name</th><th>Sex</th></tr><tr><th></th><th>Float64</th><th>Float64</th><th>String</th><th>String</th></tr></thead><tbody><p>418 rows × 11 columns (omitted printing of 7 columns)</p><tr><th>1</th><td>892.0</td><td>3.0</td><td>Kelly, Mr. James</td><td>male</td></tr><tr><th>2</th><td>893.0</td><td>3.0</td><td>Wilkes, Mrs. James (Ellen Needs)</td><td>female</td></tr><tr><th>3</th><td>894.0</td><td>2.0</td><td>Myles, Mr. Thomas Francis</td><td>male</td></tr><tr><th>4</th><td>895.0</td><td>3.0</td><td>Wirz, Mr. Albert</td><td>male</td></tr><tr><th>5</th><td>896.0</td><td>3.0</td><td>Hirvonen, Mrs. Alexander (Helga E Lindqvist)</td><td>female</td></tr><tr><th>6</th><td>897.0</td><td>3.0</td><td>Svensson, Mr. Johan Cervin</td><td>male</td></tr><tr><th>7</th><td>898.0</td><td>3.0</td><td>Connolly, Miss. Kate</td><td>female</td></tr><tr><th>8</th><td>899.0</td><td>2.0</td><td>Caldwell, Mr. Albert Francis</td><td>male</td></tr><tr><th>9</th><td>900.0</td><td>3.0</td><td>Abrahim, Mrs. Joseph (Sophie Halaut Easu)</td><td>female</td></tr><tr><th>10</th><td>901.0</td><td>3.0</td><td>Davies, Mr. John Samuel</td><td>male</td></tr><tr><th>11</th><td>902.0</td><td>3.0</td><td>Ilieff, Mr. Ylio</td><td>male</td></tr><tr><th>12</th><td>903.0</td><td>1.0</td><td>Jones, Mr. Charles Cresson</td><td>male</td></tr><tr><th>13</th><td>904.0</td><td>1.0</td><td>Snyder, Mrs. John Pillsbury (Nelle Stevenson)</td><td>female</td></tr><tr><th>14</th><td>905.0</td><td>2.0</td><td>Howard, Mr. Benjamin</td><td>male</td></tr><tr><th>15</th><td>906.0</td><td>1.0</td><td>Chaffee, Mrs. Herbert Fuller (Carrie Constance Toogood)</td><td>female</td></tr><tr><th>16</th><td>907.0</td><td>2.0</td><td>del Carlo, Mrs. Sebastiano (Argenia Genovesi)</td><td>female</td></tr><tr><th>17</th><td>908.0</td><td>2.0</td><td>Keane, Mr. Daniel</td><td>male</td></tr><tr><th>18</th><td>909.0</td><td>3.0</td><td>Assaf, Mr. Gerios</td><td>male</td></tr><tr><th>19</th><td>910.0</td><td>3.0</td><td>Ilmakangas, Miss. Ida Livija</td><td>female</td></tr><tr><th>20</th><td>911.0</td><td>3.0</td><td>Assaf Khalil, Mrs. Mariana (Miriam")"</td><td>female</td></tr><tr><th>21</th><td>912.0</td><td>1.0</td><td>Rothschild, Mr. Martin</td><td>male</td></tr><tr><th>22</th><td>913.0</td><td>3.0</td><td>Olsen, Master. Artur Karl</td><td>male</td></tr><tr><th>23</th><td>914.0</td><td>1.0</td><td>Flegenheim, Mrs. Alfred (Antoinette)</td><td>female</td></tr><tr><th>24</th><td>915.0</td><td>1.0</td><td>Williams, Mr. Richard Norris II</td><td>male</td></tr><tr><th>25</th><td>916.0</td><td>1.0</td><td>Ryerson, Mrs. Arthur Larned (Emily Maria Borie)</td><td>female</td></tr><tr><th>26</th><td>917.0</td><td>3.0</td><td>Robins, Mr. Alexander A</td><td>male</td></tr><tr><th>27</th><td>918.0</td><td>1.0</td><td>Ostby, Miss. Helene Ragnhild</td><td>female</td></tr><tr><th>28</th><td>919.0</td><td>3.0</td><td>Daher, Mr. Shedid</td><td>male</td></tr><tr><th>29</th><td>920.0</td><td>1.0</td><td>Brady, Mr. John Bertram</td><td>male</td></tr><tr><th>30</th><td>921.0</td><td>3.0</td><td>Samaan, Mr. Elias</td><td>male</td></tr><tr><th>&vellip;</th><td>&vellip;</td><td>&vellip;</td><td>&vellip;</td><td>&vellip;</td></tr></tbody></table></div></div>
 </div>
 <p>La segunda es más elegante y se utiliza pipe sintax:</p>
 <div class="cell docutils container">
@@ -546,11 +518,18 @@ Stacktrace:
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: dftest not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">11</span><span class="p">]:</span><span class="mi">1</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(::</span><span class="n">Function</span><span class="p">,</span> <span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">)</span> <span class="n">at</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1091</span>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>11-element Array{String,1}:
+ &quot;PassengerId&quot;
+ &quot;Pclass&quot;
+ &quot;Name&quot;
+ &quot;Sex&quot;
+ &quot;Age&quot;
+ &quot;SibSp&quot;
+ &quot;Parch&quot;
+ &quot;Ticket&quot;
+ &quot;Fare&quot;
+ &quot;Cabin&quot;
+ &quot;Embarked&quot;
 </pre></div>
 </div>
 </div>
@@ -575,11 +554,7 @@ Stacktrace:
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: dftest not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">13</span><span class="p">]:</span><span class="mi">1</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(::</span><span class="n">Function</span><span class="p">,</span> <span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">)</span> <span class="n">at</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1091</span>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(418, 11)
 </pre></div>
 </div>
 </div>
@@ -599,14 +574,7 @@ Stacktrace:
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: dftest not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">15</span><span class="p">]:</span><span class="mi">1</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(::</span><span class="n">Function</span><span class="p">,</span> <span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">)</span> <span class="n">at</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1091</span>
-</pre></div>
-</div>
-</div>
+<div class="output text_html"><table class="data-frame"><thead><tr><th></th><th>variable</th><th>mean</th><th>min</th><th>median</th><th>max</th></tr><tr><th></th><th>Symbol</th><th>Union…</th><th>Any</th><th>Union…</th><th>Any</th></tr></thead><tbody><p>11 rows × 8 columns (omitted printing of 3 columns)</p><tr><th>1</th><td>PassengerId</td><td>1100.5</td><td>892.0</td><td>1100.5</td><td>1309.0</td></tr><tr><th>2</th><td>Pclass</td><td>2.26555</td><td>1.0</td><td>3.0</td><td>3.0</td></tr><tr><th>3</th><td>Name</td><td></td><td>Abbott, Master. Eugene Joseph</td><td></td><td>van Billiard, Master. Walter John</td></tr><tr><th>4</th><td>Sex</td><td></td><td>female</td><td></td><td>male</td></tr><tr><th>5</th><td>Age</td><td>30.2726</td><td>0.17</td><td>27.0</td><td>76.0</td></tr><tr><th>6</th><td>SibSp</td><td>0.447368</td><td>0.0</td><td>0.0</td><td>8.0</td></tr><tr><th>7</th><td>Parch</td><td>0.392344</td><td>0.0</td><td>0.0</td><td>9.0</td></tr><tr><th>8</th><td>Ticket</td><td></td><td></td><td></td><td></td></tr><tr><th>9</th><td>Fare</td><td>35.6272</td><td>0.0</td><td>14.4542</td><td>512.329</td></tr><tr><th>10</th><td>Cabin</td><td></td><td>A11</td><td></td><td>G6</td></tr><tr><th>11</th><td>Embarked</td><td></td><td>C</td><td></td><td>S</td></tr></tbody></table></div></div>
 </div>
 </div>
 <div class="section" id="renombrando-las-columnas">
@@ -628,14 +596,7 @@ Stacktrace:
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: dftest not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">17</span><span class="p">]:</span><span class="mi">1</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(::</span><span class="n">Function</span><span class="p">,</span> <span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">)</span> <span class="n">at</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1091</span>
-</pre></div>
-</div>
-</div>
+<div class="output text_html"><table class="data-frame"><thead><tr><th></th><th>Id</th><th>Class</th><th>Name</th><th>Gender</th></tr><tr><th></th><th>Float64</th><th>Float64</th><th>String</th><th>String</th></tr></thead><tbody><p>418 rows × 11 columns (omitted printing of 7 columns)</p><tr><th>1</th><td>892.0</td><td>3.0</td><td>Kelly, Mr. James</td><td>male</td></tr><tr><th>2</th><td>893.0</td><td>3.0</td><td>Wilkes, Mrs. James (Ellen Needs)</td><td>female</td></tr><tr><th>3</th><td>894.0</td><td>2.0</td><td>Myles, Mr. Thomas Francis</td><td>male</td></tr><tr><th>4</th><td>895.0</td><td>3.0</td><td>Wirz, Mr. Albert</td><td>male</td></tr><tr><th>5</th><td>896.0</td><td>3.0</td><td>Hirvonen, Mrs. Alexander (Helga E Lindqvist)</td><td>female</td></tr><tr><th>6</th><td>897.0</td><td>3.0</td><td>Svensson, Mr. Johan Cervin</td><td>male</td></tr><tr><th>7</th><td>898.0</td><td>3.0</td><td>Connolly, Miss. Kate</td><td>female</td></tr><tr><th>8</th><td>899.0</td><td>2.0</td><td>Caldwell, Mr. Albert Francis</td><td>male</td></tr><tr><th>9</th><td>900.0</td><td>3.0</td><td>Abrahim, Mrs. Joseph (Sophie Halaut Easu)</td><td>female</td></tr><tr><th>10</th><td>901.0</td><td>3.0</td><td>Davies, Mr. John Samuel</td><td>male</td></tr><tr><th>11</th><td>902.0</td><td>3.0</td><td>Ilieff, Mr. Ylio</td><td>male</td></tr><tr><th>12</th><td>903.0</td><td>1.0</td><td>Jones, Mr. Charles Cresson</td><td>male</td></tr><tr><th>13</th><td>904.0</td><td>1.0</td><td>Snyder, Mrs. John Pillsbury (Nelle Stevenson)</td><td>female</td></tr><tr><th>14</th><td>905.0</td><td>2.0</td><td>Howard, Mr. Benjamin</td><td>male</td></tr><tr><th>15</th><td>906.0</td><td>1.0</td><td>Chaffee, Mrs. Herbert Fuller (Carrie Constance Toogood)</td><td>female</td></tr><tr><th>16</th><td>907.0</td><td>2.0</td><td>del Carlo, Mrs. Sebastiano (Argenia Genovesi)</td><td>female</td></tr><tr><th>17</th><td>908.0</td><td>2.0</td><td>Keane, Mr. Daniel</td><td>male</td></tr><tr><th>18</th><td>909.0</td><td>3.0</td><td>Assaf, Mr. Gerios</td><td>male</td></tr><tr><th>19</th><td>910.0</td><td>3.0</td><td>Ilmakangas, Miss. Ida Livija</td><td>female</td></tr><tr><th>20</th><td>911.0</td><td>3.0</td><td>Assaf Khalil, Mrs. Mariana (Miriam")"</td><td>female</td></tr><tr><th>21</th><td>912.0</td><td>1.0</td><td>Rothschild, Mr. Martin</td><td>male</td></tr><tr><th>22</th><td>913.0</td><td>3.0</td><td>Olsen, Master. Artur Karl</td><td>male</td></tr><tr><th>23</th><td>914.0</td><td>1.0</td><td>Flegenheim, Mrs. Alfred (Antoinette)</td><td>female</td></tr><tr><th>24</th><td>915.0</td><td>1.0</td><td>Williams, Mr. Richard Norris II</td><td>male</td></tr><tr><th>25</th><td>916.0</td><td>1.0</td><td>Ryerson, Mrs. Arthur Larned (Emily Maria Borie)</td><td>female</td></tr><tr><th>26</th><td>917.0</td><td>3.0</td><td>Robins, Mr. Alexander A</td><td>male</td></tr><tr><th>27</th><td>918.0</td><td>1.0</td><td>Ostby, Miss. Helene Ragnhild</td><td>female</td></tr><tr><th>28</th><td>919.0</td><td>3.0</td><td>Daher, Mr. Shedid</td><td>male</td></tr><tr><th>29</th><td>920.0</td><td>1.0</td><td>Brady, Mr. John Bertram</td><td>male</td></tr><tr><th>30</th><td>921.0</td><td>3.0</td><td>Samaan, Mr. Elias</td><td>male</td></tr><tr><th>&vellip;</th><td>&vellip;</td><td>&vellip;</td><td>&vellip;</td><td>&vellip;</td></tr></tbody></table></div></div>
 </div>
 </div>
 <div class="section" id="accediendo-a-los-elementos-de-un-dataframe">
@@ -1031,11 +992,33 @@ Stacktrace:
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: dftest not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">42</span><span class="p">]:</span><span class="mi">1</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(::</span><span class="n">Function</span><span class="p">,</span> <span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">)</span> <span class="n">at</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1091</span>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>418-element Array{Float64,1}:
+ 0.0
+ 1.0
+ 0.0
+ 0.0
+ 2.0
+ 0.0
+ 0.0
+ 2.0
+ 0.0
+ 2.0
+ 0.0
+ 0.0
+ 1.0
+ ⋮
+ 1.0
+ 2.0
+ 0.0
+ 2.0
+ 0.0
+ 1.0
+ 0.0
+ 0.0
+ 0.0
+ 0.0
+ 0.0
+ 2.0
 </pre></div>
 </div>
 </div>
@@ -1188,15 +1171,6 @@ md</p>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: dftest not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">52</span><span class="p">]:</span><span class="mi">6</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(::</span><span class="n">Function</span><span class="p">,</span> <span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">)</span> <span class="n">at</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1091</span>
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1204,28 +1178,10 @@ md</p>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: dftest₁ not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">53</span><span class="p">]:</span><span class="mi">1</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(::</span><span class="n">Function</span><span class="p">,</span> <span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">)</span> <span class="n">at</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1091</span>
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">describe</span><span class="p">(</span><span class="n">df</span><span class="p">);</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: df not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">54</span><span class="p">]:</span><span class="mi">1</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(::</span><span class="n">Function</span><span class="p">,</span> <span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">)</span> <span class="n">at</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1091</span>
 </pre></div>
 </div>
 </div>
@@ -1239,11 +1195,7 @@ md</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: df not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">55</span><span class="p">]:</span><span class="mi">1</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(::</span><span class="n">Function</span><span class="p">,</span> <span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">)</span> <span class="n">at</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1091</span>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1309
 </pre></div>
 </div>
 </div>
@@ -1272,11 +1224,7 @@ md</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: df not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">57</span><span class="p">]:</span><span class="mi">1</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(::</span><span class="n">Function</span><span class="p">,</span> <span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">)</span> <span class="n">at</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1091</span>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>109
 </pre></div>
 </div>
 </div>
@@ -1288,11 +1236,7 @@ md</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: df not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">58</span><span class="p">]:</span><span class="mi">1</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(::</span><span class="n">Function</span><span class="p">,</span> <span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">)</span> <span class="n">at</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1091</span>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>385
 </pre></div>
 </div>
 </div>
@@ -1310,15 +1254,6 @@ md</p>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: df not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">59</span><span class="p">]:</span><span class="mi">1</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(::</span><span class="n">Function</span><span class="p">,</span> <span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">)</span> <span class="n">at</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1091</span>
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1327,14 +1262,7 @@ md</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: agesurviver not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(::</span><span class="n">Function</span><span class="p">,</span> <span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">)</span> <span class="n">at</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1091</span>
-</pre></div>
-</div>
-</div>
+<div class="output text_html"><table class="data-frame"><thead><tr><th></th><th>Edadesₛ</th><th>Countₛ</th></tr><tr><th></th><th>Float64</th><th>Int64</th></tr></thead><tbody><p>71 rows × 2 columns</p><tr><th>1</th><td>38.0</td><td>7</td></tr><tr><th>2</th><td>26.0</td><td>10</td></tr><tr><th>3</th><td>35.0</td><td>14</td></tr><tr><th>4</th><td>27.0</td><td>15</td></tr><tr><th>5</th><td>14.0</td><td>3</td></tr><tr><th>6</th><td>4.0</td><td>7</td></tr><tr><th>7</th><td>58.0</td><td>4</td></tr><tr><th>8</th><td>55.0</td><td>4</td></tr><tr><th>9</th><td>34.0</td><td>6</td></tr><tr><th>10</th><td>15.0</td><td>5</td></tr><tr><th>11</th><td>28.0</td><td>9</td></tr><tr><th>12</th><td>3.0</td><td>6</td></tr><tr><th>13</th><td>19.0</td><td>12</td></tr><tr><th>14</th><td>49.0</td><td>4</td></tr><tr><th>15</th><td>29.0</td><td>13</td></tr><tr><th>16</th><td>21.0</td><td>8</td></tr><tr><th>17</th><td>5.0</td><td>4</td></tr><tr><th>18</th><td>17.0</td><td>8</td></tr><tr><th>19</th><td>32.0</td><td>9</td></tr><tr><th>20</th><td>0.83</td><td>2</td></tr><tr><th>21</th><td>30.0</td><td>16</td></tr><tr><th>22</th><td>33.0</td><td>9</td></tr><tr><th>23</th><td>23.0</td><td>10</td></tr><tr><th>24</th><td>32.5</td><td>1</td></tr><tr><th>25</th><td>12.0</td><td>3</td></tr><tr><th>26</th><td>24.0</td><td>20</td></tr><tr><th>27</th><td>22.0</td><td>21</td></tr><tr><th>28</th><td>16.0</td><td>8</td></tr><tr><th>29</th><td>40.0</td><td>6</td></tr><tr><th>30</th><td>9.0</td><td>3</td></tr><tr><th>&vellip;</th><td>&vellip;</td><td>&vellip;</td></tr></tbody></table></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1343,14 +1271,7 @@ md</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: agesurviver not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">61</span><span class="p">]:</span><span class="mi">1</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(::</span><span class="n">Function</span><span class="p">,</span> <span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">)</span> <span class="n">at</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1091</span>
-</pre></div>
-</div>
-</div>
+<div class="output text_html"><table class="data-frame"><thead><tr><th></th><th>Edadesₛ</th><th>Countₛ</th></tr><tr><th></th><th>Float64</th><th>Int64</th></tr></thead><tbody><p>10 rows × 2 columns</p><tr><th>1</th><td>22.0</td><td>21</td></tr><tr><th>2</th><td>24.0</td><td>20</td></tr><tr><th>3</th><td>30.0</td><td>16</td></tr><tr><th>4</th><td>18.0</td><td>16</td></tr><tr><th>5</th><td>36.0</td><td>16</td></tr><tr><th>6</th><td>27.0</td><td>15</td></tr><tr><th>7</th><td>35.0</td><td>14</td></tr><tr><th>8</th><td>29.0</td><td>13</td></tr><tr><th>9</th><td>19.0</td><td>12</td></tr><tr><th>10</th><td>45.0</td><td>12</td></tr></tbody></table></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1364,14 +1285,7 @@ md</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: df not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">62</span><span class="p">]:</span><span class="mi">1</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(::</span><span class="n">Function</span><span class="p">,</span> <span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">)</span> <span class="n">at</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1091</span>
-</pre></div>
-</div>
-</div>
+<div class="output text_html"><table class="data-frame"><thead><tr><th></th><th>Age</th><th>Countₛ</th></tr><tr><th></th><th>Float64</th><th>Int64</th></tr></thead><tbody><p>10 rows × 2 columns</p><tr><th>1</th><td>22.0</td><td>21</td></tr><tr><th>2</th><td>24.0</td><td>20</td></tr><tr><th>3</th><td>30.0</td><td>16</td></tr><tr><th>4</th><td>18.0</td><td>16</td></tr><tr><th>5</th><td>36.0</td><td>16</td></tr><tr><th>6</th><td>27.0</td><td>15</td></tr><tr><th>7</th><td>35.0</td><td>14</td></tr><tr><th>8</th><td>29.0</td><td>13</td></tr><tr><th>9</th><td>19.0</td><td>12</td></tr><tr><th>10</th><td>45.0</td><td>12</td></tr></tbody></table></div></div>
 </div>
 </div>
 <div class="section" id="cual-fue-el-top-10-de-edad-que-no-lograron-sobrevivir">
@@ -1386,15 +1300,6 @@ md</p>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: df not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">63</span><span class="p">]:</span><span class="mi">1</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(::</span><span class="n">Function</span><span class="p">,</span> <span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">)</span> <span class="n">at</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1091</span>
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1403,14 +1308,7 @@ md</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: notagesurviver not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">64</span><span class="p">]:</span><span class="mi">1</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(::</span><span class="n">Function</span><span class="p">,</span> <span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">)</span> <span class="n">at</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1091</span>
-</pre></div>
-</div>
-</div>
+<div class="output text_html"><table class="data-frame"><thead><tr><th></th><th>Edadesₙₛ</th><th>Countₙₛ</th></tr><tr><th></th><th>Float64</th><th>Int64</th></tr></thead><tbody><p>10 rows × 2 columns</p><tr><th>1</th><td>21.0</td><td>33</td></tr><tr><th>2</th><td>25.0</td><td>27</td></tr><tr><th>3</th><td>24.0</td><td>27</td></tr><tr><th>4</th><td>30.0</td><td>24</td></tr><tr><th>5</th><td>28.0</td><td>23</td></tr><tr><th>6</th><td>18.0</td><td>23</td></tr><tr><th>7</th><td>22.0</td><td>22</td></tr><tr><th>8</th><td>26.0</td><td>20</td></tr><tr><th>9</th><td>19.0</td><td>17</td></tr><tr><th>10</th><td>29.0</td><td>17</td></tr></tbody></table></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1424,14 +1322,7 @@ md</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: df not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">65</span><span class="p">]:</span><span class="mi">1</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(::</span><span class="n">Function</span><span class="p">,</span> <span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">)</span> <span class="n">at</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1091</span>
-</pre></div>
-</div>
-</div>
+<div class="output text_html"><table class="data-frame"><thead><tr><th></th><th>Age</th><th>Countₛ</th></tr><tr><th></th><th>Float64</th><th>Int64</th></tr></thead><tbody><p>10 rows × 2 columns</p><tr><th>1</th><td>21.0</td><td>33</td></tr><tr><th>2</th><td>25.0</td><td>27</td></tr><tr><th>3</th><td>24.0</td><td>27</td></tr><tr><th>4</th><td>30.0</td><td>24</td></tr><tr><th>5</th><td>28.0</td><td>23</td></tr><tr><th>6</th><td>18.0</td><td>23</td></tr><tr><th>7</th><td>22.0</td><td>22</td></tr><tr><th>8</th><td>26.0</td><td>20</td></tr><tr><th>9</th><td>19.0</td><td>17</td></tr><tr><th>10</th><td>29.0</td><td>17</td></tr></tbody></table></div></div>
 </div>
 </div>
 <div class="section" id="grafica-con-plots">
@@ -1451,11 +1342,33 @@ md</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: df not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">67</span><span class="p">]:</span><span class="mi">1</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(::</span><span class="n">Function</span><span class="p">,</span> <span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">)</span> <span class="n">at</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1091</span>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>494-element Array{Int64,1}:
+ 1
+ 1
+ 1
+ 1
+ 1
+ 1
+ 1
+ 1
+ 0
+ 1
+ 0
+ 1
+ 0
+ ⋮
+ 1
+ 1
+ 1
+ 1
+ 1
+ 1
+ 1
+ 1
+ 1
+ 1
+ 1
+ 1
 </pre></div>
 </div>
 </div>
@@ -1475,11 +1388,33 @@ md</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: df not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">69</span><span class="p">]:</span><span class="mi">1</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(::</span><span class="n">Function</span><span class="p">,</span> <span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">)</span> <span class="n">at</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1091</span>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>815-element Array{Int64,1}:
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 1
+ 0
+ 1
+ 0
+ 1
+ 0
+ ⋮
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
 </pre></div>
 </div>
 </div>
@@ -1491,25 +1426,7 @@ md</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="n">Cannot</span> <span class="n">convert</span> <span class="n">Symbol</span> <span class="n">to</span> <span class="n">series</span> <span class="n">data</span> <span class="k">for</span> <span class="n">plotting</span>
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">error</span><span class="p">(::</span><span class="n">String</span><span class="p">)</span> <span class="n">at</span> <span class="o">./</span><span class="n">error</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">33</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">_prepare_series_data</span><span class="p">(::</span><span class="n">Symbol</span><span class="p">)</span> <span class="n">at</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">runner</span><span class="o">/.</span><span class="n">julia</span><span class="o">/</span><span class="n">packages</span><span class="o">/</span><span class="n">RecipesPipeline</span><span class="o">/</span><span class="n">uPBKQ</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">series</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">8</span>
- <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="n">_series_data_vector</span><span class="p">(::</span><span class="n">Symbol</span><span class="p">,</span> <span class="p">::</span><span class="n">Dict</span><span class="p">{</span><span class="n">Symbol</span><span class="p">,</span><span class="n">Any</span><span class="p">})</span> <span class="n">at</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">runner</span><span class="o">/.</span><span class="n">julia</span><span class="o">/</span><span class="n">packages</span><span class="o">/</span><span class="n">RecipesPipeline</span><span class="o">/</span><span class="n">uPBKQ</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">series</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">27</span>
- <span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="n">macro</span> <span class="n">expansion</span> <span class="n">at</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">runner</span><span class="o">/.</span><span class="n">julia</span><span class="o">/</span><span class="n">packages</span><span class="o">/</span><span class="n">RecipesPipeline</span><span class="o">/</span><span class="n">uPBKQ</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">series</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">145</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
- <span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="n">apply_recipe</span><span class="p">(::</span><span class="n">AbstractDict</span><span class="p">{</span><span class="n">Symbol</span><span class="p">,</span><span class="n">Any</span><span class="p">},</span> <span class="p">::</span><span class="n">Type</span><span class="p">{</span><span class="n">RecipesPipeline</span><span class="o">.</span><span class="n">SliceIt</span><span class="p">},</span> <span class="p">::</span><span class="n">Any</span><span class="p">,</span> <span class="p">::</span><span class="n">Any</span><span class="p">,</span> <span class="p">::</span><span class="n">Any</span><span class="p">)</span> <span class="n">at</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">runner</span><span class="o">/.</span><span class="n">julia</span><span class="o">/</span><span class="n">packages</span><span class="o">/</span><span class="n">RecipesBase</span><span class="o">/</span><span class="mi">92</span><span class="n">zOw</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">RecipesBase</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">282</span>
- <span class="p">[</span><span class="mi">6</span><span class="p">]</span> <span class="n">_process_userrecipes</span><span class="o">!(</span>::Any, ::Any, ::Any<span class="o">)</span> at /home/runner/.julia/packages/RecipesPipeline/uPBKQ/src/user_recipe.jl:36
- <span class="p">[</span><span class="mi">7</span><span class="p">]</span> <span class="n">recipe_pipeline</span><span class="o">!(</span>::Any, ::Any, ::Any<span class="o">)</span> at /home/runner/.julia/packages/RecipesPipeline/uPBKQ/src/RecipesPipeline.jl:70
- <span class="p">[</span><span class="mi">8</span><span class="p">]</span> <span class="n">_plot</span><span class="o">!(</span>::Plots.Plot, ::Any, ::Any<span class="o">)</span> at /home/runner/.julia/packages/Plots/lmp2A/src/plot.jl:172
- <span class="p">[</span><span class="mi">9</span><span class="p">]</span> <span class="c1">#plot#129 at /home/runner/.julia/packages/Plots/lmp2A/src/plot.jl:58 [inlined]</span>
- <span class="p">[</span><span class="mi">10</span><span class="p">]</span> <span class="n">add_label</span><span class="p">(::</span><span class="n">Array</span><span class="p">{</span><span class="n">String</span><span class="p">,</span><span class="mi">1</span><span class="p">},</span> <span class="p">::</span><span class="n">Function</span><span class="p">,</span> <span class="p">::</span><span class="n">Symbol</span><span class="p">;</span> <span class="n">kwargs</span><span class="p">::</span><span class="n">Base</span><span class="o">.</span><span class="n">Iterators</span><span class="o">.</span><span class="n">Pairs</span><span class="p">{</span><span class="n">Symbol</span><span class="p">,</span><span class="n">Any</span><span class="p">,</span><span class="n">NTuple</span><span class="p">{</span><span class="mi">5</span><span class="p">,</span><span class="n">Symbol</span><span class="p">},</span><span class="n">NamedTuple</span><span class="p">{(:</span><span class="n">seriestype</span><span class="p">,</span> <span class="p">:</span><span class="n">legend</span><span class="p">,</span> <span class="p">:</span><span class="n">bar_width</span><span class="p">,</span> <span class="p">:</span><span class="n">xticks</span><span class="p">,</span> <span class="p">:</span><span class="n">title</span><span class="p">),</span><span class="n">Tuple</span><span class="p">{</span><span class="n">Symbol</span><span class="p">,</span><span class="n">Symbol</span><span class="p">,</span><span class="n">Float64</span><span class="p">,</span><span class="n">Tuple</span><span class="p">{</span><span class="n">Array</span><span class="p">{</span><span class="n">Float64</span><span class="p">,</span><span class="mi">1</span><span class="p">},</span><span class="n">Array</span><span class="p">{</span><span class="n">String</span><span class="p">,</span><span class="mi">1</span><span class="p">}},</span><span class="n">String</span><span class="p">}}})</span> <span class="n">at</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">runner</span><span class="o">/.</span><span class="n">julia</span><span class="o">/</span><span class="n">packages</span><span class="o">/</span><span class="n">StatsPlots</span><span class="o">/</span><span class="n">IMY3F</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">df</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">153</span>
- <span class="p">[</span><span class="mi">11</span><span class="p">]</span> <span class="p">(::</span><span class="n">var</span><span class="s2">&quot;#47#48&quot;</span><span class="p">)(::</span><span class="n">DataFrame</span><span class="p">)</span> <span class="n">at</span> <span class="o">./</span><span class="n">none</span><span class="p">:</span><span class="mi">0</span>
- <span class="p">[</span><span class="mi">12</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">70</span><span class="p">]:</span><span class="mi">1</span>
- <span class="p">[</span><span class="mi">13</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(::</span><span class="n">Function</span><span class="p">,</span> <span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">)</span> <span class="n">at</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1091</span>
-</pre></div>
-</div>
-</div>
+<img alt="_images/Paquete_DataFrames_113_0.svg" src="_images/Paquete_DataFrames_113_0.svg" /></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1518,25 +1435,7 @@ md</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="n">Cannot</span> <span class="n">convert</span> <span class="n">Symbol</span> <span class="n">to</span> <span class="n">series</span> <span class="n">data</span> <span class="k">for</span> <span class="n">plotting</span>
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">error</span><span class="p">(::</span><span class="n">String</span><span class="p">)</span> <span class="n">at</span> <span class="o">./</span><span class="n">error</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">33</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">_prepare_series_data</span><span class="p">(::</span><span class="n">Symbol</span><span class="p">)</span> <span class="n">at</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">runner</span><span class="o">/.</span><span class="n">julia</span><span class="o">/</span><span class="n">packages</span><span class="o">/</span><span class="n">RecipesPipeline</span><span class="o">/</span><span class="n">uPBKQ</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">series</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">8</span>
- <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="n">_series_data_vector</span><span class="p">(::</span><span class="n">Symbol</span><span class="p">,</span> <span class="p">::</span><span class="n">Dict</span><span class="p">{</span><span class="n">Symbol</span><span class="p">,</span><span class="n">Any</span><span class="p">})</span> <span class="n">at</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">runner</span><span class="o">/.</span><span class="n">julia</span><span class="o">/</span><span class="n">packages</span><span class="o">/</span><span class="n">RecipesPipeline</span><span class="o">/</span><span class="n">uPBKQ</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">series</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">27</span>
- <span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="n">macro</span> <span class="n">expansion</span> <span class="n">at</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">runner</span><span class="o">/.</span><span class="n">julia</span><span class="o">/</span><span class="n">packages</span><span class="o">/</span><span class="n">RecipesPipeline</span><span class="o">/</span><span class="n">uPBKQ</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">series</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">145</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
- <span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="n">apply_recipe</span><span class="p">(::</span><span class="n">AbstractDict</span><span class="p">{</span><span class="n">Symbol</span><span class="p">,</span><span class="n">Any</span><span class="p">},</span> <span class="p">::</span><span class="n">Type</span><span class="p">{</span><span class="n">RecipesPipeline</span><span class="o">.</span><span class="n">SliceIt</span><span class="p">},</span> <span class="p">::</span><span class="n">Any</span><span class="p">,</span> <span class="p">::</span><span class="n">Any</span><span class="p">,</span> <span class="p">::</span><span class="n">Any</span><span class="p">)</span> <span class="n">at</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">runner</span><span class="o">/.</span><span class="n">julia</span><span class="o">/</span><span class="n">packages</span><span class="o">/</span><span class="n">RecipesBase</span><span class="o">/</span><span class="mi">92</span><span class="n">zOw</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">RecipesBase</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">282</span>
- <span class="p">[</span><span class="mi">6</span><span class="p">]</span> <span class="n">_process_userrecipes</span><span class="o">!(</span>::Any, ::Any, ::Any<span class="o">)</span> at /home/runner/.julia/packages/RecipesPipeline/uPBKQ/src/user_recipe.jl:36
- <span class="p">[</span><span class="mi">7</span><span class="p">]</span> <span class="n">recipe_pipeline</span><span class="o">!(</span>::Any, ::Any, ::Any<span class="o">)</span> at /home/runner/.julia/packages/RecipesPipeline/uPBKQ/src/RecipesPipeline.jl:70
- <span class="p">[</span><span class="mi">8</span><span class="p">]</span> <span class="n">_plot</span><span class="o">!(</span>::Plots.Plot, ::Any, ::Any<span class="o">)</span> at /home/runner/.julia/packages/Plots/lmp2A/src/plot.jl:172
- <span class="p">[</span><span class="mi">9</span><span class="p">]</span> <span class="c1">#plot#129 at /home/runner/.julia/packages/Plots/lmp2A/src/plot.jl:58 [inlined]</span>
- <span class="p">[</span><span class="mi">10</span><span class="p">]</span> <span class="n">add_label</span><span class="p">(::</span><span class="n">Array</span><span class="p">{</span><span class="n">String</span><span class="p">,</span><span class="mi">1</span><span class="p">},</span> <span class="p">::</span><span class="n">Function</span><span class="p">,</span> <span class="p">::</span><span class="n">Symbol</span><span class="p">;</span> <span class="n">kwargs</span><span class="p">::</span><span class="n">Base</span><span class="o">.</span><span class="n">Iterators</span><span class="o">.</span><span class="n">Pairs</span><span class="p">{</span><span class="n">Symbol</span><span class="p">,</span><span class="n">Any</span><span class="p">,</span><span class="n">NTuple</span><span class="p">{</span><span class="mi">5</span><span class="p">,</span><span class="n">Symbol</span><span class="p">},</span><span class="n">NamedTuple</span><span class="p">{(:</span><span class="n">seriestype</span><span class="p">,</span> <span class="p">:</span><span class="n">legend</span><span class="p">,</span> <span class="p">:</span><span class="n">bar_width</span><span class="p">,</span> <span class="p">:</span><span class="n">xticks</span><span class="p">,</span> <span class="p">:</span><span class="n">title</span><span class="p">),</span><span class="n">Tuple</span><span class="p">{</span><span class="n">Symbol</span><span class="p">,</span><span class="n">Symbol</span><span class="p">,</span><span class="n">Float64</span><span class="p">,</span><span class="n">Tuple</span><span class="p">{</span><span class="n">Array</span><span class="p">{</span><span class="n">Float64</span><span class="p">,</span><span class="mi">1</span><span class="p">},</span><span class="n">Array</span><span class="p">{</span><span class="n">String</span><span class="p">,</span><span class="mi">1</span><span class="p">}},</span><span class="n">String</span><span class="p">}}})</span> <span class="n">at</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">runner</span><span class="o">/.</span><span class="n">julia</span><span class="o">/</span><span class="n">packages</span><span class="o">/</span><span class="n">StatsPlots</span><span class="o">/</span><span class="n">IMY3F</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">df</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">153</span>
- <span class="p">[</span><span class="mi">11</span><span class="p">]</span> <span class="p">(::</span><span class="n">var</span><span class="s2">&quot;#49#50&quot;</span><span class="p">)(::</span><span class="n">DataFrame</span><span class="p">)</span> <span class="n">at</span> <span class="o">./</span><span class="n">none</span><span class="p">:</span><span class="mi">0</span>
- <span class="p">[</span><span class="mi">12</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">71</span><span class="p">]:</span><span class="mi">1</span>
- <span class="p">[</span><span class="mi">13</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(::</span><span class="n">Function</span><span class="p">,</span> <span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">)</span> <span class="n">at</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1091</span>
-</pre></div>
-</div>
-</div>
+<img alt="_images/Paquete_DataFrames_114_0.svg" src="_images/Paquete_DataFrames_114_0.svg" /></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1641,43 +1540,31 @@ Unable to revert mtime: /usr/share/fonts/cmap
 Unable to revert mtime: /usr/share/fonts/truetype
 Unable to revert mtime: /usr/share/fonts/type1
 Unable to revert mtime: /usr/share/fonts/cmap/adobe-cns1
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Unable to revert mtime: /usr/share/fonts/cmap/adobe-gb1
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Unable to revert mtime: /usr/share/fonts/cmap/adobe-japan1
+Unable to revert mtime: /usr/share/fonts/cmap/adobe-gb1
+Unable to revert mtime: /usr/share/fonts/cmap/adobe-japan1
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Unable to revert mtime: /usr/share/fonts/cmap/adobe-japan2
 Unable to revert mtime: /usr/share/fonts/cmap/adobe-korea1
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Unable to revert mtime: /usr/share/fonts/truetype/dejavu
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Unable to revert mtime: /usr/share/fonts/truetype/droid
+Unable to revert mtime: /usr/share/fonts/truetype/dejavu
+Unable to revert mtime: /usr/share/fonts/truetype/droid
 Unable to revert mtime: /usr/share/fonts/truetype/lato
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Unable to revert mtime: /usr/share/fonts/truetype/liberation
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Unable to revert mtime: /usr/share/fonts/truetype/noto
+Unable to revert mtime: /usr/share/fonts/truetype/noto
 Unable to revert mtime: /usr/share/fonts/type1/gsfonts
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Unable to revert mtime: /usr/share/fonts/cMap
 Unable to revert mtime: /usr/share/fonts/cmap/adobe-cns1
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Unable to revert mtime: /usr/share/fonts/cmap/adobe-gb1
+Unable to revert mtime: /usr/share/fonts/cmap/adobe-gb1
 Unable to revert mtime: /usr/share/fonts/cmap/adobe-japan1
 Unable to revert mtime: /usr/share/fonts/cmap/adobe-japan2
 Unable to revert mtime: /usr/share/fonts/cmap/adobe-korea1
 </pre></div>
 </div>
-<img alt="_images/Paquete_DataFrames_123_10.svg" src="_images/Paquete_DataFrames_123_10.svg" /></div>
+<img alt="_images/Paquete_DataFrames_123_4.svg" src="_images/Paquete_DataFrames_123_4.svg" /></div>
 </div>
 <p>Es posible realizar una gráfica como se muestra en el ejemplo, donde no se usa <code class="docutils literal notranslate"><span class="pre">Plots.jl</span></code>.</p>
 <div class="cell docutils container">
@@ -1687,7 +1574,7 @@ Unable to revert mtime: /usr/share/fonts/cmap/adobe-korea1
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(electron:7489): Gtk-WARNING **: 17:38:52.977: cannot open display: 
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(electron:7624): Gtk-WARNING **: 18:57:11.426: cannot open display: 
 </pre></div>
 </div>
 </div>
