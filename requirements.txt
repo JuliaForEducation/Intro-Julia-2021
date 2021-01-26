@@ -2,4 +2,4 @@ jupyter-book
 matplotlib
 numpy
 ghp-import
-xlrd
+xlrd==1.2.0
